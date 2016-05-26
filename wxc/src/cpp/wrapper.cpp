@@ -241,7 +241,8 @@ EWXWEXPORT(wxClosure*,wxEvtHandler_GetClosure)(wxEvtHandler* evtHandler,int id,i
   // Bugfix: see www.mail-archive.com/wxhaskell-devel@lists.sourceforge.net/msg00577.html
   // On entry, Dynamic event table may have no bound events
   // Bug reproduces only on Debug builds, and seems to be ignorable
-  if (evtHandler->GetDynamicEventTable() != NULL)
+  size_t cookie;
+  if (evtHandler->GetFirstDynamicEntry(cookie) != NULL)
     found = evtHandler->SearchDynamicEventTable( event );
   getCallback = NULL;
 

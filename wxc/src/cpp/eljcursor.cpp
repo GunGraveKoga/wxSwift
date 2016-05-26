@@ -3,10 +3,12 @@
 extern "C"
 {
 
+#if WXWIN_COMPATIBILITY_2_8
 EWXWEXPORT(wxCursor*,Cursor_CreateFromStock)(int _id)
 {
 	return  new wxCursor(_id);
 }
+#endif
 
 EWXWEXPORT(wxCursor*,Cursor_CreateFromImage)(wxImage* image)
 {

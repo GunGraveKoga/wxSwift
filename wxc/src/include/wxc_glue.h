@@ -533,7 +533,7 @@ TClass(wxString) ELJApp_GetVendorName( );
 /* int        ELJApp_GetWantDebugOutput(  ); */
 void       ELJApp_InitAllImageHandlers(  );
 TBool      ELJApp_Initialized(  );
-int        ELJApp_MainLoop(  );
+DLL_STORAGE int        ELJApp_MainLoop(  );
 TClass(wxPoint) ELJApp_MousePosition( );
 int        ELJApp_Pending(  );
 int        ELJApp_SafeYield( TClass(wxWindow) _win );
@@ -544,7 +544,7 @@ void       ELJApp_SetClassName( TClass(wxString) name );
 void       ELJApp_SetExitOnFrameDelete( int flag );
 void       ELJApp_SetPrintMode( int mode );
 void       ELJApp_SetTooltipDelay( int _ms );
-void       ELJApp_SetTopWindow( TClass(wxWindow) _wnd );
+DLL_STORAGE void       ELJApp_SetTopWindow( TClass(wxWindow) _wnd );
 void       ELJApp_SetUseBestVisual( int flag );
 void       ELJApp_SetVendorName( TClass(wxString) name );
 void       ELJApp_Sleep( int _scs );
@@ -2801,7 +2801,7 @@ TBool wxFontMapper_IsEncodingAvailable( TSelf(wxFontMapper) _obj, int encoding, 
 
 /* wxFrame */
 TClassDefExtend(wxFrame,wxTopLevelWindow)
-TClass(wxFrame) wxFrame_Create( TClass(wxWindow) _prt, int _id, TClass(wxString) _txt, TRect(_lft,_top,_wdt,_hgt), int _stl );
+DLL_STORAGE TClass(wxFrame) wxFrame_Create( TClass(wxWindow) _prt, int _id, TClass(wxString) _txt, TRect(_lft,_top,_wdt,_hgt), int _stl );
 TClass(wxStatusBar) wxFrame_CreateStatusBar( TSelf(wxFrame) _obj, int number, int style );
 TClass(wxToolBar)   wxFrame_CreateToolBar( TSelf(wxFrame) _obj, long style );
 int        wxFrame_GetClientAreaOrigin_left( TSelf(wxFrame) _obj );
@@ -5642,7 +5642,7 @@ void       wxWindow_SetSizer( TSelf(wxWindow) _obj, TClass(wxSizer) sizer );
 void       wxWindow_SetToolTip( TSelf(wxWindow) _obj, TClass(wxString) tip );
 void       wxWindow_SetValidator( TSelf(wxWindow) _obj, TClass(wxValidator) validator );
 void       wxWindow_SetWindowStyleFlag( TSelf(wxWindow) _obj, long style );
-TBool      wxWindow_Show( TSelf(wxWindow) _obj );
+DLL_STORAGE  TBool      wxWindow_Show( TSelf(wxWindow) _obj );
 void       wxWindow_Thaw( TSelf(wxWindow) _obj );
 TBool      wxWindow_TransferDataFromWindow( TSelf(wxWindow) _obj );
 TBool      wxWindow_TransferDataToWindow( TSelf(wxWindow) _obj );
