@@ -53,8 +53,8 @@
 
 /* wxClosure */
 TClassDefExtend(wxClosure,wxObject)
-//DLL_STORAGE TClass(wxClosure)  wxClosure_Create( TClosureFun _fun_CEvent, void* _data );
-DLL_STORAGE TClass(wxClosure)  wxClosure_Create(void(*_fun_CEvent)(void *, void*, void*), void* _data);
+//TClass(wxClosure)  wxClosure_Create( TClosureFun _fun_CEvent, void* _data );
+TClass(wxClosure)  wxClosure_Create(void(*_fun_CEvent)(void *, void*, void*), void* _data);
 void*              wxClosure_GetData( TSelf(wxClosure) _obj );
 
 TClass(wxClosure)  wxEvtHandler_GetClosure( TSelf(wxEvtHandler) _obj, int id, int type );
@@ -94,7 +94,7 @@ TClass(wxString) wxFrame_GetTitle( TSelf(wxFrame) _obj );
 void        wxFrame_SetTitle( TSelf(wxFrame) _frame, TClass(wxString) _txt );
 TBool       wxFrame_SetShape( TSelf(wxFrame) self, TClass(wxRegion) region);
 
-DLL_STORAGE TBool       wxFrame_ShowFullScreen( TSelf(wxFrame) self, TBool show, int style);
+TBool       wxFrame_ShowFullScreen( TSelf(wxFrame) self, TBool show, int style);
 
 TBool       wxFrame_IsFullScreen( TSelf(wxFrame) self );
 
@@ -135,9 +135,9 @@ TClass(wxPoint) wxWindow_ScreenToClient2( TSelf(wxWindow) _obj, TPoint(x,y) );
 
 /* wxString helpers */
 
-DLL_STORAGE TClass(wxString) wxString_Create( TString buffer );
+TClass(wxString) wxString_Create( TString buffer );
 
-DLL_STORAGE TClass(wxString) wxString_CreateUTF8(const char* buffer);
+TClass(wxString) wxString_CreateUTF8(const char* buffer);
 
 TClass(wxString) wxString_CreateLen( TString buffer, int len );
 
@@ -551,7 +551,7 @@ TClass(wxString) wxGetApplicationPath();
 
 
 /* ELJApp */
-DLL_STORAGE void  ELJApp_InitializeC( TClass(wxClosure) closure, int _argc, TChar** _argv );
+void  ELJApp_InitializeC( TClass(wxClosure) closure, int _argc, TChar** _argv );
 
 int   ELJApp_GetIdleInterval();
 

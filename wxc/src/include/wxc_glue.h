@@ -494,7 +494,7 @@ int        ELJSysErrorCode(  );
 void*      ELJSysErrorMsg( int nErrCode );
 void       LogErrorMsg( TClass(wxString) _msg );
 void       LogFatalErrorMsg( TClass(wxString) _msg );
-DLL_STORAGE void       LogMessageMsg( TClass(wxString) _msg );
+void       LogMessageMsg( TClass(wxString) _msg );
 void       LogWarningMsg( TClass(wxString) _msg );
 TBool      Quantize( TClass(wxImage) src, TClass(wxImage) dest, int desiredNoColours, void* eightBitData, int flags );
 TBool      QuantizePalette( TClass(wxImage) src, TClass(wxImage) dest, void* pPalette, int desiredNoColours, void* eightBitData, int flags );
@@ -533,7 +533,7 @@ TClass(wxString) ELJApp_GetVendorName( );
 /* int        ELJApp_GetWantDebugOutput(  ); */
 void       ELJApp_InitAllImageHandlers(  );
 TBool      ELJApp_Initialized(  );
-DLL_STORAGE int        ELJApp_MainLoop(  );
+int        ELJApp_MainLoop(  );
 TClass(wxPoint) ELJApp_MousePosition( );
 int        ELJApp_Pending(  );
 int        ELJApp_SafeYield( TClass(wxWindow) _win );
@@ -544,7 +544,7 @@ void       ELJApp_SetClassName( TClass(wxString) name );
 void       ELJApp_SetExitOnFrameDelete( int flag );
 void       ELJApp_SetPrintMode( int mode );
 void       ELJApp_SetTooltipDelay( int _ms );
-DLL_STORAGE void       ELJApp_SetTopWindow( TClass(wxWindow) _wnd );
+void       ELJApp_SetTopWindow( TClass(wxWindow) _wnd );
 void       ELJApp_SetUseBestVisual( int flag );
 void       ELJApp_SetVendorName( TClass(wxString) name );
 void       ELJApp_Sleep( int _scs );
@@ -2581,8 +2581,8 @@ void       wxEvent_Skip( TSelf(wxEvent) _obj );
 /* wxEvtHandler */
 TClassDefExtend(wxEvtHandler,wxObject)
 void       wxEvtHandler_AddPendingEvent( TSelf(wxEvtHandler) _obj, TClass(wxEvent) event );
-DLL_STORAGE  int        wxEvtHandler_Connect( TSelf(wxEvtHandler) _obj, int first, int last, int type, void* data );
-DLL_STORAGE  TClass(wxEvtHandler) wxEvtHandler_Create(  );
+int        wxEvtHandler_Connect( TSelf(wxEvtHandler) _obj, int first, int last, int type, void* data );
+TClass(wxEvtHandler) wxEvtHandler_Create(  );
 void       wxEvtHandler_Delete( TSelf(wxEvtHandler) _obj );
 int        wxEvtHandler_Disconnect( TSelf(wxEvtHandler) _obj, int first, int last, int type, int id );
 TBool      wxEvtHandler_GetEvtHandlerEnabled( TSelf(wxEvtHandler) _obj );
@@ -2801,8 +2801,8 @@ TBool wxFontMapper_IsEncodingAvailable( TSelf(wxFontMapper) _obj, int encoding, 
 
 /* wxFrame */
 TClassDefExtend(wxFrame,wxTopLevelWindow)
-DLL_STORAGE TClass(wxFrame) wxFrame_Create( TClass(wxWindow) _prt, int _id, TClass(wxString) _txt, TRect(_lft,_top,_wdt,_hgt), int _stl );
-DLL_STORAGE TClass(wxStatusBar) wxFrame_CreateStatusBar( TSelf(wxFrame) _obj, int number, int style );
+TClass(wxFrame) wxFrame_Create( TClass(wxWindow) _prt, int _id, TClass(wxString) _txt, TRect(_lft,_top,_wdt,_hgt), int _stl );
+TClass(wxStatusBar) wxFrame_CreateStatusBar( TSelf(wxFrame) _obj, int number, int style );
 TClass(wxToolBar)   wxFrame_CreateToolBar( TSelf(wxFrame) _obj, long style );
 int        wxFrame_GetClientAreaOrigin_left( TSelf(wxFrame) _obj );
 int        wxFrame_GetClientAreaOrigin_top( TSelf(wxFrame) _obj );
@@ -2810,9 +2810,9 @@ TClass(wxMenuBar) wxFrame_GetMenuBar( TSelf(wxFrame) _obj );
 TClass(wxStatusBar) wxFrame_GetStatusBar( TSelf(wxFrame) _obj );
 TClass(wxToolBar) wxFrame_GetToolBar( TSelf(wxFrame) _obj );
 void       wxFrame_Restore( TSelf(wxFrame) _obj );
-DLL_STORAGE void       wxFrame_SetMenuBar( TSelf(wxFrame) _obj, TClass(wxMenuBar) menubar );
+void       wxFrame_SetMenuBar( TSelf(wxFrame) _obj, TClass(wxMenuBar) menubar );
 void       wxFrame_SetStatusBar( TSelf(wxFrame) _obj, TClass(wxStatusBar) statBar );
-DLL_STORAGE void       wxFrame_SetStatusText( TSelf(wxFrame) _obj, TClass(wxString) _txt, int _number );
+void       wxFrame_SetStatusText( TSelf(wxFrame) _obj, TClass(wxString) _txt, int _number );
 void       wxFrame_SetStatusWidths( TSelf(wxFrame) _obj, int _n, void* _widths_field );
 void       wxFrame_SetToolBar( TSelf(wxFrame) _obj, TClass(wxToolBar) _toolbar );
 
@@ -3875,13 +3875,13 @@ TClassDefExtend(wxMemoryOutputStream,wxOutputStream)
 
 /* wxMenu */
 TClassDefExtend(wxMenu,wxEvtHandler)
-DLL_STORAGE void      wxMenu_Append( TSelf(wxMenu) _obj, int id, TClass(wxString) text, TClass(wxString) help, TBool isCheckable );
+void      wxMenu_Append( TSelf(wxMenu) _obj, int id, TClass(wxString) text, TClass(wxString) help, TBool isCheckable );
 void       wxMenu_AppendItem( TSelf(wxMenu) _obj, TClass(wxMenuItem) _itm );
-DLL_STORAGE void       wxMenu_AppendSeparator( TSelf(wxMenu) _obj );
+void       wxMenu_AppendSeparator( TSelf(wxMenu) _obj );
 void       wxMenu_AppendSub( TSelf(wxMenu) _obj, int id, TClass(wxString) text, TClass(wxMenu) submenu, TClass(wxString) help );
 void       wxMenu_Break( TSelf(wxMenu) _obj );
 void       wxMenu_Check( TSelf(wxMenu) _obj, int id, TBool check );
-DLL_STORAGE TClass(wxMenu) wxMenu_Create( TClass(wxString) title, long style );
+TClass(wxMenu) wxMenu_Create( TClass(wxString) title, long style );
 void       wxMenu_DeleteById( TSelf(wxMenu) _obj, int id );
 void       wxMenu_DeleteByItem( TSelf(wxMenu) _obj, TClass(wxMenuItem) _itm );
 void       wxMenu_DeletePointer( TSelf(wxMenu) _obj );
@@ -3922,9 +3922,9 @@ void       wxMenu_UpdateUI( TSelf(wxMenu) _obj, void* source );
 
 /* wxMenuBar */
 TClassDefExtend(wxMenuBar,wxEvtHandler)
-DLL_STORAGE int        wxMenuBar_Append( TSelf(wxMenuBar) _obj, TClass(wxMenu) menu, TClass(wxString) title );
+int        wxMenuBar_Append( TSelf(wxMenuBar) _obj, TClass(wxMenu) menu, TClass(wxString) title );
 void       wxMenuBar_Check( TSelf(wxMenuBar) _obj, int id, TBool check );
-DLL_STORAGE TClass(wxMenuBar) wxMenuBar_Create( int _style );
+TClass(wxMenuBar) wxMenuBar_Create( int _style );
 void       wxMenuBar_DeletePointer( TSelf(wxMenuBar) _obj );
 int        wxMenuBar_Enable( TSelf(wxMenuBar) _obj, TBool enable );
 void       wxMenuBar_EnableItem( TSelf(wxMenuBar) _obj, int id, TBool enable );
@@ -3984,9 +3984,9 @@ void       wxMenuItem_SetItemLabel( TSelf(wxMenuItem) _obj, TClass(wxString) str
 
 /* wxMessageDialog */
 TClassDefExtend(wxMessageDialog,wxDialog)
-DLL_STORAGE TClass(wxMessageDialog) wxMessageDialog_Create( TClass(wxWindow) _prt, TClass(wxString) _msg, TClass(wxString) _cap, int _stl );
-DLL_STORAGE void       wxMessageDialog_Delete( TSelf(wxMessageDialog) _obj );
-DLL_STORAGE int        wxMessageDialog_ShowModal( TSelf(wxMessageDialog) _obj );
+TClass(wxMessageDialog) wxMessageDialog_Create( TClass(wxWindow) _prt, TClass(wxString) _msg, TClass(wxString) _cap, int _stl );
+void       wxMessageDialog_Delete( TSelf(wxMessageDialog) _obj );
+int        wxMessageDialog_ShowModal( TSelf(wxMessageDialog) _obj );
 
 /* wxMetafile */
 TClassDefExtend(wxMetafile,wxObject)
@@ -5525,7 +5525,7 @@ void       wxWindow_Center( TSelf(wxWindow) _obj, int direction );
 void       wxWindow_CenterOnParent( TSelf(wxWindow) _obj, int dir );
 void       wxWindow_ClearBackground( TSelf(wxWindow) _obj );
 TClass(wxPoint) wxWindow_ClientToScreen( TSelf(wxWindow) _obj, TPoint(x,y) );
-DLL_STORAGE TBool      wxWindow_Close( TSelf(wxWindow) _obj, TBool _force );
+TBool      wxWindow_Close( TSelf(wxWindow) _obj, TBool _force );
 TClass(wxPoint) wxWindow_ConvertDialogToPixels( TSelf(wxWindow) _obj );
 TClass(wxPoint) wxWindow_ConvertPixelsToDialog( TSelf(wxWindow) _obj );
 TClass(wxWindow) wxWindow_Create( TClass(wxWindow) _prt, int _id, TRect(_x,_y,_w,_h), int _stl );
@@ -5642,7 +5642,7 @@ void       wxWindow_SetSizer( TSelf(wxWindow) _obj, TClass(wxSizer) sizer );
 void       wxWindow_SetToolTip( TSelf(wxWindow) _obj, TClass(wxString) tip );
 void       wxWindow_SetValidator( TSelf(wxWindow) _obj, TClass(wxValidator) validator );
 void       wxWindow_SetWindowStyleFlag( TSelf(wxWindow) _obj, long style );
-DLL_STORAGE  TBool      wxWindow_Show( TSelf(wxWindow) _obj );
+TBool      wxWindow_Show( TSelf(wxWindow) _obj );
 void       wxWindow_Thaw( TSelf(wxWindow) _obj );
 TBool      wxWindow_TransferDataFromWindow( TSelf(wxWindow) _obj );
 TBool      wxWindow_TransferDataToWindow( TSelf(wxWindow) _obj );

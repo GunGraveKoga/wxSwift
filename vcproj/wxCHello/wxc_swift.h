@@ -38,10 +38,14 @@ const int wxDEFAULT_FRAME_STYLE = \
              wxCLIP_CHILDREN);
 
 
-
+#ifndef WXUSINGDLL
 #define WXUSINGDLL
+#endif
+
 #ifndef _UNICODE
 #define _UNICODE
 #endif
-#include "C:/Work/wxSwift/wxc/src/include/wxc.h"
 
+extern "C" {
+#include "C:/Work/wxSwift/wxc/src/include/wxc.h"
+}
