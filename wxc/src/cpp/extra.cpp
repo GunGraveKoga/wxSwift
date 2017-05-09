@@ -2344,10 +2344,10 @@ EWXWEXPORT(bool,wxLog_GetVerbose)(wxLog* self)
 	return self->GetVerbose();
 }
 
-//EWXWEXPORT(int,wxLog_GetTraceMask)(wxLog* self)
-//{
-//	return (int)self->GetTraceMask();
-//}
+EWXWEXPORT(int,wxLog_GetTraceMask)(wxLog* self)
+{
+	return (int)self->GetTraceMask();
+}
 
 EWXWEXPORT(bool,wxLog_IsAllowedTraceMask)(wxLog* self,void* mask)
 {

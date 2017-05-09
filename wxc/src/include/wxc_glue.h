@@ -3875,7 +3875,7 @@ TClassDefExtend(wxMemoryOutputStream,wxOutputStream)
 
 /* wxMenu */
 TClassDefExtend(wxMenu,wxEvtHandler)
-void      wxMenu_Append( TSelf(wxMenu) _obj, int id, TClass(wxString) text, TClass(wxString) help, TBool isCheckable );
+void       wxMenu_Append( TSelf(wxMenu) _obj, int id, TClass(wxString) text, TClass(wxString) help, TBool isCheckable );
 void       wxMenu_AppendItem( TSelf(wxMenu) _obj, TClass(wxMenuItem) _itm );
 void       wxMenu_AppendSeparator( TSelf(wxMenu) _obj );
 void       wxMenu_AppendSub( TSelf(wxMenu) _obj, int id, TClass(wxString) text, TClass(wxMenu) submenu, TClass(wxString) help );

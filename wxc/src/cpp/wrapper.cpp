@@ -242,7 +242,7 @@ EWXWEXPORT(wxClosure*,wxEvtHandler_GetClosure)(wxEvtHandler* evtHandler,int id,i
   // On entry, Dynamic event table may have no bound events
   // Bug reproduces only on Debug builds, and seems to be ignorable
   if (evtHandler->GetDynamicEventTable() != NULL)
-	  found = evtHandler->SearchDynamicEventTable(event);
+    found = evtHandler->SearchDynamicEventTable( event );
   getCallback = NULL;
 
   if (found && callback)

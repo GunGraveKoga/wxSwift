@@ -46,6 +46,8 @@ const int wxDEFAULT_FRAME_STYLE = \
 #define _UNICODE
 #endif
 
+#define wxUSE_UNICODE
+
 extern "C" {
 #include "C:/Work/wxSwift/wxc/src/include/wxc.h"
 }

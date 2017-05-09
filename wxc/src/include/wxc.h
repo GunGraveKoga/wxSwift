@@ -10,9 +10,6 @@
 
 #define EXPORT
 
-#ifndef DLL_STORAGE
-#define DLL_STORAGE
-#endif
 
 /*-----------------------------------------------------------------------------
 
@@ -53,8 +50,7 @@
 
 /* wxClosure */
 TClassDefExtend(wxClosure,wxObject)
-//TClass(wxClosure)  wxClosure_Create( TClosureFun _fun_CEvent, void* _data );
-TClass(wxClosure)  wxClosure_Create(void(*_fun_CEvent)(void *, void*, void*), void* _data);
+TClass(wxClosure)  wxClosure_Create( TClosureFun _fun_CEvent, void* _data );
 void*              wxClosure_GetData( TSelf(wxClosure) _obj );
 
 TClass(wxClosure)  wxEvtHandler_GetClosure( TSelf(wxEvtHandler) _obj, int id, int type );

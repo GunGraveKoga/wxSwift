@@ -122,10 +122,10 @@ EWXWEXPORT(int,ELJLog_GetVerbose)(ELJLog* self)
 	return (int)self->GetVerbose();
 }
 	
-//EWXWEXPORT(int,ELJLog_GetTraceMask)(ELJLog* self)
-//{
-//	return (int)self->GetTraceMask();
-//}
+EWXWEXPORT(int,ELJLog_GetTraceMask)(ELJLog* self)
+{
+	return (int)self->GetTraceMask();
+}
 	
 EWXWEXPORT(bool,ELJLog_IsAllowedTraceMask)(ELJLog* self,void* mask)
 {
