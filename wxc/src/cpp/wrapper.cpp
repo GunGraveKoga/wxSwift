@@ -3,7 +3,9 @@
 #include "wx/dynlib.h"
 #include "wx/fs_zip.h"
 #include "wx/cmdline.h"
+#ifdef _WIN32
 #include <Shlwapi.h>
+#endif
 
 /* quantize is not supported on wxGTK 2.4.0 */
 #if !defined(__WXGTK__) || (wxVERSION_NUMBER > 2400)
@@ -781,7 +783,9 @@ EWXWEXPORT(bool, wxc_Initialize)(int argc, wxChar **argv)
     // up the AddRef() method through the vtable pointer which is NULL.
     // We force the TLS value for SH_WAPI_ThreadRefIndex to zero, so the error
     // handling code prevents the segment fault.
+#ifdef _WIN32
 	SHSetThreadRef(NULL);
+#endif
 
 	return wxInitialize(argc, argv);
 }

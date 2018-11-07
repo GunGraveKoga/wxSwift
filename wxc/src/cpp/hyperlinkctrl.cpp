@@ -9,19 +9,19 @@ EWXWEXPORT(wxHyperlinkCtrl*,wxHyperlinkCtrl_Create)(wxWindow* parent,int id,cons
 	return new wxHyperlinkCtrl(parent, id, label, url, wxPoint(x, y), wxSize(w, h), style);
 }
 
-EWXWEXPORT(wxColour,wxHyperlinkCtrl_GetHoverColour)(wxHyperlinkCtrl* self)
+EWXWEXPORT(wxColour*,wxHyperlinkCtrl_GetHoverColour)(wxHyperlinkCtrl* self)
 {
-	return self->GetHoverColour();
+    return new wxColour(self->GetHoverColour());
 }
 
-EWXWEXPORT(wxColour,wxHyperlinkCtrl_GetNormalColour)(wxHyperlinkCtrl* self)
+EWXWEXPORT(wxColour*,wxHyperlinkCtrl_GetNormalColour)(wxHyperlinkCtrl* self)
 {
-	return self->GetNormalColour();
+	return new wxColour(self->GetNormalColour());
 }
 
-EWXWEXPORT(wxString,wxHyperlinkCtrl_GetURL)(wxHyperlinkCtrl* self)
+EWXWEXPORT(wxString*,wxHyperlinkCtrl_GetURL)(wxHyperlinkCtrl* self)
 {
-	return self->GetURL();
+	return new wxString(self->GetURL());
 }
 
 EWXWEXPORT(bool,wxHyperlinkCtrl_GetVisited)(wxHyperlinkCtrl* self)
@@ -29,9 +29,9 @@ EWXWEXPORT(bool,wxHyperlinkCtrl_GetVisited)(wxHyperlinkCtrl* self)
 	return self->GetVisited();
 }
 
-EWXWEXPORT(wxColour,wxHyperlinkCtrl_GetVisitedColour)(wxHyperlinkCtrl* self)
+EWXWEXPORT(wxColour*,wxHyperlinkCtrl_GetVisitedColour)(wxHyperlinkCtrl* self)
 {
-	return self->GetVisitedColour();
+	return new wxColour(self->GetVisitedColour());
 }
 
 EWXWEXPORT(void,wxHyperlinkCtrl_SetHoverColour)(wxHyperlinkCtrl* self,const wxColour &colour)

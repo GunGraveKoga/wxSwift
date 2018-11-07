@@ -1950,9 +1950,9 @@ EWXWEXPORT(bool,wxAuiManager_DetachPane)(wxAuiManager* self, wxWindow* _window)
 }
 
 
-EWXWEXPORT(wxAuiPaneInfoArray,wxAuiManager_GetAllPanes)(wxAuiManager* self)
+EWXWEXPORT(wxAuiPaneInfoArray*,wxAuiManager_GetAllPanes)(wxAuiManager* self)
 {
-   return self->GetAllPanes();
+   return new wxAuiPaneInfoArray(self->GetAllPanes());
 }
 
 

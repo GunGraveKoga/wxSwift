@@ -5,7 +5,7 @@ TClassDef(wxManagedPtr)
 
 #if defined (__WXMAC__) && defined (EXPORT)
 #undef EXPORT
-#define EXPORT extern "C"
+#define EXPORT extern "C" CALLINGCONV
 #endif
 
 void* wxManagedPtr_GetPtr( TSelf(wxManagedPtr) self );
