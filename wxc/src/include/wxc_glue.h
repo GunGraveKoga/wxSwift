@@ -511,7 +511,7 @@ TClass(ELJLog) ELJApp_CreateLogTarget(  );
 void       ELJApp_Dispatch(  );
 TClass(wxSize) ELJApp_DisplaySize(  );
 void       ELJApp_EnableTooltips( TBool _enable );
-void       ELJApp_EnableTopLevelWindows( int _enb );
+void       ELJApp_EnableTopLevelWindows( bool _enb );
 int        ELJApp_ExecuteProcess( TClass(wxString) _cmd, int _snc, TClass(wxProcess) _prc );
 void       ELJApp_Exit(  );
 void       ELJApp_ExitMainLoop(  );
@@ -521,11 +521,11 @@ TClass(wxWindow) ELJApp_FindWindowByName( TClass(wxString) _lbl, TClass(wxWindow
 TClass(wxApp) ELJApp_GetApp(  );
 TClass(wxString) ELJApp_GetAppName( );
 TClass(wxString) ELJApp_GetClassName( );
-int        ELJApp_GetExitOnFrameDelete( );
+bool        ELJApp_GetExitOnFrameDelete( );
 TClass(wxString) ELJApp_GetOsDescription( );
 int        ELJApp_GetOsVersion( void* _maj, void* _min );
 TClass(wxWindow) ELJApp_GetTopWindow(  );
-int        ELJApp_GetUseBestVisual(  );
+bool       ELJApp_GetUseBestVisual(  );
 TClass(wxString) ELJApp_GetUserHome( void* _usr );
 TClass(wxString) ELJApp_GetUserId( );
 TClass(wxString) ELJApp_GetUserName( );
@@ -535,21 +535,21 @@ void       ELJApp_InitAllImageHandlers(  );
 TBool      ELJApp_Initialized(  );
 int        ELJApp_MainLoop(  );
 TClass(wxPoint) ELJApp_MousePosition( );
-int        ELJApp_Pending(  );
+bool        ELJApp_Pending(  );
 int        ELJApp_SafeYield( TClass(wxWindow) _win );
 /* int        ELJApp_SendIdleEvents(  ); */
 /* int        ELJApp_SendIdleEventsToWindow( TClass(wxWindow) win ); */
 void       ELJApp_SetAppName( TClass(wxString) name );
 void       ELJApp_SetClassName( TClass(wxString) name );
-void       ELJApp_SetExitOnFrameDelete( int flag );
+void       ELJApp_SetExitOnFrameDelete( bool flag );
 void       ELJApp_SetPrintMode( int mode );
-void       ELJApp_SetTooltipDelay( int _ms );
+void       ELJApp_SetTooltipDelay( long _ms );
 void       ELJApp_SetTopWindow( TClass(wxWindow) _wnd );
-void       ELJApp_SetUseBestVisual( int flag );
+void       ELJApp_SetUseBestVisual( bool flag );
 void       ELJApp_SetVendorName( TClass(wxString) name );
 void       ELJApp_Sleep( int _scs );
-void       ELJApp_MilliSleep( int _mscs );
-int        ELJApp_Yield(  );
+void       ELJApp_MilliSleep( unsigned long _mscs );
+bool       ELJApp_Yield(  );
 TBoolInt   ELJApp_IsTerminating(  );
 
 /* Only Initialize, do not OnInit() and MainLoop() */
@@ -2575,13 +2575,13 @@ TClass(wxObject) wxEvent_GetEventObject( TSelf(wxEvent) _obj );
 int        wxEvent_GetEventType( TSelf(wxEvent) _obj );
 int        wxEvent_GetId( TSelf(wxEvent) _obj );
 TBool      wxEvent_GetSkipped( TSelf(wxEvent) _obj );
-int        wxEvent_GetTimestamp( TSelf(wxEvent) _obj );
+long       wxEvent_GetTimestamp( TSelf(wxEvent) _obj );
 TBool      wxEvent_IsCommandEvent( TSelf(wxEvent) _obj );
 int        wxEvent_NewEventType(  );
 void       wxEvent_SetEventObject( TSelf(wxEvent) _obj, TClass(wxObject) obj );
 void       wxEvent_SetEventType( TSelf(wxEvent) _obj, int typ );
 void       wxEvent_SetId( TSelf(wxEvent) _obj, int Id );
-void       wxEvent_SetTimestamp( TSelf(wxEvent) _obj, int ts );
+void       wxEvent_SetTimestamp( TSelf(wxEvent) _obj, long ts );
 void       wxEvent_Skip( TSelf(wxEvent) _obj );
 
 /* wxEvtHandler */
@@ -2590,7 +2590,7 @@ void       wxEvtHandler_AddPendingEvent( TSelf(wxEvtHandler) _obj, TClass(wxEven
 int        wxEvtHandler_Connect( TSelf(wxEvtHandler) _obj, int first, int last, int type, void* data );
 TClass(wxEvtHandler) wxEvtHandler_Create(  );
 void       wxEvtHandler_Delete( TSelf(wxEvtHandler) _obj );
-int        wxEvtHandler_Disconnect( TSelf(wxEvtHandler) _obj, int first, int last, int type, int id );
+int        wxEvtHandler_Disconnect( TSelf(wxEvtHandler) _obj, int first, int last, int type, void* data );
 TBool      wxEvtHandler_GetEvtHandlerEnabled( TSelf(wxEvtHandler) _obj );
 TClass(wxEvtHandler) wxEvtHandler_GetNextHandler( TSelf(wxEvtHandler) _obj );
 TClass(wxEvtHandler) wxEvtHandler_GetPreviousHandler( TSelf(wxEvtHandler) _obj );

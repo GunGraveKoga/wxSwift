@@ -1206,7 +1206,7 @@ EWXWEXPORT(wxString*,wxString_CreateUTF8)(utf8char* buffer)
   return new wxString (buffer,wxConvUTF8);
 }
 
-EWXWEXPORT(wxString*,wxString_CreateLen)(wxChar* buffer,int len)
+EWXWEXPORT(wxString*,wxString_CreateLen)(wxChar* buffer,size_t len)
 {
   return new wxString(buffer,len);
 }
@@ -1216,7 +1216,7 @@ EWXWEXPORT(void,wxString_Delete)(wxString* s)
   delete s;
 }
 
-EWXWEXPORT(int,wxString_GetString)(wxString* s,wxChar* buffer)
+EWXWEXPORT(size_t,wxString_GetString)(wxString* s,wxChar* buffer)
 {
   if (buffer) memcpy (buffer, s->wc_str(), s->Length() * sizeof(wxChar));
   return s->Length();

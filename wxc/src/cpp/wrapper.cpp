@@ -338,9 +338,9 @@ EWXWEXPORT(bool,ELJApp_Initialized)()
 #endif
 }
 
-EWXWEXPORT(int,ELJApp_Pending)()
+EWXWEXPORT(bool,ELJApp_Pending)()
 {
-        return (int)wxGetApp().Pending();
+        return wxGetApp().Pending();
 }
 
 EWXWEXPORT(void,ELJApp_Dispatch)()
@@ -394,9 +394,9 @@ EWXWEXPORT(void,ELJApp_SetExitOnFrameDelete)(bool flag)
         wxGetApp().SetExitOnFrameDelete(flag);
 }
 
-EWXWEXPORT(int,ELJApp_GetExitOnFrameDelete)()
+EWXWEXPORT(bool,ELJApp_GetExitOnFrameDelete)()
 {
-        return (int)wxGetApp().GetExitOnFrameDelete();
+        return wxGetApp().GetExitOnFrameDelete();
 }
 
 EWXWEXPORT(void*,ELJApp_CreateLogTarget)()
@@ -421,9 +421,9 @@ EWXWEXPORT(void,ELJApp_SetUseBestVisual)(bool flag)
         wxGetApp().SetUseBestVisual( flag);
 }
 
-EWXWEXPORT(int,ELJApp_GetUseBestVisual)()
+EWXWEXPORT(bool,ELJApp_GetUseBestVisual)()
 {
-        return (int)wxGetApp().GetUseBestVisual();
+        return wxGetApp().GetUseBestVisual();
 }
 
 EWXWEXPORT(void,ELJApp_SetPrintMode)(int mode)
@@ -456,7 +456,7 @@ EWXWEXPORT(void,ELJApp_EnableTooltips)(bool _enable)
         wxToolTip::Enable (_enable);
 }
 
-EWXWEXPORT(void,ELJApp_SetTooltipDelay)(int _ms)
+EWXWEXPORT(void,ELJApp_SetTooltipDelay)(long _ms)
 {
         wxToolTip::SetDelay (_ms);
 }
@@ -542,9 +542,9 @@ EWXWEXPORT(int,ELJApp_ExecuteProcess)(wxString* _cmd,bool _snc,void* _prc)
         return (int)wxExecute(*_cmd, _snc , (wxProcess*)_prc);
 }
 
-EWXWEXPORT(int,ELJApp_Yield)()
+EWXWEXPORT(bool,ELJApp_Yield)()
 {
-        return (int)wxYield();
+        return wxYield();
 }
 
 EWXWEXPORT(int,ELJApp_SafeYield)(wxWindow* _win)
@@ -569,7 +569,7 @@ EWXWEXPORT(void,ELJApp_Sleep)(int _scs)
         wxSleep(_scs);
 }
 
-EWXWEXPORT(void,ELJApp_MilliSleep)(int _mscs)
+EWXWEXPORT(void,ELJApp_MilliSleep)(unsigned long _mscs)
 {
 #if (wxVERSION_NUMBER < 2600)
         wxUsleep(_mscs);

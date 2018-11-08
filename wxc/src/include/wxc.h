@@ -135,7 +135,7 @@ TClass(wxString) wxString_Create( TString buffer );
 
 TClass(wxString) wxString_CreateUTF8(const char* buffer);
 
-TClass(wxString) wxString_CreateLen( TString buffer, int len );
+TClass(wxString) wxString_CreateLen( TString buffer, size_t len );
 
 void             wxString_Delete( TSelf(wxString) s );
 

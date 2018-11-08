@@ -105,7 +105,7 @@
 /* strings */
 #define TString           TChar*
 #define TStringOut        TChar*
-#define TStringLen        int
+#define TStringLen        size_t
 
 #define TByteData            char*
 #define TByteString(d,n)     TByteData* d, int n

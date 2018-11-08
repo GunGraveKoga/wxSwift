@@ -58,7 +58,7 @@ EWXWEXPORT(void,wxCommandEvent_Delete)(wxCommandEvent* self)
         delete self;
 }
 
-EWXWEXPORT(int,wxEvent_GetTimestamp)(wxEvent* self)
+EWXWEXPORT(long,wxEvent_GetTimestamp)(wxEvent* self)
 {
         return self->GetTimestamp();
 }
