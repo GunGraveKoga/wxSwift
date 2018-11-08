@@ -1,0 +1,1284 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		149B9EFA2193872300A15A31 /* libwxc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9EF52193869C00A15A31 /* libwxc.dylib */; };
+		149B9EFD2193873C00A15A31 /* dragimage.h in Headers */ = {isa = PBXBuildFile; fileRef = 149B9DE72193836B00A15A31 /* dragimage.h */; };
+		149B9EFE2193873C00A15A31 /* eljgrid.h in Headers */ = {isa = PBXBuildFile; fileRef = 149B9DD72193836A00A15A31 /* eljgrid.h */; };
+		149B9EFF2193873C00A15A31 /* ewxw_def.h in Headers */ = {isa = PBXBuildFile; fileRef = 149B9DE42193836A00A15A31 /* ewxw_def.h */; };
+		149B9F002193873C00A15A31 /* glcanvas.h in Headers */ = {isa = PBXBuildFile; fileRef = 149B9DE32193836A00A15A31 /* glcanvas.h */; };
+		149B9F012193873C00A15A31 /* graphicscontext.h in Headers */ = {isa = PBXBuildFile; fileRef = 149B9DE02193836A00A15A31 /* graphicscontext.h */; };
+		149B9F022193873C00A15A31 /* hyperlinkctrl.h in Headers */ = {isa = PBXBuildFile; fileRef = 149B9DDC2193836A00A15A31 /* hyperlinkctrl.h */; };
+		149B9F032193873C00A15A31 /* managed.h in Headers */ = {isa = PBXBuildFile; fileRef = 149B9DDD2193836A00A15A31 /* managed.h */; };
+		149B9F042193873C00A15A31 /* mediactrl.h in Headers */ = {isa = PBXBuildFile; fileRef = 149B9DE22193836A00A15A31 /* mediactrl.h */; };
+		149B9F052193873C00A15A31 /* pickerctrl.h in Headers */ = {isa = PBXBuildFile; fileRef = 149B9DE12193836A00A15A31 /* pickerctrl.h */; };
+		149B9F062193873C00A15A31 /* previewframe.h in Headers */ = {isa = PBXBuildFile; fileRef = 149B9DD82193836A00A15A31 /* previewframe.h */; };
+		149B9F072193873C00A15A31 /* printout.h in Headers */ = {isa = PBXBuildFile; fileRef = 149B9DE62193836B00A15A31 /* printout.h */; };
+		149B9F082193873C00A15A31 /* sound.h in Headers */ = {isa = PBXBuildFile; fileRef = 149B9DD92193836A00A15A31 /* sound.h */; };
+		149B9F092193873C00A15A31 /* stc_gen.h in Headers */ = {isa = PBXBuildFile; fileRef = 149B9DE82193836B00A15A31 /* stc_gen.h */; };
+		149B9F0A2193873C00A15A31 /* stc.h in Headers */ = {isa = PBXBuildFile; fileRef = 149B9DD52193836900A15A31 /* stc.h */; };
+		149B9F0B2193873C00A15A31 /* stream.h in Headers */ = {isa = PBXBuildFile; fileRef = 149B9DE52193836A00A15A31 /* stream.h */; };
+		149B9F0C2193873C00A15A31 /* textstream.h in Headers */ = {isa = PBXBuildFile; fileRef = 149B9DD62193836A00A15A31 /* textstream.h */; };
+		149B9F0D2193873C00A15A31 /* wrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 149B9DDA2193836A00A15A31 /* wrapper.h */; };
+		149B9F0E2193873C00A15A31 /* wxc_glue.h in Headers */ = {isa = PBXBuildFile; fileRef = 149B9DDB2193836A00A15A31 /* wxc_glue.h */; };
+		149B9F0F2193873C00A15A31 /* wxc_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 149B9DDF2193836A00A15A31 /* wxc_types.h */; };
+		149B9F102193873C00A15A31 /* wxc.h in Headers */ = {isa = PBXBuildFile; fileRef = 149B9DDE2193836A00A15A31 /* wxc.h */; };
+		149B9F112193873C00A15A31 /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = 149B9DD32193835B00A15A31 /* version.h */; };
+		149B9F122193875600A15A31 /* apppath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E572193839000A15A31 /* apppath.cpp */; };
+		149B9F132193875600A15A31 /* defs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E2F2193838D00A15A31 /* defs.cpp */; };
+		149B9F142193875600A15A31 /* dragimage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E372193838E00A15A31 /* dragimage.cpp */; };
+		149B9F152193875600A15A31 /* eljaccelerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E4D2193838F00A15A31 /* eljaccelerator.cpp */; };
+		149B9F162193875600A15A31 /* eljartprov.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E492193838F00A15A31 /* eljartprov.cpp */; };
+		149B9F172193875600A15A31 /* eljaui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E742193839200A15A31 /* eljaui.cpp */; };
+		149B9F182193875600A15A31 /* eljbitmap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E092193838B00A15A31 /* eljbitmap.cpp */; };
+		149B9F192193875600A15A31 /* eljbrush.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E392193838E00A15A31 /* eljbrush.cpp */; };
+		149B9F1A2193875600A15A31 /* eljbusyinfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E212193838D00A15A31 /* eljbusyinfo.cpp */; };
+		149B9F1B2193875600A15A31 /* eljbutton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E562193839000A15A31 /* eljbutton.cpp */; };
+		149B9F1C2193875600A15A31 /* eljcalendarctrl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E242193838D00A15A31 /* eljcalendarctrl.cpp */; };
+		149B9F1D2193875600A15A31 /* eljcaret.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E0F2193838B00A15A31 /* eljcaret.cpp */; };
+		149B9F1E2193875600A15A31 /* eljcheckbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E022193838B00A15A31 /* eljcheckbox.cpp */; };
+		149B9F1F2193875600A15A31 /* eljchecklistbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E552193839000A15A31 /* eljchecklistbox.cpp */; };
+		149B9F202193875600A15A31 /* eljchoice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E082193838B00A15A31 /* eljchoice.cpp */; };
+		149B9F212193875600A15A31 /* eljclipboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E0C2193838B00A15A31 /* eljclipboard.cpp */; };
+		149B9F222193875600A15A31 /* eljcoldata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E6F2193839200A15A31 /* eljcoldata.cpp */; };
+		149B9F232193875600A15A31 /* eljcolour.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9DFF2193838B00A15A31 /* eljcolour.cpp */; };
+		149B9F242193875600A15A31 /* eljcolourdlg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E382193838E00A15A31 /* eljcolourdlg.cpp */; };
+		149B9F252193875600A15A31 /* eljcombobox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E172193838C00A15A31 /* eljcombobox.cpp */; };
+		149B9F262193875600A15A31 /* eljcommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E582193839000A15A31 /* eljcommand.cpp */; };
+		149B9F272193875600A15A31 /* eljconfigbase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E032193838B00A15A31 /* eljconfigbase.cpp */; };
+		149B9F282193875600A15A31 /* eljcontrol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E012193838B00A15A31 /* eljcontrol.cpp */; };
+		149B9F292193875600A15A31 /* eljctxhelp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E292193838D00A15A31 /* eljctxhelp.cpp */; };
+		149B9F2A2193875600A15A31 /* eljcursor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E052193838B00A15A31 /* eljcursor.cpp */; };
+		149B9F2B2193875600A15A31 /* eljdataformat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E6C2193839100A15A31 /* eljdataformat.cpp */; };
+		149B9F2C2193875600A15A31 /* eljdatetime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E252193838D00A15A31 /* eljdatetime.cpp */; };
+		149B9F2D2193875600A15A31 /* eljdc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E0A2193838B00A15A31 /* eljdc.cpp */; };
+		149B9F2E2193875600A15A31 /* eljdcsvg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E702193839200A15A31 /* eljdcsvg.cpp */; };
+		149B9F2F2193875600A15A31 /* eljdialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E6D2193839200A15A31 /* eljdialog.cpp */; };
+		149B9F312193875600A15A31 /* eljdirdlg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E652193839100A15A31 /* eljdirdlg.cpp */; };
+		149B9F322193875600A15A31 /* eljdnd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E402193838E00A15A31 /* eljdnd.cpp */; };
+		149B9F332193875600A15A31 /* eljdrawing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E512193839000A15A31 /* eljdrawing.cpp */; };
+		149B9F342193875600A15A31 /* eljevent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E662193839100A15A31 /* eljevent.cpp */; };
+		149B9F352193875600A15A31 /* eljfiledialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E1F2193838C00A15A31 /* eljfiledialog.cpp */; };
+		149B9F362193875600A15A31 /* eljfilehist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E122193838C00A15A31 /* eljfilehist.cpp */; };
+		149B9F372193875600A15A31 /* eljfindrepldlg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E432193838F00A15A31 /* eljfindrepldlg.cpp */; };
+		149B9F382193875600A15A31 /* eljfont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E502193839000A15A31 /* eljfont.cpp */; };
+		149B9F392193875600A15A31 /* eljfontdata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E672193839100A15A31 /* eljfontdata.cpp */; };
+		149B9F3A2193875600A15A31 /* eljfontdlg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E302193838D00A15A31 /* eljfontdlg.cpp */; };
+		149B9F3B2193875600A15A31 /* eljframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E062193838B00A15A31 /* eljframe.cpp */; };
+		149B9F3C2193875600A15A31 /* eljgauge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E162193838C00A15A31 /* eljgauge.cpp */; };
+		149B9F3E2193875600A15A31 /* eljgrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E2B2193838D00A15A31 /* eljgrid.cpp */; };
+		149B9F3F2193875600A15A31 /* eljhelpcontroller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E072193838B00A15A31 /* eljhelpcontroller.cpp */; };
+		149B9F402193875600A15A31 /* eljicnbndl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E362193838E00A15A31 /* eljicnbndl.cpp */; };
+		149B9F412193875600A15A31 /* eljicon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E642193839100A15A31 /* eljicon.cpp */; };
+		149B9F422193875600A15A31 /* eljimage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E0D2193838B00A15A31 /* eljimage.cpp */; };
+		149B9F432193875600A15A31 /* eljimagelist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E272193838D00A15A31 /* eljimagelist.cpp */; };
+		149B9F442193875600A15A31 /* eljipc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E282193838D00A15A31 /* eljipc.cpp */; };
+		149B9F452193875600A15A31 /* eljjoystick.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E1D2193838C00A15A31 /* eljjoystick.cpp */; };
+		149B9F462193875600A15A31 /* eljlayoutconstraints.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E0B2193838B00A15A31 /* eljlayoutconstraints.cpp */; };
+		149B9F472193875600A15A31 /* eljlistbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E4C2193838F00A15A31 /* eljlistbox.cpp */; };
+		149B9F482193875600A15A31 /* eljlistctrl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E102193838C00A15A31 /* eljlistctrl.cpp */; };
+		149B9F492193875600A15A31 /* eljlocale.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E542193839000A15A31 /* eljlocale.cpp */; };
+		149B9F4A2193875600A15A31 /* eljlog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E4B2193838F00A15A31 /* eljlog.cpp */; };
+		149B9F4B2193875600A15A31 /* eljmask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E5D2193839100A15A31 /* eljmask.cpp */; };
+		149B9F4C2193875600A15A31 /* eljmdi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E712193839200A15A31 /* eljmdi.cpp */; };
+		149B9F4D2193875600A15A31 /* eljmenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E412193838F00A15A31 /* eljmenu.cpp */; };
+		149B9F4E2193875600A15A31 /* eljmenubar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E422193838F00A15A31 /* eljmenubar.cpp */; };
+		149B9F4F2193875600A15A31 /* eljmessagedialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E262193838D00A15A31 /* eljmessagedialog.cpp */; };
+		149B9F502193875600A15A31 /* eljmime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E322193838E00A15A31 /* eljmime.cpp */; };
+		149B9F512193875600A15A31 /* eljminiframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E0E2193838B00A15A31 /* eljminiframe.cpp */; };
+		149B9F522193875600A15A31 /* eljnotebook.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E5A2193839000A15A31 /* eljnotebook.cpp */; };
+		149B9F532193875600A15A31 /* eljpalette.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9DFD2193838A00A15A31 /* eljpalette.cpp */; };
+		149B9F542193875600A15A31 /* eljpanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E1B2193838C00A15A31 /* eljpanel.cpp */; };
+		149B9F552193875600A15A31 /* eljpen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E452193838F00A15A31 /* eljpen.cpp */; };
+		149B9F572193875600A15A31 /* eljprintdlg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E4A2193838F00A15A31 /* eljprintdlg.cpp */; };
+		149B9F582193875600A15A31 /* eljprinting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E192193838C00A15A31 /* eljprinting.cpp */; };
+		149B9F592193875600A15A31 /* eljprocess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E622193839100A15A31 /* eljprocess.cpp */; };
+		149B9F5A2193875600A15A31 /* eljradiobox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E6A2193839100A15A31 /* eljradiobox.cpp */; };
+		149B9F5B2193875600A15A31 /* eljradiobutton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E6E2193839200A15A31 /* eljradiobutton.cpp */; };
+		149B9F5C2193875600A15A31 /* eljrc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9DFE2193838B00A15A31 /* eljrc.cpp */; };
+		149B9F5D2193875600A15A31 /* eljregion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E692193839100A15A31 /* eljregion.cpp */; };
+		149B9F5E2193875600A15A31 /* eljregioniter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E3C2193838E00A15A31 /* eljregioniter.cpp */; };
+		149B9F5F2193875600A15A31 /* eljsash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E722193839200A15A31 /* eljsash.cpp */; };
+		149B9F602193875600A15A31 /* eljscrollbar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E632193839100A15A31 /* eljscrollbar.cpp */; };
+		149B9F612193875600A15A31 /* eljscrolledwindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E5E2193839100A15A31 /* eljscrolledwindow.cpp */; };
+		149B9F622193875600A15A31 /* eljsingleinst.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E522193839000A15A31 /* eljsingleinst.cpp */; };
+		149B9F632193875600A15A31 /* eljsizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E352193838E00A15A31 /* eljsizer.cpp */; };
+		149B9F642193875600A15A31 /* eljslider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E5F2193839100A15A31 /* eljslider.cpp */; };
+		149B9F652193875600A15A31 /* eljspinctrl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E002193838B00A15A31 /* eljspinctrl.cpp */; };
+		149B9F662193875600A15A31 /* eljsplash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E6B2193839100A15A31 /* eljsplash.cpp */; };
+		149B9F672193875600A15A31 /* eljsplitterwindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E4E2193839000A15A31 /* eljsplitterwindow.cpp */; };
+		149B9F682193875600A15A31 /* eljstaticbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E1C2193838C00A15A31 /* eljstaticbox.cpp */; };
+		149B9F692193875600A15A31 /* eljstaticline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E532193839000A15A31 /* eljstaticline.cpp */; };
+		149B9F6A2193875600A15A31 /* eljstatictext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E1A2193838C00A15A31 /* eljstatictext.cpp */; };
+		149B9F6B2193875600A15A31 /* eljstatusbar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E5B2193839100A15A31 /* eljstatusbar.cpp */; };
+		149B9F6C2193875600A15A31 /* eljsystemsettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E482193838F00A15A31 /* eljsystemsettings.cpp */; };
+		149B9F6D2193875600A15A31 /* eljtextctrl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E2C2193838D00A15A31 /* eljtextctrl.cpp */; };
+		149B9F6E2193875600A15A31 /* eljtglbtn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E612193839100A15A31 /* eljtglbtn.cpp */; };
+		149B9F6F2193875600A15A31 /* eljthread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E1E2193838C00A15A31 /* eljthread.cpp */; };
+		149B9F702193875600A15A31 /* eljtimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E332193838E00A15A31 /* eljtimer.cpp */; };
+		149B9F712193875600A15A31 /* eljtipwnd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E4F2193839000A15A31 /* eljtipwnd.cpp */; };
+		149B9F722193875600A15A31 /* eljtoolbar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E112193838C00A15A31 /* eljtoolbar.cpp */; };
+		149B9F732193875600A15A31 /* eljvalidator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E142193838C00A15A31 /* eljvalidator.cpp */; };
+		149B9F742193875600A15A31 /* eljwindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E042193838B00A15A31 /* eljwindow.cpp */; };
+		149B9F752193875600A15A31 /* eljwizard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E202193838C00A15A31 /* eljwizard.cpp */; };
+		149B9F762193875600A15A31 /* ewxw_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E5C2193839100A15A31 /* ewxw_main.cpp */; };
+		149B9F772193875600A15A31 /* extra.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E2D2193838D00A15A31 /* extra.cpp */; };
+		149B9F782193875600A15A31 /* glcanvas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E152193838C00A15A31 /* glcanvas.cpp */; };
+		149B9F792193875600A15A31 /* graphicscontext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E752193839200A15A31 /* graphicscontext.cpp */; };
+		149B9F7A2193875600A15A31 /* hyperlinkctrl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E232193838D00A15A31 /* hyperlinkctrl.cpp */; };
+		149B9F7B2193875600A15A31 /* image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E592193839000A15A31 /* image.cpp */; };
+		149B9F7C2193875600A15A31 /* managed.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E732193839200A15A31 /* managed.cpp */; };
+		149B9F7D2193875600A15A31 /* mediactrl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E3E2193838E00A15A31 /* mediactrl.cpp */; };
+		149B9F7E2193875600A15A31 /* pickerctrl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E2E2193838D00A15A31 /* pickerctrl.cpp */; };
+		149B9F7F2193875600A15A31 /* previewframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E602193839100A15A31 /* previewframe.cpp */; };
+		149B9F802193875600A15A31 /* printout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E762193839200A15A31 /* printout.cpp */; };
+		149B9F812193875600A15A31 /* sckaddr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E2A2193838D00A15A31 /* sckaddr.cpp */; };
+		149B9F822193875600A15A31 /* socket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E3A2193838E00A15A31 /* socket.cpp */; };
+		149B9F832193875600A15A31 /* sound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E312193838D00A15A31 /* sound.cpp */; };
+		149B9F852193875600A15A31 /* stc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E472193838F00A15A31 /* stc.cpp */; };
+		149B9F862193875600A15A31 /* std.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E682193839100A15A31 /* std.cpp */; };
+		149B9F872193875600A15A31 /* stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E442193838F00A15A31 /* stream.cpp */; };
+		149B9F882193875600A15A31 /* taskbaricon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E342193838E00A15A31 /* taskbaricon.cpp */; };
+		149B9F892193875600A15A31 /* textstream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E222193838D00A15A31 /* textstream.cpp */; };
+		149B9F8A2193875600A15A31 /* treectrl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E182193838C00A15A31 /* treectrl.cpp */; };
+		149B9F8B2193875600A15A31 /* wrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149B9E462193838F00A15A31 /* wrapper.cpp */; };
+		149B9F8D21938C3E00A15A31 /* libexpat.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F8C21938C3E00A15A31 /* libexpat.tbd */; };
+		149B9F9F21938D0F00A15A31 /* libwx_osx_cocoau_adv-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F8E21938D0E00A15A31 /* libwx_osx_cocoau_adv-3.0.0.4.0.dylib */; };
+		149B9FA021938D0F00A15A31 /* libwx_osx_cocoau_media-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F8F21938D0E00A15A31 /* libwx_osx_cocoau_media-3.0.0.4.0.dylib */; };
+		149B9FA121938D0F00A15A31 /* libwx_osx_cocoau_qa-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9021938D0E00A15A31 /* libwx_osx_cocoau_qa-3.0.0.4.0.dylib */; };
+		149B9FA221938D0F00A15A31 /* libwx_baseu-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9121938D0F00A15A31 /* libwx_baseu-3.0.0.4.0.dylib */; };
+		149B9FA321938D0F00A15A31 /* libwx_baseu_xml-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9221938D0F00A15A31 /* libwx_baseu_xml-3.0.0.4.0.dylib */; };
+		149B9FA421938D0F00A15A31 /* libwx_osx_cocoau_ribbon-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9321938D0F00A15A31 /* libwx_osx_cocoau_ribbon-3.0.0.4.0.dylib */; };
+		149B9FA521938D0F00A15A31 /* libwx_osx_cocoau_xrc-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9421938D0F00A15A31 /* libwx_osx_cocoau_xrc-3.0.0.4.0.dylib */; };
+		149B9FA621938D0F00A15A31 /* libwx_osx_cocoau_propgrid-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9521938D0F00A15A31 /* libwx_osx_cocoau_propgrid-3.0.0.4.0.dylib */; };
+		149B9FA721938D0F00A15A31 /* libwx_osx_cocoau_html-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9621938D0F00A15A31 /* libwx_osx_cocoau_html-3.0.0.4.0.dylib */; };
+		149B9FA821938D0F00A15A31 /* libwx_osx_cocoau_stc-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9721938D0F00A15A31 /* libwx_osx_cocoau_stc-3.0.0.4.0.dylib */; };
+		149B9FA921938D0F00A15A31 /* libwx_osx_cocoau_core-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9821938D0F00A15A31 /* libwx_osx_cocoau_core-3.0.0.4.0.dylib */; };
+		149B9FAA21938D0F00A15A31 /* libwx_osx_cocoau_gl-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9921938D0F00A15A31 /* libwx_osx_cocoau_gl-3.0.0.4.0.dylib */; };
+		149B9FAB21938D0F00A15A31 /* libwx_osx_cocoau_aui-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9A21938D0F00A15A31 /* libwx_osx_cocoau_aui-3.0.0.4.0.dylib */; };
+		149B9FAC21938D0F00A15A31 /* libwx_baseu_net-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9B21938D0F00A15A31 /* libwx_baseu_net-3.0.0.4.0.dylib */; };
+		149B9FAD21938D0F00A15A31 /* libwx_osx_cocoau_richtext-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9C21938D0F00A15A31 /* libwx_osx_cocoau_richtext-3.0.0.4.0.dylib */; };
+		149B9FAE21938D0F00A15A31 /* libwx_osx_cocoau_webview-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9D21938D0F00A15A31 /* libwx_osx_cocoau_webview-3.0.0.4.0.dylib */; };
+		149B9FAF21938D0F00A15A31 /* libjpeg.8.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9E21938D0F00A15A31 /* libjpeg.8.dylib */; };
+		149B9FB121938F4800A15A31 /* libpng16.16.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9FB021938F4800A15A31 /* libpng16.16.dylib */; };
+		149B9FB32193901400A15A31 /* libtiff.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9FB22193901400A15A31 /* libtiff.5.dylib */; };
+		149B9FB62193919900A15A31 /* wxObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149B9FB52193919900A15A31 /* wxObject.swift */; };
+		149B9FB82193924800A15A31 /* wx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149B9FB72193924800A15A31 /* wx.swift */; };
+		149B9FBA21939A0300A15A31 /* wxString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149B9FB921939A0300A15A31 /* wxString.swift */; };
+		14EFAE2D2193BB6600105BAB /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EFAE2C2193BB6500105BAB /* IOKit.framework */; };
+		14EFAE2F2193BB7500105BAB /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EFAE2E2193BB7500105BAB /* Carbon.framework */; };
+		14EFAE312193BB8600105BAB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EFAE302193BB8600105BAB /* Cocoa.framework */; };
+		14EFAE332193BB9900105BAB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EFAE322193BB9900105BAB /* AudioToolbox.framework */; };
+		14EFAE352193BBBA00105BAB /* libSystem.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EFAE342193BBB900105BAB /* libSystem.tbd */; };
+		14EFAE372193BBC200105BAB /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EFAE362193BBC200105BAB /* OpenGL.framework */; };
+		14EFAE382193C06B00105BAB /* libwx_baseu-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9121938D0F00A15A31 /* libwx_baseu-3.0.0.4.0.dylib */; };
+		14EFAE392193C0AD00105BAB /* libwx_baseu_net-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9B21938D0F00A15A31 /* libwx_baseu_net-3.0.0.4.0.dylib */; };
+		14EFAE3A2193C0B100105BAB /* libwx_baseu_xml-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9221938D0F00A15A31 /* libwx_baseu_xml-3.0.0.4.0.dylib */; };
+		14EFAE3B2193C0BC00105BAB /* libwx_osx_cocoau_adv-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F8E21938D0E00A15A31 /* libwx_osx_cocoau_adv-3.0.0.4.0.dylib */; };
+		14EFAE3C2193C0BC00105BAB /* libwx_osx_cocoau_aui-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9A21938D0F00A15A31 /* libwx_osx_cocoau_aui-3.0.0.4.0.dylib */; };
+		14EFAE3D2193C0BC00105BAB /* libwx_osx_cocoau_core-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9821938D0F00A15A31 /* libwx_osx_cocoau_core-3.0.0.4.0.dylib */; };
+		14EFAE3E2193C0BC00105BAB /* libwx_osx_cocoau_gl-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9921938D0F00A15A31 /* libwx_osx_cocoau_gl-3.0.0.4.0.dylib */; };
+		14EFAE3F2193C0BC00105BAB /* libwx_osx_cocoau_html-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9621938D0F00A15A31 /* libwx_osx_cocoau_html-3.0.0.4.0.dylib */; };
+		14EFAE402193C0BC00105BAB /* libwx_osx_cocoau_media-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F8F21938D0E00A15A31 /* libwx_osx_cocoau_media-3.0.0.4.0.dylib */; };
+		14EFAE412193C0BC00105BAB /* libwx_osx_cocoau_propgrid-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9521938D0F00A15A31 /* libwx_osx_cocoau_propgrid-3.0.0.4.0.dylib */; };
+		14EFAE422193C0BC00105BAB /* libwx_osx_cocoau_qa-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9021938D0E00A15A31 /* libwx_osx_cocoau_qa-3.0.0.4.0.dylib */; };
+		14EFAE432193C0BC00105BAB /* libwx_osx_cocoau_ribbon-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9321938D0F00A15A31 /* libwx_osx_cocoau_ribbon-3.0.0.4.0.dylib */; };
+		14EFAE442193C0BC00105BAB /* libwx_osx_cocoau_richtext-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9C21938D0F00A15A31 /* libwx_osx_cocoau_richtext-3.0.0.4.0.dylib */; };
+		14EFAE452193C0BC00105BAB /* libwx_osx_cocoau_stc-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9721938D0F00A15A31 /* libwx_osx_cocoau_stc-3.0.0.4.0.dylib */; };
+		14EFAE462193C0BC00105BAB /* libwx_osx_cocoau_webview-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9D21938D0F00A15A31 /* libwx_osx_cocoau_webview-3.0.0.4.0.dylib */; };
+		14EFAE472193C0BC00105BAB /* libwx_osx_cocoau_xrc-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9421938D0F00A15A31 /* libwx_osx_cocoau_xrc-3.0.0.4.0.dylib */; };
+		14EFAE482193C0BC00105BAB /* libexpat.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F8C21938C3E00A15A31 /* libexpat.tbd */; };
+		14EFAE492193C0C100105BAB /* libtiff.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9FB22193901400A15A31 /* libtiff.5.dylib */; };
+		14EFAE4A2193C0C100105BAB /* libpng16.16.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9FB021938F4800A15A31 /* libpng16.16.dylib */; };
+		14EFAE4B2193C0C100105BAB /* libjpeg.8.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9E21938D0F00A15A31 /* libjpeg.8.dylib */; };
+		14EFAE4C2193C0CA00105BAB /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EFAE362193BBC200105BAB /* OpenGL.framework */; };
+		14EFAE4D2193C0CE00105BAB /* libSystem.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EFAE342193BBB900105BAB /* libSystem.tbd */; };
+		14EFAE4E2193C0D100105BAB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EFAE322193BB9900105BAB /* AudioToolbox.framework */; };
+		14EFAE4F2193C0D400105BAB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EFAE302193BB8600105BAB /* Cocoa.framework */; };
+		14EFAE502193C0D700105BAB /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EFAE2E2193BB7500105BAB /* Carbon.framework */; };
+		14EFAE512193C0DA00105BAB /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EFAE2C2193BB6500105BAB /* IOKit.framework */; };
+		14EFAE532193C1B300105BAB /* wxCharBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EFAE522193C1B300105BAB /* wxCharBuffer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		149B9EFB2193872700A15A31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 149B9DBA219381DF00A15A31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 149B9EF42193869C00A15A31;
+			remoteInfo = wxc;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		149B9DC3219381DF00A15A31 /* wxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = wxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		149B9DD32193835B00A15A31 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		149B9DD52193836900A15A31 /* stc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stc.h; sourceTree = "<group>"; };
+		149B9DD62193836A00A15A31 /* textstream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = textstream.h; sourceTree = "<group>"; };
+		149B9DD72193836A00A15A31 /* eljgrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eljgrid.h; sourceTree = "<group>"; };
+		149B9DD82193836A00A15A31 /* previewframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = previewframe.h; sourceTree = "<group>"; };
+		149B9DD92193836A00A15A31 /* sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sound.h; sourceTree = "<group>"; };
+		149B9DDA2193836A00A15A31 /* wrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wrapper.h; sourceTree = "<group>"; };
+		149B9DDB2193836A00A15A31 /* wxc_glue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wxc_glue.h; sourceTree = "<group>"; };
+		149B9DDC2193836A00A15A31 /* hyperlinkctrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hyperlinkctrl.h; sourceTree = "<group>"; };
+		149B9DDD2193836A00A15A31 /* managed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = managed.h; sourceTree = "<group>"; };
+		149B9DDE2193836A00A15A31 /* wxc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wxc.h; sourceTree = "<group>"; };
+		149B9DDF2193836A00A15A31 /* wxc_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wxc_types.h; sourceTree = "<group>"; };
+		149B9DE02193836A00A15A31 /* graphicscontext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = graphicscontext.h; sourceTree = "<group>"; };
+		149B9DE12193836A00A15A31 /* pickerctrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pickerctrl.h; sourceTree = "<group>"; };
+		149B9DE22193836A00A15A31 /* mediactrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mediactrl.h; sourceTree = "<group>"; };
+		149B9DE32193836A00A15A31 /* glcanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glcanvas.h; sourceTree = "<group>"; };
+		149B9DE42193836A00A15A31 /* ewxw_def.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ewxw_def.h; sourceTree = "<group>"; };
+		149B9DE52193836A00A15A31 /* stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stream.h; sourceTree = "<group>"; };
+		149B9DE62193836B00A15A31 /* printout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = printout.h; sourceTree = "<group>"; };
+		149B9DE72193836B00A15A31 /* dragimage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dragimage.h; sourceTree = "<group>"; };
+		149B9DE82193836B00A15A31 /* stc_gen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stc_gen.h; sourceTree = "<group>"; };
+		149B9DFD2193838A00A15A31 /* eljpalette.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljpalette.cpp; sourceTree = "<group>"; };
+		149B9DFE2193838B00A15A31 /* eljrc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljrc.cpp; sourceTree = "<group>"; };
+		149B9DFF2193838B00A15A31 /* eljcolour.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljcolour.cpp; sourceTree = "<group>"; };
+		149B9E002193838B00A15A31 /* eljspinctrl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljspinctrl.cpp; sourceTree = "<group>"; };
+		149B9E012193838B00A15A31 /* eljcontrol.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljcontrol.cpp; sourceTree = "<group>"; };
+		149B9E022193838B00A15A31 /* eljcheckbox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljcheckbox.cpp; sourceTree = "<group>"; };
+		149B9E032193838B00A15A31 /* eljconfigbase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljconfigbase.cpp; sourceTree = "<group>"; };
+		149B9E042193838B00A15A31 /* eljwindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljwindow.cpp; sourceTree = "<group>"; };
+		149B9E052193838B00A15A31 /* eljcursor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljcursor.cpp; sourceTree = "<group>"; };
+		149B9E062193838B00A15A31 /* eljframe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljframe.cpp; sourceTree = "<group>"; };
+		149B9E072193838B00A15A31 /* eljhelpcontroller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljhelpcontroller.cpp; sourceTree = "<group>"; };
+		149B9E082193838B00A15A31 /* eljchoice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljchoice.cpp; sourceTree = "<group>"; };
+		149B9E092193838B00A15A31 /* eljbitmap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljbitmap.cpp; sourceTree = "<group>"; };
+		149B9E0A2193838B00A15A31 /* eljdc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljdc.cpp; sourceTree = "<group>"; };
+		149B9E0B2193838B00A15A31 /* eljlayoutconstraints.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljlayoutconstraints.cpp; sourceTree = "<group>"; };
+		149B9E0C2193838B00A15A31 /* eljclipboard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljclipboard.cpp; sourceTree = "<group>"; };
+		149B9E0D2193838B00A15A31 /* eljimage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljimage.cpp; sourceTree = "<group>"; };
+		149B9E0E2193838B00A15A31 /* eljminiframe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljminiframe.cpp; sourceTree = "<group>"; };
+		149B9E0F2193838B00A15A31 /* eljcaret.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljcaret.cpp; sourceTree = "<group>"; };
+		149B9E102193838C00A15A31 /* eljlistctrl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljlistctrl.cpp; sourceTree = "<group>"; };
+		149B9E112193838C00A15A31 /* eljtoolbar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljtoolbar.cpp; sourceTree = "<group>"; };
+		149B9E122193838C00A15A31 /* eljfilehist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljfilehist.cpp; sourceTree = "<group>"; };
+		149B9E132193838C00A15A31 /* stc_gen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stc_gen.cpp; sourceTree = "<group>"; };
+		149B9E142193838C00A15A31 /* eljvalidator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljvalidator.cpp; sourceTree = "<group>"; };
+		149B9E152193838C00A15A31 /* glcanvas.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glcanvas.cpp; sourceTree = "<group>"; };
+		149B9E162193838C00A15A31 /* eljgauge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljgauge.cpp; sourceTree = "<group>"; };
+		149B9E172193838C00A15A31 /* eljcombobox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljcombobox.cpp; sourceTree = "<group>"; };
+		149B9E182193838C00A15A31 /* treectrl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = treectrl.cpp; sourceTree = "<group>"; };
+		149B9E192193838C00A15A31 /* eljprinting.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljprinting.cpp; sourceTree = "<group>"; };
+		149B9E1A2193838C00A15A31 /* eljstatictext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljstatictext.cpp; sourceTree = "<group>"; };
+		149B9E1B2193838C00A15A31 /* eljpanel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljpanel.cpp; sourceTree = "<group>"; };
+		149B9E1C2193838C00A15A31 /* eljstaticbox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljstaticbox.cpp; sourceTree = "<group>"; };
+		149B9E1D2193838C00A15A31 /* eljjoystick.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljjoystick.cpp; sourceTree = "<group>"; };
+		149B9E1E2193838C00A15A31 /* eljthread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljthread.cpp; sourceTree = "<group>"; };
+		149B9E1F2193838C00A15A31 /* eljfiledialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljfiledialog.cpp; sourceTree = "<group>"; };
+		149B9E202193838C00A15A31 /* eljwizard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljwizard.cpp; sourceTree = "<group>"; };
+		149B9E212193838D00A15A31 /* eljbusyinfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljbusyinfo.cpp; sourceTree = "<group>"; };
+		149B9E222193838D00A15A31 /* textstream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = textstream.cpp; sourceTree = "<group>"; };
+		149B9E232193838D00A15A31 /* hyperlinkctrl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hyperlinkctrl.cpp; sourceTree = "<group>"; };
+		149B9E242193838D00A15A31 /* eljcalendarctrl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljcalendarctrl.cpp; sourceTree = "<group>"; };
+		149B9E252193838D00A15A31 /* eljdatetime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljdatetime.cpp; sourceTree = "<group>"; };
+		149B9E262193838D00A15A31 /* eljmessagedialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljmessagedialog.cpp; sourceTree = "<group>"; };
+		149B9E272193838D00A15A31 /* eljimagelist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljimagelist.cpp; sourceTree = "<group>"; };
+		149B9E282193838D00A15A31 /* eljipc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljipc.cpp; sourceTree = "<group>"; };
+		149B9E292193838D00A15A31 /* eljctxhelp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljctxhelp.cpp; sourceTree = "<group>"; };
+		149B9E2A2193838D00A15A31 /* sckaddr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sckaddr.cpp; sourceTree = "<group>"; };
+		149B9E2B2193838D00A15A31 /* eljgrid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljgrid.cpp; sourceTree = "<group>"; };
+		149B9E2C2193838D00A15A31 /* eljtextctrl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljtextctrl.cpp; sourceTree = "<group>"; };
+		149B9E2D2193838D00A15A31 /* extra.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = extra.cpp; sourceTree = "<group>"; };
+		149B9E2E2193838D00A15A31 /* pickerctrl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pickerctrl.cpp; sourceTree = "<group>"; };
+		149B9E2F2193838D00A15A31 /* defs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = defs.cpp; sourceTree = "<group>"; };
+		149B9E302193838D00A15A31 /* eljfontdlg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljfontdlg.cpp; sourceTree = "<group>"; };
+		149B9E312193838D00A15A31 /* sound.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sound.cpp; sourceTree = "<group>"; };
+		149B9E322193838E00A15A31 /* eljmime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljmime.cpp; sourceTree = "<group>"; };
+		149B9E332193838E00A15A31 /* eljtimer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljtimer.cpp; sourceTree = "<group>"; };
+		149B9E342193838E00A15A31 /* taskbaricon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = taskbaricon.cpp; sourceTree = "<group>"; };
+		149B9E352193838E00A15A31 /* eljsizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljsizer.cpp; sourceTree = "<group>"; };
+		149B9E362193838E00A15A31 /* eljicnbndl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljicnbndl.cpp; sourceTree = "<group>"; };
+		149B9E372193838E00A15A31 /* dragimage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dragimage.cpp; sourceTree = "<group>"; };
+		149B9E382193838E00A15A31 /* eljcolourdlg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljcolourdlg.cpp; sourceTree = "<group>"; };
+		149B9E392193838E00A15A31 /* eljbrush.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljbrush.cpp; sourceTree = "<group>"; };
+		149B9E3A2193838E00A15A31 /* socket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = socket.cpp; sourceTree = "<group>"; };
+		149B9E3B2193838E00A15A31 /* eljdialup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljdialup.cpp; sourceTree = "<group>"; };
+		149B9E3C2193838E00A15A31 /* eljregioniter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljregioniter.cpp; sourceTree = "<group>"; };
+		149B9E3D2193838E00A15A31 /* eljgizmos.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljgizmos.cpp; sourceTree = "<group>"; };
+		149B9E3E2193838E00A15A31 /* mediactrl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mediactrl.cpp; sourceTree = "<group>"; };
+		149B9E3F2193838E00A15A31 /* eljplot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljplot.cpp; sourceTree = "<group>"; };
+		149B9E402193838E00A15A31 /* eljdnd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljdnd.cpp; sourceTree = "<group>"; };
+		149B9E412193838F00A15A31 /* eljmenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljmenu.cpp; sourceTree = "<group>"; };
+		149B9E422193838F00A15A31 /* eljmenubar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljmenubar.cpp; sourceTree = "<group>"; };
+		149B9E432193838F00A15A31 /* eljfindrepldlg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljfindrepldlg.cpp; sourceTree = "<group>"; };
+		149B9E442193838F00A15A31 /* stream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stream.cpp; sourceTree = "<group>"; };
+		149B9E452193838F00A15A31 /* eljpen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljpen.cpp; sourceTree = "<group>"; };
+		149B9E462193838F00A15A31 /* wrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wrapper.cpp; sourceTree = "<group>"; };
+		149B9E472193838F00A15A31 /* stc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stc.cpp; sourceTree = "<group>"; };
+		149B9E482193838F00A15A31 /* eljsystemsettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljsystemsettings.cpp; sourceTree = "<group>"; };
+		149B9E492193838F00A15A31 /* eljartprov.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljartprov.cpp; sourceTree = "<group>"; };
+		149B9E4A2193838F00A15A31 /* eljprintdlg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljprintdlg.cpp; sourceTree = "<group>"; };
+		149B9E4B2193838F00A15A31 /* eljlog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljlog.cpp; sourceTree = "<group>"; };
+		149B9E4C2193838F00A15A31 /* eljlistbox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljlistbox.cpp; sourceTree = "<group>"; };
+		149B9E4D2193838F00A15A31 /* eljaccelerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljaccelerator.cpp; sourceTree = "<group>"; };
+		149B9E4E2193839000A15A31 /* eljsplitterwindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljsplitterwindow.cpp; sourceTree = "<group>"; };
+		149B9E4F2193839000A15A31 /* eljtipwnd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljtipwnd.cpp; sourceTree = "<group>"; };
+		149B9E502193839000A15A31 /* eljfont.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljfont.cpp; sourceTree = "<group>"; };
+		149B9E512193839000A15A31 /* eljdrawing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljdrawing.cpp; sourceTree = "<group>"; };
+		149B9E522193839000A15A31 /* eljsingleinst.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljsingleinst.cpp; sourceTree = "<group>"; };
+		149B9E532193839000A15A31 /* eljstaticline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljstaticline.cpp; sourceTree = "<group>"; };
+		149B9E542193839000A15A31 /* eljlocale.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljlocale.cpp; sourceTree = "<group>"; };
+		149B9E552193839000A15A31 /* eljchecklistbox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljchecklistbox.cpp; sourceTree = "<group>"; };
+		149B9E562193839000A15A31 /* eljbutton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljbutton.cpp; sourceTree = "<group>"; };
+		149B9E572193839000A15A31 /* apppath.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = apppath.cpp; sourceTree = "<group>"; };
+		149B9E582193839000A15A31 /* eljcommand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljcommand.cpp; sourceTree = "<group>"; };
+		149B9E592193839000A15A31 /* image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = image.cpp; sourceTree = "<group>"; };
+		149B9E5A2193839000A15A31 /* eljnotebook.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljnotebook.cpp; sourceTree = "<group>"; };
+		149B9E5B2193839100A15A31 /* eljstatusbar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljstatusbar.cpp; sourceTree = "<group>"; };
+		149B9E5C2193839100A15A31 /* ewxw_main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ewxw_main.cpp; sourceTree = "<group>"; };
+		149B9E5D2193839100A15A31 /* eljmask.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljmask.cpp; sourceTree = "<group>"; };
+		149B9E5E2193839100A15A31 /* eljscrolledwindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljscrolledwindow.cpp; sourceTree = "<group>"; };
+		149B9E5F2193839100A15A31 /* eljslider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljslider.cpp; sourceTree = "<group>"; };
+		149B9E602193839100A15A31 /* previewframe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = previewframe.cpp; sourceTree = "<group>"; };
+		149B9E612193839100A15A31 /* eljtglbtn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljtglbtn.cpp; sourceTree = "<group>"; };
+		149B9E622193839100A15A31 /* eljprocess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljprocess.cpp; sourceTree = "<group>"; };
+		149B9E632193839100A15A31 /* eljscrollbar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljscrollbar.cpp; sourceTree = "<group>"; };
+		149B9E642193839100A15A31 /* eljicon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljicon.cpp; sourceTree = "<group>"; };
+		149B9E652193839100A15A31 /* eljdirdlg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljdirdlg.cpp; sourceTree = "<group>"; };
+		149B9E662193839100A15A31 /* eljevent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljevent.cpp; sourceTree = "<group>"; };
+		149B9E672193839100A15A31 /* eljfontdata.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljfontdata.cpp; sourceTree = "<group>"; };
+		149B9E682193839100A15A31 /* std.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = std.cpp; sourceTree = "<group>"; };
+		149B9E692193839100A15A31 /* eljregion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljregion.cpp; sourceTree = "<group>"; };
+		149B9E6A2193839100A15A31 /* eljradiobox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljradiobox.cpp; sourceTree = "<group>"; };
+		149B9E6B2193839100A15A31 /* eljsplash.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljsplash.cpp; sourceTree = "<group>"; };
+		149B9E6C2193839100A15A31 /* eljdataformat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljdataformat.cpp; sourceTree = "<group>"; };
+		149B9E6D2193839200A15A31 /* eljdialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljdialog.cpp; sourceTree = "<group>"; };
+		149B9E6E2193839200A15A31 /* eljradiobutton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljradiobutton.cpp; sourceTree = "<group>"; };
+		149B9E6F2193839200A15A31 /* eljcoldata.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljcoldata.cpp; sourceTree = "<group>"; };
+		149B9E702193839200A15A31 /* eljdcsvg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljdcsvg.cpp; sourceTree = "<group>"; };
+		149B9E712193839200A15A31 /* eljmdi.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljmdi.cpp; sourceTree = "<group>"; };
+		149B9E722193839200A15A31 /* eljsash.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljsash.cpp; sourceTree = "<group>"; };
+		149B9E732193839200A15A31 /* managed.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = managed.cpp; sourceTree = "<group>"; };
+		149B9E742193839200A15A31 /* eljaui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eljaui.cpp; sourceTree = "<group>"; };
+		149B9E752193839200A15A31 /* graphicscontext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = graphicscontext.cpp; sourceTree = "<group>"; };
+		149B9E762193839200A15A31 /* printout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = printout.cpp; sourceTree = "<group>"; };
+		149B9EF52193869C00A15A31 /* libwxc.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libwxc.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		149B9F8C21938C3E00A15A31 /* libexpat.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libexpat.tbd; path = usr/lib/libexpat.tbd; sourceTree = SDKROOT; };
+		149B9F8E21938D0E00A15A31 /* libwx_osx_cocoau_adv-3.0.0.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libwx_osx_cocoau_adv-3.0.0.4.0.dylib"; path = "../../../../usr/local/Cellar/wxmac/3.0.4_1/lib/libwx_osx_cocoau_adv-3.0.0.4.0.dylib"; sourceTree = "<group>"; };
+		149B9F8F21938D0E00A15A31 /* libwx_osx_cocoau_media-3.0.0.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libwx_osx_cocoau_media-3.0.0.4.0.dylib"; path = "../../../../usr/local/Cellar/wxmac/3.0.4_1/lib/libwx_osx_cocoau_media-3.0.0.4.0.dylib"; sourceTree = "<group>"; };
+		149B9F9021938D0E00A15A31 /* libwx_osx_cocoau_qa-3.0.0.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libwx_osx_cocoau_qa-3.0.0.4.0.dylib"; path = "../../../../usr/local/Cellar/wxmac/3.0.4_1/lib/libwx_osx_cocoau_qa-3.0.0.4.0.dylib"; sourceTree = "<group>"; };
+		149B9F9121938D0F00A15A31 /* libwx_baseu-3.0.0.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libwx_baseu-3.0.0.4.0.dylib"; path = "../../../../usr/local/Cellar/wxmac/3.0.4_1/lib/libwx_baseu-3.0.0.4.0.dylib"; sourceTree = "<group>"; };
+		149B9F9221938D0F00A15A31 /* libwx_baseu_xml-3.0.0.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libwx_baseu_xml-3.0.0.4.0.dylib"; path = "../../../../usr/local/Cellar/wxmac/3.0.4_1/lib/libwx_baseu_xml-3.0.0.4.0.dylib"; sourceTree = "<group>"; };
+		149B9F9321938D0F00A15A31 /* libwx_osx_cocoau_ribbon-3.0.0.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libwx_osx_cocoau_ribbon-3.0.0.4.0.dylib"; path = "../../../../usr/local/Cellar/wxmac/3.0.4_1/lib/libwx_osx_cocoau_ribbon-3.0.0.4.0.dylib"; sourceTree = "<group>"; };
+		149B9F9421938D0F00A15A31 /* libwx_osx_cocoau_xrc-3.0.0.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libwx_osx_cocoau_xrc-3.0.0.4.0.dylib"; path = "../../../../usr/local/Cellar/wxmac/3.0.4_1/lib/libwx_osx_cocoau_xrc-3.0.0.4.0.dylib"; sourceTree = "<group>"; };
+		149B9F9521938D0F00A15A31 /* libwx_osx_cocoau_propgrid-3.0.0.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libwx_osx_cocoau_propgrid-3.0.0.4.0.dylib"; path = "../../../../usr/local/Cellar/wxmac/3.0.4_1/lib/libwx_osx_cocoau_propgrid-3.0.0.4.0.dylib"; sourceTree = "<group>"; };
+		149B9F9621938D0F00A15A31 /* libwx_osx_cocoau_html-3.0.0.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libwx_osx_cocoau_html-3.0.0.4.0.dylib"; path = "../../../../usr/local/Cellar/wxmac/3.0.4_1/lib/libwx_osx_cocoau_html-3.0.0.4.0.dylib"; sourceTree = "<group>"; };
+		149B9F9721938D0F00A15A31 /* libwx_osx_cocoau_stc-3.0.0.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libwx_osx_cocoau_stc-3.0.0.4.0.dylib"; path = "../../../../usr/local/Cellar/wxmac/3.0.4_1/lib/libwx_osx_cocoau_stc-3.0.0.4.0.dylib"; sourceTree = "<group>"; };
+		149B9F9821938D0F00A15A31 /* libwx_osx_cocoau_core-3.0.0.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libwx_osx_cocoau_core-3.0.0.4.0.dylib"; path = "../../../../usr/local/Cellar/wxmac/3.0.4_1/lib/libwx_osx_cocoau_core-3.0.0.4.0.dylib"; sourceTree = "<group>"; };
+		149B9F9921938D0F00A15A31 /* libwx_osx_cocoau_gl-3.0.0.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libwx_osx_cocoau_gl-3.0.0.4.0.dylib"; path = "../../../../usr/local/Cellar/wxmac/3.0.4_1/lib/libwx_osx_cocoau_gl-3.0.0.4.0.dylib"; sourceTree = "<group>"; };
+		149B9F9A21938D0F00A15A31 /* libwx_osx_cocoau_aui-3.0.0.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libwx_osx_cocoau_aui-3.0.0.4.0.dylib"; path = "../../../../usr/local/Cellar/wxmac/3.0.4_1/lib/libwx_osx_cocoau_aui-3.0.0.4.0.dylib"; sourceTree = "<group>"; };
+		149B9F9B21938D0F00A15A31 /* libwx_baseu_net-3.0.0.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libwx_baseu_net-3.0.0.4.0.dylib"; path = "../../../../usr/local/Cellar/wxmac/3.0.4_1/lib/libwx_baseu_net-3.0.0.4.0.dylib"; sourceTree = "<group>"; };
+		149B9F9C21938D0F00A15A31 /* libwx_osx_cocoau_richtext-3.0.0.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libwx_osx_cocoau_richtext-3.0.0.4.0.dylib"; path = "../../../../usr/local/Cellar/wxmac/3.0.4_1/lib/libwx_osx_cocoau_richtext-3.0.0.4.0.dylib"; sourceTree = "<group>"; };
+		149B9F9D21938D0F00A15A31 /* libwx_osx_cocoau_webview-3.0.0.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libwx_osx_cocoau_webview-3.0.0.4.0.dylib"; path = "../../../../usr/local/Cellar/wxmac/3.0.4_1/lib/libwx_osx_cocoau_webview-3.0.0.4.0.dylib"; sourceTree = "<group>"; };
+		149B9F9E21938D0F00A15A31 /* libjpeg.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjpeg.8.dylib; path = ../../../../usr/local/Cellar/jpeg/8d/lib/libjpeg.8.dylib; sourceTree = "<group>"; };
+		149B9FB021938F4800A15A31 /* libpng16.16.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng16.16.dylib; path = ../../../../usr/local/Cellar/libpng/1.6.35/lib/libpng16.16.dylib; sourceTree = "<group>"; };
+		149B9FB22193901400A15A31 /* libtiff.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libtiff.5.dylib; path = ../../../../usr/local/Cellar/libtiff/4.0.9_4/lib/libtiff.5.dylib; sourceTree = "<group>"; };
+		149B9FB52193919900A15A31 /* wxObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxObject.swift; sourceTree = "<group>"; };
+		149B9FB72193924800A15A31 /* wx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wx.swift; sourceTree = "<group>"; };
+		149B9FB921939A0300A15A31 /* wxString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxString.swift; sourceTree = "<group>"; };
+		149B9FBC2193B4C500A15A31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14EFAE2C2193BB6500105BAB /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		14EFAE2E2193BB7500105BAB /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		14EFAE302193BB8600105BAB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		14EFAE322193BB9900105BAB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		14EFAE342193BBB900105BAB /* libSystem.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.tbd; path = usr/lib/libSystem.tbd; sourceTree = SDKROOT; };
+		14EFAE362193BBC200105BAB /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		14EFAE522193C1B300105BAB /* wxCharBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxCharBuffer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		149B9DC0219381DF00A15A31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				149B9EFA2193872300A15A31 /* libwxc.dylib in Frameworks */,
+				149B9FA221938D0F00A15A31 /* libwx_baseu-3.0.0.4.0.dylib in Frameworks */,
+				149B9FAC21938D0F00A15A31 /* libwx_baseu_net-3.0.0.4.0.dylib in Frameworks */,
+				149B9FA321938D0F00A15A31 /* libwx_baseu_xml-3.0.0.4.0.dylib in Frameworks */,
+				149B9F8D21938C3E00A15A31 /* libexpat.tbd in Frameworks */,
+				149B9FAF21938D0F00A15A31 /* libjpeg.8.dylib in Frameworks */,
+				149B9F9F21938D0F00A15A31 /* libwx_osx_cocoau_adv-3.0.0.4.0.dylib in Frameworks */,
+				149B9FAB21938D0F00A15A31 /* libwx_osx_cocoau_aui-3.0.0.4.0.dylib in Frameworks */,
+				149B9FA921938D0F00A15A31 /* libwx_osx_cocoau_core-3.0.0.4.0.dylib in Frameworks */,
+				149B9FAA21938D0F00A15A31 /* libwx_osx_cocoau_gl-3.0.0.4.0.dylib in Frameworks */,
+				149B9FA721938D0F00A15A31 /* libwx_osx_cocoau_html-3.0.0.4.0.dylib in Frameworks */,
+				149B9FA021938D0F00A15A31 /* libwx_osx_cocoau_media-3.0.0.4.0.dylib in Frameworks */,
+				149B9FA621938D0F00A15A31 /* libwx_osx_cocoau_propgrid-3.0.0.4.0.dylib in Frameworks */,
+				149B9FA421938D0F00A15A31 /* libwx_osx_cocoau_ribbon-3.0.0.4.0.dylib in Frameworks */,
+				149B9FAD21938D0F00A15A31 /* libwx_osx_cocoau_richtext-3.0.0.4.0.dylib in Frameworks */,
+				149B9FA821938D0F00A15A31 /* libwx_osx_cocoau_stc-3.0.0.4.0.dylib in Frameworks */,
+				149B9FAE21938D0F00A15A31 /* libwx_osx_cocoau_webview-3.0.0.4.0.dylib in Frameworks */,
+				149B9FA521938D0F00A15A31 /* libwx_osx_cocoau_xrc-3.0.0.4.0.dylib in Frameworks */,
+				149B9FA121938D0F00A15A31 /* libwx_osx_cocoau_qa-3.0.0.4.0.dylib in Frameworks */,
+				149B9FB121938F4800A15A31 /* libpng16.16.dylib in Frameworks */,
+				149B9FB32193901400A15A31 /* libtiff.5.dylib in Frameworks */,
+				14EFAE2D2193BB6600105BAB /* IOKit.framework in Frameworks */,
+				14EFAE2F2193BB7500105BAB /* Carbon.framework in Frameworks */,
+				14EFAE312193BB8600105BAB /* Cocoa.framework in Frameworks */,
+				14EFAE332193BB9900105BAB /* AudioToolbox.framework in Frameworks */,
+				14EFAE352193BBBA00105BAB /* libSystem.tbd in Frameworks */,
+				14EFAE372193BBC200105BAB /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		149B9EF32193869C00A15A31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14EFAE4B2193C0C100105BAB /* libjpeg.8.dylib in Frameworks */,
+				14EFAE4D2193C0CE00105BAB /* libSystem.tbd in Frameworks */,
+				14EFAE3B2193C0BC00105BAB /* libwx_osx_cocoau_adv-3.0.0.4.0.dylib in Frameworks */,
+				14EFAE402193C0BC00105BAB /* libwx_osx_cocoau_media-3.0.0.4.0.dylib in Frameworks */,
+				14EFAE392193C0AD00105BAB /* libwx_baseu_net-3.0.0.4.0.dylib in Frameworks */,
+				14EFAE3C2193C0BC00105BAB /* libwx_osx_cocoau_aui-3.0.0.4.0.dylib in Frameworks */,
+				14EFAE3A2193C0B100105BAB /* libwx_baseu_xml-3.0.0.4.0.dylib in Frameworks */,
+				14EFAE4A2193C0C100105BAB /* libpng16.16.dylib in Frameworks */,
+				14EFAE4F2193C0D400105BAB /* Cocoa.framework in Frameworks */,
+				14EFAE412193C0BC00105BAB /* libwx_osx_cocoau_propgrid-3.0.0.4.0.dylib in Frameworks */,
+				14EFAE472193C0BC00105BAB /* libwx_osx_cocoau_xrc-3.0.0.4.0.dylib in Frameworks */,
+				14EFAE382193C06B00105BAB /* libwx_baseu-3.0.0.4.0.dylib in Frameworks */,
+				14EFAE462193C0BC00105BAB /* libwx_osx_cocoau_webview-3.0.0.4.0.dylib in Frameworks */,
+				14EFAE502193C0D700105BAB /* Carbon.framework in Frameworks */,
+				14EFAE4E2193C0D100105BAB /* AudioToolbox.framework in Frameworks */,
+				14EFAE482193C0BC00105BAB /* libexpat.tbd in Frameworks */,
+				14EFAE492193C0C100105BAB /* libtiff.5.dylib in Frameworks */,
+				14EFAE442193C0BC00105BAB /* libwx_osx_cocoau_richtext-3.0.0.4.0.dylib in Frameworks */,
+				14EFAE3D2193C0BC00105BAB /* libwx_osx_cocoau_core-3.0.0.4.0.dylib in Frameworks */,
+				14EFAE432193C0BC00105BAB /* libwx_osx_cocoau_ribbon-3.0.0.4.0.dylib in Frameworks */,
+				14EFAE3E2193C0BC00105BAB /* libwx_osx_cocoau_gl-3.0.0.4.0.dylib in Frameworks */,
+				14EFAE4C2193C0CA00105BAB /* OpenGL.framework in Frameworks */,
+				14EFAE452193C0BC00105BAB /* libwx_osx_cocoau_stc-3.0.0.4.0.dylib in Frameworks */,
+				14EFAE422193C0BC00105BAB /* libwx_osx_cocoau_qa-3.0.0.4.0.dylib in Frameworks */,
+				14EFAE3F2193C0BC00105BAB /* libwx_osx_cocoau_html-3.0.0.4.0.dylib in Frameworks */,
+				14EFAE512193C0DA00105BAB /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		149B9DB9219381DF00A15A31 = {
+			isa = PBXGroup;
+			children = (
+				149B9FB42193902900A15A31 /* wx */,
+				149B9DCE2193828100A15A31 /* wxc */,
+				149B9DC4219381DF00A15A31 /* Products */,
+				149B9EF92193872300A15A31 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		149B9DC4219381DF00A15A31 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				149B9DC3219381DF00A15A31 /* wxSwift.framework */,
+				149B9EF52193869C00A15A31 /* libwxc.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		149B9DCE2193828100A15A31 /* wxc */ = {
+			isa = PBXGroup;
+			children = (
+				149B9DD1219382B700A15A31 /* src */,
+			);
+			path = wxc;
+			sourceTree = "<group>";
+		};
+		149B9DCF2193828B00A15A31 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				149B9DE72193836B00A15A31 /* dragimage.h */,
+				149B9DD72193836A00A15A31 /* eljgrid.h */,
+				149B9DE42193836A00A15A31 /* ewxw_def.h */,
+				149B9DE32193836A00A15A31 /* glcanvas.h */,
+				149B9DE02193836A00A15A31 /* graphicscontext.h */,
+				149B9DDC2193836A00A15A31 /* hyperlinkctrl.h */,
+				149B9DDD2193836A00A15A31 /* managed.h */,
+				149B9DE22193836A00A15A31 /* mediactrl.h */,
+				149B9DE12193836A00A15A31 /* pickerctrl.h */,
+				149B9DD82193836A00A15A31 /* previewframe.h */,
+				149B9DE62193836B00A15A31 /* printout.h */,
+				149B9DD92193836A00A15A31 /* sound.h */,
+				149B9DE82193836B00A15A31 /* stc_gen.h */,
+				149B9DD52193836900A15A31 /* stc.h */,
+				149B9DE52193836A00A15A31 /* stream.h */,
+				149B9DD62193836A00A15A31 /* textstream.h */,
+				149B9DDA2193836A00A15A31 /* wrapper.h */,
+				149B9DDB2193836A00A15A31 /* wxc_glue.h */,
+				149B9DDF2193836A00A15A31 /* wxc_types.h */,
+				149B9DDE2193836A00A15A31 /* wxc.h */,
+				149B9DD22193830C00A15A31 /* wx */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		149B9DD02193829400A15A31 /* cpp */ = {
+			isa = PBXGroup;
+			children = (
+				149B9E572193839000A15A31 /* apppath.cpp */,
+				149B9E2F2193838D00A15A31 /* defs.cpp */,
+				149B9E372193838E00A15A31 /* dragimage.cpp */,
+				149B9E4D2193838F00A15A31 /* eljaccelerator.cpp */,
+				149B9E492193838F00A15A31 /* eljartprov.cpp */,
+				149B9E742193839200A15A31 /* eljaui.cpp */,
+				149B9E092193838B00A15A31 /* eljbitmap.cpp */,
+				149B9E392193838E00A15A31 /* eljbrush.cpp */,
+				149B9E212193838D00A15A31 /* eljbusyinfo.cpp */,
+				149B9E562193839000A15A31 /* eljbutton.cpp */,
+				149B9E242193838D00A15A31 /* eljcalendarctrl.cpp */,
+				149B9E0F2193838B00A15A31 /* eljcaret.cpp */,
+				149B9E022193838B00A15A31 /* eljcheckbox.cpp */,
+				149B9E552193839000A15A31 /* eljchecklistbox.cpp */,
+				149B9E082193838B00A15A31 /* eljchoice.cpp */,
+				149B9E0C2193838B00A15A31 /* eljclipboard.cpp */,
+				149B9E6F2193839200A15A31 /* eljcoldata.cpp */,
+				149B9DFF2193838B00A15A31 /* eljcolour.cpp */,
+				149B9E382193838E00A15A31 /* eljcolourdlg.cpp */,
+				149B9E172193838C00A15A31 /* eljcombobox.cpp */,
+				149B9E582193839000A15A31 /* eljcommand.cpp */,
+				149B9E032193838B00A15A31 /* eljconfigbase.cpp */,
+				149B9E012193838B00A15A31 /* eljcontrol.cpp */,
+				149B9E292193838D00A15A31 /* eljctxhelp.cpp */,
+				149B9E052193838B00A15A31 /* eljcursor.cpp */,
+				149B9E6C2193839100A15A31 /* eljdataformat.cpp */,
+				149B9E252193838D00A15A31 /* eljdatetime.cpp */,
+				149B9E0A2193838B00A15A31 /* eljdc.cpp */,
+				149B9E702193839200A15A31 /* eljdcsvg.cpp */,
+				149B9E6D2193839200A15A31 /* eljdialog.cpp */,
+				149B9E3B2193838E00A15A31 /* eljdialup.cpp */,
+				149B9E652193839100A15A31 /* eljdirdlg.cpp */,
+				149B9E402193838E00A15A31 /* eljdnd.cpp */,
+				149B9E512193839000A15A31 /* eljdrawing.cpp */,
+				149B9E662193839100A15A31 /* eljevent.cpp */,
+				149B9E1F2193838C00A15A31 /* eljfiledialog.cpp */,
+				149B9E122193838C00A15A31 /* eljfilehist.cpp */,
+				149B9E432193838F00A15A31 /* eljfindrepldlg.cpp */,
+				149B9E502193839000A15A31 /* eljfont.cpp */,
+				149B9E672193839100A15A31 /* eljfontdata.cpp */,
+				149B9E302193838D00A15A31 /* eljfontdlg.cpp */,
+				149B9E062193838B00A15A31 /* eljframe.cpp */,
+				149B9E162193838C00A15A31 /* eljgauge.cpp */,
+				149B9E3D2193838E00A15A31 /* eljgizmos.cpp */,
+				149B9E2B2193838D00A15A31 /* eljgrid.cpp */,
+				149B9E072193838B00A15A31 /* eljhelpcontroller.cpp */,
+				149B9E362193838E00A15A31 /* eljicnbndl.cpp */,
+				149B9E642193839100A15A31 /* eljicon.cpp */,
+				149B9E0D2193838B00A15A31 /* eljimage.cpp */,
+				149B9E272193838D00A15A31 /* eljimagelist.cpp */,
+				149B9E282193838D00A15A31 /* eljipc.cpp */,
+				149B9E1D2193838C00A15A31 /* eljjoystick.cpp */,
+				149B9E0B2193838B00A15A31 /* eljlayoutconstraints.cpp */,
+				149B9E4C2193838F00A15A31 /* eljlistbox.cpp */,
+				149B9E102193838C00A15A31 /* eljlistctrl.cpp */,
+				149B9E542193839000A15A31 /* eljlocale.cpp */,
+				149B9E4B2193838F00A15A31 /* eljlog.cpp */,
+				149B9E5D2193839100A15A31 /* eljmask.cpp */,
+				149B9E712193839200A15A31 /* eljmdi.cpp */,
+				149B9E412193838F00A15A31 /* eljmenu.cpp */,
+				149B9E422193838F00A15A31 /* eljmenubar.cpp */,
+				149B9E262193838D00A15A31 /* eljmessagedialog.cpp */,
+				149B9E322193838E00A15A31 /* eljmime.cpp */,
+				149B9E0E2193838B00A15A31 /* eljminiframe.cpp */,
+				149B9E5A2193839000A15A31 /* eljnotebook.cpp */,
+				149B9DFD2193838A00A15A31 /* eljpalette.cpp */,
+				149B9E1B2193838C00A15A31 /* eljpanel.cpp */,
+				149B9E452193838F00A15A31 /* eljpen.cpp */,
+				149B9E3F2193838E00A15A31 /* eljplot.cpp */,
+				149B9E4A2193838F00A15A31 /* eljprintdlg.cpp */,
+				149B9E192193838C00A15A31 /* eljprinting.cpp */,
+				149B9E622193839100A15A31 /* eljprocess.cpp */,
+				149B9E6A2193839100A15A31 /* eljradiobox.cpp */,
+				149B9E6E2193839200A15A31 /* eljradiobutton.cpp */,
+				149B9DFE2193838B00A15A31 /* eljrc.cpp */,
+				149B9E692193839100A15A31 /* eljregion.cpp */,
+				149B9E3C2193838E00A15A31 /* eljregioniter.cpp */,
+				149B9E722193839200A15A31 /* eljsash.cpp */,
+				149B9E632193839100A15A31 /* eljscrollbar.cpp */,
+				149B9E5E2193839100A15A31 /* eljscrolledwindow.cpp */,
+				149B9E522193839000A15A31 /* eljsingleinst.cpp */,
+				149B9E352193838E00A15A31 /* eljsizer.cpp */,
+				149B9E5F2193839100A15A31 /* eljslider.cpp */,
+				149B9E002193838B00A15A31 /* eljspinctrl.cpp */,
+				149B9E6B2193839100A15A31 /* eljsplash.cpp */,
+				149B9E4E2193839000A15A31 /* eljsplitterwindow.cpp */,
+				149B9E1C2193838C00A15A31 /* eljstaticbox.cpp */,
+				149B9E532193839000A15A31 /* eljstaticline.cpp */,
+				149B9E1A2193838C00A15A31 /* eljstatictext.cpp */,
+				149B9E5B2193839100A15A31 /* eljstatusbar.cpp */,
+				149B9E482193838F00A15A31 /* eljsystemsettings.cpp */,
+				149B9E2C2193838D00A15A31 /* eljtextctrl.cpp */,
+				149B9E612193839100A15A31 /* eljtglbtn.cpp */,
+				149B9E1E2193838C00A15A31 /* eljthread.cpp */,
+				149B9E332193838E00A15A31 /* eljtimer.cpp */,
+				149B9E4F2193839000A15A31 /* eljtipwnd.cpp */,
+				149B9E112193838C00A15A31 /* eljtoolbar.cpp */,
+				149B9E142193838C00A15A31 /* eljvalidator.cpp */,
+				149B9E042193838B00A15A31 /* eljwindow.cpp */,
+				149B9E202193838C00A15A31 /* eljwizard.cpp */,
+				149B9E5C2193839100A15A31 /* ewxw_main.cpp */,
+				149B9E2D2193838D00A15A31 /* extra.cpp */,
+				149B9E152193838C00A15A31 /* glcanvas.cpp */,
+				149B9E752193839200A15A31 /* graphicscontext.cpp */,
+				149B9E232193838D00A15A31 /* hyperlinkctrl.cpp */,
+				149B9E592193839000A15A31 /* image.cpp */,
+				149B9E732193839200A15A31 /* managed.cpp */,
+				149B9E3E2193838E00A15A31 /* mediactrl.cpp */,
+				149B9E2E2193838D00A15A31 /* pickerctrl.cpp */,
+				149B9E602193839100A15A31 /* previewframe.cpp */,
+				149B9E762193839200A15A31 /* printout.cpp */,
+				149B9E2A2193838D00A15A31 /* sckaddr.cpp */,
+				149B9E3A2193838E00A15A31 /* socket.cpp */,
+				149B9E312193838D00A15A31 /* sound.cpp */,
+				149B9E132193838C00A15A31 /* stc_gen.cpp */,
+				149B9E472193838F00A15A31 /* stc.cpp */,
+				149B9E682193839100A15A31 /* std.cpp */,
+				149B9E442193838F00A15A31 /* stream.cpp */,
+				149B9E342193838E00A15A31 /* taskbaricon.cpp */,
+				149B9E222193838D00A15A31 /* textstream.cpp */,
+				149B9E182193838C00A15A31 /* treectrl.cpp */,
+				149B9E462193838F00A15A31 /* wrapper.cpp */,
+			);
+			path = cpp;
+			sourceTree = "<group>";
+		};
+		149B9DD1219382B700A15A31 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				149B9DCF2193828B00A15A31 /* include */,
+				149B9DD02193829400A15A31 /* cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		149B9DD22193830C00A15A31 /* wx */ = {
+			isa = PBXGroup;
+			children = (
+				149B9DD32193835B00A15A31 /* version.h */,
+			);
+			path = wx;
+			sourceTree = "<group>";
+		};
+		149B9EF92193872300A15A31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14EFAE362193BBC200105BAB /* OpenGL.framework */,
+				14EFAE342193BBB900105BAB /* libSystem.tbd */,
+				14EFAE322193BB9900105BAB /* AudioToolbox.framework */,
+				14EFAE302193BB8600105BAB /* Cocoa.framework */,
+				14EFAE2E2193BB7500105BAB /* Carbon.framework */,
+				14EFAE2C2193BB6500105BAB /* IOKit.framework */,
+				149B9FB22193901400A15A31 /* libtiff.5.dylib */,
+				149B9FB021938F4800A15A31 /* libpng16.16.dylib */,
+				149B9F9E21938D0F00A15A31 /* libjpeg.8.dylib */,
+				149B9F9B21938D0F00A15A31 /* libwx_baseu_net-3.0.0.4.0.dylib */,
+				149B9F9221938D0F00A15A31 /* libwx_baseu_xml-3.0.0.4.0.dylib */,
+				149B9F9121938D0F00A15A31 /* libwx_baseu-3.0.0.4.0.dylib */,
+				149B9F8E21938D0E00A15A31 /* libwx_osx_cocoau_adv-3.0.0.4.0.dylib */,
+				149B9F9A21938D0F00A15A31 /* libwx_osx_cocoau_aui-3.0.0.4.0.dylib */,
+				149B9F9821938D0F00A15A31 /* libwx_osx_cocoau_core-3.0.0.4.0.dylib */,
+				149B9F9921938D0F00A15A31 /* libwx_osx_cocoau_gl-3.0.0.4.0.dylib */,
+				149B9F9621938D0F00A15A31 /* libwx_osx_cocoau_html-3.0.0.4.0.dylib */,
+				149B9F8F21938D0E00A15A31 /* libwx_osx_cocoau_media-3.0.0.4.0.dylib */,
+				149B9F9521938D0F00A15A31 /* libwx_osx_cocoau_propgrid-3.0.0.4.0.dylib */,
+				149B9F9021938D0E00A15A31 /* libwx_osx_cocoau_qa-3.0.0.4.0.dylib */,
+				149B9F9321938D0F00A15A31 /* libwx_osx_cocoau_ribbon-3.0.0.4.0.dylib */,
+				149B9F9C21938D0F00A15A31 /* libwx_osx_cocoau_richtext-3.0.0.4.0.dylib */,
+				149B9F9721938D0F00A15A31 /* libwx_osx_cocoau_stc-3.0.0.4.0.dylib */,
+				149B9F9D21938D0F00A15A31 /* libwx_osx_cocoau_webview-3.0.0.4.0.dylib */,
+				149B9F9421938D0F00A15A31 /* libwx_osx_cocoau_xrc-3.0.0.4.0.dylib */,
+				149B9F8C21938C3E00A15A31 /* libexpat.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		149B9FB42193902900A15A31 /* wx */ = {
+			isa = PBXGroup;
+			children = (
+				149B9FB72193924800A15A31 /* wx.swift */,
+				149B9FB52193919900A15A31 /* wxObject.swift */,
+				149B9FB921939A0300A15A31 /* wxString.swift */,
+				14EFAE522193C1B300105BAB /* wxCharBuffer.swift */,
+				149B9FBC2193B4C500A15A31 /* Info.plist */,
+			);
+			path = wx;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		149B9DBE219381DF00A15A31 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		149B9EF12193869C00A15A31 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				149B9F032193873C00A15A31 /* managed.h in Headers */,
+				149B9F0A2193873C00A15A31 /* stc.h in Headers */,
+				149B9F012193873C00A15A31 /* graphicscontext.h in Headers */,
+				149B9F0C2193873C00A15A31 /* textstream.h in Headers */,
+				149B9EFF2193873C00A15A31 /* ewxw_def.h in Headers */,
+				149B9F072193873C00A15A31 /* printout.h in Headers */,
+				149B9F0E2193873C00A15A31 /* wxc_glue.h in Headers */,
+				149B9F112193873C00A15A31 /* version.h in Headers */,
+				149B9F062193873C00A15A31 /* previewframe.h in Headers */,
+				149B9F052193873C00A15A31 /* pickerctrl.h in Headers */,
+				149B9F082193873C00A15A31 /* sound.h in Headers */,
+				149B9F0F2193873C00A15A31 /* wxc_types.h in Headers */,
+				149B9F022193873C00A15A31 /* hyperlinkctrl.h in Headers */,
+				149B9F0B2193873C00A15A31 /* stream.h in Headers */,
+				149B9F102193873C00A15A31 /* wxc.h in Headers */,
+				149B9F092193873C00A15A31 /* stc_gen.h in Headers */,
+				149B9EFE2193873C00A15A31 /* eljgrid.h in Headers */,
+				149B9EFD2193873C00A15A31 /* dragimage.h in Headers */,
+				149B9F042193873C00A15A31 /* mediactrl.h in Headers */,
+				149B9F002193873C00A15A31 /* glcanvas.h in Headers */,
+				149B9F0D2193873C00A15A31 /* wrapper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		149B9DC2219381DF00A15A31 /* wxSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 149B9DCB219381DF00A15A31 /* Build configuration list for PBXNativeTarget "wxSwift" */;
+			buildPhases = (
+				149B9DBE219381DF00A15A31 /* Headers */,
+				149B9DBF219381DF00A15A31 /* Sources */,
+				149B9DC0219381DF00A15A31 /* Frameworks */,
+				149B9DC1219381DF00A15A31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				149B9EFC2193872700A15A31 /* PBXTargetDependency */,
+			);
+			name = wxSwift;
+			productName = wxSwift;
+			productReference = 149B9DC3219381DF00A15A31 /* wxSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		149B9EF42193869C00A15A31 /* wxc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 149B9EF62193869C00A15A31 /* Build configuration list for PBXNativeTarget "wxc" */;
+			buildPhases = (
+				149B9EF12193869C00A15A31 /* Headers */,
+				149B9EF22193869C00A15A31 /* Sources */,
+				149B9EF32193869C00A15A31 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wxc;
+			productName = wxc;
+			productReference = 149B9EF52193869C00A15A31 /* libwxc.dylib */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		149B9DBA219381DF00A15A31 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Yury Vovk";
+				TargetAttributes = {
+					149B9DC2219381DF00A15A31 = {
+						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
+					};
+					149B9EF42193869C00A15A31 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 149B9DBD219381DF00A15A31 /* Build configuration list for PBXProject "wxSwift" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 149B9DB9219381DF00A15A31;
+			productRefGroup = 149B9DC4219381DF00A15A31 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				149B9DC2219381DF00A15A31 /* wxSwift */,
+				149B9EF42193869C00A15A31 /* wxc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		149B9DC1219381DF00A15A31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		149B9DBF219381DF00A15A31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14EFAE532193C1B300105BAB /* wxCharBuffer.swift in Sources */,
+				149B9FB82193924800A15A31 /* wx.swift in Sources */,
+				149B9FBA21939A0300A15A31 /* wxString.swift in Sources */,
+				149B9FB62193919900A15A31 /* wxObject.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		149B9EF22193869C00A15A31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				149B9F892193875600A15A31 /* textstream.cpp in Sources */,
+				149B9F412193875600A15A31 /* eljicon.cpp in Sources */,
+				149B9F6D2193875600A15A31 /* eljtextctrl.cpp in Sources */,
+				149B9F852193875600A15A31 /* stc.cpp in Sources */,
+				149B9F612193875600A15A31 /* eljscrolledwindow.cpp in Sources */,
+				149B9F492193875600A15A31 /* eljlocale.cpp in Sources */,
+				149B9F5F2193875600A15A31 /* eljsash.cpp in Sources */,
+				149B9F2B2193875600A15A31 /* eljdataformat.cpp in Sources */,
+				149B9F872193875600A15A31 /* stream.cpp in Sources */,
+				149B9F692193875600A15A31 /* eljstaticline.cpp in Sources */,
+				149B9F372193875600A15A31 /* eljfindrepldlg.cpp in Sources */,
+				149B9F402193875600A15A31 /* eljicnbndl.cpp in Sources */,
+				149B9F252193875600A15A31 /* eljcombobox.cpp in Sources */,
+				149B9F7A2193875600A15A31 /* hyperlinkctrl.cpp in Sources */,
+				149B9F282193875600A15A31 /* eljcontrol.cpp in Sources */,
+				149B9F3F2193875600A15A31 /* eljhelpcontroller.cpp in Sources */,
+				149B9F292193875600A15A31 /* eljctxhelp.cpp in Sources */,
+				149B9F2C2193875600A15A31 /* eljdatetime.cpp in Sources */,
+				149B9F342193875600A15A31 /* eljevent.cpp in Sources */,
+				149B9F712193875600A15A31 /* eljtipwnd.cpp in Sources */,
+				149B9F742193875600A15A31 /* eljwindow.cpp in Sources */,
+				149B9F1A2193875600A15A31 /* eljbusyinfo.cpp in Sources */,
+				149B9F472193875600A15A31 /* eljlistbox.cpp in Sources */,
+				149B9F522193875600A15A31 /* eljnotebook.cpp in Sources */,
+				149B9F3A2193875600A15A31 /* eljfontdlg.cpp in Sources */,
+				149B9F5A2193875600A15A31 /* eljradiobox.cpp in Sources */,
+				149B9F1B2193875600A15A31 /* eljbutton.cpp in Sources */,
+				149B9F322193875600A15A31 /* eljdnd.cpp in Sources */,
+				149B9F832193875600A15A31 /* sound.cpp in Sources */,
+				149B9F7B2193875600A15A31 /* image.cpp in Sources */,
+				149B9F6A2193875600A15A31 /* eljstatictext.cpp in Sources */,
+				149B9F6F2193875600A15A31 /* eljthread.cpp in Sources */,
+				149B9F622193875600A15A31 /* eljsingleinst.cpp in Sources */,
+				149B9F1F2193875600A15A31 /* eljchecklistbox.cpp in Sources */,
+				149B9F122193875600A15A31 /* apppath.cpp in Sources */,
+				149B9F142193875600A15A31 /* dragimage.cpp in Sources */,
+				149B9F272193875600A15A31 /* eljconfigbase.cpp in Sources */,
+				149B9F6B2193875600A15A31 /* eljstatusbar.cpp in Sources */,
+				149B9F462193875600A15A31 /* eljlayoutconstraints.cpp in Sources */,
+				149B9F3B2193875600A15A31 /* eljframe.cpp in Sources */,
+				149B9F7E2193875600A15A31 /* pickerctrl.cpp in Sources */,
+				149B9F5E2193875600A15A31 /* eljregioniter.cpp in Sources */,
+				149B9F162193875600A15A31 /* eljartprov.cpp in Sources */,
+				149B9F202193875600A15A31 /* eljchoice.cpp in Sources */,
+				149B9F882193875600A15A31 /* taskbaricon.cpp in Sources */,
+				149B9F232193875600A15A31 /* eljcolour.cpp in Sources */,
+				149B9F4F2193875600A15A31 /* eljmessagedialog.cpp in Sources */,
+				149B9F4E2193875600A15A31 /* eljmenubar.cpp in Sources */,
+				149B9F242193875600A15A31 /* eljcolourdlg.cpp in Sources */,
+				149B9F332193875600A15A31 /* eljdrawing.cpp in Sources */,
+				149B9F312193875600A15A31 /* eljdirdlg.cpp in Sources */,
+				149B9F8B2193875600A15A31 /* wrapper.cpp in Sources */,
+				149B9F6C2193875600A15A31 /* eljsystemsettings.cpp in Sources */,
+				149B9F182193875600A15A31 /* eljbitmap.cpp in Sources */,
+				149B9F682193875600A15A31 /* eljstaticbox.cpp in Sources */,
+				149B9F362193875600A15A31 /* eljfilehist.cpp in Sources */,
+				149B9F4C2193875600A15A31 /* eljmdi.cpp in Sources */,
+				149B9F262193875600A15A31 /* eljcommand.cpp in Sources */,
+				149B9F4D2193875600A15A31 /* eljmenu.cpp in Sources */,
+				149B9F792193875600A15A31 /* graphicscontext.cpp in Sources */,
+				149B9F192193875600A15A31 /* eljbrush.cpp in Sources */,
+				149B9F382193875600A15A31 /* eljfont.cpp in Sources */,
+				149B9F762193875600A15A31 /* ewxw_main.cpp in Sources */,
+				149B9F642193875600A15A31 /* eljslider.cpp in Sources */,
+				149B9F732193875600A15A31 /* eljvalidator.cpp in Sources */,
+				149B9F602193875600A15A31 /* eljscrollbar.cpp in Sources */,
+				149B9F482193875600A15A31 /* eljlistctrl.cpp in Sources */,
+				149B9F422193875600A15A31 /* eljimage.cpp in Sources */,
+				149B9F5D2193875600A15A31 /* eljregion.cpp in Sources */,
+				149B9F1D2193875600A15A31 /* eljcaret.cpp in Sources */,
+				149B9F172193875600A15A31 /* eljaui.cpp in Sources */,
+				149B9F432193875600A15A31 /* eljimagelist.cpp in Sources */,
+				149B9F6E2193875600A15A31 /* eljtglbtn.cpp in Sources */,
+				149B9F802193875600A15A31 /* printout.cpp in Sources */,
+				149B9F132193875600A15A31 /* defs.cpp in Sources */,
+				149B9F392193875600A15A31 /* eljfontdata.cpp in Sources */,
+				149B9F722193875600A15A31 /* eljtoolbar.cpp in Sources */,
+				149B9F572193875600A15A31 /* eljprintdlg.cpp in Sources */,
+				149B9F812193875600A15A31 /* sckaddr.cpp in Sources */,
+				149B9F542193875600A15A31 /* eljpanel.cpp in Sources */,
+				149B9F7D2193875600A15A31 /* mediactrl.cpp in Sources */,
+				149B9F502193875600A15A31 /* eljmime.cpp in Sources */,
+				149B9F2A2193875600A15A31 /* eljcursor.cpp in Sources */,
+				149B9F8A2193875600A15A31 /* treectrl.cpp in Sources */,
+				149B9F212193875600A15A31 /* eljclipboard.cpp in Sources */,
+				149B9F3E2193875600A15A31 /* eljgrid.cpp in Sources */,
+				149B9F442193875600A15A31 /* eljipc.cpp in Sources */,
+				149B9F4B2193875600A15A31 /* eljmask.cpp in Sources */,
+				149B9F552193875600A15A31 /* eljpen.cpp in Sources */,
+				149B9F582193875600A15A31 /* eljprinting.cpp in Sources */,
+				149B9F592193875600A15A31 /* eljprocess.cpp in Sources */,
+				149B9F5B2193875600A15A31 /* eljradiobutton.cpp in Sources */,
+				149B9F782193875600A15A31 /* glcanvas.cpp in Sources */,
+				149B9F822193875600A15A31 /* socket.cpp in Sources */,
+				149B9F512193875600A15A31 /* eljminiframe.cpp in Sources */,
+				149B9F152193875600A15A31 /* eljaccelerator.cpp in Sources */,
+				149B9F2D2193875600A15A31 /* eljdc.cpp in Sources */,
+				149B9F3C2193875600A15A31 /* eljgauge.cpp in Sources */,
+				149B9F862193875600A15A31 /* std.cpp in Sources */,
+				149B9F7F2193875600A15A31 /* previewframe.cpp in Sources */,
+				149B9F1C2193875600A15A31 /* eljcalendarctrl.cpp in Sources */,
+				149B9F4A2193875600A15A31 /* eljlog.cpp in Sources */,
+				149B9F532193875600A15A31 /* eljpalette.cpp in Sources */,
+				149B9F2E2193875600A15A31 /* eljdcsvg.cpp in Sources */,
+				149B9F772193875600A15A31 /* extra.cpp in Sources */,
+				149B9F452193875600A15A31 /* eljjoystick.cpp in Sources */,
+				149B9F222193875600A15A31 /* eljcoldata.cpp in Sources */,
+				149B9F352193875600A15A31 /* eljfiledialog.cpp in Sources */,
+				149B9F752193875600A15A31 /* eljwizard.cpp in Sources */,
+				149B9F652193875600A15A31 /* eljspinctrl.cpp in Sources */,
+				149B9F1E2193875600A15A31 /* eljcheckbox.cpp in Sources */,
+				149B9F2F2193875600A15A31 /* eljdialog.cpp in Sources */,
+				149B9F5C2193875600A15A31 /* eljrc.cpp in Sources */,
+				149B9F632193875600A15A31 /* eljsizer.cpp in Sources */,
+				149B9F7C2193875600A15A31 /* managed.cpp in Sources */,
+				149B9F672193875600A15A31 /* eljsplitterwindow.cpp in Sources */,
+				149B9F702193875600A15A31 /* eljtimer.cpp in Sources */,
+				149B9F662193875600A15A31 /* eljsplash.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		149B9EFC2193872700A15A31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 149B9EF42193869C00A15A31 /* wxc */;
+			targetProxy = 149B9EFB2193872700A15A31 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		149B9DC9219381DF00A15A31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/lib/wx/include/osx_cocoa-unicode-3.0/",
+					"/usr/local/include/wx-3.0",
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		149B9DCA219381DF00A15A31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/lib/wx/include/osx_cocoa-unicode-3.0/",
+					"/usr/local/include/wx-3.0",
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		149B9DCC219381DF00A15A31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = wx/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/wxmac/3.0.4_1/lib,
+					/usr/local/Cellar/jpeg/8d/lib,
+					/usr/local/Cellar/libpng/1.6.35/lib,
+					/usr/local/Cellar/libtiff/4.0.9_4/lib,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.gungravekoga.wxSwift;
+				PRODUCT_MODULE_NAME = wx;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		149B9DCD219381DF00A15A31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = wx/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/wxmac/3.0.4_1/lib,
+					/usr/local/Cellar/jpeg/8d/lib,
+					/usr/local/Cellar/libpng/1.6.35/lib,
+					/usr/local/Cellar/libtiff/4.0.9_4/lib,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.gungravekoga.wxSwift;
+				PRODUCT_MODULE_NAME = wx;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		149B9EF72193869C00A15A31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_EXTENSION = dylib;
+				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/wxmac/3.0.4_1/lib,
+					/usr/local/Cellar/libtiff/4.0.9_4/lib,
+					/usr/local/Cellar/libpng/1.6.35/lib,
+					/usr/local/Cellar/jpeg/8d/lib,
+				);
+				MACH_O_TYPE = mh_dylib;
+				OTHER_CFLAGS = (
+					"-D_FILE_OFFSET_BITS=64",
+					"-DWXUSINGDLL",
+					"-D__WXMAC__",
+					"-D__WXOSX__",
+					"-D__WXOSX_COCOA__",
+					"-DSTATIC_WXC",
+					"-DCALLINGCONV=__attribute__((swiftcall))",
+					"-O2",
+					"-Wno-ignored-attributes",
+					"-Wno-macro-redefined",
+					"-D__GXX_ABI_VERSION=1011",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		149B9EF82193869C00A15A31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_EXTENSION = dylib;
+				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/wxmac/3.0.4_1/lib,
+					/usr/local/Cellar/libtiff/4.0.9_4/lib,
+					/usr/local/Cellar/libpng/1.6.35/lib,
+					/usr/local/Cellar/jpeg/8d/lib,
+				);
+				MACH_O_TYPE = mh_dylib;
+				OTHER_CFLAGS = (
+					"-D_FILE_OFFSET_BITS=64",
+					"-DWXUSINGDLL",
+					"-D__WXMAC__",
+					"-D__WXOSX__",
+					"-D__WXOSX_COCOA__",
+					"-DSTATIC_WXC",
+					"-DCALLINGCONV=__attribute__((swiftcall))",
+					"-O2",
+					"-Wno-ignored-attributes",
+					"-Wno-macro-redefined",
+					"-D__GXX_ABI_VERSION=1011",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		149B9DBD219381DF00A15A31 /* Build configuration list for PBXProject "wxSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				149B9DC9219381DF00A15A31 /* Debug */,
+				149B9DCA219381DF00A15A31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		149B9DCB219381DF00A15A31 /* Build configuration list for PBXNativeTarget "wxSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				149B9DCC219381DF00A15A31 /* Debug */,
+				149B9DCD219381DF00A15A31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		149B9EF62193869C00A15A31 /* Build configuration list for PBXNativeTarget "wxc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				149B9EF72193869C00A15A31 /* Debug */,
+				149B9EF82193869C00A15A31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 149B9DBA219381DF00A15A31 /* Project object */;
+}
