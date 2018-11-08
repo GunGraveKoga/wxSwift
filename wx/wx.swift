@@ -6,11 +6,15 @@
 //  Copyright © 2018 Yury Vovk. All rights reserved.
 //
 
-public func bridge<T: wxObject>(_ obj: T) -> UnsafeMutableRawPointer {
+public func bridge<T: AnyObject>(_ obj: T?) -> CVoidPtr {
+    guard let obj = obj else {
+        return nil
+    }
+    
     return Unmanaged.passUnretained(obj).toOpaque()
 }
 
-public func bridge<T: wxObject>(_ ptr: UnsafeMutableRawPointer?) -> T? {
+public func bridge<T: AnyObject>(_ ptr: CVoidPtr) -> T? {
     guard let ptr = ptr else {
         return nil
     }
@@ -18,11 +22,15 @@ public func bridge<T: wxObject>(_ ptr: UnsafeMutableRawPointer?) -> T? {
     return Unmanaged<T>.fromOpaque(ptr).takeUnretainedValue()
 }
 
-public func bridgeRetained<T: wxObject>(_ obj: T) -> UnsafeMutableRawPointer {
+public func bridgeRetained<T: AnyObject>(_ obj: T?) -> CVoidPtr {
+    guard let obj = obj else {
+        return nil
+    }
+    
     return Unmanaged.passRetained(obj).toOpaque()
 }
 
-public func bridgeTransfer<T: wxObject>(_ ptr: UnsafeMutableRawPointer?) -> T? {
+public func bridgeTransfer<T: AnyObject>(_ ptr: CVoidPtr) -> T? {
     guard let ptr = ptr else {
         return nil
     }
