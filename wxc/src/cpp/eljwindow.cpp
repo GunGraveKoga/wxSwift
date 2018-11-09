@@ -615,9 +615,9 @@ EWXWEXPORT(int,wxWindow_LayoutPhase2)(wxWindow* self,int* noChanges)
 	return (int)self->LayoutPhase2(noChanges);
 }
 	
-EWXWEXPORT(int,wxWindow_DoPhase)(wxWindow* self,int phase)
+EWXWEXPORT(bool,wxWindow_DoPhase)(wxWindow* self,int phase)
 {
-	return (int)self->DoPhase(phase);
+	return self->DoPhase(phase);
 }
 	
 EWXWEXPORT(void,wxWindow_SetSizeConstraint)(wxWindow* self,int x,int y,int w,int h)
