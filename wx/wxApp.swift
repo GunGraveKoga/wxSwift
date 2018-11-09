@@ -200,7 +200,7 @@ public final class wxApp: wxEvtHandler {
     
     private static var _initialized: Bool = false
     
-    public override init() {
+    public init() {
         
         if !wxApp._initialized {
             wxApp._initialized = _wxc_wxc_Initialize(0, nil)

@@ -71,10 +71,15 @@ public final class wxClosure: wxObject {
             
             context = bridge(data)
             
-            let oldEventObject = _event.eventObject
-            _event.setEventObject(context?._eventObject)
+            let old = _event.getEventObject()
+            
+            defer {
+                _event.setEventObject(old)
+            }
+            
+            _event.eventObject = context?._eventObject
+            
             context?._eventHandler(_event)
-            _event.eventObject = oldEventObject
         }
         
         let _context = __wxClosureCallbackWrapper(object, callbac)
@@ -94,10 +99,16 @@ public final class wxClosure: wxObject {
             }
             
             context = bridge(data)
-            let oldEventObject = _event.eventObject
-            _event.setEventObject(context?._sender)
+            
+            let old = _event.getEventObject()
+            
+            defer {
+                _event.setEventObject(old)
+            }
+            
+            _event.eventObject = context?._sender
+            
             context?.performAction(_event)
-            _event.eventObject = oldEventObject
         }
         
         let _contex = __wxClosureMethodWrapper<T>(sender, target, action)
