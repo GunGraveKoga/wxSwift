@@ -12,6 +12,11 @@ internal func _wxc_wxObject_Delete(_ ptr: CVoidPtr) -> Void {
     wxObject_Delete(ptr)
 }
 
+public func delete<T: wxObject>(_ obj: T) {
+    _wxc_wxObject_Delete(obj.rawValue)
+    Unmanaged<T>.passUnretained(obj).release()
+}
+
 open class wxObject : Equatable {
     
     public private(set) var rawValue: CVoidPtr
