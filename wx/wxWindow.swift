@@ -318,18 +318,6 @@ internal func _wxc_wxWindow_GetRect(_ ptr: CVoidPtr) -> CVoidPtr {
     return wxWindow_GetRect(ptr)
 }
 
-@_silgen_name("expwxHORIZONTAL")
-fileprivate func expwxHORIZONTAL() -> CInt
-internal func _wxc_expwxHORIZONTAL() -> CInt {
-    return expwxHORIZONTAL()
-}
-
-@_silgen_name("expwxVERTICAL")
-fileprivate func expwxVERTICAL() -> CInt
-internal func _wxc_expwxVERTICAL() -> CInt {
-    return expwxVERTICAL()
-}
-
 @_silgen_name("wxWindow_GetScrollPos")
 fileprivate func wxWindow_GetScrollPos(_ ptr: CVoidPtr, _ orient: CInt) -> CInt
 internal func _wxc_wxWindow_GetScrollPos(_ ptr: CVoidPtr, _ orient: CInt) -> CInt {
@@ -398,8 +386,8 @@ internal func _wxc_wxWindow_GetVirtualSize(_ ptr: CVoidPtr) -> CVoidPtr {
 }
 
 @_silgen_name("wxWindow_GetWindowStyleFlag")
-fileprivate func wxWindow_GetWindowStyleFlag(_ ptr: CVoidPtr) -> CInt
-internal func _wxc_wxWindow_GetWindowStyleFlag(_ ptr: CVoidPtr) -> CInt {
+fileprivate func wxWindow_GetWindowStyleFlag(_ ptr: CVoidPtr) -> CLong
+internal func _wxc_wxWindow_GetWindowStyleFlag(_ ptr: CVoidPtr) -> CLong {
     return wxWindow_GetWindowStyleFlag(ptr)
 }
 
@@ -631,12 +619,252 @@ internal func _wxc_wxWindow_SetConstraintSizes(_ ptr: CVoidPtr, _ recurse: CBool
     wxWindow_SetConstraintSizes(ptr, recurse)
 }
 
-public typealias wxWindowID = CInt
+@_silgen_name("wxWindow_SetConstraints")
+fileprivate func wxWindow_SetConstraints(_ ptr: CVoidPtr, _ constraints: CVoidPtr) -> Void
+internal func _wxc_wxWindow_SetConstraints(_ ptr: CVoidPtr, _ constraints: CVoidPtr) -> Void {
+    wxWindow_SetConstraints(ptr, constraints)
+}
 
-public var wxHORIZONTAL: CInt = _wxc_expwxHORIZONTAL()
-public var wxVERTICAL: CInt = _wxc_expwxVERTICAL()
+@_silgen_name("wxWindow_SetCursor")
+fileprivate func wxWindow_SetCursor(_ ptr: CVoidPtr, _ cursor: CVoidPtr) -> CBool
+internal func _wxc_wxWindow_SetCursor(_ ptr: CVoidPtr, _ cursor: CVoidPtr) -> CBool {
+    return wxWindow_SetCursor(ptr, cursor)
+}
+
+@_silgen_name("wxWindow_SetDropTarget")
+fileprivate func wxWindow_SetDropTarget(_ ptr: CVoidPtr, _ target: CVoidPtr) -> Void
+internal func _wxc_wxWindow_SetDropTarget(_ ptr: CVoidPtr, _ target: CVoidPtr) -> Void {
+    wxWindow_SetDropTarget(ptr, target)
+}
+
+@_silgen_name("wxWindow_SetExtraStyle")
+fileprivate func wxWindow_SetExtraStyle(_ ptr: CVoidPtr, _ exStyle: CLong) -> Void
+internal func _wxc_wxWindow_SetExtraStyle(_ ptr: CVoidPtr, _ exStyle: CLong) -> Void {
+    wxWindow_SetExtraStyle(ptr, exStyle)
+}
+
+@_silgen_name("wxWindow_SetFocus")
+fileprivate func wxWindow_SetFocus(_ ptr: CVoidPtr) -> Void
+internal func _wxc_wxWindow_SetFocus(_ ptr: CVoidPtr) -> Void {
+    wxWindow_SetFocus(ptr)
+}
+
+@_silgen_name("wxWindow_SetFont")
+fileprivate func wxWindow_SetFont(_ ptr: CVoidPtr, _ font: CVoidPtr) -> CBool
+internal func _wxc_wxWindow_SetFont(_ ptr: CVoidPtr, _ font: CVoidPtr) -> CBool {
+    return wxWindow_SetFont(ptr, font)
+}
+
+@_silgen_name("wxWindow_SetForegroundColour")
+fileprivate func wxWindow_SetForegroundColour(_ ptr: CVoidPtr, _ colour: CVoidPtr) -> CBool
+internal func _wxc_wxWindow_SetForegroundColour( _ ptr: CVoidPtr, _ colour: CVoidPtr) -> CBool {
+    return wxWindow_SetForegroundColour(ptr, colour)
+}
+
+@_silgen_name("wxWindow_SetId")
+fileprivate func wxWindow_SetId(_ ptr: CVoidPtr, _ Id: CInt) -> Void
+internal func _wxc_wxWindow_SetId(_ ptr: CVoidPtr, _ Id: CInt) -> Void {
+    wxWindow_SetId(ptr, Id)
+}
+
+@_silgen_name("wxWindow_SetLabel")
+fileprivate func wxWindow_SetLabel(_ ptr: CVoidPtr, _ title: CVoidPtr) -> Void
+internal func _wxc_wxWindow_SetLabel(_ ptr: CVoidPtr, _ title: CVoidPtr) -> Void {
+    wxWindow_SetLabel(ptr, title)
+}
+
+@_silgen_name("wxWindow_SetName")
+fileprivate func wxWindow_SetName(_ ptr: CVoidPtr, _ name: CVoidPtr) -> Void
+internal func _wxc_wxWindow_SetName(_ ptr: CVoidPtr, _ name: CVoidPtr) -> Void {
+    wxWindow_SetName(ptr, name)
+}
+
+@_silgen_name("wxWindow_SetScrollPos")
+fileprivate func wxWindow_SetScrollPos(_ ptr: CVoidPtr, _ orient: CInt, _ pos: CInt, _ refresh: CBool) -> Void
+internal func _wxc_wxWindow_SetScrollPos(_ ptr: CVoidPtr, _ orient: CInt, _ pos: CInt, _ refresh: CBool) -> Void {
+    wxWindow_SetScrollPos(ptr, orient, pos, refresh)
+}
+
+@_silgen_name("wxWindow_SetScrollbar")
+fileprivate func wxWindow_SetScrollbar(_ ptr: CVoidPtr, _ orient: CInt, _ pos: CInt, _ thumbSize: CInt, _ range: CInt, _ refresh: CBool) -> Void
+internal func _wxc_wxWindow_SetScrollbar(_ ptr: CVoidPtr, _ orient: CInt, _ pos: CInt, _ thumbSize: CInt, _ range: CInt, _ refresh: CBool) -> Void {
+    wxWindow_SetScrollbar(ptr, orient, pos, thumbSize, range, refresh)
+}
+
+@_silgen_name("wxWindow_SetSize")
+fileprivate func wxWindow_SetSize(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt, _ w: CInt, _ h: CInt, _ sizeFlags: CInt) -> Void
+internal func _wxc_wxWindow_SetSize(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt, _ w: CInt, _ h: CInt, _ sizeFlags: CInt) -> Void {
+    wxWindow_SetSize(ptr, x, y, w, h, sizeFlags)
+}
+
+@_silgen_name("wxWindow_SetSizeConstraint")
+fileprivate func wxWindow_SetSizeConstraint(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt, _ w: CInt, _ h: CInt) -> Void
+internal func _wxc_wxWindow_SetSizeConstraint(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt, _ w: CInt, _ h: CInt) -> Void {
+    wxWindow_SetSizeConstraint(ptr, x, y, w, h)
+}
+
+@_silgen_name("wxWindow_SetSizeHints")
+fileprivate func wxWindow_SetSizeHints(_ ptr: CVoidPtr, _ minW: CInt, _ minH: CInt, _ maxW: CInt, _ maxH: CInt, _ incW: CInt, _ incH: CInt) -> Void
+internal func _wxc_wxWindow_SetSizeHints(_ ptr: CVoidPtr, _ minW: CInt, _ minH: CInt, _ maxW: CInt, _ maxH: CInt, _ incW: CInt, _ incH: CInt) -> Void {
+    wxWindow_SetSizeHints(ptr, minW, minH, maxW, maxH, incW, incH)
+}
+
+@_silgen_name("wxWindow_SetSizer")
+fileprivate func wxWindow_SetSizer(_ ptr: CVoidPtr, _ sizer: CVoidPtr) -> Void
+internal func _wxc_wxWindow_SetSizer(_ ptr: CVoidPtr, _ sizer: CVoidPtr) -> Void {
+    wxWindow_SetSizer(ptr, sizer)
+}
+
+@_silgen_name("wxWindow_SetToolTip")
+fileprivate func wxWindow_SetToolTip(_ ptr: CVoidPtr,  _ tip: CVoidPtr) -> Void
+internal func _wxc_wxWindow_SetToolTip(_ ptr: CVoidPtr, _ tip: CVoidPtr) -> Void {
+    wxWindow_SetToolTip(ptr, tip)
+}
+
+@_silgen_name("wxWindow_SetValidator")
+fileprivate func wxWindow_SetValidator(_ ptr: CVoidPtr, _ validator: CVoidPtr) -> Void
+internal func _wxc_wxWindow_SetValidator(_ ptr: CVoidPtr, _ validator: CVoidPtr) -> Void {
+    wxWindow_SetValidator(ptr, validator)
+}
+
+@_silgen_name("wxWindow_SetWindowStyleFlag")
+fileprivate func wxWindow_SetWindowStyleFlag(_ ptr: CVoidPtr, _ flag: CLong) -> Void
+internal func _wxc_wxWindow_SetWindowStyleFlag(_ ptr: CVoidPtr, _ flag: CLong) -> Void {
+    wxWindow_SetWindowStyleFlag(ptr, flag)
+}
+
+@_silgen_name("wxWindow_Show")
+fileprivate func wxWindow_Show(_ ptr: CVoidPtr) -> CBool
+internal func _wxc_wxWindow_Show(_ ptr: CVoidPtr) -> CBool {
+    return wxWindow_Show(ptr)
+}
+
+@_silgen_name("wxWindow_Thaw")
+fileprivate func wxWindow_Thaw(_ ptr: CVoidPtr) -> Void
+internal func _wxc_wxWindow_Thaw(_ ptr: CVoidPtr) -> Void {
+    wxWindow_Thaw(ptr)
+}
+
+@_silgen_name("wxWindow_TransferDataFromWindow")
+fileprivate func wxWindow_TransferDataFromWindow(_ ptr: CVoidPtr) -> CBool
+internal func _wxc_wxWindow_TransferDataFromWindow(_ ptr: CVoidPtr) -> CBool {
+    return wxWindow_TransferDataFromWindow(ptr)
+}
+
+@_silgen_name("wxWindow_TransferDataToWindow")
+fileprivate func wxWindow_TransferDataToWindow(_ ptr: CVoidPtr) -> CBool
+internal func _wxc_wxWindow_TransferDataToWindow(_ ptr: CVoidPtr) -> CBool {
+    return wxWindow_TransferDataToWindow(ptr)
+}
+
+@_silgen_name("wxWindow_UnsetConstraints")
+fileprivate func wxWindow_UnsetConstraints(_ ptr: CVoidPtr, _ constraints: CVoidPtr) -> Void
+internal func _wxc_wxWindow_UnsetConstraints(_ ptr: CVoidPtr, _ constraints: CVoidPtr) -> Void {
+    wxWindow_UnsetConstraints(ptr, constraints)
+}
+
+@_silgen_name("wxWindow_UpdateWindowUI")
+fileprivate func wxWindow_UpdateWindowUI(_ ptr: CVoidPtr) -> Void
+internal func _wxc_wxWindow_UpdateWindowUI(_ ptr: CVoidPtr) -> Void {
+    wxWindow_UpdateWindowUI(ptr)
+}
+
+@_silgen_name("wxWindow_Validate")
+fileprivate func wxWindow_Validate(_ ptr: CVoidPtr) -> CBool
+internal func _wxc_wxWindow_Validate(_ ptr: CVoidPtr) -> CBool {
+    return wxWindow_Validate(ptr)
+}
+
+@_silgen_name("wxWindow_SetVirtualSize")
+fileprivate func wxWindow_SetVirtualSize(_ ptr: CVoidPtr, _ w: CInt, _ h: CInt) -> Void
+internal func _wxc_wxWindow_SetVirtualSize(_ ptr: CVoidPtr, _ w: CInt, _ h: CInt) -> Void {
+    wxWindow_SetVirtualSize(ptr, w, h)
+}
+
+@_silgen_name("wxWindow_WarpPointer")
+fileprivate func wxWindow_WarpPointer(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt) -> Void
+internal func _wxc_wxWindow_WarpPointer(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt) -> Void {
+    wxWindow_WarpPointer(ptr, x, y)
+}
 
 open class wxWindow: wxEvtHandler {
+    
+    public struct SizeFlags: OptionSet {
+        public let rawValue: CInt
+        
+        public static let wxSIZE_AUTO_WIDTH = SizeFlags(rawValue: 0x0001)
+        public static let wxSIZE_AUTO_HEIGHT = SizeFlags(rawValue: 0x0002)
+        public static let wxSIZE_AUTO: SizeFlags = [.wxSIZE_AUTO_WIDTH, .wxSIZE_AUTO_HEIGHT]
+        public static let wxSIZE_USE_EXISTING = SizeFlags(rawValue: 0x0000)
+        public static let wxSIZE_ALLOW_MINUS_ONE = SizeFlags(rawValue: 0x0004)
+        public static let wxSIZE_NO_ADJUSTMENTS = SizeFlags(rawValue: 0x0008)
+        public static let wxSIZE_FORCE = SizeFlags(rawValue: 0x0010)
+        
+        public init(rawValue: CInt) {
+            self.rawValue = rawValue
+        }
+    }
+    
+    public struct WindowStyleFlag: OptionSet {
+        public let rawValue: CLong
+        
+        public static let wxVSCROLL = WindowStyleFlag(rawValue: 0x80000000)
+        public static let wxHSCROLL = WindowStyleFlag(rawValue: 0x40000000)
+        public static let wxCAPTION = WindowStyleFlag(rawValue: 0x20000000)
+        @available(*, deprecated)
+        public static let wxDOUBLE_BORDER = WindowStyleFlag(rawValue: 0x10000000)
+        public static let wxSUNKEN_BORDER = WindowStyleFlag(rawValue: 0x08000000)
+        public static let wxRAISED_BORDER = WindowStyleFlag(rawValue: 0x04000000)
+        public static let wxBORDER: WindowStyleFlag = .wxSIMPLE_BORDER
+        public static let wxSIMPLE_BORDER = WindowStyleFlag(rawValue: 0x02000000)
+        public static let wxSTATIC_BORDER = WindowStyleFlag(rawValue: 0x01000000)
+        public static let wxNO_BORDER = WindowStyleFlag(rawValue: 0x00200000)
+        public static let wxALWAYS_SHOW_SB = WindowStyleFlag(rawValue: 0x00800000)
+        public static let wxBORDER_DEFAULT = WindowStyleFlag(rawValue: 0)
+        public static let wxBORDER_SIMPLE: WindowStyleFlag = .wxSIMPLE_BORDER
+        public static let wxBORDER_SUNKEN: WindowStyleFlag = .wxSUNKEN_BORDER
+        public static let wxBORDER_RAISED: WindowStyleFlag = .wxRAISED_BORDER
+        public static let wxBORDER_THEME = WindowStyleFlag(rawValue: 0x10000000)
+        public static let wxBORDER_NONE: WindowStyleFlag = .wxNO_BORDER
+        @available(*, deprecated)
+        public static let wxBORDER_DOUBLE = WindowStyleFlag(rawValue: 0x10000000)
+        public static let wxTRANSPARENT_WINDOW = WindowStyleFlag(rawValue: 0x00100000)
+        public static let wxTAB_TRAVERSAL = WindowStyleFlag(rawValue: 0x00080000)
+        public static let wxWANTS_CHARS = WindowStyleFlag(rawValue: 0x00040000)
+        public static let wxNO_FULL_REPAINT_ON_RESIZE = WindowStyleFlag(rawValue: 0)
+        public static let wxCLIP_CHILDREN = WindowStyleFlag(rawValue: 0x00400000)
+        public static let wxFULL_REPAINT_ON_RESIZE = WindowStyleFlag(rawValue: 0x00010000)
+        public static let wxBORDER_MASK = WindowStyleFlag(rawValue: 0x1f200000)
+        public static let wxCLIP_SIBLINGS = WindowStyleFlag(rawValue: 0x20000000)
+        #if __WXMOTIF__
+        public static let wxRETAINED = WindowStyleFlag(rawValue: 0x00020000)
+        #else
+        public static let wxRETAINED = WindowStyleFlag(rawValue: 0x00000000)
+        #endif
+        public static let wxPOPUP_WINDOW = WindowStyleFlag(rawValue: 0x00020000)
+        public static let wxWINDOW_STYLE_MASK: WindowStyleFlag = [.wxVSCROLL, .wxHSCROLL, .wxBORDER_MASK, .wxALWAYS_SHOW_SB, .wxCLIP_CHILDREN, .wxCLIP_SIBLINGS, .wxTRANSPARENT_WINDOW, .wxTAB_TRAVERSAL, .wxWANTS_CHARS, .wxRETAINED, .wxPOPUP_WINDOW, .wxFULL_REPAINT_ON_RESIZE]
+        
+        public init(rawValue: CLong) {
+            self.rawValue = rawValue
+        }
+    }
+    
+    public struct ExtraStyles: OptionSet {
+        public let rawValue: CLong
+        
+        @available(*, deprecated, message: "This flag is obsolete as recursive validation is now the default (and only possible) behaviour. Simply don't use it any more in the new code.")
+        public static let wxWS_EX_VALIDATE_RECURSIVELY = ExtraStyles(rawValue: 0x00000000)
+        public static let wxWS_EX_BLOCK_EVENTS = ExtraStyles(rawValue: 0x00000002)
+        public static let wxWS_EX_TRANSIENT = ExtraStyles(rawValue: 0x00000004)
+        public static let wxWS_EX_THEMED_BACKGROUND = ExtraStyles(rawValue: 0x00000008)
+        public static let wxWS_EX_PROCESS_IDLE = ExtraStyles(rawValue: 0x00000010)
+        public static let wxWS_EX_PROCESS_UI_UPDATES = ExtraStyles(rawValue: 0x00000020)
+        public static let wxWS_EX_CONTEXTHELP = ExtraStyles(rawValue: 0x00000080)
+        
+        public init(rawValue: CLong) {
+            self.rawValue = rawValue
+        }
+    }
     
     public required init?(rawValue: CVoidPtr) {
         super.init(rawValue: rawValue)
@@ -804,22 +1032,42 @@ open class wxWindow: wxEvtHandler {
     internal var _clientData: wxClientData?
     public var clientData: wxClientData? {
         get {
-            guard _clientData != nil else {
-                return wxClientData(rawValue: _wxc_wxWindow_GetClientData(rawValue))
-            }
-            
-            return _clientData
+            return getClientData()
         }
         
         set {
-            _wxc_wxWindow_SetClientData(rawValue, newValue?.rawValue)
-            _clientData = newValue
+            setClientData(newValue)
         }
+    }
+    
+    public func getClientData<T: wxClientData>() -> T? {
+        guard let clientData = _clientData else {
+            return T(rawValue: _wxc_wxWindow_GetClientData(rawValue))
+        }
+        
+        return clientData as? T
+    }
+    
+    public func getClientData() -> CVoidPtr {
+        return _wxc_wxWindow_GetClientData(rawValue)
+    }
+    
+    public func setClientData<T: wxClientData>(_ clientData: T?) {
+        _wxc_wxWindow_SetClientData(rawValue, clientData?.rawValue)
+        _clientData = clientData
+    }
+    
+    public func setClientData(_ clientData: CVoidPtr) {
+        _wxc_wxWindow_SetClientData(rawValue, clientData)
     }
     
     public var clientSize: Size {
         get {
             return Size(wxSize: _wxc_wxWindow_GetClientSize(rawValue))!
+        }
+        
+        set {
+            _wxc_wxWindow_SetClientSize(rawValue, newValue.width, newValue.height)
         }
     }
     
@@ -837,6 +1085,10 @@ open class wxWindow: wxEvtHandler {
         get {
             return wxLayoutConstraints(rawValue: _wxc_wxWindow_GetConstraints(rawValue))
         }
+        
+        set {
+            _wxc_wxWindow_SetConstraints(rawValue, newValue?.rawValue)
+        }
     }
     
     public var constraintsInvolvedIn: wxWindowList? {
@@ -848,6 +1100,10 @@ open class wxWindow: wxEvtHandler {
     public var cursor: wxCursor? {
         get {
             return wxCursor(rawValue: _wxc_wxWindow_GetCursor(rawValue))
+        }
+        
+        set {
+            _ = _wxc_wxWindow_SetCursor(rawValue, newValue?.rawValue)
         }
     }
     
@@ -865,6 +1121,8 @@ open class wxWindow: wxEvtHandler {
             if let dropTarget = _dropTarget {
                 dropTarget.rebase()
             }
+            
+            _wxc_wxWindow_SetDropTarget(rawValue, newValue?.rawValue)
             
             _dropTarget = newValue
         }
@@ -890,6 +1148,10 @@ open class wxWindow: wxEvtHandler {
             return font
         }
         
+        set {
+            _ = _wxc_wxWindow_SetFont(rawValue, newValue.rawValue)
+        }
+        
     }
     
     public var foregroundColour: wxColour {
@@ -900,6 +1162,10 @@ open class wxWindow: wxEvtHandler {
             
             return colour
         }
+        
+        set {
+            _ = _wxc_wxWindow_SetForegroundColour(rawValue, newValue.rawValue)
+        }
     }
     
     public var handle: UnsafeMutableRawPointer {
@@ -908,15 +1174,29 @@ open class wxWindow: wxEvtHandler {
         }
     }
     
-    public var ID: wxWindowID {
+    public var Id: wxWindowID {
         get {
             return _wxc_wxWindow_GetId(rawValue)
+        }
+        
+        set {
+            _wxc_wxWindow_SetId(rawValue, newValue)
         }
     }
     
     public var label: String? {
         get {
             return String(wxString: _wxc_wxWindow_GetLabel(rawValue))
+        }
+        
+        set {
+            if let value = newValue {
+                value.withWxString {
+                    _wxc_wxWindow_SetLabel(rawValue, $0)
+                }
+            } else {
+                _wxc_wxWindow_SetLabel(rawValue, nil)
+            }
         }
     }
     
@@ -954,6 +1234,16 @@ open class wxWindow: wxEvtHandler {
         get {
             return String(wxString: _wxc_wxWindow_GetName(rawValue))
         }
+        
+        set {
+            if let value = newValue {
+                value.withWxString {
+                    _wxc_wxWindow_SetName(rawValue, $0)
+                }
+            } else {
+                _wxc_wxWindow_SetName(rawValue, nil)
+            }
+        }
     }
     
     public func getParent<T: wxWindow>() -> T? {
@@ -981,16 +1271,16 @@ open class wxWindow: wxEvtHandler {
         }
     }
     
-    public func getScrollPos(orientation: CInt) -> CInt {
-        return _wxc_wxWindow_GetScrollPos(rawValue, orientation)
+    public func getScrollPos(orientation: wxOrientation) -> CInt {
+        return _wxc_wxWindow_GetScrollPos(rawValue, orientation.rawValue)
     }
     
-    public func getScrollRange(orientation: CInt) -> CInt {
-        return _wxc_wxWindow_GetScrollRange(rawValue, orientation)
+    public func getScrollRange(orientation: wxOrientation) -> CInt {
+        return _wxc_wxWindow_GetScrollRange(rawValue, orientation.rawValue)
     }
     
-    public func getScrollThumb(orientation: CInt) -> CInt {
-        return _wxc_wxWindow_GetScrollThumb(rawValue, orientation)
+    public func getScrollThumb(orientation: wxOrientation) -> CInt {
+        return _wxc_wxWindow_GetScrollThumb(rawValue, orientation.rawValue)
     }
     
     public var size: Size {
@@ -999,7 +1289,10 @@ open class wxWindow: wxEvtHandler {
         }
         
         set {
-            _wxc_wxWindow_SetClientSize(rawValue, newValue.width, newValue.height)
+            var r = rect
+            r.size = newValue
+            
+            setSize(rect: r)
         }
     }
     
@@ -1010,11 +1303,23 @@ open class wxWindow: wxEvtHandler {
             
             return Size(width: w, height: h)
         }
+        
+        set {
+            var r = Rect(x: 0, y: 0, width: 0, height: 0)
+            r.origin = positionConstraint
+            r.size = newValue
+            
+            _wxc_wxWindow_SetSizeConstraint(rawValue, r.x , r.y, r.width, r.height)
+        }
     }
     
     public var sizer: wxSizer? {
         get {
             return wxSizer(rawValue: _wxc_wxWindow_GetSizer(rawValue))
+        }
+        
+        set {
+            _wxc_wxWindow_SetSizer(rawValue, newValue?.rawValue)
         }
     }
     
@@ -1031,6 +1336,16 @@ open class wxWindow: wxEvtHandler {
         get {
             return String(wxString: _wxc_wxWindow_GetToolTip(rawValue))
         }
+        
+        set {
+            if let value = newValue {
+                value.withWxString {
+                    _wxc_wxWindow_SetToolTip(rawValue, $0)
+                }
+            } else {
+                _wxc_wxWindow_SetToolTip(rawValue, nil)
+            }
+        }
     }
     
     public var updateRegion: wxRegion! {
@@ -1043,17 +1358,39 @@ open class wxWindow: wxEvtHandler {
         get {
             return wxValidator(rawValue: _wxc_wxWindow_GetValidator(rawValue))
         }
+        
+        set {
+            _wxc_wxWindow_SetValidator(rawValue, newValue?.rawValue)
+        }
     }
     
     public var virtualSize: Size {
         get {
             return Size(wxSize: _wxc_wxWindow_GetVirtualSize(rawValue))!
         }
+        
+        set {
+            _wxc_wxWindow_SetVirtualSize(rawValue, newValue.width, newValue.height)
+        }
     }
     
-    public var windowStyleFlag: CInt {
+    public var windowStyleFlag: wxWindow.WindowStyleFlag {
         get {
-            return _wxc_wxWindow_GetWindowStyleFlag(rawValue)
+            return WindowStyleFlag(rawValue: _wxc_wxWindow_GetWindowStyleFlag(rawValue))
+        }
+        
+        set {
+            _wxc_wxWindow_SetWindowStyleFlag(rawValue, newValue.rawValue)
+        }
+    }
+    
+    public var windowStyle: wxWindow.WindowStyleFlag {
+        get {
+            return windowStyleFlag
+        }
+        
+        set {
+            windowStyleFlag = newValue
         }
     }
     
@@ -1214,6 +1551,7 @@ open class wxWindow: wxEvtHandler {
         _wxc_wxWindow_SetAcceleratorTable(rawValue, table.rawValue)
     }
     
+    @discardableResult
     public func setBackgroundColour(_ colour: wxColour) -> Bool {
         return _wxc_wxWindow_SetBackgroundColour(rawValue, colour.rawValue)
     }
@@ -1224,5 +1562,77 @@ open class wxWindow: wxEvtHandler {
     
     public func setConstraintSizes(recurse: Bool = true) {
         _wxc_wxWindow_SetConstraintSizes(rawValue, recurse)
+    }
+    
+    @discardableResult
+    public func setCursor(_ cursor: wxCursor?) -> Bool {
+        return _wxc_wxWindow_SetCursor(rawValue, cursor?.rawValue)
+    }
+    
+    public func setExtraStyle(_ extraStyle: wxWindow.ExtraStyles) {
+        _wxc_wxWindow_SetExtraStyle(rawValue, extraStyle.rawValue)
+    }
+    
+    public func setFocus() {
+        _wxc_wxWindow_SetFocus(rawValue)
+    }
+    
+    public func setFont(_ font: wxFont) -> Bool {
+        return _wxc_wxWindow_SetFont(rawValue, font.rawValue)
+    }
+    
+    public func setForegroundColour(_ colour: wxColour) -> Bool {
+        return _wxc_wxWindow_SetForegroundColour(rawValue, colour.rawValue)
+    }
+    
+    public func setScrollPos(orientation: wxOrientation, position: CInt, refresh: Bool = true) {
+        _wxc_wxWindow_SetScrollPos(rawValue, orientation.rawValue, position, refresh)
+    }
+    
+    public func setScrollbar(orientation: wxOrientation, position: CInt, thumbSize: CInt, range: CInt, refresh: Bool = true) {
+        _wxc_wxWindow_SetScrollbar(rawValue, orientation.rawValue, position, thumbSize, range, refresh)
+    }
+    
+    public func setSize(rect: Rect, sizeFlags: wxWindow.SizeFlags = .wxSIZE_AUTO) {
+        _wxc_wxWindow_SetSize(rawValue, rect.x, rect.y, rect.width, rect.height, sizeFlags.rawValue)
+    }
+    
+    public func setSizeHints(minSize: Size, maxSize: Size = wxDefaultSize, incSize: Size = wxDefaultSize) {
+        _wxc_wxWindow_SetSizeHints(rawValue, minSize.width, minSize.height, maxSize.width, maxSize.height, incSize.width, incSize.height)
+    }
+    
+    @discardableResult
+    public func show() -> Bool {
+        return _wxc_wxWindow_Show(rawValue)
+    }
+    
+    public func thaw() {
+        _wxc_wxWindow_Thaw(rawValue)
+    }
+    
+    @discardableResult
+    public func transferDataFromWindow() -> Bool {
+        return _wxc_wxWindow_TransferDataFromWindow(rawValue)
+    }
+    
+    @discardableResult
+    public func transferDataToWindow() -> Bool {
+        return _wxc_wxWindow_TransferDataToWindow(rawValue)
+    }
+    
+    public func unsetConstraints(_ constraints: wxLayoutConstraints) {
+        _wxc_wxWindow_UnsetConstraints(rawValue, constraints.rawValue)
+    }
+    
+    public func updateWindowUI() {
+        _wxc_wxWindow_UpdateWindowUI(rawValue)
+    }
+    
+    public func validate() -> Bool {
+        return _wxc_wxWindow_Validate(rawValue)
+    }
+    
+    public func warpPointer(to pos: Point) {
+        _wxc_wxWindow_WarpPointer(rawValue, pos.x, pos.y)
     }
 }
