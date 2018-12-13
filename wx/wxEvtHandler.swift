@@ -127,24 +127,36 @@ open class wxEvtHandler: wxObject {
     
     public var nextHandler: wxEvtHandler? {
         get {
-            guard let handler = _nextHandler else {
-                return wxEvtHandler(rawValue: getNextHandler())
-            }
-            
-            return handler
+            return getNextHandler()
         }
         
         set {
-            setNextHandler(newValue?.rawValue)
-            _nextHandler = newValue
+            setNextHandler(newValue)
         }
     }
     
-    internal func setNextHandler(_ handler: CVoidPtr) {
+    public func setNextHandler<T: wxEvtHandler>(_ handler: T?) {
+        _wxc_wxEvtHandler_SetNextHandler(rawValue, handler?.rawValue)
+        _nextHandler = nextHandler
+    }
+    
+    public func setNextHandler(_ handler: CVoidPtr) {
         _wxc_wxEvtHandler_SetNextHandler(rawValue, handler)
     }
     
-    internal func getNextHandler() -> CVoidPtr {
+    public func getNextHandler<T: wxEvtHandler>() -> T? {
+        guard let handler = _nextHandler else {
+            guard let rawValue = rawValue else {
+                return nil
+            }
+            
+            return T(rawValue:_wxc_wxEvtHandler_GetNextHandler(rawValue))
+        }
+        
+        return handler as? T
+    }
+    
+    public func getNextHandler() -> CVoidPtr {
         return _wxc_wxEvtHandler_GetNextHandler(rawValue)
     }
     
@@ -152,25 +164,37 @@ open class wxEvtHandler: wxObject {
     
     public var previousHandler: wxEvtHandler? {
         get {
-            guard let handler = _previousHandler else {
-                return wxEvtHandler(rawValue: getPreviousHandler())
-            }
-            
-            return handler
+            return getPreviousHandler()
         }
         
         set {
-            setPreviousHandler(newValue?.rawValue)
-            _previousHandler = newValue
+            setPreviousHandler(newValue)
         }
     }
     
-    internal func setPreviousHandler(_ handler: CVoidPtr) {
+    public func setPreviousHandler<T: wxEvtHandler>(_ handler: T?) {
+        _wxc_wxEvtHandler_SetPreviousHandler(rawValue, handler?.rawValue)
+        _previousHandler = handler
+    }
+    
+    public func setPreviousHandler(_ handler: CVoidPtr) {
         _wxc_wxEvtHandler_SetPreviousHandler(rawValue, handler)
     }
     
-    internal func getPreviousHandler() -> CVoidPtr {
+    public func getPreviousHandler() -> CVoidPtr {
         return _wxc_wxEvtHandler_GetPreviousHandler(rawValue)
+    }
+    
+    public func getPreviousHandler<T: wxEvtHandler>() -> T? {
+        guard let handler = _previousHandler else {
+            guard let rawValue = rawValue else {
+                return nil
+            }
+            
+            return T(rawValue: _wxc_wxEvtHandler_GetPreviousHandler(rawValue))
+        }
+        
+        return handler as? T
     }
     
     public func processEvent(_ event: wxEvent) -> Bool {
