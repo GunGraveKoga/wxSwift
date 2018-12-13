@@ -39,3 +39,6 @@ build
 *.ipch
 
 *.xcuserstate
+*.xcuserdata
+xcschememanagement.plist
+IDEFindNavigatorScopes.plist
