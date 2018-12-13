@@ -28,13 +28,13 @@ public final class wxCaret: wxObject {
     
     public var position: Point {
         get {
-            return wxPoint(rawValue: _wxc_wxCaret_GetPosition(rawValue))!
+            return Point(wxPoint: _wxc_wxCaret_GetPosition(rawValue))!
         }
     }
     
     public var size: Size {
         get {
-            return wxSize(rawValue: _wxc_wxCaret_GetSize(rawValue))!
+            return Size(wxSize: _wxc_wxCaret_GetSize(rawValue))!
         }
         
         set {

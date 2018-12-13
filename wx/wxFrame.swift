@@ -18,7 +18,14 @@ open class wxFrame: wxTopLevelWindow {
         super.init(rawValue: rawValue)
     }
     
-    public init(withRect rect: wxRect, title: String, parent: wxWindow? = nil, windowId: wxWindowID, style: CInt) {
-        super.init(rawValue: _wxc_wxFrame_Create(parent?.rawValue, windowId, wxString(string: title).rawValue, rect.x, rect.y, rect.width, rect.height, style))!
+    public init(withRect rect: Rect, title: String, parent: wxWindow? = nil, windowId: wxWindowID, style: CInt) {
+        
+        let _title = _wxc_wxString_CreateUTF8(title)
+        
+        defer {
+            _wxc_wxString_Delete(_title)
+        }
+        
+        super.init(rawValue: _wxc_wxFrame_Create(parent?.rawValue, windowId, _title, rect.x, rect.y, rect.width, rect.height, style))!
     }
 }

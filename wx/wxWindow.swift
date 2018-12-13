@@ -471,7 +471,7 @@ open class wxWindow: wxEvtHandler {
     
     public var position: Point {
         get {
-            return Point(wxPoint: wxWindow_GetPosition(rawValue))!
+            return Point(wxPoint: _wxc_wxWindow_GetPosition(rawValue))!
         }
     }
     
@@ -675,7 +675,7 @@ open class wxWindow: wxEvtHandler {
     }
     
     public func lower() {
-        wxWindow_Lower(rawValue)
+        _wxc_wxWindow_Lower(rawValue)
     }
     
     public func move(to pos: Point) {

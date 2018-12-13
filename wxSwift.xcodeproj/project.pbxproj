@@ -208,6 +208,9 @@
 		14EFAE6D2194FB9F00105BAB /* wxRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EFAE6C2194FB9F00105BAB /* wxRect.swift */; };
 		EDFCE01C21C2C3AA0064FD60 /* wxDefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE01B21C2C3A90064FD60 /* wxDefs.swift */; };
 		EDFCE01E21C2D08C0064FD60 /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE01D21C2D08C0064FD60 /* Bridge.swift */; };
+		EDFCE02021C2DAEE0064FD60 /* wxControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE01F21C2DAEE0064FD60 /* wxControl.swift */; };
+		EDFCE02221C2DB0D0064FD60 /* wxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE02121C2DB0D0064FD60 /* wxButton.swift */; };
+		EDFCE02421C2DB780064FD60 /* wxIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE02321C2DB780064FD60 /* wxIcon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -428,6 +431,9 @@
 		14EFAE6C2194FB9F00105BAB /* wxRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxRect.swift; sourceTree = "<group>"; };
 		EDFCE01B21C2C3A90064FD60 /* wxDefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxDefs.swift; sourceTree = "<group>"; };
 		EDFCE01D21C2D08C0064FD60 /* Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
+		EDFCE01F21C2DAEE0064FD60 /* wxControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxControl.swift; sourceTree = "<group>"; };
+		EDFCE02121C2DB0D0064FD60 /* wxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxButton.swift; sourceTree = "<group>"; };
+		EDFCE02321C2DB780064FD60 /* wxIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxIcon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -731,6 +737,7 @@
 				14B6728C2198D89200C6328B /* wxCaret.swift */,
 				14B672942198F4ED00C6328B /* wxGDIObject.swift */,
 				14B672962198F52D00C6328B /* wxBitmap.swift */,
+				EDFCE02321C2DB780064FD60 /* wxIcon.swift */,
 				14B672982198F59800C6328B /* wxCursor.swift */,
 				14B6729A219A3A0000C6328B /* wxDropTarget.swift */,
 				14B6728E2198E5E900C6328B /* wxLayoutConstraints.swift */,
@@ -747,6 +754,8 @@
 				14A5475421C1CABF00C4AD26 /* wxClientData.swift */,
 				14EFAE622194B8A700105BAB /* wxApp.swift */,
 				14EFAE642194F2A900105BAB /* wxWindow.swift */,
+				EDFCE01F21C2DAEE0064FD60 /* wxControl.swift */,
+				EDFCE02121C2DB0D0064FD60 /* wxButton.swift */,
 				14EFAE662194F49500105BAB /* wxTopLevelWindow.swift */,
 				14EFAE682194F56400105BAB /* wxFrame.swift */,
 				149B9FBC2193B4C500A15A31 /* Info.plist */,
@@ -909,11 +918,14 @@
 				149B9FB62193919900A15A31 /* wxObject.swift in Sources */,
 				EDFCE01C21C2C3AA0064FD60 /* wxDefs.swift in Sources */,
 				14EFAE632194B8A800105BAB /* wxApp.swift in Sources */,
+				EDFCE02421C2DB780064FD60 /* wxIcon.swift in Sources */,
 				14EFAE5D2194662900105BAB /* wxEvent.swift in Sources */,
 				14B672992198F59800C6328B /* wxCursor.swift in Sources */,
+				EDFCE02221C2DB0D0064FD60 /* wxButton.swift in Sources */,
 				14D53BC521B40F2A00E86AE6 /* wxRegion.swift in Sources */,
 				14B672932198F3A300C6328B /* wxWindowList.swift in Sources */,
 				14EFAE672194F49500105BAB /* wxTopLevelWindow.swift in Sources */,
+				EDFCE02021C2DAEE0064FD60 /* wxControl.swift in Sources */,
 				14B672952198F4ED00C6328B /* wxGDIObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
