@@ -208,9 +208,9 @@ EWXWEXPORT(void,wxWindow_SetWindowStyleFlag)(wxWindow* self,long style)
 	self->SetWindowStyleFlag( style );
 }
 	
-EWXWEXPORT(int,wxWindow_GetWindowStyleFlag)(wxWindow* self)
+EWXWEXPORT(long,wxWindow_GetWindowStyleFlag)(wxWindow* self)
 {
-	return (int)self->GetWindowStyleFlag();
+	return self->GetWindowStyleFlag();
 }
 	
 EWXWEXPORT(bool,wxWindow_HasFlag)(wxWindow* self,int flag)
