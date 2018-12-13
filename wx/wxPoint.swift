@@ -42,6 +42,8 @@ internal func _wxc_wxPoint_SetY(_ ptr: CVoidPtr, _ value: CInt) -> Void {
     wxPoint_SetY(ptr, value)
 }
 
+public let wxDefaultPosition: Point = Point(x: -1, y: -1)
+
 public struct Point {
     
     public var x: CInt

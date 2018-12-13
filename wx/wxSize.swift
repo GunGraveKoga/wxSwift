@@ -42,6 +42,8 @@ internal func _wxc_wxSize_SetWidth(_ ptr: CVoidPtr, _ w: CInt) -> Void {
     return wxSize_SetWidth(ptr, w)
 }
 
+public let wxDefaultSize: Size = Size(width: -1, height: -1)
+
 public struct Size {
     
     public var width: CInt
