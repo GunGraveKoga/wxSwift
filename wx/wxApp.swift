@@ -200,7 +200,7 @@ public final class wxApp: wxEvtHandler {
     
     private static var _initialized: Bool = false
     
-    public override init() {
+    public init() {
         
         if !wxApp._initialized {
             wxApp._initialized = _wxc_wxc_Initialize(0, nil)
@@ -225,9 +225,9 @@ public final class wxApp: wxEvtHandler {
         _wxc_ELJApp_Dispatch()
     }
     
-    public var displaySize: wxSize {
+    public var displaySize: Size {
         get {
-            return wxSize(rawValue: _wxc_ELJApp_DisplaySize())!
+            return Size(wxSize: _wxc_ELJApp_DisplaySize())!
         }
     }
     
@@ -249,7 +249,7 @@ public final class wxApp: wxEvtHandler {
     
     public var applicationName: String {
         get {
-            guard let str = wxString(rawValue: _wxc_ELJApp_GetAppName()) else {
+            guard let str = String(wxString: _wxc_ELJApp_GetAppName()) else {
                 return ""
             }
             
@@ -257,23 +257,25 @@ public final class wxApp: wxEvtHandler {
         }
         
         set {
-            let str = wxString(string: newValue)
-            _wxc_ELJApp_SetAppName(str.rawValue)
+            newValue.withWxString {
+                _wxc_ELJApp_SetAppName($0)
+            }
         }
     }
     
     public var className: String {
         get {
-            guard let str = wxString(rawValue: _wxc_ELJApp_GetClassName()) else {
+            guard let str = String(wxString: _wxc_ELJApp_GetClassName()) else {
                 return ""
             }
             
-            return String(str)
+            return str
         }
         
         set {
-            let str = wxString(string: newValue)
-            _wxc_ELJApp_SetClassName(str.rawValue)
+            newValue.withWxString {
+                _wxc_ELJApp_SetClassName($0)
+            }
         }
     }
     
@@ -307,16 +309,17 @@ public final class wxApp: wxEvtHandler {
     
     public var vendorName: String {
         get {
-            guard let str = wxString(rawValue: _wxc_ELJApp_GetVendorName()) else {
+            guard let str = String(wxString: _wxc_ELJApp_GetVendorName()) else {
                 return ""
             }
             
-            return String(str)
+            return str
         }
         
         set {
-            let str = wxString(string: newValue)
-            _wxc_ELJApp_SetVendorName(str.rawValue)
+            newValue.withWxString {
+                _wxc_ELJApp_SetVendorName($0)
+            }
         }
     }
     
@@ -354,11 +357,11 @@ public final class wxApp: wxEvtHandler {
     
     public var userName: String {
         get {
-            guard let str = wxString(rawValue: _wxc_ELJApp_GetUserName()) else {
+            guard let str = String(wxString: _wxc_ELJApp_GetUserName()) else {
                 return ""
             }
             
-            return String(str)
+            return str
         }
     }
     
@@ -369,22 +372,24 @@ public final class wxApp: wxEvtHandler {
     }
     
     public func getHomeDirectory(for user: String) -> String {
-        let _user = wxString(string: user)
+        let _user = _wxc_wxString_CreateUTF8(user)
         
-        guard let dir = wxString(rawValue: _wxc_ELJApp_GetUserHome(_user.rawValue)) else {
-            return ""
+        defer {
+            _wxc_wxString_Delete(_user)
         }
         
-        return String(dir)
+        guard let dir = _wxc_ELJApp_GetUserHome(_user) else { return "" }
+        
+        return String(wxString: dir)!
     }
     
     public var userID: String {
         get {
-            guard let str = wxString(rawValue: _wxc_ELJApp_GetUserId()) else {
+            guard let str = String(wxString: _wxc_ELJApp_GetUserId()) else {
                 return ""
             }
             
-            return String(str)
+            return str
         }
     }
 }

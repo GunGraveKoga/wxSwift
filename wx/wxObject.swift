@@ -27,4 +27,10 @@ open class wxObject : Equatable {
     public static func == (lhs: wxObject, rhs: wxObject) -> Bool {
         return lhs.rawValue == rhs.rawValue
     }
+    
+    public func destroy() {
+        if let rawValue = rawValue {
+            _wxc_wxObject_Delete(rawValue)
+        }
+    }
 }

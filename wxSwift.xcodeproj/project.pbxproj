@@ -170,6 +170,24 @@
 		149B9FB62193919900A15A31 /* wxObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149B9FB52193919900A15A31 /* wxObject.swift */; };
 		149B9FB82193924800A15A31 /* wx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149B9FB72193924800A15A31 /* wx.swift */; };
 		149B9FBA21939A0300A15A31 /* wxString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149B9FB921939A0300A15A31 /* wxString.swift */; };
+		14A5475321C1C40E00C4AD26 /* wxAcceleratorTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A5475221C1C40E00C4AD26 /* wxAcceleratorTable.swift */; };
+		14A5475521C1CABF00C4AD26 /* wxClientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A5475421C1CABF00C4AD26 /* wxClientData.swift */; };
+		14B6728B2198C57500C6328B /* wxColour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B6728A2198C57500C6328B /* wxColour.swift */; };
+		14B6728D2198D89200C6328B /* wxCaret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B6728C2198D89200C6328B /* wxCaret.swift */; };
+		14B6728F2198E5E900C6328B /* wxLayoutConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B6728E2198E5E900C6328B /* wxLayoutConstraints.swift */; };
+		14B672912198E66700C6328B /* wxIndividualLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B672902198E66700C6328B /* wxIndividualLayoutConstraint.swift */; };
+		14B672932198F3A300C6328B /* wxWindowList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B672922198F3A300C6328B /* wxWindowList.swift */; };
+		14B672952198F4ED00C6328B /* wxGDIObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B672942198F4ED00C6328B /* wxGDIObject.swift */; };
+		14B672972198F52D00C6328B /* wxBitmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B672962198F52D00C6328B /* wxBitmap.swift */; };
+		14B672992198F59800C6328B /* wxCursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B672982198F59800C6328B /* wxCursor.swift */; };
+		14B6729B219A3A0000C6328B /* wxDropTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B6729A219A3A0000C6328B /* wxDropTarget.swift */; };
+		14B6729D21A2C56B00C6328B /* wxFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B6729C21A2C56B00C6328B /* wxFont.swift */; };
+		14B6729F21A2C6C200C6328B /* wxStockGDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B6729E21A2C6C200C6328B /* wxStockGDI.swift */; };
+		14D53BC321B409CC00E86AE6 /* wxSizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D53BC221B409CC00E86AE6 /* wxSizer.swift */; };
+		14D53BC521B40F2A00E86AE6 /* wxRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D53BC421B40F2A00E86AE6 /* wxRegion.swift */; };
+		14D53BC721B4116A00E86AE6 /* wxValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D53BC621B4116A00E86AE6 /* wxValidator.swift */; };
+		14D53BC921B4381B00E86AE6 /* wxMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D53BC821B4381B00E86AE6 /* wxMenu.swift */; };
+		14D53BCB21B488E200E86AE6 /* wxDC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D53BCA21B488E200E86AE6 /* wxDC.swift */; };
 		14EFAE2D2193BB6600105BAB /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EFAE2C2193BB6500105BAB /* IOKit.framework */; };
 		14EFAE2F2193BB7500105BAB /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EFAE2E2193BB7500105BAB /* Carbon.framework */; };
 		14EFAE312193BB8600105BAB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EFAE302193BB8600105BAB /* Cocoa.framework */; };
@@ -370,6 +388,24 @@
 		149B9FB72193924800A15A31 /* wx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wx.swift; sourceTree = "<group>"; };
 		149B9FB921939A0300A15A31 /* wxString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxString.swift; sourceTree = "<group>"; };
 		149B9FBC2193B4C500A15A31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14A5475221C1C40E00C4AD26 /* wxAcceleratorTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxAcceleratorTable.swift; sourceTree = "<group>"; };
+		14A5475421C1CABF00C4AD26 /* wxClientData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxClientData.swift; sourceTree = "<group>"; };
+		14B6728A2198C57500C6328B /* wxColour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxColour.swift; sourceTree = "<group>"; };
+		14B6728C2198D89200C6328B /* wxCaret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxCaret.swift; sourceTree = "<group>"; };
+		14B6728E2198E5E900C6328B /* wxLayoutConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxLayoutConstraints.swift; sourceTree = "<group>"; };
+		14B672902198E66700C6328B /* wxIndividualLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxIndividualLayoutConstraint.swift; sourceTree = "<group>"; };
+		14B672922198F3A300C6328B /* wxWindowList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxWindowList.swift; sourceTree = "<group>"; };
+		14B672942198F4ED00C6328B /* wxGDIObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxGDIObject.swift; sourceTree = "<group>"; };
+		14B672962198F52D00C6328B /* wxBitmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxBitmap.swift; sourceTree = "<group>"; };
+		14B672982198F59800C6328B /* wxCursor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxCursor.swift; sourceTree = "<group>"; };
+		14B6729A219A3A0000C6328B /* wxDropTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxDropTarget.swift; sourceTree = "<group>"; };
+		14B6729C21A2C56B00C6328B /* wxFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxFont.swift; sourceTree = "<group>"; };
+		14B6729E21A2C6C200C6328B /* wxStockGDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxStockGDI.swift; sourceTree = "<group>"; };
+		14D53BC221B409CC00E86AE6 /* wxSizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxSizer.swift; sourceTree = "<group>"; };
+		14D53BC421B40F2A00E86AE6 /* wxRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxRegion.swift; sourceTree = "<group>"; };
+		14D53BC621B4116A00E86AE6 /* wxValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxValidator.swift; sourceTree = "<group>"; };
+		14D53BC821B4381B00E86AE6 /* wxMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxMenu.swift; sourceTree = "<group>"; };
+		14D53BCA21B488E200E86AE6 /* wxDC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxDC.swift; sourceTree = "<group>"; };
 		14EFAE2C2193BB6500105BAB /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		14EFAE2E2193BB7500105BAB /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		14EFAE302193BB8600105BAB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -685,6 +721,24 @@
 				14EFAE602194B4CD00105BAB /* wxSize.swift */,
 				14EFAE6A2194F7E700105BAB /* wxPoint.swift */,
 				14EFAE6C2194FB9F00105BAB /* wxRect.swift */,
+				14B6728A2198C57500C6328B /* wxColour.swift */,
+				14B6728C2198D89200C6328B /* wxCaret.swift */,
+				14B672942198F4ED00C6328B /* wxGDIObject.swift */,
+				14B672962198F52D00C6328B /* wxBitmap.swift */,
+				14B672982198F59800C6328B /* wxCursor.swift */,
+				14B6729A219A3A0000C6328B /* wxDropTarget.swift */,
+				14B6728E2198E5E900C6328B /* wxLayoutConstraints.swift */,
+				14B672902198E66700C6328B /* wxIndividualLayoutConstraint.swift */,
+				14B672922198F3A300C6328B /* wxWindowList.swift */,
+				14B6729C21A2C56B00C6328B /* wxFont.swift */,
+				14B6729E21A2C6C200C6328B /* wxStockGDI.swift */,
+				14D53BC221B409CC00E86AE6 /* wxSizer.swift */,
+				14D53BC421B40F2A00E86AE6 /* wxRegion.swift */,
+				14D53BC621B4116A00E86AE6 /* wxValidator.swift */,
+				14D53BC821B4381B00E86AE6 /* wxMenu.swift */,
+				14D53BCA21B488E200E86AE6 /* wxDC.swift */,
+				14A5475221C1C40E00C4AD26 /* wxAcceleratorTable.swift */,
+				14A5475421C1CABF00C4AD26 /* wxClientData.swift */,
 				14EFAE622194B8A700105BAB /* wxApp.swift */,
 				14EFAE642194F2A900105BAB /* wxWindow.swift */,
 				14EFAE662194F49500105BAB /* wxTopLevelWindow.swift */,
@@ -822,19 +876,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14D53BC721B4116A00E86AE6 /* wxValidator.swift in Sources */,
+				14D53BC321B409CC00E86AE6 /* wxSizer.swift in Sources */,
 				14EFAE5F21947A5F00105BAB /* wxClosure.swift in Sources */,
+				14B672972198F52D00C6328B /* wxBitmap.swift in Sources */,
+				14B6729F21A2C6C200C6328B /* wxStockGDI.swift in Sources */,
 				14EFAE6B2194F7E700105BAB /* wxPoint.swift in Sources */,
+				14A5475521C1CABF00C4AD26 /* wxClientData.swift in Sources */,
+				14B672912198E66700C6328B /* wxIndividualLayoutConstraint.swift in Sources */,
+				14D53BCB21B488E200E86AE6 /* wxDC.swift in Sources */,
+				14D53BC921B4381B00E86AE6 /* wxMenu.swift in Sources */,
 				14EFAE692194F56400105BAB /* wxFrame.swift in Sources */,
 				149B9FB82193924800A15A31 /* wx.swift in Sources */,
+				14B6729D21A2C56B00C6328B /* wxFont.swift in Sources */,
 				14EFAE612194B4CD00105BAB /* wxSize.swift in Sources */,
 				14EFAE5B21945F1000105BAB /* wxEvtHandler.swift in Sources */,
+				14B6729B219A3A0000C6328B /* wxDropTarget.swift in Sources */,
 				149B9FBA21939A0300A15A31 /* wxString.swift in Sources */,
+				14B6728D2198D89200C6328B /* wxCaret.swift in Sources */,
+				14A5475321C1C40E00C4AD26 /* wxAcceleratorTable.swift in Sources */,
 				14EFAE652194F2A900105BAB /* wxWindow.swift in Sources */,
+				14B6728F2198E5E900C6328B /* wxLayoutConstraints.swift in Sources */,
+				14B6728B2198C57500C6328B /* wxColour.swift in Sources */,
 				14EFAE6D2194FB9F00105BAB /* wxRect.swift in Sources */,
 				149B9FB62193919900A15A31 /* wxObject.swift in Sources */,
 				14EFAE632194B8A800105BAB /* wxApp.swift in Sources */,
 				14EFAE5D2194662900105BAB /* wxEvent.swift in Sources */,
+				14B672992198F59800C6328B /* wxCursor.swift in Sources */,
+				14D53BC521B40F2A00E86AE6 /* wxRegion.swift in Sources */,
+				14B672932198F3A300C6328B /* wxWindowList.swift in Sources */,
 				14EFAE672194F49500105BAB /* wxTopLevelWindow.swift in Sources */,
+				14B672952198F4ED00C6328B /* wxGDIObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -66,57 +66,42 @@ internal func _wxc_wxRect_SetHeight(_ ptr: CVoidPtr, _ value: CInt) -> Void {
     wxRect_SetHeight(ptr, value)
 }
 
-public final class wxRect: wxObject {
+public struct Rect {
     
-    public required init?(rawValue: CVoidPtr) {
-        super.init(rawValue: rawValue)
+    public var x: CInt
+    public var y: CInt
+    public var width: CInt
+    public var height: CInt
+    
+    public init?(wxRect: CVoidPtr) {
+        guard let wxRect = wxRect else {
+            return nil
+        }
+        
+        defer {
+            _wxc_wxRect_Delete(wxRect)
+        }
+        
+        self.x = _wxc_wxRect_GetX(wxRect)
+        self.y = _wxc_wxRect_GetY(wxRect)
+        self.width = _wxc_wxRect_GetWidth(wxRect)
+        self.height = _wxc_wxRect_GetHeight(wxRect)
     }
     
     public init(x: CInt, y: CInt, width: CInt, height: CInt) {
-        super.init(rawValue: _wxc_wxRect_Create(x, y, width, height))!
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
     }
     
-    deinit {
-        _wxc_wxRect_Delete(rawValue)
-    }
-    
-    public var x: CInt {
-        get {
-            return _wxc_wxRect_GetX(rawValue)
+    public func withWxRect<Result>(_ body: (CVoidPtr) throws -> Result) rethrows -> Result {
+        let wxRect = _wxc_wxRect_Create(x, y, width, height)
+        
+        defer {
+            _wxc_wxRect_Delete(wxRect)
         }
         
-        set {
-            _wxc_wxRect_SetX(rawValue, newValue)
-        }
-    }
-    
-    public var y: CInt {
-        get {
-            return _wxc_wxRect_GetY(rawValue)
-        }
-        
-        set {
-            _wxc_wxRect_SetY(rawValue, newValue)
-        }
-    }
-    
-    public var width: CInt {
-        get {
-            return _wxc_wxRect_GetWidth(rawValue)
-        }
-        
-        set {
-            _wxc_wxRect_SetWidth(rawValue, newValue)
-        }
-    }
-    
-    public var height: CInt {
-        get {
-            return _wxc_wxRect_GetHeight(rawValue)
-        }
-        
-        set {
-            _wxc_wxRect_SetHeight(rawValue, newValue)
-        }
+        return try body(wxRect)
     }
 }

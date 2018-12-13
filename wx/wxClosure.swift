@@ -20,28 +20,42 @@ internal func _wxc_wxClosure_GetData(_ ptr: CVoidPtr) -> CVoidPtr {
     return wxClosure_GetData(ptr)
 }
 
-fileprivate class __wxClosureCallbackWrapper {
+fileprivate class __wxClosureCallbackWrapper<E: wxEvent> {
+    typealias Event = E
     var _eventObject: wxObject
-    let _eventHandler: (wxEvent) -> Void
+    let _eventHandler: (Event) -> Void
     
-    init(_ object: wxObject, _ callback: @escaping (wxEvent) -> Void) {
+    func createEvent(_ ptr: CVoidPtr) -> wxEvent? {
+        return Event(rawValue: ptr)
+    }
+    
+    func performEvent(_ event: Event) {
+        _eventHandler(event)
+    }
+    
+    init(_ object: wxObject, _ callback: @escaping (Event) -> Void) {
         _eventObject = object
         _eventHandler = callback
     }
 }
 
-fileprivate class __wxClosureMethodWrapper<T: AnyObject> {
+fileprivate class __wxClosureMethodWrapper<T: AnyObject, E: wxEvent> {
     typealias EventObjectType = T
+    typealias Event = E
     var _target: EventObjectType
     weak var _sender: wxObject?
-    let _action: (EventObjectType) -> (wxEvent) -> ()
+    let _action: (EventObjectType) -> (Event) -> Void
     
-    init(_ sender: wxObject, _ target: EventObjectType, _ action: @escaping (EventObjectType) -> (wxEvent) -> ()) {
+    init(_ sender: wxObject, _ target: EventObjectType, _ action: @escaping (EventObjectType) -> (Event) ->Void) {
         _target = target
         _action = action
     }
     
-    func performAction(_ event: wxEvent) {
+    func createEvent(_ ptr: CVoidPtr) -> wxEvent? {
+        return Event(rawValue: ptr)
+    }
+    
+    func performEvent(_ event: Event) {
         _action(_target)(event)
     }
 }
@@ -58,23 +72,28 @@ public final class wxClosure: wxObject {
         super.init(rawValue: rawValue)
     }
     
-    public init(_ object: wxObject, _ callbac: @escaping (wxEvent) -> Void) {
+    public init<E: wxEvent>(_ object: wxObject, _ callbac: @escaping (E) -> Void) {
         let closureFunction: wxClosureFun = {
             (funcPtr: CVoidPtr, data: CVoidPtr, event: CVoidPtr) -> Void in
 
-            let context: __wxClosureCallbackWrapper?
-            
-            guard let _event = wxEvent(rawValue: event) else {
-                context = bridgeTransfer(data)
+            guard let context: __wxClosureCallbackWrapper<wxEvent> = bridge(data) else {
                 return
             }
             
-            context = bridge(data)
+            guard let _event = context.createEvent(event) else {
+                let _context: __wxClosureCallbackWrapper<wxEvent>? = bridgeTransfer(data)
+                return
+            }
             
-            let oldEventObject = _event.eventObject
-            _event.setEventObject(context?._eventObject)
-            context?._eventHandler(_event)
-            _event.eventObject = oldEventObject
+            let old = _event.getEventObject()
+            
+            defer {
+                _event.setEventObject(old)
+            }
+            
+            _event.eventObject = context._eventObject
+            
+            context.performEvent(_event)
         }
         
         let _context = __wxClosureCallbackWrapper(object, callbac)
@@ -82,25 +101,32 @@ public final class wxClosure: wxObject {
         super.init(rawValue: _wxc_wxClosure_Create(closureFunction, bridgeRetained(_context)))!
     }
     
-    public init<T: AnyObject>(_ sender: wxObject, _ target: T, _ action: @escaping (T) -> (wxEvent) -> ()) {
+    public init<T: AnyObject, E: wxEvent>(_ sender: wxObject, _ target: T, _ action: @escaping (T) -> (E) -> Void) {
         let closureFunc: wxClosureFun = {
             (funcPtr: CVoidPtr, data: CVoidPtr, event: CVoidPtr) -> Void in
             
-            let context: __wxClosureMethodWrapper<AnyObject>?
-            
-            guard let _event = wxEvent(rawValue: event) else {
-                context = bridgeTransfer(data)
+            guard let context: __wxClosureMethodWrapper<AnyObject, wxEvent> = bridge(data) else {
                 return
             }
             
-            context = bridge(data)
-            let oldEventObject = _event.eventObject
-            _event.setEventObject(context?._sender)
-            context?.performAction(_event)
-            _event.eventObject = oldEventObject
+            guard let _event = context.createEvent(event) else {
+                let _context: __wxClosureMethodWrapper<AnyObject, wxEvent>? = bridgeTransfer(data)
+                return
+            }
+            
+            
+            let old = _event.getEventObject()
+            
+            defer {
+                _event.setEventObject(old)
+            }
+            
+            _event.eventObject = context._sender
+            
+            context.performEvent(_event)
         }
         
-        let _contex = __wxClosureMethodWrapper<T>(sender, target, action)
+        let _contex = __wxClosureMethodWrapper<T, E>(sender, target, action)
         
         super.init(rawValue: _wxc_wxClosure_Create(closureFunc, bridgeRetained(_contex)))!
     }

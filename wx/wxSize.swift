@@ -42,37 +42,36 @@ internal func _wxc_wxSize_SetWidth(_ ptr: CVoidPtr, _ w: CInt) -> Void {
     return wxSize_SetWidth(ptr, w)
 }
 
-public final class wxSize: wxObject {
+public struct Size {
     
-    public required init?(rawValue: CVoidPtr) {
-        super.init(rawValue: rawValue)
+    public var width: CInt
+    public var height: CInt
+    
+    public init?(wxSize: CVoidPtr) {
+        guard let wxSize = wxSize else {
+            return nil
+        }
+        
+        defer {
+            _wxc_wxSize_Delete(wxSize)
+        }
+        
+        self.width = _wxc_wxSize_GetWidth(wxSize)
+        self.height = _wxc_wxSize_GetHeight(wxSize)
     }
     
     public init(width: CInt, height: CInt) {
-        super.init(rawValue: _wxc_wxSize_Create(width, height))!
+        self.width = width
+        self.height = height
     }
     
-    deinit {
-        _wxc_wxSize_Delete(rawValue)
-    }
-    
-    public var width: CInt {
-        get {
-            return _wxc_wxSize_GetWidth(rawValue)
+    public func withWxSize<Result>(_ body: (CVoidPtr) throws -> Result) rethrows -> Result {
+        let wxSize = _wxc_wxSize_Create(width, height)
+        
+        defer {
+            _wxc_wxSize_Delete(wxSize)
         }
         
-        set {
-            _wxc_wxSize_SetWidth(rawValue, newValue)
-        }
-    }
-    
-    public var height: CInt {
-        get {
-            return _wxc_wxSize_GetHeight(rawValue)
-        }
-        
-        set {
-            _wxc_wxSize_SetHeight(rawValue, newValue)
-        }
+        return try body(wxSize)
     }
 }

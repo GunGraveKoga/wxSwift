@@ -18,7 +18,7 @@ open class wxFrame: wxTopLevelWindow {
         super.init(rawValue: rawValue)
     }
     
-    public init(rect: wxRect, title: String, parent: wxWindow? = nil, windowId: wxWindowID, style: CInt) {
+    public init(withRect rect: wxRect, title: String, parent: wxWindow? = nil, windowId: wxWindowID, style: CInt) {
         super.init(rawValue: _wxc_wxFrame_Create(parent?.rawValue, windowId, wxString(string: title).rawValue, rect.x, rect.y, rect.width, rect.height, style))!
     }
 }

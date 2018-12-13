@@ -42,33 +42,36 @@ internal func _wxc_wxPoint_SetY(_ ptr: CVoidPtr, _ value: CInt) -> Void {
     wxPoint_SetY(ptr, value)
 }
 
-public final class wxPoint: wxObject {
+public struct Point {
     
-    public required init?(rawValue: CVoidPtr) {
-        super.init(rawValue: rawValue)
+    public var x: CInt
+    public var y: CInt
+    
+    public init?(wxPoint: CVoidPtr) {
+        guard let wxPoint = wxPoint else {
+            return nil
+        }
+        
+        defer {
+            _wxc_wxPoint_Delete(wxPoint)
+        }
+        
+        self.x = _wxc_wxPoint_GetX(wxPoint)
+        self.y = _wxc_wxPoint_GetY(wxPoint)
     }
     
     public init(x: CInt, y: CInt) {
-        super.init(rawValue: _wxc_wxPoint_Create(x, y))!
+        self.x = x
+        self.y = y
     }
     
-    public var x: CInt {
-        get {
-            return _wxc_wxPoint_GetX(rawValue)
+    public func withWxPoint<Result>(_ body: (CVoidPtr) throws -> Result) rethrows -> Result {
+        let wxPoint = _wxc_wxPoint_Create(x, y)
+        
+        defer {
+            _wxc_wxPoint_Delete(wxPoint)
         }
         
-        set {
-            _wxc_wxPoint_SetX(rawValue, newValue)
-        }
-    }
-    
-    public var y: CInt {
-        get {
-            return _wxc_wxPoint_GetY(rawValue)
-        }
-        
-        set {
-            _wxc_wxPoint_SetY(rawValue, newValue)
-        }
+        return try body(wxPoint)
     }
 }

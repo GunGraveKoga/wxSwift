@@ -560,9 +560,9 @@ EWXWEXPORT(void,wxWindow_SetAutoLayout)(wxWindow* self,bool autoLayout)
 	self->SetAutoLayout( autoLayout );
 }
 	
-EWXWEXPORT(int,wxWindow_GetAutoLayout)(wxWindow* self)
+EWXWEXPORT(bool,wxWindow_GetAutoLayout)(wxWindow* self)
 {
-	return (int)self->GetAutoLayout();
+	return self->GetAutoLayout();
 }
 	
 EWXWEXPORT(void,wxWindow_Layout)(wxWindow* self)
@@ -615,9 +615,9 @@ EWXWEXPORT(int,wxWindow_LayoutPhase2)(wxWindow* self,int* noChanges)
 	return (int)self->LayoutPhase2(noChanges);
 }
 	
-EWXWEXPORT(int,wxWindow_DoPhase)(wxWindow* self,int phase)
+EWXWEXPORT(bool,wxWindow_DoPhase)(wxWindow* self,int phase)
 {
-	return (int)self->DoPhase(phase);
+	return self->DoPhase(phase);
 }
 	
 EWXWEXPORT(void,wxWindow_SetSizeConstraint)(wxWindow* self,int x,int y,int w,int h)

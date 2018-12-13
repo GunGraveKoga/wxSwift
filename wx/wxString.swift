@@ -70,47 +70,34 @@ internal func _wxc_wxCharBuffer_DataUtf8(_ ptr: CVoidPtr) -> CCharPtr {
     return wxCharBuffer_DataUtf8(ptr)
 }
 
-public final class wxString: wxObject {
-    
-    public required init?(rawValue: CVoidPtr) {
-        super.init(rawValue: rawValue)
-    }
-    
-    public init(_ buffer: UnsafeMutablePointer<wxChar>?) {
-        super.init(rawValue: _wxc_wxString_Create(buffer))!
-    }
-    
-    public init(string: String) {
-        super.init(rawValue: _wxc_wxString_CreateUTF8(string))!
-    }
-    
-    public init(_ buffer: UnsafeMutableBufferPointer<wxChar>) {
-        super.init(rawValue: _wxc_wxString_CreateLen(buffer.baseAddress!, buffer.count))!
-    }
-    
-    deinit {
-        _wxc_wxString_Delete(rawValue)
-    }
-    
-    public func getString(_ buffer: inout CCharPtr) -> Int {
-        return Int(_wxc_wxString_GetString(rawValue, buffer))
-    }
-    
-    public var length: Int {
-        get {
-            return _wxc_wxString_Length(rawValue)
-        }
-    }
-}
-
 public extension String {
-    public init(_ _wxString: wxString) {
-        let utf8Buffer = _wxc_wxString_GetUtf8(_wxString.rawValue)!
+    public init?(wxString: CVoidPtr) {
+        guard let wxString = wxString else {
+            return nil
+        }
+        
+        defer {
+            _wxc_wxString_Delete(wxString)
+        }
+        
+        guard let utf8Buffer = _wxc_wxString_GetUtf8(wxString) else {
+            return nil
+        }
         
         defer {
             _wxc_wxCharBuffer_Delete(utf8Buffer)
         }
         
         self.init(cString: _wxc_wxCharBuffer_DataUtf8(utf8Buffer)!)
+    }
+    
+    public func withWxString<Result>(_ body: (CVoidPtr) throws -> Result) rethrows -> Result {
+        let wxString = _wxc_wxString_CreateUTF8(self)
+        
+        defer {
+            _wxc_wxString_Delete(wxString)
+        }
+        
+        return try body(wxString)
     }
 }

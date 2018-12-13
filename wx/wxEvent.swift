@@ -91,14 +91,29 @@ internal func _wxc_wxEvent_IsCommandEvent(_ evnt: CVoidPtr) -> CBool {
 
 open class wxEvent: wxObject {
     
-    public var eventObject: CVoidPtr {
+    internal var _eventObject: wxObject?
+    
+    public var eventObject: wxObject? {
         get {
-            return _wxc_wxEvent_GetEventObject(rawValue)
+            guard let object = _eventObject else {
+                return wxObject(rawValue: getEventObject())
+            }
+            
+            return object
         }
         
         set {
-            _wxc_wxEvent_SetEventObject(rawValue, newValue)
+            setEventObject(newValue?.rawValue)
+            _eventObject = newValue
         }
+    }
+    
+    internal func setEventObject(_ ptr: CVoidPtr) {
+        _wxc_wxEvent_SetEventObject(rawValue, ptr)
+    }
+    
+    internal func getEventObject() -> CVoidPtr {
+        return _wxc_wxEvent_GetEventObject(rawValue)
     }
     
     public var eventId: CInt {
@@ -145,14 +160,6 @@ open class wxEvent: wxObject {
     
     public required init?(rawValue: CVoidPtr) {
         super.init(rawValue: rawValue)
-    }
-    
-    public func getEventObject<T: AnyObject>() -> T? {
-        return bridge(self.eventObject)
-    }
-    
-    public func setEventObject<T: AnyObject>(_ obj: T?) {
-        self.eventObject = bridge(obj)
     }
     
     public func skip() {
