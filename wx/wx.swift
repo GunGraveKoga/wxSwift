@@ -46,3 +46,12 @@ public typealias CCharPtrPtr = UnsafeMutablePointer<UnsafeMutablePointer<CChar>?
 public typealias CConstWideCharPtr = UnsafePointer<CWideChar>?
 public typealias CWideCharPtr = UnsafeMutablePointer<CWideChar>?
 public typealias CWideCharPtrPtr = UnsafeMutablePointer<UnsafeMutablePointer<CWideChar>?>?
+#if wxUSE_UNICODE
+public typealias wxChar = CWideChar
+public typealias wxSChar = CWideChar
+public typealias wxUChar = CWideChar
+#else
+public typealias wxChar = CChar
+public typealias wxSChar = CSignedChar
+public typealias wxUChar = CUnsignedChar
+#endif

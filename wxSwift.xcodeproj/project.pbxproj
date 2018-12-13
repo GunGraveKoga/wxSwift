@@ -207,6 +207,7 @@
 		14EFAE6B2194F7E700105BAB /* wxPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EFAE6A2194F7E700105BAB /* wxPoint.swift */; };
 		14EFAE6D2194FB9F00105BAB /* wxRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EFAE6C2194FB9F00105BAB /* wxRect.swift */; };
 		EDFCE01C21C2C3AA0064FD60 /* wxDefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE01B21C2C3A90064FD60 /* wxDefs.swift */; };
+		EDFCE01E21C2D08C0064FD60 /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE01D21C2D08C0064FD60 /* Bridge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -426,6 +427,7 @@
 		14EFAE6A2194F7E700105BAB /* wxPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxPoint.swift; sourceTree = "<group>"; };
 		14EFAE6C2194FB9F00105BAB /* wxRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxRect.swift; sourceTree = "<group>"; };
 		EDFCE01B21C2C3A90064FD60 /* wxDefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxDefs.swift; sourceTree = "<group>"; };
+		EDFCE01D21C2D08C0064FD60 /* Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -716,6 +718,7 @@
 			children = (
 				149B9FB72193924800A15A31 /* wx.swift */,
 				EDFCE01B21C2C3A90064FD60 /* wxDefs.swift */,
+				EDFCE01D21C2D08C0064FD60 /* Bridge.swift */,
 				149B9FB52193919900A15A31 /* wxObject.swift */,
 				149B9FB921939A0300A15A31 /* wxString.swift */,
 				14EFAE5A21945F1000105BAB /* wxEvtHandler.swift */,
@@ -902,6 +905,7 @@
 				14B6728F2198E5E900C6328B /* wxLayoutConstraints.swift in Sources */,
 				14B6728B2198C57500C6328B /* wxColour.swift in Sources */,
 				14EFAE6D2194FB9F00105BAB /* wxRect.swift in Sources */,
+				EDFCE01E21C2D08C0064FD60 /* Bridge.swift in Sources */,
 				149B9FB62193919900A15A31 /* wxObject.swift in Sources */,
 				EDFCE01C21C2C3AA0064FD60 /* wxDefs.swift in Sources */,
 				14EFAE632194B8A800105BAB /* wxApp.swift in Sources */,

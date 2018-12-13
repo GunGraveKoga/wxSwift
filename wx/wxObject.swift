@@ -6,12 +6,6 @@
 //  Copyright © 2018 Yury Vovk. All rights reserved.
 //
 
-@_silgen_name("wxObject_Delete")
-fileprivate func wxObject_Delete(_ ptr: CVoidPtr) -> Void
-internal func _wxc_wxObject_Delete(_ ptr: CVoidPtr) -> Void {
-    wxObject_Delete(ptr)
-}
-
 open class wxObject : Equatable {
     
     public private(set) var rawValue: CVoidPtr

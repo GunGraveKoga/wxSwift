@@ -8,18 +8,6 @@
 
 internal typealias wxClosureFun = @convention(c) (CVoidPtr, CVoidPtr, CVoidPtr) -> Void
 
-@_silgen_name("wxClosure_Create")
-fileprivate func wxClosure_Create(_ func: wxClosureFun, _ data: CVoidPtr) -> CVoidPtr
-internal func _wxc_wxClosure_Create(_ func: wxClosureFun, _ data: CVoidPtr) -> CVoidPtr {
-    return wxClosure_Create(`func`, data)
-}
-
-@_silgen_name("wxClosure_GetData")
-fileprivate func wxClosure_GetData(_ ptr: CVoidPtr) -> CVoidPtr
-internal func _wxc_wxClosure_GetData(_ ptr: CVoidPtr) -> CVoidPtr {
-    return wxClosure_GetData(ptr)
-}
-
 fileprivate class __wxClosureCallbackWrapper<E: wxEvent> {
     typealias Event = E
     var _eventObject: wxObject
