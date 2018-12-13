@@ -140,24 +140,12 @@ open class wxEvtHandler: wxObject {
         _nextHandler = nextHandler
     }
     
-    public func setNextHandler(_ handler: CVoidPtr) {
-        _wxc_wxEvtHandler_SetNextHandler(rawValue, handler)
-    }
-    
     public func getNextHandler<T: wxEvtHandler>() -> T? {
         guard let handler = _nextHandler else {
-            guard let rawValue = rawValue else {
-                return nil
-            }
-            
             return T(rawValue:_wxc_wxEvtHandler_GetNextHandler(rawValue))
         }
         
         return handler as? T
-    }
-    
-    public func getNextHandler() -> CVoidPtr {
-        return _wxc_wxEvtHandler_GetNextHandler(rawValue)
     }
     
     internal var _previousHandler: wxEvtHandler?
@@ -177,20 +165,8 @@ open class wxEvtHandler: wxObject {
         _previousHandler = handler
     }
     
-    public func setPreviousHandler(_ handler: CVoidPtr) {
-        _wxc_wxEvtHandler_SetPreviousHandler(rawValue, handler)
-    }
-    
-    public func getPreviousHandler() -> CVoidPtr {
-        return _wxc_wxEvtHandler_GetPreviousHandler(rawValue)
-    }
-    
     public func getPreviousHandler<T: wxEvtHandler>() -> T? {
         guard let handler = _previousHandler else {
-            guard let rawValue = rawValue else {
-                return nil
-            }
-            
             return T(rawValue: _wxc_wxEvtHandler_GetPreviousHandler(rawValue))
         }
         
