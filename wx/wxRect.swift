@@ -68,10 +68,48 @@ internal func _wxc_wxRect_SetHeight(_ ptr: CVoidPtr, _ value: CInt) -> Void {
 
 public struct Rect {
     
-    public var x: CInt
-    public var y: CInt
-    public var width: CInt
-    public var height: CInt
+    public var origin: Point
+    public var size: Size
+    
+    public var x: CInt {
+        get {
+            return origin.x
+        }
+        
+        set {
+            origin.x = newValue
+        }
+    }
+    
+    public var y: CInt {
+        get {
+            return origin.y
+        }
+        
+        set {
+            origin.y = newValue
+        }
+    }
+    
+    public var width: CInt {
+        get {
+            return size.width
+        }
+        
+        set {
+            size.width = newValue
+        }
+    }
+    
+    public var height: CInt {
+        get {
+            return size.height
+        }
+        
+        set {
+            size.height = newValue
+        }
+    }
     
     public init?(wxRect: CVoidPtr) {
         guard let wxRect = wxRect else {
@@ -81,18 +119,13 @@ public struct Rect {
         defer {
             _wxc_wxRect_Delete(wxRect)
         }
-        
-        self.x = _wxc_wxRect_GetX(wxRect)
-        self.y = _wxc_wxRect_GetY(wxRect)
-        self.width = _wxc_wxRect_GetWidth(wxRect)
-        self.height = _wxc_wxRect_GetHeight(wxRect)
+        origin = Point(x: _wxc_wxRect_GetX(wxRect), y: _wxc_wxRect_GetY(wxRect))
+        size = Size(width: _wxc_wxRect_GetWidth(wxRect), height: _wxc_wxRect_GetHeight(wxRect))
     }
     
     public init(x: CInt, y: CInt, width: CInt, height: CInt) {
-        self.x = x
-        self.y = y
-        self.width = width
-        self.height = height
+        origin = Point(x: x, y: y)
+        size = Size(width: width, height: height)
     }
     
     public func withWxRect<Result>(_ body: (CVoidPtr) throws -> Result) rethrows -> Result {
