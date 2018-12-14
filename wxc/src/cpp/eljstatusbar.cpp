@@ -3,7 +3,7 @@
 extern "C"
 {
 
-EWXWEXPORT(void*,wxStatusBar_Create)(wxWindow* _prt,int _id,int _lft,int _top,int _wdt,int _hgt,int _stl)
+EWXWEXPORT(void*,wxStatusBar_Create)(wxWindow* _prt,int _id,int _lft,int _top,int _wdt,int _hgt,long _stl)
 {
 #if wxVERSION_NUMBER >= 2400
 	return (void*) new wxStatusBar (_prt, _id, _stl);

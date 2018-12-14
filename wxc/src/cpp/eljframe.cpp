@@ -101,7 +101,7 @@ EWXWEXPORT(wxFrame*,wxFrame_Create)(wxWindow* _prt,int _id,wxString* _txt,int _l
 	return new wxFrame (_prt, _id, *_txt, wxPoint(_lft, _top), wxSize(_wdt, _hgt), _stl);
 }
 
-EWXWEXPORT(wxStatusBar*,wxFrame_CreateStatusBar)(wxFrame* self,int number,int style)
+EWXWEXPORT(wxStatusBar*,wxFrame_CreateStatusBar)(wxFrame* self,int number,long style)
 {
 	return self->CreateStatusBar(number, style, 1);
 }
@@ -155,6 +155,11 @@ EWXWEXPORT(int,wxFrame_GetClientAreaOrigin_left)(wxFrame* self)
 EWXWEXPORT(int,wxFrame_GetClientAreaOrigin_top)(wxFrame* self)
 {
 	return self->GetClientAreaOrigin().y;
+}
+    
+EWXWEXPORT(void*,wxFrame_GetClientAreaOrigin)(wxFrame* self)
+{
+    return (void *)(new wxPoint(self->GetClientAreaOrigin()));
 }
 	
 EWXWEXPORT(void,wxFrame_SetMenuBar)(wxFrame* self,wxMenuBar* menubar)

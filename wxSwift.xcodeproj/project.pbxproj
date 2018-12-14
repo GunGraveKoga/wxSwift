@@ -206,6 +206,9 @@
 		14EFAE692194F56400105BAB /* wxFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EFAE682194F56400105BAB /* wxFrame.swift */; };
 		14EFAE6B2194F7E700105BAB /* wxPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EFAE6A2194F7E700105BAB /* wxPoint.swift */; };
 		14EFAE6D2194FB9F00105BAB /* wxRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EFAE6C2194FB9F00105BAB /* wxRect.swift */; };
+		14FB877421C313BC006D42BF /* wxIconBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FB877321C313BC006D42BF /* wxIconBundle.swift */; };
+		14FB877621C31BFD006D42BF /* wxStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FB877521C31BFD006D42BF /* wxStatusBar.swift */; };
+		14FB877A21C323AA006D42BF /* wxToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FB877921C323AA006D42BF /* wxToolBar.swift */; };
 		EDFCE01C21C2C3AA0064FD60 /* wxDefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE01B21C2C3A90064FD60 /* wxDefs.swift */; };
 		EDFCE01E21C2D08C0064FD60 /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE01D21C2D08C0064FD60 /* Bridge.swift */; };
 		EDFCE02021C2DAEE0064FD60 /* wxControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE01F21C2DAEE0064FD60 /* wxControl.swift */; };
@@ -429,6 +432,9 @@
 		14EFAE682194F56400105BAB /* wxFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxFrame.swift; sourceTree = "<group>"; };
 		14EFAE6A2194F7E700105BAB /* wxPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxPoint.swift; sourceTree = "<group>"; };
 		14EFAE6C2194FB9F00105BAB /* wxRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxRect.swift; sourceTree = "<group>"; };
+		14FB877321C313BC006D42BF /* wxIconBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxIconBundle.swift; sourceTree = "<group>"; };
+		14FB877521C31BFD006D42BF /* wxStatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxStatusBar.swift; sourceTree = "<group>"; };
+		14FB877921C323AA006D42BF /* wxToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxToolBar.swift; sourceTree = "<group>"; };
 		EDFCE01B21C2C3A90064FD60 /* wxDefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxDefs.swift; sourceTree = "<group>"; };
 		EDFCE01D21C2D08C0064FD60 /* Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
 		EDFCE01F21C2DAEE0064FD60 /* wxControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxControl.swift; sourceTree = "<group>"; };
@@ -738,6 +744,7 @@
 				14B672942198F4ED00C6328B /* wxGDIObject.swift */,
 				14B672962198F52D00C6328B /* wxBitmap.swift */,
 				EDFCE02321C2DB780064FD60 /* wxIcon.swift */,
+				14FB877321C313BC006D42BF /* wxIconBundle.swift */,
 				14B672982198F59800C6328B /* wxCursor.swift */,
 				14B6729A219A3A0000C6328B /* wxDropTarget.swift */,
 				14B6728E2198E5E900C6328B /* wxLayoutConstraints.swift */,
@@ -754,7 +761,9 @@
 				14A5475421C1CABF00C4AD26 /* wxClientData.swift */,
 				14EFAE622194B8A700105BAB /* wxApp.swift */,
 				14EFAE642194F2A900105BAB /* wxWindow.swift */,
+				14FB877521C31BFD006D42BF /* wxStatusBar.swift */,
 				EDFCE01F21C2DAEE0064FD60 /* wxControl.swift */,
+				14FB877921C323AA006D42BF /* wxToolBar.swift */,
 				EDFCE02121C2DB0D0064FD60 /* wxButton.swift */,
 				14EFAE662194F49500105BAB /* wxTopLevelWindow.swift */,
 				14EFAE682194F56400105BAB /* wxFrame.swift */,
@@ -903,9 +912,12 @@
 				14D53BC921B4381B00E86AE6 /* wxMenu.swift in Sources */,
 				14EFAE692194F56400105BAB /* wxFrame.swift in Sources */,
 				149B9FB82193924800A15A31 /* wx.swift in Sources */,
+				14FB877A21C323AA006D42BF /* wxToolBar.swift in Sources */,
 				14B6729D21A2C56B00C6328B /* wxFont.swift in Sources */,
 				14EFAE612194B4CD00105BAB /* wxSize.swift in Sources */,
 				14EFAE5B21945F1000105BAB /* wxEvtHandler.swift in Sources */,
+				14FB877421C313BC006D42BF /* wxIconBundle.swift in Sources */,
+				14FB877621C31BFD006D42BF /* wxStatusBar.swift in Sources */,
 				14B6729B219A3A0000C6328B /* wxDropTarget.swift in Sources */,
 				149B9FBA21939A0300A15A31 /* wxString.swift in Sources */,
 				14B6728D2198D89200C6328B /* wxCaret.swift in Sources */,

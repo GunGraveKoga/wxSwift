@@ -2808,10 +2808,11 @@ TBool wxFontMapper_IsEncodingAvailable( TSelf(wxFontMapper) _obj, int encoding, 
 /* wxFrame */
 TClassDefExtend(wxFrame,wxTopLevelWindow)
 TClass(wxFrame) wxFrame_Create( TClass(wxWindow) _prt, int _id, TClass(wxString) _txt, TRect(_lft,_top,_wdt,_hgt), int _stl );
-TClass(wxStatusBar) wxFrame_CreateStatusBar( TSelf(wxFrame) _obj, int number, int style );
+TClass(wxStatusBar) wxFrame_CreateStatusBar( TSelf(wxFrame) _obj, int number, long style );
 TClass(wxToolBar)   wxFrame_CreateToolBar( TSelf(wxFrame) _obj, long style );
 int        wxFrame_GetClientAreaOrigin_left( TSelf(wxFrame) _obj );
 int        wxFrame_GetClientAreaOrigin_top( TSelf(wxFrame) _obj );
+TClass(wxPoint) wxFrame_GetClientAreaOrigin( TSelf(wxFrame) _ obj);
 TClass(wxMenuBar) wxFrame_GetMenuBar( TSelf(wxFrame) _obj );
 TClass(wxStatusBar) wxFrame_GetStatusBar( TSelf(wxFrame) _obj );
 TClass(wxToolBar) wxFrame_GetToolBar( TSelf(wxFrame) _obj );
@@ -5087,7 +5088,7 @@ TClass(wxStaticText) wxStaticText_Create( TClass(wxWindow) _prt, int _id, TClass
 
 /* wxStatusBar */
 TClassDefExtend(wxStatusBar,wxWindow)
-TClass(wxStatusBar) wxStatusBar_Create( TClass(wxWindow) _prt, int _id, TRect(_lft,_top,_wdt,_hgt), int _stl );
+TClass(wxStatusBar) wxStatusBar_Create( TClass(wxWindow) _prt, int _id, TRect(_lft,_top,_wdt,_hgt), long _stl );
 int        wxStatusBar_GetBorderX( TSelf(wxStatusBar) _obj );
 int        wxStatusBar_GetBorderY( TSelf(wxStatusBar) _obj );
 int        wxStatusBar_GetFieldsCount( TSelf(wxStatusBar) _obj );
