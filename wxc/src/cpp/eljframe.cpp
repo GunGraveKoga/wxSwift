@@ -96,7 +96,7 @@ EWXWEXPORT(void,wxTopLevelWindow_SetTitle)(void* self,wxString* _str)
   ((wxTopLevelWindow*)self)->SetTitle(*_str);
 }
 
-EWXWEXPORT(wxFrame*,wxFrame_Create)(wxWindow* _prt,int _id,wxString* _txt,int _lft,int _top,int _wdt,int _hgt,int _stl)
+EWXWEXPORT(wxFrame*,wxFrame_Create)(wxWindow* _prt,int _id,wxString* _txt,int _lft,int _top,int _wdt,int _hgt,long _stl)
 {
 	return new wxFrame (_prt, _id, *_txt, wxPoint(_lft, _top), wxSize(_wdt, _hgt), _stl);
 }

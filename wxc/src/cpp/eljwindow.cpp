@@ -4,9 +4,9 @@
 extern "C"
 {
 
-EWXWEXPORT(void*,wxWindow_Create)(wxWindow* _prt,int _id,int _x,int _y,int _w,int _h,int _stl)
+EWXWEXPORT(void*,wxWindow_Create)(wxWindow* _prt,int _id,int _x,int _y,int _w,int _h,long _stl)
 {
-	return (void*)new wxWindow(_prt, (wxWindowID)_id, wxPoint(_x, _y), wxSize(_w, _h), (long)_stl);
+	return (void*)new wxWindow(_prt, (wxWindowID)_id, wxPoint(_x, _y), wxSize(_w, _h), _stl);
 }
 	
 EWXWEXPORT(bool,wxWindow_Close)(wxWindow* self,bool _force)

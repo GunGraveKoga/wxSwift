@@ -6,91 +6,91 @@
 //  Copyright © 2018 Yury Vovk. All rights reserved.
 //
 
+public struct wxWindowSizeFlags: OptionSet {
+    public let rawValue: CInt
+    
+    public static let wxSIZE_AUTO_WIDTH = wxWindowSizeFlags(rawValue: 0x0001)
+    public static let wxSIZE_AUTO_HEIGHT = wxWindowSizeFlags(rawValue: 0x0002)
+    public static let wxSIZE_AUTO: wxWindowSizeFlags = [.wxSIZE_AUTO_WIDTH, .wxSIZE_AUTO_HEIGHT]
+    public static let wxSIZE_USE_EXISTING = wxWindowSizeFlags(rawValue: 0x0000)
+    public static let wxSIZE_ALLOW_MINUS_ONE = wxWindowSizeFlags(rawValue: 0x0004)
+    public static let wxSIZE_NO_ADJUSTMENTS = wxWindowSizeFlags(rawValue: 0x0008)
+    public static let wxSIZE_FORCE = wxWindowSizeFlags(rawValue: 0x0010)
+    
+    public init(rawValue: CInt) {
+        self.rawValue = rawValue
+    }
+}
+
+public struct wxWindowStyle: OptionSet {
+    public let rawValue: CLong
+    
+    public static let wxVSCROLL = wxWindowStyle(rawValue: 0x80000000)
+    public static let wxHSCROLL = wxWindowStyle(rawValue: 0x40000000)
+    public static let wxCAPTION = wxWindowStyle(rawValue: 0x20000000)
+    @available(*, deprecated)
+    public static let wxDOUBLE_BORDER = wxWindowStyle(rawValue: 0x10000000)
+    public static let wxSUNKEN_BORDER = wxWindowStyle(rawValue: 0x08000000)
+    public static let wxRAISED_BORDER = wxWindowStyle(rawValue: 0x04000000)
+    public static let wxBORDER: wxWindowStyle = .wxSIMPLE_BORDER
+    public static let wxSIMPLE_BORDER = wxWindowStyle(rawValue: 0x02000000)
+    public static let wxSTATIC_BORDER = wxWindowStyle(rawValue: 0x01000000)
+    public static let wxNO_BORDER = wxWindowStyle(rawValue: 0x00200000)
+    public static let wxALWAYS_SHOW_SB = wxWindowStyle(rawValue: 0x00800000)
+    public static let wxBORDER_DEFAULT = wxWindowStyle(rawValue: 0)
+    public static let wxBORDER_SIMPLE: wxWindowStyle = .wxSIMPLE_BORDER
+    public static let wxBORDER_SUNKEN: wxWindowStyle = .wxSUNKEN_BORDER
+    public static let wxBORDER_RAISED: wxWindowStyle = .wxRAISED_BORDER
+    public static let wxBORDER_THEME = wxWindowStyle(rawValue: 0x10000000)
+    public static let wxBORDER_NONE: wxWindowStyle = .wxNO_BORDER
+    @available(*, deprecated)
+    public static let wxBORDER_DOUBLE = wxWindowStyle(rawValue: 0x10000000)
+    public static let wxTRANSPARENT_WINDOW = wxWindowStyle(rawValue: 0x00100000)
+    public static let wxTAB_TRAVERSAL = wxWindowStyle(rawValue: 0x00080000)
+    public static let wxWANTS_CHARS = wxWindowStyle(rawValue: 0x00040000)
+    public static let wxNO_FULL_REPAINT_ON_RESIZE = wxWindowStyle(rawValue: 0)
+    public static let wxCLIP_CHILDREN = wxWindowStyle(rawValue: 0x00400000)
+    public static let wxFULL_REPAINT_ON_RESIZE = wxWindowStyle(rawValue: 0x00010000)
+    public static let wxBORDER_MASK = wxWindowStyle(rawValue: 0x1f200000)
+    public static let wxCLIP_SIBLINGS = wxWindowStyle(rawValue: 0x20000000)
+    #if __WXMOTIF__
+    public static let wxRETAINED = wxWindowStyle(rawValue: 0x00020000)
+    #else
+    public static let wxRETAINED = wxWindowStyle(rawValue: 0x00000000)
+    #endif
+    public static let wxPOPUP_WINDOW = wxWindowStyle(rawValue: 0x00020000)
+    public static let wxWINDOW_STYLE_MASK: wxWindowStyle = [.wxVSCROLL, .wxHSCROLL, .wxBORDER_MASK, .wxALWAYS_SHOW_SB, .wxCLIP_CHILDREN, .wxCLIP_SIBLINGS, .wxTRANSPARENT_WINDOW, .wxTAB_TRAVERSAL, .wxWANTS_CHARS, .wxRETAINED, .wxPOPUP_WINDOW, .wxFULL_REPAINT_ON_RESIZE]
+    
+    public init(rawValue: CLong) {
+        self.rawValue = rawValue
+    }
+}
+
+public struct wxWindowExtraStyle: OptionSet {
+    public let rawValue: CLong
+    
+    @available(*, deprecated, message: "This flag is obsolete as recursive validation is now the default (and only possible) behaviour. Simply don't use it any more in the new code.")
+    public static let wxWS_EX_VALIDATE_RECURSIVELY = wxWindowExtraStyle(rawValue: 0x00000000)
+    public static let wxWS_EX_BLOCK_EVENTS = wxWindowExtraStyle(rawValue: 0x00000002)
+    public static let wxWS_EX_TRANSIENT = wxWindowExtraStyle(rawValue: 0x00000004)
+    public static let wxWS_EX_THEMED_BACKGROUND = wxWindowExtraStyle(rawValue: 0x00000008)
+    public static let wxWS_EX_PROCESS_IDLE = wxWindowExtraStyle(rawValue: 0x00000010)
+    public static let wxWS_EX_PROCESS_UI_UPDATES = wxWindowExtraStyle(rawValue: 0x00000020)
+    public static let wxWS_EX_CONTEXTHELP = wxWindowExtraStyle(rawValue: 0x00000080)
+    
+    public init(rawValue: CLong) {
+        self.rawValue = rawValue
+    }
+}
+
 open class wxWindow: wxEvtHandler {
-    
-    public struct SizeFlags: OptionSet {
-        public let rawValue: CInt
-        
-        public static let wxSIZE_AUTO_WIDTH = SizeFlags(rawValue: 0x0001)
-        public static let wxSIZE_AUTO_HEIGHT = SizeFlags(rawValue: 0x0002)
-        public static let wxSIZE_AUTO: SizeFlags = [.wxSIZE_AUTO_WIDTH, .wxSIZE_AUTO_HEIGHT]
-        public static let wxSIZE_USE_EXISTING = SizeFlags(rawValue: 0x0000)
-        public static let wxSIZE_ALLOW_MINUS_ONE = SizeFlags(rawValue: 0x0004)
-        public static let wxSIZE_NO_ADJUSTMENTS = SizeFlags(rawValue: 0x0008)
-        public static let wxSIZE_FORCE = SizeFlags(rawValue: 0x0010)
-        
-        public init(rawValue: CInt) {
-            self.rawValue = rawValue
-        }
-    }
-    
-    public struct WindowStyleFlag: OptionSet {
-        public let rawValue: CLong
-        
-        public static let wxVSCROLL = WindowStyleFlag(rawValue: 0x80000000)
-        public static let wxHSCROLL = WindowStyleFlag(rawValue: 0x40000000)
-        public static let wxCAPTION = WindowStyleFlag(rawValue: 0x20000000)
-        @available(*, deprecated)
-        public static let wxDOUBLE_BORDER = WindowStyleFlag(rawValue: 0x10000000)
-        public static let wxSUNKEN_BORDER = WindowStyleFlag(rawValue: 0x08000000)
-        public static let wxRAISED_BORDER = WindowStyleFlag(rawValue: 0x04000000)
-        public static let wxBORDER: WindowStyleFlag = .wxSIMPLE_BORDER
-        public static let wxSIMPLE_BORDER = WindowStyleFlag(rawValue: 0x02000000)
-        public static let wxSTATIC_BORDER = WindowStyleFlag(rawValue: 0x01000000)
-        public static let wxNO_BORDER = WindowStyleFlag(rawValue: 0x00200000)
-        public static let wxALWAYS_SHOW_SB = WindowStyleFlag(rawValue: 0x00800000)
-        public static let wxBORDER_DEFAULT = WindowStyleFlag(rawValue: 0)
-        public static let wxBORDER_SIMPLE: WindowStyleFlag = .wxSIMPLE_BORDER
-        public static let wxBORDER_SUNKEN: WindowStyleFlag = .wxSUNKEN_BORDER
-        public static let wxBORDER_RAISED: WindowStyleFlag = .wxRAISED_BORDER
-        public static let wxBORDER_THEME = WindowStyleFlag(rawValue: 0x10000000)
-        public static let wxBORDER_NONE: WindowStyleFlag = .wxNO_BORDER
-        @available(*, deprecated)
-        public static let wxBORDER_DOUBLE = WindowStyleFlag(rawValue: 0x10000000)
-        public static let wxTRANSPARENT_WINDOW = WindowStyleFlag(rawValue: 0x00100000)
-        public static let wxTAB_TRAVERSAL = WindowStyleFlag(rawValue: 0x00080000)
-        public static let wxWANTS_CHARS = WindowStyleFlag(rawValue: 0x00040000)
-        public static let wxNO_FULL_REPAINT_ON_RESIZE = WindowStyleFlag(rawValue: 0)
-        public static let wxCLIP_CHILDREN = WindowStyleFlag(rawValue: 0x00400000)
-        public static let wxFULL_REPAINT_ON_RESIZE = WindowStyleFlag(rawValue: 0x00010000)
-        public static let wxBORDER_MASK = WindowStyleFlag(rawValue: 0x1f200000)
-        public static let wxCLIP_SIBLINGS = WindowStyleFlag(rawValue: 0x20000000)
-        #if __WXMOTIF__
-        public static let wxRETAINED = WindowStyleFlag(rawValue: 0x00020000)
-        #else
-        public static let wxRETAINED = WindowStyleFlag(rawValue: 0x00000000)
-        #endif
-        public static let wxPOPUP_WINDOW = WindowStyleFlag(rawValue: 0x00020000)
-        public static let wxWINDOW_STYLE_MASK: WindowStyleFlag = [.wxVSCROLL, .wxHSCROLL, .wxBORDER_MASK, .wxALWAYS_SHOW_SB, .wxCLIP_CHILDREN, .wxCLIP_SIBLINGS, .wxTRANSPARENT_WINDOW, .wxTAB_TRAVERSAL, .wxWANTS_CHARS, .wxRETAINED, .wxPOPUP_WINDOW, .wxFULL_REPAINT_ON_RESIZE]
-        
-        public init(rawValue: CLong) {
-            self.rawValue = rawValue
-        }
-    }
-    
-    public struct ExtraStyles: OptionSet {
-        public let rawValue: CLong
-        
-        @available(*, deprecated, message: "This flag is obsolete as recursive validation is now the default (and only possible) behaviour. Simply don't use it any more in the new code.")
-        public static let wxWS_EX_VALIDATE_RECURSIVELY = ExtraStyles(rawValue: 0x00000000)
-        public static let wxWS_EX_BLOCK_EVENTS = ExtraStyles(rawValue: 0x00000002)
-        public static let wxWS_EX_TRANSIENT = ExtraStyles(rawValue: 0x00000004)
-        public static let wxWS_EX_THEMED_BACKGROUND = ExtraStyles(rawValue: 0x00000008)
-        public static let wxWS_EX_PROCESS_IDLE = ExtraStyles(rawValue: 0x00000010)
-        public static let wxWS_EX_PROCESS_UI_UPDATES = ExtraStyles(rawValue: 0x00000020)
-        public static let wxWS_EX_CONTEXTHELP = ExtraStyles(rawValue: 0x00000080)
-        
-        public init(rawValue: CLong) {
-            self.rawValue = rawValue
-        }
-    }
     
     public required init?(rawValue: CVoidPtr) {
         super.init(rawValue: rawValue)
     }
     
-    public init(withRect rect: Rect, parent: wxWindow? = nil, wxWindow windowID: wxWindowID, style: CInt) {
-        super.init(rawValue: _wxc_wxWindow_Create(parent?.rawValue, windowID, rect.x, rect.y, rect.width, rect.height, style))!
+    public init(withRect rect: Rect, parent: wxWindow? = nil, wxWindow windowID: wxWindowID, style: wxWindowStyle) {
+        super.init(rawValue: _wxc_wxWindow_Create(parent?.rawValue, windowID, rect.x, rect.y, rect.width, rect.height, style.rawValue))!
     }
     
     @discardableResult
@@ -593,9 +593,9 @@ open class wxWindow: wxEvtHandler {
         }
     }
     
-    open var windowStyleFlag: wxWindow.WindowStyleFlag {
+    open var windowStyleFlag: wxWindowStyle {
         get {
-            return WindowStyleFlag(rawValue: _wxc_wxWindow_GetWindowStyleFlag(rawValue))
+            return wxWindowStyle(rawValue: _wxc_wxWindow_GetWindowStyleFlag(rawValue))
         }
         
         set {
@@ -603,7 +603,7 @@ open class wxWindow: wxEvtHandler {
         }
     }
     
-    open var windowStyle: wxWindow.WindowStyleFlag {
+    open var windowStyle: wxWindowStyle {
         get {
             return windowStyleFlag
         }
@@ -788,7 +788,7 @@ open class wxWindow: wxEvtHandler {
         return _wxc_wxWindow_SetCursor(rawValue, cursor?.rawValue)
     }
     
-    open func setExtraStyle(_ extraStyle: wxWindow.ExtraStyles) {
+    open func setExtraStyle(_ extraStyle: wxWindowExtraStyle) {
         _wxc_wxWindow_SetExtraStyle(rawValue, extraStyle.rawValue)
     }
     
@@ -812,7 +812,7 @@ open class wxWindow: wxEvtHandler {
         _wxc_wxWindow_SetScrollbar(rawValue, orientation.rawValue, position, thumbSize, range, refresh)
     }
     
-    open func setSize(rect: Rect, sizeFlags: wxWindow.SizeFlags = .wxSIZE_AUTO) {
+    open func setSize(rect: Rect, sizeFlags: wxWindowSizeFlags = .wxSIZE_AUTO) {
         _wxc_wxWindow_SetSize(rawValue, rect.x, rect.y, rect.width, rect.height, sizeFlags.rawValue)
     }
     

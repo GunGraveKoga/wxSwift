@@ -1007,8 +1007,8 @@ internal func _wxc_wxWindow_ConvertPixelsToDialog(_ ptr: CVoidPtr, _ x: CInt, _ 
 }
 
 @_silgen_name("wxWindow_Create")
-fileprivate func wxWindow_Create(_ prt: CVoidPtr, _ _id: CInt, _ x: CInt, _ y: CInt, _ w: CInt, _ h: CInt, _ stl: CInt) -> CVoidPtr
-internal func _wxc_wxWindow_Create(_ prt: CVoidPtr, _ _id: CInt, _ x: CInt, _ y: CInt, _ w: CInt, _ h: CInt, _ stl: CInt) -> CVoidPtr {
+fileprivate func wxWindow_Create(_ prt: CVoidPtr, _ _id: CInt, _ x: CInt, _ y: CInt, _ w: CInt, _ h: CInt, _ stl: CLong) -> CVoidPtr
+internal func _wxc_wxWindow_Create(_ prt: CVoidPtr, _ _id: CInt, _ x: CInt, _ y: CInt, _ w: CInt, _ h: CInt, _ stl: CLong) -> CVoidPtr {
     return wxWindow_Create(prt, _id, x, y, w, h, stl)
 }
 
@@ -1828,8 +1828,8 @@ internal func _wxc_wxTopLevelWindow_SetTitle(_ ptr: CVoidPtr, _ title: CVoidPtr)
 // wxFrame
 
 @_silgen_name("wxFrame_Create")
-fileprivate func wxFrame_Create(_ parent: CVoidPtr, _ winID: CInt, _ title: CVoidPtr, _ posX: CInt, _ posY: CInt, _ width: CInt, _ height: CInt, _ style: CInt) -> CVoidPtr
-internal func _wxc_wxFrame_Create(_ parent: CVoidPtr, _ winID: CInt, _ title: CVoidPtr, _ posX: CInt, _ posY: CInt, _ width: CInt, _ height: CInt, _ style: CInt) -> CVoidPtr {
+fileprivate func wxFrame_Create(_ parent: CVoidPtr, _ winID: CInt, _ title: CVoidPtr, _ posX: CInt, _ posY: CInt, _ width: CInt, _ height: CInt, _ style: CLong) -> CVoidPtr
+internal func _wxc_wxFrame_Create(_ parent: CVoidPtr, _ winID: CInt, _ title: CVoidPtr, _ posX: CInt, _ posY: CInt, _ width: CInt, _ height: CInt, _ style: CLong) -> CVoidPtr {
     return wxFrame_Create(parent, winID, title, posX, posY, width, height, style)
 }
 

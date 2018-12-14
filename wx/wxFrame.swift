@@ -12,7 +12,7 @@ open class wxFrame: wxTopLevelWindow {
         super.init(rawValue: rawValue)
     }
     
-    public init(withRect rect: Rect, title: String, parent: wxWindow? = nil, windowId: wxWindowID, style: CInt) {
+    public init(withRect rect: Rect, title: String, parent: wxWindow? = nil, windowId: wxWindowID, style: wxWindowStyle) {
         
         let _title = _wxc_wxString_CreateUTF8(title)
         
@@ -20,14 +20,14 @@ open class wxFrame: wxTopLevelWindow {
             _wxc_wxString_Delete(_title)
         }
         
-        super.init(rawValue: _wxc_wxFrame_Create(parent?.rawValue, windowId, _title, rect.x, rect.y, rect.width, rect.height, style))!
+        super.init(rawValue: _wxc_wxFrame_Create(parent?.rawValue, windowId, _title, rect.x, rect.y, rect.width, rect.height, style.rawValue))!
     }
     
-    open func createStatusBarWith(numberOfFields: CInt, style: wxStatusBar.Style = .wxSTB_DEFAULT_STYLE) -> wxStatusBar? {
+    open func createStatusBarWith(numberOfFields: CInt, style: wxStatusBarStyle = .wxSTB_DEFAULT_STYLE) -> wxStatusBar? {
         return wxStatusBar(rawValue: _wxc_wxFrame_CreateStatusBar(rawValue, numberOfFields, style.rawValue))
     }
     
-    open func createToolBarWith(style: wxStatusBar.Style = .wxSTB_DEFAULT_STYLE) -> wxToolBar? {
+    open func createToolBarWith(style: wxStatusBarStyle = .wxSTB_DEFAULT_STYLE) -> wxToolBar? {
         return wxToolBar(rawValue: _wxc_wxFrame_CreateToolBar(rawValue, style.rawValue))
     }
     
