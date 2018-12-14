@@ -2424,7 +2424,7 @@ void       wxDialUpManager_SetWellKnownHost( TSelf(wxDialUpManager) _obj, TClass
 
 /* wxDialog */
 TClassDefExtend(wxDialog,wxTopLevelWindow)
-TClass(wxDialog) wxDialog_Create( TClass(wxWindow) _prt, int _id, TClass(wxString) _txt, TRect(_lft,_top,_wdt,_hgt), int _stl );
+TClass(wxDialog) wxDialog_Create( TClass(wxWindow) _prt, int _id, TClass(wxString) _txt, TRect(_lft,_top,_wdt,_hgt), long _stl );
 void       wxDialog_EndModal( TSelf(wxDialog) _obj, int retCode );
 int        wxDialog_GetReturnCode( TSelf(wxDialog) _obj );
 TBool      wxDialog_IsModal( TSelf(wxDialog) _obj );
@@ -2807,7 +2807,7 @@ TBool wxFontMapper_IsEncodingAvailable( TSelf(wxFontMapper) _obj, int encoding, 
 
 /* wxFrame */
 TClassDefExtend(wxFrame,wxTopLevelWindow)
-TClass(wxFrame) wxFrame_Create( TClass(wxWindow) _prt, int _id, TClass(wxString) _txt, TRect(_lft,_top,_wdt,_hgt), int _stl );
+TClass(wxFrame) wxFrame_Create( TClass(wxWindow) _prt, int _id, TClass(wxString) _txt, TRect(_lft,_top,_wdt,_hgt), long _stl );
 TClass(wxStatusBar) wxFrame_CreateStatusBar( TSelf(wxFrame) _obj, int number, long style );
 TClass(wxToolBar)   wxFrame_CreateToolBar( TSelf(wxFrame) _obj, long style );
 int        wxFrame_GetClientAreaOrigin_left( TSelf(wxFrame) _obj );
@@ -5535,7 +5535,7 @@ TClass(wxPoint) wxWindow_ClientToScreen( TSelf(wxWindow) _obj, TPoint(x,y) );
 TBool      wxWindow_Close( TSelf(wxWindow) _obj, TBool _force );
 TClass(wxPoint) wxWindow_ConvertDialogToPixels( TSelf(wxWindow) _obj, int x, int y );
 TClass(wxPoint) wxWindow_ConvertPixelsToDialog( TSelf(wxWindow) _obj, int x, int y );
-TClass(wxWindow) wxWindow_Create( TClass(wxWindow) _prt, int _id, TRect(_x,_y,_w,_h), int _stl );
+TClass(wxWindow) wxWindow_Create( TClass(wxWindow) _prt, int _id, TRect(_x,_y,_w,_h), long _stl );
 void       wxWindow_DeleteRelatedConstraints( TSelf(wxWindow) _obj );
 TBool      wxWindow_Destroy( TSelf(wxWindow) _obj );
 TBool      wxWindow_DestroyChildren( TSelf(wxWindow) _obj );

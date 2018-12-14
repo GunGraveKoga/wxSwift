@@ -215,6 +215,7 @@
 		EDFCE02221C2DB0D0064FD60 /* wxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE02121C2DB0D0064FD60 /* wxButton.swift */; };
 		EDFCE02421C2DB780064FD60 /* wxIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE02321C2DB780064FD60 /* wxIcon.swift */; };
 		EDFCE02621C3CEDF0064FD60 /* wxMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE02521C3CEDF0064FD60 /* wxMenuBar.swift */; };
+		EDFCE02821C3E3D80064FD60 /* wxDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE02721C3E3D80064FD60 /* wxDialog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -442,6 +443,7 @@
 		EDFCE02121C2DB0D0064FD60 /* wxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxButton.swift; sourceTree = "<group>"; };
 		EDFCE02321C2DB780064FD60 /* wxIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxIcon.swift; sourceTree = "<group>"; };
 		EDFCE02521C3CEDF0064FD60 /* wxMenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxMenuBar.swift; sourceTree = "<group>"; };
+		EDFCE02721C3E3D80064FD60 /* wxDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxDialog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -770,6 +772,7 @@
 				EDFCE02121C2DB0D0064FD60 /* wxButton.swift */,
 				14EFAE662194F49500105BAB /* wxTopLevelWindow.swift */,
 				14EFAE682194F56400105BAB /* wxFrame.swift */,
+				EDFCE02721C3E3D80064FD60 /* wxDialog.swift */,
 				149B9FBC2193B4C500A15A31 /* Info.plist */,
 			);
 			path = wx;
@@ -920,6 +923,7 @@
 				14B6729D21A2C56B00C6328B /* wxFont.swift in Sources */,
 				14EFAE612194B4CD00105BAB /* wxSize.swift in Sources */,
 				14EFAE5B21945F1000105BAB /* wxEvtHandler.swift in Sources */,
+				EDFCE02821C3E3D80064FD60 /* wxDialog.swift in Sources */,
 				14FB877421C313BC006D42BF /* wxIconBundle.swift in Sources */,
 				14FB877621C31BFD006D42BF /* wxStatusBar.swift in Sources */,
 				14B6729B219A3A0000C6328B /* wxDropTarget.swift in Sources */,
