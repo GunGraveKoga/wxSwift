@@ -1731,3 +1731,101 @@ fileprivate func wxWindow_WarpPointer(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt) -> 
 internal func _wxc_wxWindow_WarpPointer(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt) -> Void {
     wxWindow_WarpPointer(ptr, x, y)
 }
+
+// wxTopLevelWindow
+
+@_silgen_name("wxTopLevelWindow_EnableCloseButton")
+fileprivate func wxTopLevelWindow_EnableCloseButton(_ ptr: CVoidPtr, _ enable: CBool) -> CBool
+internal func _wxc_wxTopLevelWindow_EnableCloseButton(_ ptr: CVoidPtr, _ enable: CBool) -> CBool {
+    return wxTopLevelWindow_EnableCloseButton(ptr, enable)
+}
+
+@_silgen_name("wxTopLevelWindow_GetDefaultItem")
+fileprivate func wxTopLevelWindow_GetDefaultItem(_ ptr: CVoidPtr) -> CVoidPtr
+internal func _wxc_wxTopLevelWindow_GetDefaultItem(_ ptr: CVoidPtr) -> CVoidPtr {
+    return wxTopLevelWindow_GetDefaultItem(ptr)
+}
+
+@_silgen_name("wxTopLevelWindow_GetIcon")
+fileprivate func wxTopLevelWindow_GetIcon(_ ptr: CVoidPtr) -> CVoidPtr
+internal func _wxc_wxTopLevelWindow_GetIcon(_ ptr: CVoidPtr) -> CVoidPtr {
+    return wxTopLevelWindow_GetIcon(ptr)
+}
+
+@_silgen_name("wxTopLevelWindow_GetTitle")
+fileprivate func wxTopLevelWindow_GetTitle(_ ptr: CVoidPtr) -> CVoidPtr
+internal func _wxc_wxTopLevelWindow_GetTitle(_ ptr: CVoidPtr) -> CVoidPtr {
+    return wxTopLevelWindow_GetTitle(ptr)
+}
+
+@_silgen_name("wxTopLevelWindow_Iconize")
+fileprivate func wxTopLevelWindow_Iconize(_ ptr: CVoidPtr, _ iconize: CBool) -> Void
+internal func _wxc_wxTopLevelWindow_Iconize(_ ptr: CVoidPtr, _ iconize: CBool) -> Void {
+    wxTopLevelWindow_Iconize(ptr, iconize)
+}
+
+@_silgen_name("wxTopLevelWindow_IsActive")
+fileprivate func wxTopLevelWindow_IsActive(_ ptr: CVoidPtr) -> CBool
+internal func _wxc_wxTopLevelWindow_IsActive(_ ptr: CVoidPtr) -> CBool {
+    return wxTopLevelWindow_IsActive(ptr)
+}
+
+@_silgen_name("wxTopLevelWindow_IsIconized")
+fileprivate func wxTopLevelWindow_IsIconized(_ ptr: CVoidPtr) -> CBool
+internal func _wxc_wxTopLevelWindow_IsIconized(_ ptr: CVoidPtr) -> CBool {
+    return wxTopLevelWindow_IsIconized(ptr)
+}
+
+@_silgen_name("wxTopLevelWindow_IsMaximized")
+fileprivate func wxTopLevelWindow_IsMaximized(_ ptr: CVoidPtr) -> CBool
+internal func _wxc_wxTopLevelWindow_IsMaximized(_ ptr: CVoidPtr) -> CBool {
+    return wxTopLevelWindow_IsMaximized(ptr)
+}
+
+@_silgen_name("wxTopLevelWindow_Maximize")
+fileprivate func wxTopLevelWindow_Maximize(_ ptr: CVoidPtr, _ maximize: CBool) -> Void
+internal func _wxc_wxTopLevelWindow_Maximize(_ ptr: CVoidPtr, _ maximize: CBool) -> Void {
+    wxTopLevelWindow_Maximize(ptr, maximize)
+}
+
+@_silgen_name("wxTopLevelWindow_RequestUserAttention")
+fileprivate func wxTopLevelWindow_RequestUserAttention(_ ptr: CVoidPtr, _ flag: CInt) -> Void
+internal func _wxc_wxTopLevelWindow_RequestUserAttention(_ ptr: CVoidPtr, _ flag: CInt) -> Void {
+    wxTopLevelWindow_RequestUserAttention(ptr , flag)
+}
+
+@_silgen_name("wxTopLevelWindow_SetDefaultItem")
+fileprivate func wxTopLevelWindow_SetDefaultItem(_ ptr: CVoidPtr, _ window: CVoidPtr) -> Void
+internal func _wxc_wxTopLevelWindow_SetDefaultItem(_ ptr: CVoidPtr, _ window: CVoidPtr) -> Void {
+    wxTopLevelWindow_SetDefaultItem(ptr, window)
+}
+
+@_silgen_name("wxTopLevelWindow_SetIcon")
+fileprivate func wxTopLevelWindow_SetIcon(_ ptr: CVoidPtr, _ icon: CVoidPtr) -> Void
+internal func _wxc_wxTopLevelWindow_SetIcon(_ ptr: CVoidPtr, _ icon: CVoidPtr) -> Void {
+    wxTopLevelWindow_SetIcon(ptr, icon)
+}
+
+@_silgen_name("wxTopLevelWindow_SetIcons")
+fileprivate func wxTopLevelWindow_SetIcons(_ ptr: CVoidPtr, _ icons: CVoidPtr) -> Void
+internal func _wxc_wxTopLevelWindow_SetIcons(_ ptr: CVoidPtr, _ icons: CVoidPtr) -> Void {
+    wxTopLevelWindow_SetIcons(ptr, icons)
+}
+
+@_silgen_name("wxTopLevelWindow_SetMaxSize")
+fileprivate func wxTopLevelWindow_SetMaxSize(_ ptr: CVoidPtr, _ w: CInt, _ h: CInt) -> Void
+internal func _wxc_wxTopLevelWindow_SetMaxSize(_ ptr: CVoidPtr, _ w: CInt, _ h: CInt) -> Void {
+    wxTopLevelWindow_SetMaxSize(ptr, w, h)
+}
+
+@_silgen_name("wxTopLevelWindow_SetMinSize")
+fileprivate func wxTopLevelWindow_SetMinSize(_ ptr: CVoidPtr, _ w: CInt, _ h: CInt) -> Void
+internal func _wxc_wxTopLevelWindow_SetMinSize(_ ptr: CVoidPtr, _ w: CInt, _ h: CInt) -> Void {
+    wxTopLevelWindow_SetMinSize(ptr, w, h)
+}
+
+@_silgen_name("wxTopLevelWindow_SetTitle")
+fileprivate func wxTopLevelWindow_SetTitle(_ ptr: CVoidPtr, _ title: CVoidPtr) -> Void
+internal func _wxc_wxTopLevelWindow_SetTitle(_ ptr: CVoidPtr, _ title: CVoidPtr) -> Void {
+    wxTopLevelWindow_SetTitle(ptr, title)
+}
