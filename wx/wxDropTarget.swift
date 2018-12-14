@@ -51,11 +51,11 @@ open class wxDropTargetBase {
     
     public required init() {}
     
-    public static func == (lhs: wxDropTargetBase, rhs: wxDropTargetBase) -> Bool {
+    open static func == (lhs: wxDropTargetBase, rhs: wxDropTargetBase) -> Bool {
         return lhs.rawValue == rhs.rawValue
     }
     
-    public func onData(x: wxCoord, y: wxCoord, _ default: wxDragResult) -> wxDragResult {
+    open func onData(x: wxCoord, y: wxCoord, _ default: wxDragResult) -> wxDragResult {
         return `default`
     }
     

@@ -94,7 +94,7 @@ open class wxWindow: wxEvtHandler {
     }
     
     @discardableResult
-    public func destroy() -> Bool {
+    open func destroy() -> Bool {
         guard let rawValue = rawValue else {
             return true
         }
@@ -102,101 +102,101 @@ open class wxWindow: wxEvtHandler {
         return _wxc_wxWindow_Destroy(rawValue)
     }
     
-    override public func destroy() {
+    override open func destroy() {
         if let rawValue = rawValue {
             _ = _wxc_wxWindow_Destroy(rawValue)
         }
     }
     
     @discardableResult
-    public func destroyChildren() -> Bool {
+    open func destroyChildren() -> Bool {
         return _wxc_wxWindow_DestroyChildren(rawValue)
     }
     
-    public func addChild(_ child: wxWindow) {
+    open func addChild(_ child: wxWindow) {
         _wxc_wxWindow_AddChild(rawValue, child.rawValue)
     }
     
-    public func addConstraintReference(_ other: wxWindow) {
+    open func addConstraintReference(_ other: wxWindow) {
         _wxc_wxWindow_AddConstraintReference(rawValue, other.rawValue)
     }
     
-    public func captureMouse() {
+    open func captureMouse() {
         _wxc_wxWindow_CaptureMouse(rawValue)
     }
     
-    public func center(_ direction: CInt) {
+    open func center(_ direction: CInt) {
         _wxc_wxWindow_Center(rawValue, direction)
     }
     
-    public func centeronParent(_ direction: CInt) {
+    open func centeronParent(_ direction: CInt) {
         _wxc_wxWindow_CenterOnParent(rawValue, direction)
     }
     
-    public func clearBackground() {
+    open func clearBackground() {
         _wxc_wxWindow_ClearBackground(rawValue)
     }
     
-    public func clientToScreen(_ point: Point) -> Point {
+    open func clientToScreen(_ point: Point) -> Point {
         return Point(wxPoint: _wxc_wxWindow_ClientToScreen(rawValue, point.x, point.y))!
     }
     
     @discardableResult
-    public func close(force _force:Bool = false) -> Bool {
+    open func close(force _force:Bool = false) -> Bool {
         return _wxc_wxWindow_Close(rawValue, _force)
     }
     
-    public func convertDialogToPixels(_ point: Point) -> Point {
+    open func convertDialogToPixels(_ point: Point) -> Point {
         return Point(wxPoint: _wxc_wxWindow_ConvertDialogToPixels(rawValue, point.x, point.y))!
     }
     
-    public func convertPixelsToDialog(_ point: Point) -> Point {
+    open func convertPixelsToDialog(_ point: Point) -> Point {
         return Point(wxPoint: _wxc_wxWindow_ConvertPixelsToDialog(rawValue, point.x, point.y))!
     }
     
-    public func deleteRelatedConstraints() {
+    open func deleteRelatedConstraints() {
         _wxc_wxWindow_DeleteRelatedConstraints(rawValue)
     }
     
     @discardableResult
-    public func enable() -> Bool {
+    open func enable() -> Bool {
         return _wxc_wxWindow_Enable(rawValue)
     }
     
     @discardableResult
-    public func disable() -> Bool {
+    open func disable() -> Bool {
         return _wxc_wxWindow_Disable(rawValue)
     }
     
-    public func findFocus() -> wxWindow? {
+    open func findFocus() -> wxWindow? {
         return wxWindow(rawValue: _wxc_wxWindow_FindFocus(rawValue))
     }
     
-    public func findWindow<T: wxWindow>(_ name: String) -> T? {
+    open func findWindow<T: wxWindow>(_ name: String) -> T? {
         return name.withWxString {
             return T(rawValue: _wxc_wxWindow_FindWindow(rawValue, $0))
         }
     }
     
-    public func fit() {
+    open func fit() {
         _wxc_wxWindow_Fit(rawValue)
     }
     
-    public func fitInside() {
+    open func fitInside() {
         _wxc_wxWindow_FitInside(rawValue)
     }
     
-    public func freeze() {
+    open func freeze() {
         _wxc_wxWindow_Freeze(rawValue)
     }
     
-    public var effectiveMinSize: Size {
+    open var effectiveMinSize: Size {
         get {
             return Size(wxSize: _wxc_wxWindow_GetEffectiveMinSize(rawValue))!
         }
     }
     
-    public var autoLayout: Bool {
+    open var autoLayout: Bool {
         get {
             return _wxc_wxWindow_GetAutoLayout(rawValue)
         }
@@ -206,7 +206,7 @@ open class wxWindow: wxEvtHandler {
         }
     }
     
-    public var backgroundColour: wxColour {
+    open var backgroundColour: wxColour {
         get {
             let colour = wxColour()
             
@@ -220,13 +220,13 @@ open class wxWindow: wxEvtHandler {
         }
     }
     
-    public var besSize: Size {
+    open var besSize: Size {
         get {
             return Size(wxSize: _wxc_wxWindow_GetBestSize(rawValue))!
         }
     }
     
-    public var caret: wxCaret? {
+    open var caret: wxCaret? {
         get {
             return wxCaret(rawValue: _wxc_wxWindow_GetCaret(rawValue))
         }
@@ -236,20 +236,20 @@ open class wxWindow: wxEvtHandler {
         }
     }
     
-    public var charHeight: CInt {
+    open var charHeight: CInt {
         get {
             return _wxc_wxWindow_GetCharHeight(rawValue)
         }
     }
     
-    public var charWidth: CInt {
+    open var charWidth: CInt {
         get {
             return _wxc_wxWindow_GetCharWidth(rawValue)
         }
     }
     
     internal var _clientData: wxClientData?
-    public var clientData: wxClientData? {
+    open var clientData: wxClientData? {
         get {
             return getClientData()
         }
@@ -259,7 +259,7 @@ open class wxWindow: wxEvtHandler {
         }
     }
     
-    public func getClientData<T: wxClientData>() -> T? {
+    open func getClientData<T: wxClientData>() -> T? {
         guard let clientData = _clientData else {
             return T(rawValue: _wxc_wxWindow_GetClientData(rawValue))
         }
@@ -267,20 +267,20 @@ open class wxWindow: wxEvtHandler {
         return clientData as? T
     }
     
-    public func getClientData() -> CVoidPtr {
+    open func getClientData() -> CVoidPtr {
         return _wxc_wxWindow_GetClientData(rawValue)
     }
     
-    public func setClientData<T: wxClientData>(_ clientData: T?) {
+    open func setClientData<T: wxClientData>(_ clientData: T?) {
         _wxc_wxWindow_SetClientData(rawValue, clientData?.rawValue)
         _clientData = clientData
     }
     
-    public func setClientData(_ clientData: CVoidPtr) {
+    open func setClientData(_ clientData: CVoidPtr) {
         _wxc_wxWindow_SetClientData(rawValue, clientData)
     }
     
-    public var clientSize: Size {
+    open var clientSize: Size {
         get {
             return Size(wxSize: _wxc_wxWindow_GetClientSize(rawValue))!
         }
@@ -290,7 +290,7 @@ open class wxWindow: wxEvtHandler {
         }
     }
     
-    public var clientSizeConstraint: (width: CInt, height: CInt) {
+    open var clientSizeConstraint: (width: CInt, height: CInt) {
         get {
             var _width: CInt = 0, _height: CInt = 0
             
@@ -300,7 +300,7 @@ open class wxWindow: wxEvtHandler {
         }
     }
     
-    public var constraints: wxLayoutConstraints? {
+    open var constraints: wxLayoutConstraints? {
         get {
             return wxLayoutConstraints(rawValue: _wxc_wxWindow_GetConstraints(rawValue))
         }
@@ -310,13 +310,13 @@ open class wxWindow: wxEvtHandler {
         }
     }
     
-    public var constraintsInvolvedIn: wxWindowList? {
+    open var constraintsInvolvedIn: wxWindowList? {
         get {
             return wxWindowList(rawValue: _wxc_wxWindow_GetConstraintsInvolvedIn(rawValue))
         }
     }
     
-    public var cursor: wxCursor? {
+    open var cursor: wxCursor? {
         get {
             return wxCursor(rawValue: _wxc_wxWindow_GetCursor(rawValue))
         }
@@ -327,7 +327,7 @@ open class wxWindow: wxEvtHandler {
     }
     
     internal var _dropTarget: wxDropTargetBase?
-    public var dropTarget: wxDropTargetBase? {
+    open var dropTarget: wxDropTargetBase? {
         get {
             guard _dropTarget != nil else {
                 return wxDropTargetBase(rawValue: _wxc_wxWindow_GetDropTarget(rawValue))
@@ -348,7 +348,7 @@ open class wxWindow: wxEvtHandler {
     }
     
     internal var _eventHandler: wxEvtHandler?
-    public var eventHandler: wxEvtHandler? {
+    open var eventHandler: wxEvtHandler? {
         get {
             guard _eventHandler != nil else {
                 return wxEvtHandler(rawValue: _wxc_wxWindow_GetEventHandler(rawValue))
@@ -358,7 +358,7 @@ open class wxWindow: wxEvtHandler {
         }
     }
     
-    public var font: wxFont {
+    open var font: wxFont {
         get {
             let font = wxFont()
             
@@ -373,7 +373,7 @@ open class wxWindow: wxEvtHandler {
         
     }
     
-    public var foregroundColour: wxColour {
+    open var foregroundColour: wxColour {
         get {
             let colour = wxColour()
             
@@ -387,13 +387,13 @@ open class wxWindow: wxEvtHandler {
         }
     }
     
-    public var handle: UnsafeMutableRawPointer {
+    open var handle: UnsafeMutableRawPointer {
         get {
             return _wxc_wxWindow_GetHandle(rawValue)
         }
     }
     
-    public var Id: wxWindowID {
+    open var Id: wxWindowID {
         get {
             return _wxc_wxWindow_GetId(rawValue)
         }
@@ -403,7 +403,7 @@ open class wxWindow: wxEvtHandler {
         }
     }
     
-    public var label: String? {
+    open var label: String? {
         get {
             return String(wxString: _wxc_wxWindow_GetLabel(rawValue))
         }
@@ -419,37 +419,37 @@ open class wxWindow: wxEvtHandler {
         }
     }
     
-    public var isLabelEmpty: Bool {
+    open var isLabelEmpty: Bool {
         get {
             return _wxc_wxWindow_GetLabelEmpty(rawValue)
         }
     }
     
-    public var maxHeight: CInt {
+    open var maxHeight: CInt {
         get {
             return _wxc_wxWindow_GetMaxHeight(rawValue)
         }
     }
     
-    public var maxWidth: CInt {
+    open var maxWidth: CInt {
         get {
             return _wxc_wxWindow_GetMaxWidth(rawValue)
         }
     }
     
-    public var minHeight: CInt {
+    open var minHeight: CInt {
         get {
             return _wxc_wxWindow_GetMinHeight(rawValue)
         }
     }
     
-    public var minWidth: CInt {
+    open var minWidth: CInt {
         get {
             return _wxc_wxWindow_GetMinWidth(rawValue)
         }
     }
     
-    public var name: String? {
+    open var name: String? {
         get {
             return String(wxString: _wxc_wxWindow_GetName(rawValue))
         }
@@ -465,17 +465,17 @@ open class wxWindow: wxEvtHandler {
         }
     }
     
-    public func getParent<T: wxWindow>() -> T? {
+    open func getParent<T: wxWindow>() -> T? {
         return T(rawValue: _wxc_wxWindow_GetParent(rawValue))
     }
     
-    public var position: Point {
+    open var position: Point {
         get {
             return Point(wxPoint: _wxc_wxWindow_GetPosition(rawValue))!
         }
     }
     
-    public var positionConstraint: Point {
+    open var positionConstraint: Point {
         get {
             var x: CInt = 0, y: CInt = 0
             _wxc_wxWindow_GetPositionConstraint(rawValue, &x, &y)
@@ -484,25 +484,25 @@ open class wxWindow: wxEvtHandler {
         }
     }
     
-    public var rect: Rect {
+    open var rect: Rect {
         get {
             return Rect(wxRect: _wxc_wxWindow_GetRect(rawValue))!
         }
     }
     
-    public func getScrollPos(orientation: wxOrientation) -> CInt {
+    open func getScrollPos(orientation: wxOrientation) -> CInt {
         return _wxc_wxWindow_GetScrollPos(rawValue, orientation.rawValue)
     }
     
-    public func getScrollRange(orientation: wxOrientation) -> CInt {
+    open func getScrollRange(orientation: wxOrientation) -> CInt {
         return _wxc_wxWindow_GetScrollRange(rawValue, orientation.rawValue)
     }
     
-    public func getScrollThumb(orientation: wxOrientation) -> CInt {
+    open func getScrollThumb(orientation: wxOrientation) -> CInt {
         return _wxc_wxWindow_GetScrollThumb(rawValue, orientation.rawValue)
     }
     
-    public var size: Size {
+    open var size: Size {
         get {
             return Size(wxSize: _wxc_wxWindow_GetSize(rawValue))!
         }
@@ -515,7 +515,7 @@ open class wxWindow: wxEvtHandler {
         }
     }
     
-    public var sizeConstraint: Size {
+    open var sizeConstraint: Size {
         get {
             var w: CInt = 0, h: CInt = 0
             _wxc_wxWindow_GetSizeConstraint(rawValue, &w, &h)
@@ -532,7 +532,7 @@ open class wxWindow: wxEvtHandler {
         }
     }
     
-    public var sizer: wxSizer? {
+    open var sizer: wxSizer? {
         get {
             return wxSizer(rawValue: _wxc_wxWindow_GetSizer(rawValue))
         }
@@ -542,7 +542,7 @@ open class wxWindow: wxEvtHandler {
         }
     }
     
-    public func getTextExtent(descent: UnsafeMutablePointer<CInt>? = nil, externalLeading: UnsafeMutablePointer<CInt>? = nil, font: wxFont? = nil) -> (width: CInt, height: CInt) {
+    open func getTextExtent(descent: UnsafeMutablePointer<CInt>? = nil, externalLeading: UnsafeMutablePointer<CInt>? = nil, font: wxFont? = nil) -> (width: CInt, height: CInt) {
         
         var w: CInt = 0, h: CInt = 0
         
@@ -551,7 +551,7 @@ open class wxWindow: wxEvtHandler {
         return (w, h)
     }
     
-    public var toolTip: String? {
+    open var toolTip: String? {
         get {
             return String(wxString: _wxc_wxWindow_GetToolTip(rawValue))
         }
@@ -567,13 +567,13 @@ open class wxWindow: wxEvtHandler {
         }
     }
     
-    public var updateRegion: wxRegion! {
+    open var updateRegion: wxRegion! {
         get {
             return wxRegion(rawValue: _wxc_wxWindow_GetUpdateRegion(rawValue))
         }
     }
     
-    public var validator: wxValidator? {
+    open var validator: wxValidator? {
         get {
             return wxValidator(rawValue: _wxc_wxWindow_GetValidator(rawValue))
         }
@@ -583,7 +583,7 @@ open class wxWindow: wxEvtHandler {
         }
     }
     
-    public var virtualSize: Size {
+    open var virtualSize: Size {
         get {
             return Size(wxSize: _wxc_wxWindow_GetVirtualSize(rawValue))!
         }
@@ -593,7 +593,7 @@ open class wxWindow: wxEvtHandler {
         }
     }
     
-    public var windowStyleFlag: wxWindow.WindowStyleFlag {
+    open var windowStyleFlag: wxWindow.WindowStyleFlag {
         get {
             return WindowStyleFlag(rawValue: _wxc_wxWindow_GetWindowStyleFlag(rawValue))
         }
@@ -603,7 +603,7 @@ open class wxWindow: wxEvtHandler {
         }
     }
     
-    public var windowStyle: wxWindow.WindowStyleFlag {
+    open var windowStyle: wxWindow.WindowStyleFlag {
         get {
             return windowStyleFlag
         }
@@ -613,81 +613,81 @@ open class wxWindow: wxEvtHandler {
         }
     }
     
-    public func hasFlag(_ flag: CInt) -> Bool {
+    open func hasFlag(_ flag: CInt) -> Bool {
         return _wxc_wxWindow_HasFlag(rawValue, flag)
     }
     
-    public var hasFocus: Bool {
+    open var hasFocus: Bool {
         get {
             return _wxc_wxWindow_HasFocus(rawValue)
         }
     }
     
     @discardableResult
-    public func hide() -> Bool {
+    open func hide() -> Bool {
         return _wxc_wxWindow_Hide(rawValue)
     }
     
-    public func initDialog() {
+    open func initDialog() {
         _wxc_wxWindow_InitDialog(rawValue)
     }
     
-    public var isBeingDeleted: Bool {
+    open var isBeingDeleted: Bool {
         get {
             return _wxc_wxWindow_IsBeingDeleted(rawValue)
         }
     }
     
-    public var isEnabled: Bool {
+    open var isEnabled: Bool {
         get {
             return _wxc_wxWindow_IsEnabled(rawValue)
         }
     }
     
-    public var isExposed: Bool {
+    open var isExposed: Bool {
         get {
             return _wxc_wxWindow_IsExposed(rawValue)
         }
     }
     
-    public var isShown: Bool {
+    open var isShown: Bool {
         get {
             return _wxc_wxWindow_IsShown(rawValue)
         }
     }
     
-    public var isTopLevel: Bool {
+    open var isTopLevel: Bool {
         get {
             return _wxc_wxWindow_IsTopLevel(rawValue)
         }
     }
     
-    public func layout() -> CInt {
+    open func layout() -> CInt {
         return _wxc_wxWindow_Layout(rawValue)
     }
     
-    public func layoutPhase1(_ noChanges: UnsafeMutablePointer<CInt>) -> Bool {
+    open func layoutPhase1(_ noChanges: UnsafeMutablePointer<CInt>) -> Bool {
         return _wxc_wxWindow_LayoutPhase1(rawValue, noChanges)
     }
     
-    public func layoutPhase2(_ noChanges: UnsafeMutablePointer<CInt>) -> Bool {
+    open func layoutPhase2(_ noChanges: UnsafeMutablePointer<CInt>) -> Bool {
         return _wxc_wxWindow_LayoutPhase2(rawValue, noChanges)
     }
     
-    public func lower() {
+    open func lower() {
         _wxc_wxWindow_Lower(rawValue)
     }
     
-    public func move(to pos: Point) {
+    open func move(to pos: Point) {
         _wxc_wxWindow_Move(rawValue, pos.x, pos.y)
     }
     
-    public func moveConstraint(to pos: Point) {
+    open func moveConstraint(to pos: Point) {
         _wxc_wxWindow_MoveConstraint(rawValue, pos.x, pos.y)
     }
     
     @discardableResult
-    public func popEventHandler<T: wxEvtHandler>(_ deleteHandler: Bool = false) -> T? {
+    open func popEventHandler<T: wxEvtHandler>(_ deleteHandler: Bool = false) -> T? {
         guard let oldEventHandler = _eventHandler else {
             return T(rawValue: _wxc_wxWindow_PopEventHandler(rawValue, deleteHandler))
         }
@@ -703,15 +703,15 @@ open class wxWindow: wxEvtHandler {
         return oldEventHandler as? T
     }
     
-    public func popupMenu(_ menu: wxMenu, at pos: Point) -> Bool {
+    open func popupMenu(_ menu: wxMenu, at pos: Point) -> Bool {
         return _wxc_wxWindow_PopupMenu(rawValue, menu.rawValue, pos.x, pos.y)
     }
     
-    public func prepareDC(_ dc: wxDC) {
+    open func prepareDC(_ dc: wxDC) {
         _wxc_wxWindow_PrepareDC(rawValue, dc.rawValue)
     }
     
-    public func pushEventHandler(_ handler: wxEvtHandler) {
+    open func pushEventHandler(_ handler: wxEvtHandler) {
         if _eventHandler != nil {
             _eventHandler!._nextHandler = handler
         } else {
@@ -721,137 +721,137 @@ open class wxWindow: wxEvtHandler {
         _wxc_wxWindow_PushEventHandler(rawValue, handler.rawValue)
     }
     
-    public func raise() {
+    open func raise() {
         _wxc_wxWindow_Raise(rawValue)
     }
     
-    public func refresh(eraseBackground: Bool = true) {
+    open func refresh(eraseBackground: Bool = true) {
         _wxc_wxWindow_Refresh(rawValue, eraseBackground)
     }
     
-    public func refres(rect: Rect, eraseBackground: Bool = true) {
+    open func refres(rect: Rect, eraseBackground: Bool = true) {
         _wxc_wxWindow_RefreshRect(rawValue, eraseBackground, rect.x, rect.y, rect.width, rect.height)
     }
     
-    public func releaseMouse() {
+    open func releaseMouse() {
         _wxc_wxWindow_ReleaseMouse(rawValue)
     }
     
-    public func removeChild(_ child: wxWindow) {
+    open func removeChild(_ child: wxWindow) {
         _wxc_wxWindow_RemoveChild(rawValue, child.rawValue)
     }
     
-    public func removeConstraintReference(otherWindow: wxWindow) {
+    open func removeConstraintReference(otherWindow: wxWindow) {
         _wxc_wxWindow_RemoveConstraintReference(rawValue, otherWindow.rawValue)
     }
     
     @discardableResult
-    public func reparent(_ parent: wxWindow) -> Bool {
+    open func reparent(_ parent: wxWindow) -> Bool {
         return _wxc_wxWindow_Reparent(rawValue, parent.rawValue)
     }
     
-    public func resetConstraints() {
+    open func resetConstraints() {
         _wxc_wxWindow_ResetConstraints(rawValue)
     }
     
-    public func screenToClient(_ pos: Point) -> Point? {
+    open func screenToClient(_ pos: Point) -> Point? {
         return Point(wxPoint: _wxc_wxWindow_ScreenToClient(rawValue, pos.x, pos.y))
     }
     
-    public func scrollWindow(deltaX: CInt, deltaY: CInt) {
+    open func scrollWindow(deltaX: CInt, deltaY: CInt) {
         _wxc_wxWindow_ScrollWindow(rawValue, deltaX, deltaY)
     }
     
-    public func scrollWindow(rect: Rect, deltaX: CInt, deltaY: CInt) {
+    open func scrollWindow(rect: Rect, deltaX: CInt, deltaY: CInt) {
         _wxc_wxWindow_ScrollWindowRect(rawValue, deltaX, deltaY, rect.x, rect.y, rect.width, rect.height)
     }
     
-    public func setAcceleratorTable(_ table: wxAcceleratorTable) {
+    open func setAcceleratorTable(_ table: wxAcceleratorTable) {
         _wxc_wxWindow_SetAcceleratorTable(rawValue, table.rawValue)
     }
     
     @discardableResult
-    public func setBackgroundColour(_ colour: wxColour) -> Bool {
+    open func setBackgroundColour(_ colour: wxColour) -> Bool {
         return _wxc_wxWindow_SetBackgroundColour(rawValue, colour.rawValue)
     }
     
-    public func setClientObject(_ object: wxClientData) {
+    open func setClientObject(_ object: wxClientData) {
         _wxc_wxWindow_SetClientObject(rawValue, object.rawValue)
     }
     
-    public func setConstraintSizes(recurse: Bool = true) {
+    open func setConstraintSizes(recurse: Bool = true) {
         _wxc_wxWindow_SetConstraintSizes(rawValue, recurse)
     }
     
     @discardableResult
-    public func setCursor(_ cursor: wxCursor?) -> Bool {
+    open func setCursor(_ cursor: wxCursor?) -> Bool {
         return _wxc_wxWindow_SetCursor(rawValue, cursor?.rawValue)
     }
     
-    public func setExtraStyle(_ extraStyle: wxWindow.ExtraStyles) {
+    open func setExtraStyle(_ extraStyle: wxWindow.ExtraStyles) {
         _wxc_wxWindow_SetExtraStyle(rawValue, extraStyle.rawValue)
     }
     
-    public func setFocus() {
+    open func setFocus() {
         _wxc_wxWindow_SetFocus(rawValue)
     }
     
-    public func setFont(_ font: wxFont) -> Bool {
+    open func setFont(_ font: wxFont) -> Bool {
         return _wxc_wxWindow_SetFont(rawValue, font.rawValue)
     }
     
-    public func setForegroundColour(_ colour: wxColour) -> Bool {
+    open func setForegroundColour(_ colour: wxColour) -> Bool {
         return _wxc_wxWindow_SetForegroundColour(rawValue, colour.rawValue)
     }
     
-    public func setScrollPos(orientation: wxOrientation, position: CInt, refresh: Bool = true) {
+    open func setScrollPos(orientation: wxOrientation, position: CInt, refresh: Bool = true) {
         _wxc_wxWindow_SetScrollPos(rawValue, orientation.rawValue, position, refresh)
     }
     
-    public func setScrollbar(orientation: wxOrientation, position: CInt, thumbSize: CInt, range: CInt, refresh: Bool = true) {
+    open func setScrollbar(orientation: wxOrientation, position: CInt, thumbSize: CInt, range: CInt, refresh: Bool = true) {
         _wxc_wxWindow_SetScrollbar(rawValue, orientation.rawValue, position, thumbSize, range, refresh)
     }
     
-    public func setSize(rect: Rect, sizeFlags: wxWindow.SizeFlags = .wxSIZE_AUTO) {
+    open func setSize(rect: Rect, sizeFlags: wxWindow.SizeFlags = .wxSIZE_AUTO) {
         _wxc_wxWindow_SetSize(rawValue, rect.x, rect.y, rect.width, rect.height, sizeFlags.rawValue)
     }
     
-    public func setSizeHints(minSize: Size, maxSize: Size = wxDefaultSize, incSize: Size = wxDefaultSize) {
+    open func setSizeHints(minSize: Size, maxSize: Size = wxDefaultSize, incSize: Size = wxDefaultSize) {
         _wxc_wxWindow_SetSizeHints(rawValue, minSize.width, minSize.height, maxSize.width, maxSize.height, incSize.width, incSize.height)
     }
     
     @discardableResult
-    public func show() -> Bool {
+    open func show() -> Bool {
         return _wxc_wxWindow_Show(rawValue)
     }
     
-    public func thaw() {
+    open func thaw() {
         _wxc_wxWindow_Thaw(rawValue)
     }
     
     @discardableResult
-    public func transferDataFromWindow() -> Bool {
+    open func transferDataFromWindow() -> Bool {
         return _wxc_wxWindow_TransferDataFromWindow(rawValue)
     }
     
     @discardableResult
-    public func transferDataToWindow() -> Bool {
+    open func transferDataToWindow() -> Bool {
         return _wxc_wxWindow_TransferDataToWindow(rawValue)
     }
     
-    public func unsetConstraints(_ constraints: wxLayoutConstraints) {
+    open func unsetConstraints(_ constraints: wxLayoutConstraints) {
         _wxc_wxWindow_UnsetConstraints(rawValue, constraints.rawValue)
     }
     
-    public func updateWindowUI() {
+    open func updateWindowUI() {
         _wxc_wxWindow_UpdateWindowUI(rawValue)
     }
     
-    public func validate() -> Bool {
+    open func validate() -> Bool {
         return _wxc_wxWindow_Validate(rawValue)
     }
     
-    public func warpPointer(to pos: Point) {
+    open func warpPointer(to pos: Point) {
         _wxc_wxWindow_WarpPointer(rawValue, pos.x, pos.y)
     }
 }

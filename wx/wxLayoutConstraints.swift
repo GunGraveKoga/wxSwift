@@ -6,7 +6,7 @@
 //  Copyright © 2018 Yury Vovk. All rights reserved.
 //
 
-public final class wxLayoutConstraints: wxObject {
+open class wxLayoutConstraints: wxObject {
     
     public required init?(rawValue: CVoidPtr) {
         super.init(rawValue: rawValue)
@@ -16,49 +16,49 @@ public final class wxLayoutConstraints: wxObject {
         super.init(rawValue: _wxc_wxLayoutConstraints_Create())!
     }
     
-    public var bottom: wxIndividualLayoutConstraint {
+    open var bottom: wxIndividualLayoutConstraint {
         get {
             return wxIndividualLayoutConstraint(rawValue: _wxc_wxLayoutConstraints_bottom(rawValue))!
         }
     }
     
-    public var centerX: wxIndividualLayoutConstraint {
+    open var centerX: wxIndividualLayoutConstraint {
         get {
             return wxIndividualLayoutConstraint(rawValue: _wxc_wxLayoutConstraints_centreX(rawValue))!
         }
     }
     
-    public var centerY: wxIndividualLayoutConstraint {
+    open var centerY: wxIndividualLayoutConstraint {
         get {
             return wxIndividualLayoutConstraint(rawValue: _wxc_wxLayoutConstraints_centreY(rawValue))!
         }
     }
     
-    public var height: wxIndividualLayoutConstraint {
+    open var height: wxIndividualLayoutConstraint {
         get {
             return wxIndividualLayoutConstraint(rawValue: _wxc_wxLayoutConstraints_height(rawValue))!
         }
     }
     
-    public var left: wxIndividualLayoutConstraint {
+    open var left: wxIndividualLayoutConstraint {
         get {
             return wxIndividualLayoutConstraint(rawValue: _wxc_wxLayoutConstraints_left(rawValue))!
         }
     }
     
-    public var right: wxIndividualLayoutConstraint {
+    open var right: wxIndividualLayoutConstraint {
         get {
             return wxIndividualLayoutConstraint(rawValue: _wxc_wxLayoutConstraints_right(rawValue))!
         }
     }
     
-    public var top: wxIndividualLayoutConstraint {
+    open var top: wxIndividualLayoutConstraint {
         get {
             return wxIndividualLayoutConstraint(rawValue: _wxc_wxLayoutConstraints_top(rawValue))!
         }
     }
     
-    public var width: wxIndividualLayoutConstraint {
+    open var width: wxIndividualLayoutConstraint {
         get {
             return wxIndividualLayoutConstraint(rawValue: _wxc_wxLayoutConstraints_width(rawValue))!
         }

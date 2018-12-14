@@ -6,11 +6,16 @@
 //  Copyright © 2018 Yury Vovk. All rights reserved.
 //
 
+public typealias wxEventType = CInt
+public func wxNewEventType() -> CInt {
+    return _wxc_wxEvent_NewEventType()
+}
+
 open class wxEvent: wxObject {
     
     internal var _eventObject: wxObject?
     
-    public var eventObject: wxObject? {
+    open var eventObject: wxObject? {
         get {
             guard let object = _eventObject else {
                 return wxObject(rawValue: getEventObject())
@@ -25,15 +30,15 @@ open class wxEvent: wxObject {
         }
     }
     
-    internal func setEventObject(_ ptr: CVoidPtr) {
+    open func setEventObject(_ ptr: CVoidPtr) {
         _wxc_wxEvent_SetEventObject(rawValue, ptr)
     }
     
-    internal func getEventObject() -> CVoidPtr {
+    open func getEventObject() -> CVoidPtr {
         return _wxc_wxEvent_GetEventObject(rawValue)
     }
     
-    public var eventId: CInt {
+    open var eventId: CInt {
         get {
             return _wxc_wxEvent_GetId(rawValue)
         }
@@ -43,7 +48,7 @@ open class wxEvent: wxObject {
         }
     }
     
-    public var eventType: wxEventType {
+    open var eventType: wxEventType {
         get {
             return _wxc_wxEvent_GetEventType(rawValue)
         }
@@ -53,19 +58,19 @@ open class wxEvent: wxObject {
         }
     }
     
-    public var isSkipped: Bool {
+    open var isSkipped: Bool {
         get {
             return _wxc_wxEvent_GetSkipped(rawValue)
         }
     }
     
-    public var isCommandEvent: Bool {
+    open var isCommandEvent: Bool {
         get {
             return _wxc_wxEvent_IsCommandEvent(rawValue)
         }
     }
     
-    public var timestamp: CLong {
+    open var timestamp: CLong {
         get {
             return _wxc_wxEvent_GetTimestamp(rawValue)
         }
@@ -79,7 +84,7 @@ open class wxEvent: wxObject {
         super.init(rawValue: rawValue)
     }
     
-    public func skip() {
+    open func skip() {
         _wxc_wxEvent_Skip(rawValue)
     }
 }

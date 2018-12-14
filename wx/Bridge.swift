@@ -302,11 +302,6 @@ internal func _wxc_wxEvent_NewEventType() -> CInt {
     return wxEvent_NewEventType()
 }
 
-public typealias wxEventType = CInt
-public func wxNewEventType() -> CInt {
-    return _wxc_wxEvent_NewEventType()
-}
-
 @_silgen_name("wxEvent_SetEventObject")
 fileprivate func wxEvent_SetEventObject(_ evnt: CVoidPtr, _ ptr: CVoidPtr) -> Void
 internal func _wxc_wxEvent_SetEventObject(_ evnt: CVoidPtr, _ ptr: CVoidPtr) -> Void {

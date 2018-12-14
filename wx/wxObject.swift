@@ -18,7 +18,7 @@ open class wxObject : Equatable {
         self.rawValue = _rawValue
     }
     
-    public static func == (lhs: wxObject, rhs: wxObject) -> Bool {
+    open static func == (lhs: wxObject, rhs: wxObject) -> Bool {
         return lhs.rawValue == rhs.rawValue
     }
     

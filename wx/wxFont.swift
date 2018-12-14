@@ -6,7 +6,7 @@
 //  Copyright © 2018 Yury Vovk. All rights reserved.
 //
 
-public final class wxFont: wxObject {
+open class wxFont: wxObject {
     
     public enum Family: CInt {
         case Default = 70
@@ -188,7 +188,7 @@ public final class wxFont: wxObject {
         _wxc_wxFont_Delete(rawValue)
     }
     
-    public var defaultEncoding: wxFont.Encoding {
+    open var defaultEncoding: wxFont.Encoding {
         get {
             return wxFont.Encoding(rawValue: _wxc_wxFont_GetDefaultEncoding(rawValue))!
         }
@@ -198,7 +198,7 @@ public final class wxFont: wxObject {
         }
     }
     
-    public var encoding: wxFont.Encoding {
+    open var encoding: wxFont.Encoding {
         get {
             return wxFont.Encoding(rawValue: _wxc_wxFont_GetEncoding(rawValue))!
         }
@@ -208,7 +208,7 @@ public final class wxFont: wxObject {
         }
     }
     
-    public var faceName: String {
+    open var faceName: String {
         get {
             return String(wxString: _wxc_wxFont_GetFaceName(rawValue))!
         }
@@ -220,7 +220,7 @@ public final class wxFont: wxObject {
         }
     }
     
-    public var family: wxFont.Family {
+    open var family: wxFont.Family {
         get {
             return wxFont.Family(rawValue: _wxc_wxFont_GetFamily(rawValue))!
         }
@@ -230,13 +230,13 @@ public final class wxFont: wxObject {
         }
     }
     
-    public var familyString: String {
+    open var familyString: String {
         get {
             return String(wxString: _wxc_wxFont_GetFamilyString(rawValue))!
         }
     }
     
-    public var pointSize: CInt {
+    open var pointSize: CInt {
         get {
             return _wxc_wxFont_GetPointSize(rawValue)
         }
@@ -246,7 +246,7 @@ public final class wxFont: wxObject {
         }
     }
     
-    public var style: wxFont.Style {
+    open var style: wxFont.Style {
         get {
             return wxFont.Style(rawValue: _wxc_wxFont_GetStyle(rawValue))!
         }
@@ -256,13 +256,13 @@ public final class wxFont: wxObject {
         }
     }
     
-    public var styleString: String {
+    open var styleString: String {
         get {
             return String(wxString: _wxc_wxFont_GetStyleString(rawValue))!
         }
     }
     
-    public var underlined: Bool {
+    open var underlined: Bool {
         get {
             return _wxc_wxFont_GetUnderlined(rawValue)
         }
@@ -272,7 +272,7 @@ public final class wxFont: wxObject {
         }
     }
     
-    public var weight: wxFont.Weight {
+    open var weight: wxFont.Weight {
         get {
             return wxFont.Weight(rawValue: _wxc_wxFont_GetWeight(rawValue))!
         }
@@ -282,13 +282,13 @@ public final class wxFont: wxObject {
         }
     }
     
-    public var weightString: String {
+    open var weightString: String {
         get {
             return String(wxString: _wxc_wxFont_GetWeightString(rawValue))!
         }
     }
     
-    public var isOK: Bool {
+    open var isOK: Bool {
         get {
             return _wxc_wxFont_IsOk(rawValue)
         }

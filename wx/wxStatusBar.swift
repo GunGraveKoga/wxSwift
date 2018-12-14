@@ -6,7 +6,7 @@
 //  Copyright © 2018 Yury Vovk. All rights reserved.
 //
 
-public final class wxStatusBar: wxWindow {
+open class wxStatusBar: wxWindow {
     
     public struct Style: OptionSet {
         public let rawValue: CLong

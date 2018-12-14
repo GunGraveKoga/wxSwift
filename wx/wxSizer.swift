@@ -6,7 +6,7 @@
 //  Copyright © 2018 Yury Vovk. All rights reserved.
 //
 
-public final class wxSizer: wxObject {
+open class wxSizer: wxObject {
     
     public required init?(rawValue: CVoidPtr) {
         super.init(rawValue: rawValue)

@@ -6,7 +6,7 @@
 //  Copyright © 2018 Yury Vovk. All rights reserved.
 //
 
-public final class wxRegion: wxObject {
+open class wxRegion: wxObject {
     
     public required init?(rawValue: CVoidPtr) {
         super.init(rawValue: rawValue)

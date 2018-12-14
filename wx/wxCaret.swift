@@ -6,7 +6,7 @@
 //  Copyright © 2018 Yury Vovk. All rights reserved.
 //
 
-public final class wxCaret: wxObject {
+open class wxCaret: wxObject {
     
     public class var blinkTime: CInt {
         get {
@@ -26,13 +26,13 @@ public final class wxCaret: wxObject {
         super.init(rawValue: _wxc_wxCaret_Create(window.rawValue, width, height))!
     }
     
-    public var position: Point {
+    open var position: Point {
         get {
             return Point(wxPoint: _wxc_wxCaret_GetPosition(rawValue))!
         }
     }
     
-    public var size: Size {
+    open var size: Size {
         get {
             return Size(wxSize: _wxc_wxCaret_GetSize(rawValue))!
         }
@@ -42,33 +42,33 @@ public final class wxCaret: wxObject {
         }
     }
     
-    public var window: wxWindow {
+    open var window: wxWindow {
         get {
             return wxWindow(rawValue: _wxc_wxCaret_GetWindow(rawValue))!
         }
     }
     
-    public func hide() {
+    open func hide() {
         _wxc_wxCaret_Hide(rawValue)
     }
     
-    public var isOK: Bool {
+    open var isOK: Bool {
         get {
             return _wxc_wxCaret_IsOk(rawValue)
         }
     }
     
-    public var isVisible: Bool {
+    open var isVisible: Bool {
         get {
             return _wxc_wxCaret_IsVisible(rawValue)
         }
     }
     
-    public func move(to point: Point) {
+    open func move(to point: Point) {
         _wxc_wxCaret_Move(rawValue, point.x, point.y)
     }
     
-    public func show() {
+    open func show() {
         _wxc_wxCaret_Show(rawValue)
     }
 }

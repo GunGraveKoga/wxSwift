@@ -6,6 +6,6 @@
 //  Copyright © 2018 Yury Vovk. All rights reserved.
 //
 
-public final class wxToolBar: wxControl {
+open class wxToolBar: wxControl {
     
 }

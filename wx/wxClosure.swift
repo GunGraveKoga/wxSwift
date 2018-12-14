@@ -48,7 +48,7 @@ fileprivate class __wxClosureMethodWrapper<T: AnyObject, E: wxEvent> {
     }
 }
 
-public final class wxClosure: wxObject {
+public class wxClosure: wxObject {
     
     public var closureData: CVoidPtr {
         get {

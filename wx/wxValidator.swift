@@ -6,7 +6,7 @@
 //  Copyright © 2018 Yury Vovk. All rights reserved.
 //
 
-public final class wxValidator: wxObject {
+open class wxValidator: wxObject {
     
     public required init?(rawValue: CVoidPtr) {
         super.init(rawValue: rawValue)

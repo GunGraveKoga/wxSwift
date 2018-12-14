@@ -6,7 +6,7 @@
 //  Copyright © 2018 Yury Vovk. All rights reserved.
 //
 
-public final class wxColour: wxObject {
+open class wxColour: wxObject {
     
     public static var nullColour = wxColour(rawValue: _wxc_Null_Colour())!
     public static var blackColour = wxColour(rawValue: _wxc_wxColour_CreateFromStock(0))!
@@ -48,13 +48,13 @@ public final class wxColour: wxObject {
         _wxc_wxColour_Delete(rawValue)
     }
     
-    public var isOK: Bool {
+    open var isOK: Bool {
         get {
             return _wxc_wxColour_IsOk(rawValue)
         }
     }
     
-    public func copy() -> wxColour {
+    open func copy() -> wxColour {
         var other: CVoidPtr?
         
         _wxc_wxColour_Copy(rawValue, &other)
@@ -62,39 +62,39 @@ public final class wxColour: wxObject {
         return wxColour(rawValue: other!)!
     }
     
-    public func set(byName name: String) {
+    open func set(byName name: String) {
         name.withWxString {
             _wxc_wxColour_SetByName(rawValue, $0)
         }
     }
     
-    public func set(red: UInt8, green: UInt8, blue: UInt8, alpha: UInt8) {
+    open func set(red: UInt8, green: UInt8, blue: UInt8, alpha: UInt8) {
         _wxc_wxColour_Set(rawValue, red, green, blue, alpha)
     }
     
-    public func set(other: wxColour) {
+    open func set(other: wxColour) {
         _wxc_wxColour_Assign(rawValue, other.rawValue)
     }
     
-    public var red: UInt8 {
+    open var red: UInt8 {
         get {
             return _wxc_wxColour_Red(rawValue)
         }
     }
     
-    public var green: UInt8 {
+    open var green: UInt8 {
         get {
             return _wxc_wxColour_Green(rawValue)
         }
     }
     
-    public var blue: UInt8 {
+    open var blue: UInt8 {
         get {
             return _wxc_wxColour_Blue(rawValue)
         }
     }
     
-    public var alpha: UInt8 {
+    open var alpha: UInt8 {
         get {
             return _wxc_wxColour_Alpha(rawValue)
         }

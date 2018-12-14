@@ -10,18 +10,14 @@ public func wxGetApp() -> wxApp {
     return wxApp(rawValue: _wxc_ELJApp_GetApp())!
 }
 
-public final class wxApp: wxEvtHandler {
+open class wxApp: wxEvtHandler {
     
-    private static var _initialized: Bool = false
+    private static let _initialized: Bool = _wxc_wxc_Initialize(0, nil)
     
-    public init() {
+    public required init() {
         
-        if !wxApp._initialized {
-            wxApp._initialized = _wxc_wxc_Initialize(0, nil)
-            
-            guard wxApp._initialized else {
-                fatalError("Filed to initialize wxWidgets library!")
-            }
+        guard wxApp._initialized else {
+            fatalError("Filed to initialize wxWidgets library!")
         }
         
         super.init(rawValue: _wxc_ELJApp_GetApp())!
@@ -31,37 +27,37 @@ public final class wxApp: wxEvtHandler {
         super.init(rawValue: rawValue)
     }
     
-    public func bell() {
+    open func bell() {
         _wxc_ELJApp_Bell()
     }
     
-    public func dispatch() {
+    open func dispatch() {
         _wxc_ELJApp_Dispatch()
     }
     
-    public var displaySize: Size {
+    open var displaySize: Size {
         get {
             return Size(wxSize: _wxc_ELJApp_DisplaySize())!
         }
     }
     
-    public func enableTooltips(_ enable: Bool) {
+    open func enableTooltips(_ enable: Bool) {
         _wxc_ELJApp_EnableTooltips(enable)
     }
     
-    public func enableTopLevelWindow(_ enable: Bool) {
+    open func enableTopLevelWindow(_ enable: Bool) {
         _wxc_ELJApp_EnableTopLevelWindows(enable)
     }
     
-    public func exit() {
+    open func exit() {
         _wxc_ELJApp_Exit()
     }
     
-    public func exitMainLoop() {
+    open func exitMainLoop() {
         _wxc_ELJApp_ExitMainLoop()
     }
     
-    public var applicationName: String {
+    open var applicationName: String {
         get {
             guard let str = String(wxString: _wxc_ELJApp_GetAppName()) else {
                 return ""
@@ -77,7 +73,7 @@ public final class wxApp: wxEvtHandler {
         }
     }
     
-    public var className: String {
+    open var className: String {
         get {
             guard let str = String(wxString: _wxc_ELJApp_GetClassName()) else {
                 return ""
@@ -93,7 +89,7 @@ public final class wxApp: wxEvtHandler {
         }
     }
     
-    public var exitOnFrameDelete: Bool {
+    open var exitOnFrameDelete: Bool {
         get {
             return _wxc_ELJApp_GetExitOnFrameDelete()
         }
@@ -103,15 +99,15 @@ public final class wxApp: wxEvtHandler {
         }
     }
     
-    public func setPrintmode(_ mode: CInt) {
+    open func setPrintmode(_ mode: CInt) {
         _wxc_ELJApp_SetPrintMode(mode)
     }
     
-    public func setTooltipDelay(_ ms: CLong) {
+    open func setTooltipDelay(_ ms: CLong) {
         _wxc_ELJApp_SetTooltipDelay(ms)
     }
     
-    public var useBestVisual: Bool {
+    open var useBestVisual: Bool {
         get {
             return _wxc_ELJApp_GetUseBestVisual()
         }
@@ -121,7 +117,7 @@ public final class wxApp: wxEvtHandler {
         }
     }
     
-    public var vendorName: String {
+    open var vendorName: String {
         get {
             guard let str = String(wxString: _wxc_ELJApp_GetVendorName()) else {
                 return ""
@@ -137,39 +133,39 @@ public final class wxApp: wxEvtHandler {
         }
     }
     
-    public func mainLopp() {
+    open func mainLopp() {
         _wxc_ELJApp_MainLoop()
     }
     
-    public func sleep(_ seconds: CInt) {
+    open func sleep(_ seconds: CInt) {
         _wxc_ELJApp_Sleep(seconds)
     }
     
-    public func milliSleep(_ milliseconds: CUnsignedLong) {
+    open func milliSleep(_ milliseconds: CUnsignedLong) {
         _wxc_ELJApp_MilliSleep(milliseconds)
     }
     
-    public func yield() -> Bool {
+    open func yield() -> Bool {
         return _wxc_ELJApp_Yield()
     }
     
-    public func pendig() -> Bool {
+    open func pendig() -> Bool {
         return _wxc_ELJApp_Pending()
     }
     
-    public var isTerminating: Bool {
+    open var isTerminating: Bool {
         get {
             return _wxc_ELJApp_IsTerminating()
         }
     }
     
-    public var isInitialized: Bool {
+    open var isInitialized: Bool {
         get {
             return _wxc_ELJApp_Initialized()
         }
     }
     
-    public var userName: String {
+    open var userName: String {
         get {
             guard let str = String(wxString: _wxc_ELJApp_GetUserName()) else {
                 return ""
@@ -179,13 +175,13 @@ public final class wxApp: wxEvtHandler {
         }
     }
     
-    public var userHomeDirectory: String {
+    open var userHomeDirectory: String {
         get {
             return getHomeDirectory(for: userName)
         }
     }
     
-    public func getHomeDirectory(for user: String) -> String {
+    open func getHomeDirectory(for user: String) -> String {
         let _user = _wxc_wxString_CreateUTF8(user)
         
         defer {
@@ -197,7 +193,7 @@ public final class wxApp: wxEvtHandler {
         return String(wxString: dir)!
     }
     
-    public var userID: String {
+    open var userID: String {
         get {
             guard let str = String(wxString: _wxc_ELJApp_GetUserId()) else {
                 return ""
