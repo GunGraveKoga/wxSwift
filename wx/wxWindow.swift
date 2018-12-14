@@ -89,8 +89,12 @@ open class wxWindow: wxEvtHandler {
         super.init(rawValue: rawValue)
     }
     
-    public init(withRect rect: Rect, parent: wxWindow? = nil, wxWindow windowID: wxWindowID, style: wxWindowStyle) {
-        super.init(rawValue: _wxc_wxWindow_Create(parent?.rawValue, windowID, rect.x, rect.y, rect.width, rect.height, style.rawValue))!
+    public init(withRect rect: Rect, parent: wxWindow? = nil, windowId: wxWindowID, style: wxWindowStyle) {
+        super.init(rawValue: _wxc_wxWindow_Create(parent?.rawValue, windowId.rawValue, rect.x, rect.y, rect.width, rect.height, style.rawValue))!
+    }
+    
+    public init(parent: wxWindow? = nil, windowId: wxWindowID, position: Point = wxDefaultPosition, size: Size = wxDefaultSize, style: wxWindowStyle) {
+        super.init(rawValue: _wxc_wxWindow_Create(parent?.rawValue, windowId.rawValue, position.x, position.y, size.width, size.height, style.rawValue))!
     }
     
     @discardableResult
@@ -395,11 +399,11 @@ open class wxWindow: wxEvtHandler {
     
     open var Id: wxWindowID {
         get {
-            return _wxc_wxWindow_GetId(rawValue)
+            return wxWindowID(rawValue: _wxc_wxWindow_GetId(rawValue))
         }
         
         set {
-            _wxc_wxWindow_SetId(rawValue, newValue)
+            _wxc_wxWindow_SetId(rawValue, newValue.rawValue)
         }
     }
     

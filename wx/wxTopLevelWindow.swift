@@ -108,3 +108,16 @@ open class wxTopLevelWindow: wxWindow {
         _wxc_wxTopLevelWindow_SetMinSize(rawValue, size.width, size.height)
     }
 }
+
+public extension wxWindowStyle {
+    public static let wxSTAY_ON_TOP = wxWindowStyle(rawValue: 0x8000)
+    public static let wxICONIZE = wxWindowStyle(rawValue: 0x4000)
+    public static let wxMINIMIZE: wxWindowStyle = .wxICONIZE
+    public static let wxMAXIMIZE = wxWindowStyle(rawValue: 0x2000)
+    public static let wxCLOSE_BOX = wxWindowStyle(rawValue: 0x1000)
+    public static let wxSYSTEM_MENU = wxWindowStyle(rawValue: 0x0800)
+    public static let wxMINIMIZE_BOX = wxWindowStyle(rawValue: 0x0400)
+    public static let wxMAXIMIZE_BOX = wxWindowStyle(rawValue: 0x0200)
+    public static let wxTINY_CAPTION = wxWindowStyle(rawValue: 0x0080)
+    public static let wxRESIZE_BORDER = wxWindowStyle(rawValue: 0x0040)
+}

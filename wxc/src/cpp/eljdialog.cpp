@@ -3,7 +3,7 @@
 extern "C"
 {
 
-EWXWEXPORT(wxDialog*,wxDialog_Create)(wxWindow* _prt,int _id,wxString* _txt,int _lft,int _top,int _wdt,int _hgt,int _stl)
+EWXWEXPORT(wxDialog*,wxDialog_Create)(wxWindow* _prt,int _id,wxString* _txt,int _lft,int _top,int _wdt,int _hgt,long _stl)
 {
 	return new wxDialog (_prt, _id, *_txt, wxPoint(_lft, _top), wxSize(_wdt, _hgt), _stl);
 }

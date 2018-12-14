@@ -18,9 +18,9 @@ open class wxEvtHandler: wxObject {
         _wxc_wxEvtHandler_AddPendingEvent(rawValue, event.rawValue)
     }
     
-    open func connect(winId: CInt = wxID_ANY, lastId: CInt = wxID_ANY, eventType: wxEventType, closure: wxClosure) {
+    open func connect(winId: wxWindowID = .wxID_ANY, lastId: wxWindowID = .wxID_ANY, eventType: wxEventType, closure: wxClosure) {
         
-        _ = _wxc_wxEvtHandler_Connect(rawValue, winId, lastId, eventType, closure.rawValue)
+        _ = _wxc_wxEvtHandler_Connect(rawValue, winId.rawValue, lastId.rawValue, eventType, closure.rawValue)
     }
     
     open func bind<E: wxEvent>(eventType type: wxEventType, _ body: @escaping (E) -> Void) {
