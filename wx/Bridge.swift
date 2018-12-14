@@ -1824,3 +1824,83 @@ fileprivate func wxTopLevelWindow_SetTitle(_ ptr: CVoidPtr, _ title: CVoidPtr) -
 internal func _wxc_wxTopLevelWindow_SetTitle(_ ptr: CVoidPtr, _ title: CVoidPtr) -> Void {
     wxTopLevelWindow_SetTitle(ptr, title)
 }
+
+// wxFrame
+
+@_silgen_name("wxFrame_Create")
+fileprivate func wxFrame_Create(_ parent: CVoidPtr, _ winID: CInt, _ title: CVoidPtr, _ posX: CInt, _ posY: CInt, _ width: CInt, _ height: CInt, _ style: CInt) -> CVoidPtr
+internal func _wxc_wxFrame_Create(_ parent: CVoidPtr, _ winID: CInt, _ title: CVoidPtr, _ posX: CInt, _ posY: CInt, _ width: CInt, _ height: CInt, _ style: CInt) -> CVoidPtr {
+    return wxFrame_Create(parent, winID, title, posX, posY, width, height, style)
+}
+
+@_silgen_name("wxFrame_CreateStatusBar")
+fileprivate func wxFrame_CreateStatusBar(_ ptr: CVoidPtr, _ number: CInt, _ style: CLong) -> CVoidPtr
+internal func _wxc_wxFrame_CreateStatusBar(_ ptr: CVoidPtr, _ number: CInt, _ style: CLong) -> CVoidPtr {
+    return wxFrame_CreateStatusBar(ptr, number, style)
+}
+
+@_silgen_name("wxFrame_CreateToolBar")
+fileprivate func wxFrame_CreateToolBar(_ ptr: CVoidPtr, _ style: CLong) -> CVoidPtr
+internal func _wxc_wxFrame_CreateToolBar(_ ptr: CVoidPtr, _ style: CLong) -> CVoidPtr {
+    return wxFrame_CreateToolBar(ptr, style)
+}
+
+@_silgen_name("wxFrame_GetClientAreaOrigin")
+fileprivate func wxFrame_GetClientAreaOrigin(_ ptr: CVoidPtr) -> CVoidPtr
+internal func _wxc_wxFrame_GetClientAreaOrigin(_ ptr: CVoidPtr) -> CVoidPtr {
+    return wxFrame_GetClientAreaOrigin(ptr)
+}
+
+@_silgen_name("wxFrame_GetMenuBar")
+fileprivate func wxFrame_GetMenuBar(_ ptr: CVoidPtr) -> CVoidPtr
+internal func _wxc_wxFrame_GetMenuBar(_ ptr: CVoidPtr) -> CVoidPtr {
+    return wxFrame_GetMenuBar(ptr)
+}
+
+@_silgen_name("wxFrame_GetStatusBar")
+fileprivate func wxFrame_GetStatusBar(_ ptr: CVoidPtr) -> CVoidPtr
+internal func _wxc_wxFrame_GetStatusBar(_ ptr: CVoidPtr) -> CVoidPtr {
+    return wxFrame_GetStatusBar(ptr)
+}
+
+@_silgen_name("wxFrame_GetToolBar")
+fileprivate func wxFrame_GetToolBar(_ ptr: CVoidPtr) -> CVoidPtr
+internal func _wxc_wxFrame_GetToolBar(_ ptr: CVoidPtr) -> CVoidPtr {
+    return wxFrame_GetToolBar(ptr)
+}
+
+@_silgen_name("wxFrame_Restore")
+fileprivate func wxFrame_Restore(_ ptr: CVoidPtr) -> Void
+internal func _wxc_wxFrame_Restore(_ ptr: CVoidPtr) -> Void {
+    wxFrame_Restore(ptr)
+}
+
+@_silgen_name("vwxFrame_SetMenuBar")
+fileprivate func wxFrame_SetMenuBar(_ ptr: CVoidPtr, _ manuBar: CVoidPtr) -> Void
+internal func _wxc_wxFrame_SetMenuBar(_ ptr: CVoidPtr, _ menuBar: CVoidPtr) -> Void {
+    wxFrame_SetMenuBar(ptr, menuBar)
+}
+
+@_silgen_name("wxFrame_SetStatusBar")
+fileprivate func wxFrame_SetStatusBar(_ ptr: CVoidPtr, _ statusBar: CVoidPtr) -> Void
+internal func _wxc_wxFrame_SetStatusBar(_ ptr: CVoidPtr, _ statusBar: CVoidPtr) -> Void {
+    wxFrame_SetStatusBar(ptr, statusBar)
+}
+
+@_silgen_name("wxFrame_SetStatusText")
+fileprivate func wxFrame_SetStatusText(_ ptr: CVoidPtr, _ text: CVoidPtr, _ number: CInt) -> Void
+internal func _wxc_wxFrame_SetStatusText(_ ptr: CVoidPtr, _ text: CVoidPtr, _ number: CInt) -> Void {
+    wxFrame_SetStatusText(ptr, text, number)
+}
+
+@_silgen_name("wxFrame_SetStatusWidths")
+fileprivate func wxFrame_SetStatusWidths(_ ptr: CVoidPtr, _ count: CInt, _ widths_field: UnsafePointer<CInt>!) -> Void
+internal func _wxc_wxFrame_SetStatusWidths(_ ptr: CVoidPtr, _ count: CInt, _ widths_field: UnsafePointer<CInt>!) -> Void {
+    wxFrame_SetStatusWidths(ptr, count, widths_field)
+}
+
+@_silgen_name("wxFrame_SetToolBar")
+fileprivate func wxFrame_SetToolBar(_ ptr: CVoidPtr, _ toolBar: CVoidPtr) -> Void
+internal func _wxc_wxFrame_SetToolBar(_ ptr: CVoidPtr, _ toolBar: CVoidPtr) -> Void {
+    wxFrame_SetToolBar(ptr, toolBar)
+}

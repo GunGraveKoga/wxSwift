@@ -214,6 +214,7 @@
 		EDFCE02021C2DAEE0064FD60 /* wxControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE01F21C2DAEE0064FD60 /* wxControl.swift */; };
 		EDFCE02221C2DB0D0064FD60 /* wxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE02121C2DB0D0064FD60 /* wxButton.swift */; };
 		EDFCE02421C2DB780064FD60 /* wxIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE02321C2DB780064FD60 /* wxIcon.swift */; };
+		EDFCE02621C3CEDF0064FD60 /* wxMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE02521C3CEDF0064FD60 /* wxMenuBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -440,6 +441,7 @@
 		EDFCE01F21C2DAEE0064FD60 /* wxControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxControl.swift; sourceTree = "<group>"; };
 		EDFCE02121C2DB0D0064FD60 /* wxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxButton.swift; sourceTree = "<group>"; };
 		EDFCE02321C2DB780064FD60 /* wxIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxIcon.swift; sourceTree = "<group>"; };
+		EDFCE02521C3CEDF0064FD60 /* wxMenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxMenuBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -761,6 +763,7 @@
 				14A5475421C1CABF00C4AD26 /* wxClientData.swift */,
 				14EFAE622194B8A700105BAB /* wxApp.swift */,
 				14EFAE642194F2A900105BAB /* wxWindow.swift */,
+				EDFCE02521C3CEDF0064FD60 /* wxMenuBar.swift */,
 				14FB877521C31BFD006D42BF /* wxStatusBar.swift */,
 				EDFCE01F21C2DAEE0064FD60 /* wxControl.swift */,
 				14FB877921C323AA006D42BF /* wxToolBar.swift */,
@@ -903,6 +906,7 @@
 				14D53BC721B4116A00E86AE6 /* wxValidator.swift in Sources */,
 				14D53BC321B409CC00E86AE6 /* wxSizer.swift in Sources */,
 				14EFAE5F21947A5F00105BAB /* wxClosure.swift in Sources */,
+				EDFCE02621C3CEDF0064FD60 /* wxMenuBar.swift in Sources */,
 				14B672972198F52D00C6328B /* wxBitmap.swift in Sources */,
 				14B6729F21A2C6C200C6328B /* wxStockGDI.swift in Sources */,
 				14EFAE6B2194F7E700105BAB /* wxPoint.swift in Sources */,
