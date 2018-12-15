@@ -209,6 +209,10 @@
 		14FB877421C313BC006D42BF /* wxIconBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FB877321C313BC006D42BF /* wxIconBundle.swift */; };
 		14FB877621C31BFD006D42BF /* wxStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FB877521C31BFD006D42BF /* wxStatusBar.swift */; };
 		14FB877A21C323AA006D42BF /* wxToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FB877921C323AA006D42BF /* wxToolBar.swift */; };
+		14FB877C21C4E597006D42BF /* wxImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FB877B21C4E597006D42BF /* wxImage.swift */; };
+		14FB877E21C4FC5B006D42BF /* wxBitmapHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FB877D21C4FC5B006D42BF /* wxBitmapHandler.swift */; };
+		14FB878021C501F8006D42BF /* wxMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FB877F21C501F8006D42BF /* wxMask.swift */; };
+		14FB878221C50909006D42BF /* wxPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FB878121C50909006D42BF /* wxPalette.swift */; };
 		EDFCE01C21C2C3AA0064FD60 /* wxDefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE01B21C2C3A90064FD60 /* wxDefs.swift */; };
 		EDFCE01E21C2D08C0064FD60 /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE01D21C2D08C0064FD60 /* Bridge.swift */; };
 		EDFCE02021C2DAEE0064FD60 /* wxControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE01F21C2DAEE0064FD60 /* wxControl.swift */; };
@@ -437,6 +441,10 @@
 		14FB877321C313BC006D42BF /* wxIconBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxIconBundle.swift; sourceTree = "<group>"; };
 		14FB877521C31BFD006D42BF /* wxStatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxStatusBar.swift; sourceTree = "<group>"; };
 		14FB877921C323AA006D42BF /* wxToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxToolBar.swift; sourceTree = "<group>"; };
+		14FB877B21C4E597006D42BF /* wxImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxImage.swift; sourceTree = "<group>"; };
+		14FB877D21C4FC5B006D42BF /* wxBitmapHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxBitmapHandler.swift; sourceTree = "<group>"; };
+		14FB877F21C501F8006D42BF /* wxMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxMask.swift; sourceTree = "<group>"; };
+		14FB878121C50909006D42BF /* wxPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxPalette.swift; sourceTree = "<group>"; };
 		EDFCE01B21C2C3A90064FD60 /* wxDefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxDefs.swift; sourceTree = "<group>"; };
 		EDFCE01D21C2D08C0064FD60 /* Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
 		EDFCE01F21C2DAEE0064FD60 /* wxControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxControl.swift; sourceTree = "<group>"; };
@@ -736,6 +744,8 @@
 				EDFCE01B21C2C3A90064FD60 /* wxDefs.swift */,
 				EDFCE01D21C2D08C0064FD60 /* Bridge.swift */,
 				149B9FB52193919900A15A31 /* wxObject.swift */,
+				14FB877F21C501F8006D42BF /* wxMask.swift */,
+				14FB877D21C4FC5B006D42BF /* wxBitmapHandler.swift */,
 				149B9FB921939A0300A15A31 /* wxString.swift */,
 				14EFAE5A21945F1000105BAB /* wxEvtHandler.swift */,
 				14EFAE5C2194662900105BAB /* wxEvent.swift */,
@@ -746,7 +756,9 @@
 				14B6728A2198C57500C6328B /* wxColour.swift */,
 				14B6728C2198D89200C6328B /* wxCaret.swift */,
 				14B672942198F4ED00C6328B /* wxGDIObject.swift */,
+				14FB878121C50909006D42BF /* wxPalette.swift */,
 				14B672962198F52D00C6328B /* wxBitmap.swift */,
+				14FB877B21C4E597006D42BF /* wxImage.swift */,
 				EDFCE02321C2DB780064FD60 /* wxIcon.swift */,
 				14FB877321C313BC006D42BF /* wxIconBundle.swift */,
 				14B672982198F59800C6328B /* wxCursor.swift */,
@@ -906,6 +918,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14FB877C21C4E597006D42BF /* wxImage.swift in Sources */,
 				14D53BC721B4116A00E86AE6 /* wxValidator.swift in Sources */,
 				14D53BC321B409CC00E86AE6 /* wxSizer.swift in Sources */,
 				14EFAE5F21947A5F00105BAB /* wxClosure.swift in Sources */,
@@ -915,6 +928,8 @@
 				14EFAE6B2194F7E700105BAB /* wxPoint.swift in Sources */,
 				14A5475521C1CABF00C4AD26 /* wxClientData.swift in Sources */,
 				14B672912198E66700C6328B /* wxIndividualLayoutConstraint.swift in Sources */,
+				14FB878021C501F8006D42BF /* wxMask.swift in Sources */,
+				14FB877E21C4FC5B006D42BF /* wxBitmapHandler.swift in Sources */,
 				14D53BCB21B488E200E86AE6 /* wxDC.swift in Sources */,
 				14D53BC921B4381B00E86AE6 /* wxMenu.swift in Sources */,
 				14EFAE692194F56400105BAB /* wxFrame.swift in Sources */,
@@ -932,6 +947,7 @@
 				14A5475321C1C40E00C4AD26 /* wxAcceleratorTable.swift in Sources */,
 				14EFAE652194F2A900105BAB /* wxWindow.swift in Sources */,
 				14B6728F2198E5E900C6328B /* wxLayoutConstraints.swift in Sources */,
+				14FB878221C50909006D42BF /* wxPalette.swift in Sources */,
 				14B6728B2198C57500C6328B /* wxColour.swift in Sources */,
 				14EFAE6D2194FB9F00105BAB /* wxRect.swift in Sources */,
 				EDFCE01E21C2D08C0064FD60 /* Bridge.swift in Sources */,

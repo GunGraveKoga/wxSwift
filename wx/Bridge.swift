@@ -14,6 +14,12 @@ internal func _wxc_wxObject_Delete(_ ptr: CVoidPtr) -> Void {
     wxObject_Delete(ptr)
 }
 
+@_silgen_name("wxObject_SafeDelete")
+fileprivate func wxObject_SafeDelete(_ ptr: CVoidPtr) -> Void
+internal func _wxc_wxObject_SafeDelete(_ ptr: CVoidPtr) -> Void {
+    wxObject_SafeDelete(ptr)
+}
+
 // wxString
 
 @_silgen_name("wxString_Create")
@@ -1925,4 +1931,184 @@ internal func _wxc_wxControl_SetLabel(_ ptr: CVoidPtr, _ label: CVoidPtr) -> Voi
     wxControl_SetLabel(ptr, label)
 }
 
+// wxBitmap
 
+@_silgen_name("Null_Bitmap")
+fileprivate func Null_Bitmap() -> CVoidPtr
+internal func _wxc_Null_Bitmap() -> CVoidPtr {
+    return Null_Bitmap()
+}
+
+@_silgen_name("wxBitmap_SafeDelete")
+fileprivate func wxBitmap_SafeDelete(_ ptr: CVoidPtr) -> Void
+internal func _wxc_wxBitmap_SafeDelete(_ ptr: CVoidPtr) -> Void {
+    wxBitmap_SafeDelete(ptr)
+}
+
+@_silgen_name("wxBitmap_IsStatic")
+fileprivate func wxBitmap_IsStatic(_ ptr: CVoidPtr) -> CBool
+internal func _wxc_wxBitmap_IsStatic(_ ptr: CVoidPtr) -> CBool {
+    return wxBitmap_IsStatic(ptr)
+}
+
+@_silgen_name("wxBitmap_CreateFromImage")
+fileprivate func wxBitmap_CreateFromImage(_ image: CVoidPtr, _ depth: CInt) -> CVoidPtr
+internal func _wxc_wxBitmap_CreateFromImage(_ image: CVoidPtr, _ depth: CInt) -> CVoidPtr {
+    return wxBitmap_CreateFromImage(image, depth)
+}
+
+@_silgen_name("wxBitmap_AddHandler")
+fileprivate func wxBitmap_AddHandler(_ handler: CVoidPtr) -> Void
+internal func _wxc_wxBitmap_AddHandler(_ handler: CVoidPtr) -> Void {
+    wxBitmap_AddHandler(handler)
+}
+
+@_silgen_name("wxBitmap_CleanUpHandlers")
+fileprivate func wxBitmap_CleanUpHandlers() -> Void
+internal func _wxc_wxBitmap_CleanUpHandlers() -> Void {
+    wxBitmap_CleanUpHandlers()
+}
+
+@_silgen_name("wxBitmap_Create")
+fileprivate func wxBitmap_Create(_ bits: UnsafeRawPointer, _ w: CInt, _ h: CInt, _ depth: CInt) -> CVoidPtr
+internal func _wxc_wxBitmap_Create(_ bits: UnsafeRawPointer, _ w: CInt, _ h: CInt, _ depth: CInt) -> CVoidPtr {
+    return wxBitmap_Create(bits, w, h, depth)
+}
+
+@_silgen_name("wxBitmap_Create")
+fileprivate func wxBitmap_CreateDefault() -> CVoidPtr
+internal func _wxc_wxBitmap_CreateDefault() -> CVoidPtr {
+    return wxBitmap_CreateDefault()
+}
+
+@_silgen_name("wxBitmap_CreateEmpty")
+fileprivate func wxBitmap_CreateEmpty(_ w: CInt, _ h: CInt, _ depth: CInt) -> CVoidPtr
+internal func _wxc_wxBitmap_CreateEmpty(_ w: CInt, _ h: CInt, _ depth: CInt) -> CVoidPtr {
+    return wxBitmap_CreateEmpty(w, h, depth)
+}
+
+@_silgen_name("wxBitmap_CreateFromXPM")
+fileprivate func wxBitmap_CreateFromXPM(_ data: UnsafeRawPointer) -> CVoidPtr
+internal func _wxc_wxBitmap_CreateFromXPM(_ data: UnsafeRawPointer) -> CVoidPtr {
+    return wxBitmap_CreateFromXPM(data)
+}
+
+@_silgen_name("wxBitmap_CreateLoad")
+fileprivate func wxBitmap_CreateLoad(_ file: CVoidPtr, _ type: CInt) -> CVoidPtr
+internal func _wxc_wxBitmap_CreateLoad(_ file: CVoidPtr, _ type: CInt) -> CVoidPtr {
+    return wxBitmap_CreateLoad(file, type)
+}
+
+@_silgen_name("wxBitmap_Delete")
+fileprivate func wxBitmap_Delete(_ ptr: CVoidPtr) -> Void
+internal func _wxc_wxBitmap_Delete(_ ptr: CVoidPtr) -> Void {
+    wxBitmap_Delete(ptr)
+}
+
+@_silgen_name("wxBitmap_FindHandlerByExtension")
+fileprivate func wxBitmap_FindHandlerByExtension(_ extension: CVoidPtr, _ type: CInt) -> CVoidPtr
+internal func _wxc_wxBitmap_FindHandlerByExtension(_ extension: CVoidPtr, _ type: CInt) -> CVoidPtr {
+    return wxBitmap_FindHandlerByExtension(`extension`, type)
+}
+
+@_silgen_name("wxBitmap_FindHandlerByName")
+fileprivate func wxBitmap_FindHandlerByName(_ name: CVoidPtr) -> CVoidPtr
+internal func _wxc_wxBitmap_FindHandlerByName(_ name: CVoidPtr) -> CVoidPtr {
+    return wxBitmap_FindHandlerByName(name)
+}
+
+@_silgen_name("wxBitmap_FindHandlerByType")
+fileprivate func wxBitmap_FindHandlerByType(_ type: CInt) -> CVoidPtr
+internal func _wxc_wxBitmap_FindHandlerByType(_ type: CInt) -> CVoidPtr {
+    return wxBitmap_FindHandlerByType(type)
+}
+
+@_silgen_name("wxBitmap_GetDepth")
+fileprivate func wxBitmap_GetDepth(_ ptr: CVoidPtr) -> CInt
+internal func _wxc_wxBitmap_GetDepth(_ ptr: CVoidPtr) -> CInt {
+    return wxBitmap_GetDepth(ptr)
+}
+
+@_silgen_name("wxBitmap_GetHeight")
+fileprivate func wxBitmap_GetHeight(_ ptr: CVoidPtr) -> CInt
+internal func _wxc_wxBitmap_GetHeight(_ ptr: CVoidPtr) -> CInt {
+    return wxBitmap_GetHeight(ptr)
+}
+
+@_silgen_name("wxBitmap_GetMask")
+fileprivate func wxBitmap_GetMask(_ ptr: CVoidPtr) -> CVoidPtr
+internal func _wxc_wxBitmap_GetMask(_ ptr: CVoidPtr) -> CVoidPtr {
+    return wxBitmap_GetMask(ptr)
+}
+
+@_silgen_name("wxBitmap_GetSubBitmap")
+fileprivate func wxBitmap_GetSubBitmap(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt, _ w: CInt, _ h: CInt, _ bitmap: CVoidPtr) -> Void
+internal func _wxc_wxBitmap_GetSubBitmap(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt, _ w: CInt, _ h: CInt, _ bitmap: CVoidPtr) -> Void {
+    wxBitmap_GetSubBitmap(ptr, x, y, w, h, bitmap)
+}
+
+@_silgen_name("wxBitmap_GetWidth")
+fileprivate func wxBitmap_GetWidth(_ ptr: CVoidPtr) -> CInt
+internal func _wxc_wxBitmap_GetWidth(_ ptr: CVoidPtr) -> CInt {
+    return wxBitmap_GetWidth(ptr)
+}
+
+@_silgen_name("wxBitmap_InitStandardHandlers")
+fileprivate func wxBitmap_InitStandardHandlers() -> Void
+internal func _wxc_wxBitmap_InitStandardHandlers() -> Void {
+    wxBitmap_InitStandardHandlers()
+}
+
+@_silgen_name("wxBitmap_InsertHandler")
+fileprivate func wxBitmap_InsertHandler(_ handler: CVoidPtr) -> Void
+internal func _wxc_wxBitmap_InsertHandler(_ handler: CVoidPtr) -> Void {
+    wxBitmap_InsertHandler(handler)
+}
+
+@_silgen_name("wxBitmap_LoadFile")
+fileprivate func wxBitmap_LoadFile(_ ptr: CVoidPtr, _ name: CVoidPtr, _ type: CInt) -> CBool
+internal func _wxc_wxBitmap_LoadFile(_ ptr: CVoidPtr, _ name: CVoidPtr, _ type: CInt) -> CBool {
+    return wxBitmap_LoadFile(ptr, name, type)
+}
+
+@_silgen_name("wxBitmap_IsOk")
+fileprivate func wxBitmap_IsOk(_ ptr: CVoidPtr) -> CBool
+internal func _wxc_wxBitmap_IsOk(_ ptr: CVoidPtr) -> CBool {
+    return wxBitmap_IsOk(ptr)
+}
+
+@_silgen_name("wxBitmap_RemoveHandler")
+fileprivate func wxBitmap_RemoveHandler(_ name: CVoidPtr) -> CBool
+internal func _wxc_wxBitmap_RemoveHandler(_ name: CVoidPtr) -> CBool {
+    return wxBitmap_RemoveHandler(name)
+}
+
+@_silgen_name("wxBitmap_SaveFile")
+fileprivate func wxBitmap_SaveFile(_ ptr: CVoidPtr, _ name: CVoidPtr, _ type: CInt, _ palette: CVoidPtr) -> CBool
+internal func _wxc_wxBitmap_SaveFile(_ ptr: CVoidPtr, _ name: CVoidPtr, _ type: CInt, _ palette: CVoidPtr) -> CBool {
+    return wxBitmap_SaveFile(ptr, name, type, palette)
+}
+
+@_silgen_name("wxBitmap_SetDepth")
+fileprivate func wxBitmap_SetDepth(_ ptr: CVoidPtr, _ depth: CInt) -> Void
+internal func _wxc_wxBitmap_SetDepth(_ ptr: CVoidPtr, _ depth: CInt) -> Void {
+    wxBitmap_SetDepth(ptr, depth)
+}
+
+@_silgen_name("wxBitmap_SetHeight")
+fileprivate func wxBitmap_SetHeight(_ ptr: CVoidPtr, _ h: CInt) -> Void
+internal func _wxc_wxBitmap_SetHeight(_ ptr: CVoidPtr, _ h: CInt) -> Void {
+    wxBitmap_SetHeight(ptr, h)
+}
+
+@_silgen_name("wxBitmap_SetMask")
+fileprivate func wxBitmap_SetMask(_ ptr: CVoidPtr, _ mask: CVoidPtr) -> Void
+internal func _wxc_wxBitmap_SetMask(_ ptr: CVoidPtr, _ mask: CVoidPtr) -> Void {
+    wxBitmap_SetMask(ptr, mask)
+}
+
+@_silgen_name("wxBitmap_SetWidth")
+fileprivate func wxBitmap_SetWidth(_ ptr: CVoidPtr, _ w: CInt) -> Void
+internal func _wxc_wxBitmap_SetWidth(_ ptr: CVoidPtr, _ w: CInt) -> Void {
+    wxBitmap_SetWidth(ptr, w)
+}
