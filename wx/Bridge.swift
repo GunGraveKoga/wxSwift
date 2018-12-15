@@ -2163,4 +2163,106 @@ internal func _wxc_wxPalette_IsOk(_ ptr: CVoidPtr) -> CBool {
     return wxPalette_IsOk(ptr)
 }
 
+// wxIcon
 
+@_silgen_name("wxIcon_SafeDelete")
+fileprivate func wxIcon_SafeDelete(_ ptr: CVoidPtr) -> Void
+internal func _wxc_wxIcon_SafeDelete(_ ptr: CVoidPtr) -> Void {
+    return wxIcon_SafeDelete(ptr)
+}
+
+@_silgen_name("wxIcon_IsStatic")
+fileprivate func wxIcon_IsStatic(_ ptr: CVoidPtr) -> CBool
+internal func _wxc_wxIcon_IsStatic(_ ptr: CVoidPtr) -> CBool {
+    return wxIcon_IsStatic(ptr)
+}
+
+@_silgen_name("wxIcon_Assign")
+fileprivate func wxIcon_Assign(_ ptr: CVoidPtr, _ other: CVoidPtr) -> Void
+internal func _wxc_wxIcon_Assign(_ ptr: CVoidPtr, _ other: CVoidPtr) -> Void {
+    wxIcon_Assign(ptr, other)
+}
+
+@_silgen_name("wxIcon_CopyFromBitmap")
+fileprivate func wxIcon_CopyFromBitmap(_ ptr: CVoidPtr, _ bitmap: CVoidPtr) -> Void
+internal func _wxc_wxIcon_CopyFromBitmap(_ ptr: CVoidPtr, _ bitmap: CVoidPtr) -> Void {
+    wxIcon_CopyFromBitmap(ptr, bitmap)
+}
+
+@_silgen_name("wxIcon_CreateDefault")
+fileprivate func wxIcon_CreateDefault() -> CVoidPtr
+internal func _wxc_wxIcon_CreateDefault() -> CVoidPtr {
+    return wxIcon_CreateDefault()
+}
+
+@_silgen_name("wxIcon_CreateLoad")
+fileprivate func wxIcon_CreateLoad(_ file: CVoidPtr, _ type: CInt, _ w: CInt, _ h: CInt) -> CVoidPtr
+internal func _wxc_wxIcon_CreateLoad(_ file: CVoidPtr, _ type: CInt, _ w: CInt, _ h: CInt) -> CVoidPtr {
+    return wxIcon_CreateLoad(file, type, w, h)
+}
+
+@_silgen_name("wxIcon_Delete")
+fileprivate func wxIcon_Delete(_ ptr: CVoidPtr) -> Void
+internal func _wxc_wxIcon_Delete(_ ptr: CVoidPtr) -> Void {
+    wxIcon_Delete(ptr)
+}
+
+@_silgen_name("wxIcon_FromXPM")
+fileprivate func wxIcon_FromXPM(_ data: UnsafeRawPointer) -> CVoidPtr
+internal func _wxc_wxIcon_FromXPM(_ data: UnsafeRawPointer) -> CVoidPtr {
+    return wxIcon_FromXPM(data)
+}
+
+@_silgen_name("wxIcon_GetDepth")
+fileprivate func wxIcon_GetDepth(_ ptr: CVoidPtr) -> CInt
+internal func _wxc_wxIcon_GetDepth(_ ptr: CVoidPtr) -> CInt {
+    return wxIcon_GetDepth(ptr)
+}
+
+@_silgen_name("wxIcon_GetHeight")
+fileprivate func wxIcon_GetHeight(_ ptr: CVoidPtr) -> CInt
+internal func _wxc_wxIcon_GetHeight(_ ptr: CVoidPtr) -> CInt {
+    return wxIcon_GetHeight(ptr)
+}
+
+@_silgen_name("wxIcon_GetWidth")
+fileprivate func wxIcon_GetWidth(_ ptr: CVoidPtr) -> CInt
+internal func _wxc_wxIcon_GetWidth(_ ptr: CVoidPtr) -> CInt {
+    return wxIcon_GetWidth(ptr)
+}
+
+@_silgen_name("wxIcon_IsEqual")
+fileprivate func wxIcon_IsEqual(_ ptr: CVoidPtr, _ other: CVoidPtr) -> CBool
+internal func _wxc_wxIcon_IsEqual(_ ptr: CVoidPtr, _ other: CVoidPtr) -> CBool {
+    return wxIcon_IsEqual(ptr, other)
+}
+
+@_silgen_name("wxIcon_Load")
+fileprivate func wxIcon_Load(_ ptr: CVoidPtr, _ file: CVoidPtr, _ type: CInt, _ w: CInt, _ h: CInt) -> CBool
+internal func _wxc_wxIcon_Load(_ ptr: CVoidPtr, _ file: CVoidPtr, _ type: CInt, _ w: CInt, _ h: CInt) -> CBool {
+    return wxIcon_Load(ptr, file, type, w, h)
+}
+
+@_silgen_name("wxIcon_IsOk")
+fileprivate func wxIcon_IsOk(_ ptr: CVoidPtr) -> CBool
+internal func _wxc_wxIcon_IsOk(_ ptr: CVoidPtr) -> CBool {
+    return wxIcon_IsOk(ptr)
+}
+
+@_silgen_name("wxIcon_SetDepth")
+fileprivate func wxIcon_SetDepth(_ ptr: CVoidPtr, _ depth: CInt) -> Void
+internal func _wxc_wxIcon_SetDepth(_ ptr: CVoidPtr, _ depth: CInt) -> Void {
+    wxIcon_SetDepth(ptr, depth)
+}
+
+@_silgen_name("wxIcon_SetHeight")
+fileprivate func wxIcon_SetHeight(_ ptr: CVoidPtr, _ height: CInt) -> Void
+internal func _wxc_wxIcon_SetHeight(_ ptr: CVoidPtr, _ height: CInt) -> Void {
+    wxIcon_SetHeight(ptr, height)
+}
+
+@_silgen_name("wxIcon_SetWidth")
+fileprivate func wxIcon_SetWidth(_ ptr: CVoidPtr, _ width: CInt) -> Void
+internal func _wxc_wxIcon_SetWidth(_ ptr: CVoidPtr, _ width: CInt) -> Void {
+    wxIcon_SetWidth(ptr, width)
+}
