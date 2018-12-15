@@ -1904,3 +1904,25 @@ fileprivate func wxFrame_SetToolBar(_ ptr: CVoidPtr, _ toolBar: CVoidPtr) -> Voi
 internal func _wxc_wxFrame_SetToolBar(_ ptr: CVoidPtr, _ toolBar: CVoidPtr) -> Void {
     wxFrame_SetToolBar(ptr, toolBar)
 }
+
+// wxControl
+
+@_silgen_name("wxControl_Command")
+fileprivate func wxControl_Command(_ ptr: CVoidPtr, _ event: CVoidPtr) -> Void
+internal func _wxc_wxControl_Command(_ ptr: CVoidPtr, _ event: CVoidPtr) -> Void {
+    wxControl_Command(ptr, event)
+}
+
+@_silgen_name("wxControl_GetLabel")
+fileprivate func wxControl_GetLabel(_ ptr: CVoidPtr) -> CVoidPtr
+internal func _wxc_wxControl_GetLabel(_ ptr: CVoidPtr) -> CVoidPtr {
+    return wxControl_GetLabel(ptr)
+}
+
+@_silgen_name("wxControl_SetLabel")
+fileprivate func wxControl_SetLabel(_ ptr: CVoidPtr, _ label: CVoidPtr) -> Void
+internal func _wxc_wxControl_SetLabel(_ ptr: CVoidPtr, _ label: CVoidPtr) -> Void {
+    wxControl_SetLabel(ptr, label)
+}
+
+
