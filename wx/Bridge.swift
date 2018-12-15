@@ -2112,3 +2112,55 @@ fileprivate func wxBitmap_SetWidth(_ ptr: CVoidPtr, _ w: CInt) -> Void
 internal func _wxc_wxBitmap_SetWidth(_ ptr: CVoidPtr, _ w: CInt) -> Void {
     wxBitmap_SetWidth(ptr, w)
 }
+
+// wxPalette
+
+@_silgen_name("wxPalette_Assign")
+fileprivate func wxPalette_Assign(_ ptr: CVoidPtr, _ other: CVoidPtr) -> Void
+internal func _wxc_wxPalette_Assign(_ ptr: CVoidPtr, _ other: CVoidPtr) -> Void {
+    wxPalette_Assign(ptr, other)
+}
+
+@_silgen_name("wxPalette_CreateDefault")
+fileprivate func wxPalette_CreateDefault() -> CVoidPtr
+internal func _wxc_wxPalette_CreateDefault() -> CVoidPtr {
+    return wxPalette_CreateDefault()
+}
+
+@_silgen_name("wxPalette_CreateRGB")
+fileprivate func wxPalette_CreateRGB(_ count: CInt, _ red: UnsafeRawPointer!, _ green: UnsafeRawPointer!, _ blue: UnsafeRawPointer!) -> CVoidPtr
+internal func _wxc_wxPalette_CreateRGB(_ count: CInt, _ red: UnsafeRawPointer!, _ green: UnsafeRawPointer!, _ blue: UnsafeRawPointer!) -> CVoidPtr {
+    return wxPalette_CreateRGB(count, red, green, blue)
+}
+
+@_silgen_name("wxPalette_Delete")
+fileprivate func wxPalette_Delete(_ ptr: CVoidPtr) -> Void
+internal func _wxc_wxPalette_Delete(_ ptr: CVoidPtr) -> Void {
+    wxPalette_Delete(ptr)
+}
+
+@_silgen_name("wxPalette_GetPixel")
+fileprivate func wxPalette_GetPixel(_ ptr: CVoidPtr, _ red: UInt8, _ green: UInt8, _ blue: UInt8) -> CInt
+internal func _wxc_wxPalette_GetPixel(_ ptr: CVoidPtr, _ red: UInt8, _ green: UInt8, _ blue: UInt8) -> CInt {
+    return wxPalette_GetPixel(ptr, red, green, blue)
+}
+
+@_silgen_name("wxPalette_GetRGB")
+fileprivate func wxPalette_GetRGB(_ ptr: CVoidPtr, _ pixel: CInt, _ red: UnsafeMutableRawPointer, _ green: UnsafeMutableRawPointer, _ blue: UnsafeMutableRawPointer) -> CBool
+internal func _wxc_wxPalette_GetRGB(_ ptr: CVoidPtr, _ pixel: CInt, _ red: UnsafeMutableRawPointer, _ green: UnsafeMutableRawPointer, _ blue: UnsafeMutableRawPointer) -> CBool {
+    return wxPalette_GetRGB(ptr, pixel, red, green, blue)
+}
+
+@_silgen_name("wxPalette_IsEqual")
+fileprivate func wxPalette_IsEqual(_ ptr: CVoidPtr, _ other: CVoidPtr) -> CBool
+internal func _wxc_wxPalette_IsEqual(_ ptr: CVoidPtr, _ other: CVoidPtr) -> CBool {
+    return wxPalette_IsEqual(ptr, other)
+}
+
+@_silgen_name("wxPalette_IsOk")
+fileprivate func wxPalette_IsOk(_ ptr: CVoidPtr) -> CBool
+internal func _wxc_wxPalette_IsOk(_ ptr: CVoidPtr) -> CBool {
+    return wxPalette_IsOk(ptr)
+}
+
+
