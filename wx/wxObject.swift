@@ -18,13 +18,19 @@ open class wxObject : Equatable {
         self.rawValue = _rawValue
     }
     
-    open static func == (lhs: wxObject, rhs: wxObject) -> Bool {
+    public static func == (lhs: wxObject, rhs: wxObject) -> Bool {
         return lhs.rawValue == rhs.rawValue
     }
     
-    public func destroy() {
+    public func delete() {
         if let rawValue = rawValue {
             _wxc_wxObject_Delete(rawValue)
+        }
+    }
+    
+    public func safeDelete() {
+        if let rawValue = rawValue {
+            _wxc_wxObject_SafeDelete(rawValue)
         }
     }
 }

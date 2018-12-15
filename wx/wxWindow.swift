@@ -106,12 +106,6 @@ open class wxWindow: wxEvtHandler {
         return _wxc_wxWindow_Destroy(rawValue)
     }
     
-    override open func destroy() {
-        if let rawValue = rawValue {
-            _ = _wxc_wxWindow_Destroy(rawValue)
-        }
-    }
-    
     @discardableResult
     open func destroyChildren() -> Bool {
         return _wxc_wxWindow_DestroyChildren(rawValue)
