@@ -103,9 +103,7 @@ open class wxEvtHandler: wxObject {
         _wxc_wxEvtHandler_ProcessPendingEvents(rawValue)
     }
     
-    public override func destroy() {
-        if let rawValue = rawValue {
-            _wxc_wxEvtHandler_Delete(rawValue)
-        }
+    public override func delete() {
+        _wxc_wxEvtHandler_Delete(rawValue)
     }
 }

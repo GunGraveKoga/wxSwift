@@ -23,14 +23,10 @@ open class wxObject : Equatable {
     }
     
     public func delete() {
-        if let rawValue = rawValue {
-            _wxc_wxObject_Delete(rawValue)
-        }
+        _wxc_wxObject_Delete(rawValue)
     }
     
     public func safeDelete() {
-        if let rawValue = rawValue {
-            _wxc_wxObject_SafeDelete(rawValue)
-        }
+        _wxc_wxObject_SafeDelete(rawValue)
     }
 }

@@ -25,9 +25,7 @@ open class wxPalette: wxGDIObject {
     }
     
     override public func delete() {
-        if let rawValue = rawValue {
-            _wxc_wxPalette_Delete(rawValue)
-        }
+        _wxc_wxPalette_Delete(rawValue)
     }
     
     open func getPixel(red: UInt8, green: UInt8, blue: UInt8) -> CInt {
