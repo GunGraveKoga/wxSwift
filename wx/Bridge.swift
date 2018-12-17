@@ -2320,8 +2320,8 @@ internal func _wxc_wxStreamBase_GetLastError(_ ptr: CVoidPtr) -> CInt {
 }
 
 @_silgen_name("wxStreamBase_GetSize")
-fileprivate func wxStreamBase_GetSize(_ ptr: CVoidPtr) -> CInt
-internal func _wxc_wxStreamBase_GetSize(_ ptr: CVoidPtr) -> CInt {
+fileprivate func wxStreamBase_GetSize(_ ptr: CVoidPtr) -> UInt
+internal func _wxc_wxStreamBase_GetSize(_ ptr: CVoidPtr) -> UInt {
     return wxStreamBase_GetSize(ptr)
 }
 
@@ -2336,3 +2336,5 @@ fileprivate func wxStreamBase_Delete(_ ptr: CVoidPtr) -> Void
 internal func _wxc_wxStreamBase_Delete(_ ptr: CVoidPtr) -> Void {
     wxStreamBase_Delete(ptr)
 }
+
+

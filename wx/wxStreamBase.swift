@@ -13,12 +13,12 @@ public enum wxStreamError: CInt {
     wxSTREAM_READ_ERROR
 }
 
-public protocol wxStreamBase: RawRepresentable {
+public protocol wxStreamBase: class, RawRepresentable {
     
     
     func getLastError() -> wxStreamError!
     
-    func getSize() -> CInt
+    func getSize() -> UInt
     
     func isOK() -> Bool
     
@@ -31,7 +31,7 @@ public extension wxStreamBase where Self.RawValue == CVoidPtr {
         return wxStreamError(rawValue: _wxc_wxStreamBase_GetLastError(self.rawValue))
     }
     
-    public func getSize() -> CInt {
+    public func getSize() -> UInt {
         return _wxc_wxStreamBase_GetSize(self.rawValue)
     }
     
