@@ -2337,4 +2337,47 @@ internal func _wxc_wxStreamBase_Delete(_ ptr: CVoidPtr) -> Void {
     wxStreamBase_Delete(ptr)
 }
 
+// wxOutputStream
 
+@_silgen_name("wxOutputStream_Delete")
+fileprivate func wxOutputStream_Delete(_ ptr: CVoidPtr) -> Void
+internal func _wxc_wxOutputStream_Delete(_ ptr: CVoidPtr) -> Void {
+    wxOutputStream_Delete(ptr)
+}
+
+
+@_silgen_name("wxOutputStream_LastWrite")
+fileprivate func wxOutputStream_LastWrite(_ ptr: CVoidPtr) -> UInt
+internal func _wxc_wxOutputStream_LastWrite(_ ptr: CVoidPtr) -> UInt {
+    return wxOutputStream_LastWrite(ptr)
+}
+
+@_silgen_name("wxOutputStream_PutC")
+fileprivate func wxOutputStream_PutC(_ ptr: CVoidPtr, _ char: CChar) -> Void
+internal func _wxc_wxOutputStream_PutC(_ ptr: CVoidPtr, _ char: CChar) -> Void {
+    wxOutputStream_PutC(ptr, char)
+}
+
+@_silgen_name("wxOutputStream_Seek")
+fileprivate func wxOutputStream_Seek(_ ptr: CVoidPtr, _ pos: Int, _ mode: CInt) -> Int
+internal func _wxc_wxOutputStream_Seek(_ ptr: CVoidPtr, _ pos: Int, _ mode: CInt) -> Int {
+    return wxOutputStream_Seek(ptr, pos, mode)
+}
+
+@_silgen_name("wxOutputStream_Sync")
+fileprivate func wxOutputStream_Sync(_ ptr: CVoidPtr) -> Void
+internal func _wxc_wxOutputStream_Sync(_ ptr: CVoidPtr) -> Void {
+    wxOutputStream_Sync(ptr)
+}
+
+@_silgen_name("wxOutputStream_Tell")
+fileprivate func wxOutputStream_Tell(_ ptr: CVoidPtr) -> Int
+internal func _wxc_wxOutputStream_Tell(_ ptr: CVoidPtr) -> Int {
+    return wxOutputStream_Tell(ptr)
+}
+
+@_silgen_name("wxOutputStream_Write")
+fileprivate func wxOutputStream_Write(_ ptr: CVoidPtr, _ buffer: UnsafeRawPointer!, _ length: UInt) -> Void
+internal func _wxc_wxOutputStream_Write(_ ptr: CVoidPtr, _ buffer: UnsafeRawPointer!, _ length: UInt) -> Void {
+    return wxOutputStream_Write(ptr, buffer, length)
+}

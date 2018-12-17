@@ -220,6 +220,8 @@
 		EDFCE02421C2DB780064FD60 /* wxIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE02321C2DB780064FD60 /* wxIcon.swift */; };
 		EDFCE02621C3CEDF0064FD60 /* wxMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE02521C3CEDF0064FD60 /* wxMenuBar.swift */; };
 		EDFCE02821C3E3D80064FD60 /* wxDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE02721C3E3D80064FD60 /* wxDialog.swift */; };
+		EDFCE02A21C810200064FD60 /* wxStreamBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE02921C8101F0064FD60 /* wxStreamBase.swift */; };
+		EDFCE02C21C8191A0064FD60 /* wxOutputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE02B21C8191A0064FD60 /* wxOutputStream.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -452,6 +454,8 @@
 		EDFCE02321C2DB780064FD60 /* wxIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxIcon.swift; sourceTree = "<group>"; };
 		EDFCE02521C3CEDF0064FD60 /* wxMenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxMenuBar.swift; sourceTree = "<group>"; };
 		EDFCE02721C3E3D80064FD60 /* wxDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxDialog.swift; sourceTree = "<group>"; };
+		EDFCE02921C8101F0064FD60 /* wxStreamBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxStreamBase.swift; sourceTree = "<group>"; };
+		EDFCE02B21C8191A0064FD60 /* wxOutputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxOutputStream.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -743,6 +747,8 @@
 				149B9FB72193924800A15A31 /* wx.swift */,
 				EDFCE01B21C2C3A90064FD60 /* wxDefs.swift */,
 				EDFCE01D21C2D08C0064FD60 /* Bridge.swift */,
+				EDFCE02921C8101F0064FD60 /* wxStreamBase.swift */,
+				EDFCE02B21C8191A0064FD60 /* wxOutputStream.swift */,
 				149B9FB52193919900A15A31 /* wxObject.swift */,
 				14FB877F21C501F8006D42BF /* wxMask.swift */,
 				14FB877D21C4FC5B006D42BF /* wxBitmapHandler.swift */,
@@ -943,6 +949,7 @@
 				14FB877621C31BFD006D42BF /* wxStatusBar.swift in Sources */,
 				14B6729B219A3A0000C6328B /* wxDropTarget.swift in Sources */,
 				149B9FBA21939A0300A15A31 /* wxString.swift in Sources */,
+				EDFCE02A21C810200064FD60 /* wxStreamBase.swift in Sources */,
 				14B6728D2198D89200C6328B /* wxCaret.swift in Sources */,
 				14A5475321C1C40E00C4AD26 /* wxAcceleratorTable.swift in Sources */,
 				14EFAE652194F2A900105BAB /* wxWindow.swift in Sources */,
@@ -958,6 +965,7 @@
 				14EFAE5D2194662900105BAB /* wxEvent.swift in Sources */,
 				14B672992198F59800C6328B /* wxCursor.swift in Sources */,
 				EDFCE02221C2DB0D0064FD60 /* wxButton.swift in Sources */,
+				EDFCE02C21C8191A0064FD60 /* wxOutputStream.swift in Sources */,
 				14D53BC521B40F2A00E86AE6 /* wxRegion.swift in Sources */,
 				14B672932198F3A300C6328B /* wxWindowList.swift in Sources */,
 				14EFAE672194F49500105BAB /* wxTopLevelWindow.swift in Sources */,
