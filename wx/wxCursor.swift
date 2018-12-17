@@ -97,11 +97,12 @@ public class wxCursor: wxGDIObject {
     }
     
     override public func delete() {
+        guard rawValue != nil else {
+            return
+        }
+        
         _wxc_wxCursor_Delete(rawValue)
-    }
-    
-    override public func safeDelete() {
-        _wxc_wxCursor_SafeDelete(rawValue)
+        rawValue = nil
     }
     
     public func isStatic() -> Bool {

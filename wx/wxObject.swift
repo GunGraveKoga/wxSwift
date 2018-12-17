@@ -8,7 +8,7 @@
 
 open class wxObject : Equatable {
     
-    public private(set) var rawValue: CVoidPtr
+    public internal(set) var rawValue: CVoidPtr
     
     public required init?(rawValue: CVoidPtr) {
         guard let _rawValue = rawValue else {
@@ -23,10 +23,11 @@ open class wxObject : Equatable {
     }
     
     public func delete() {
+        guard rawValue != nil else {
+            return
+        }
+        
         _wxc_wxObject_Delete(rawValue)
-    }
-    
-    public func safeDelete() {
-        _wxc_wxObject_SafeDelete(rawValue)
+        rawValue = nil
     }
 }

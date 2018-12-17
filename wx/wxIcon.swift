@@ -31,15 +31,12 @@ open class wxIcon: wxGDIObject {
     }
     
     override public func delete() {
-        if let rawValue = rawValue {
-            _wxc_wxIcon_Delete(rawValue)
+        guard rawValue != nil else {
+            return
         }
-    }
-    
-    override public func safeDelete() {
-        if let rawValue = rawValue {
-            _wxc_wxIcon_SafeDelete(rawValue)
-        }
+        
+        _wxc_wxIcon_Delete(rawValue)
+        rawValue = nil
     }
     
     public func isStatic() -> Bool {

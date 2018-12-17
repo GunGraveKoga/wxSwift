@@ -125,15 +125,12 @@ open class wxBitmap: wxGDIObject {
     }
     
     public override func delete() {
-        if let rawValue = rawValue {
-            _wxc_wxBitmap_Delete(rawValue)
+        guard rawValue != nil else {
+            return
         }
-    }
-    
-    public override func safeDelete() {
-        if let rawValue = rawValue {
-            _wxc_wxBitmap_SafeDelete(rawValue)
-        }
+        
+        _wxc_wxBitmap_Delete(rawValue)
+        rawValue = nil
     }
     
     public func isStatic() -> Bool {
