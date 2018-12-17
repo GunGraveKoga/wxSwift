@@ -31,3 +31,8 @@ open class wxObject : Equatable {
         rawValue = nil
     }
 }
+
+public protocol wxCopying: class {
+    
+    func copy() -> Self
+}

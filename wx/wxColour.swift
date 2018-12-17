@@ -6,7 +6,7 @@
 //  Copyright © 2018 Yury Vovk. All rights reserved.
 //
 
-open class wxColour: wxObject {
+open class wxColour: wxObject, wxCopying {
     
     public static var nullColour = wxColour(rawValue: _wxc_Null_Colour())!
     public static var blackColour = wxColour(rawValue: _wxc_wxColour_CreateFromStock(0))!
@@ -27,7 +27,7 @@ open class wxColour: wxObject {
         super.init(rawValue: rawValue)
     }
     
-    public init() {
+    public required init() {
         super.init(rawValue: _wxc_wxColour_CreateEmpty())!
     }
     
@@ -54,12 +54,12 @@ open class wxColour: wxObject {
         }
     }
     
-    open func copy() -> wxColour {
-        var other: CVoidPtr?
+    open func copy() -> Self {
+        let copy = type(of: self).init()
         
-        _wxc_wxColour_Copy(rawValue, &other)
+        _wxc_wxColour_Copy(rawValue, copy.rawValue)
         
-        return wxColour(rawValue: other!)!
+        return copy
     }
     
     open func set(byName name: String) {
