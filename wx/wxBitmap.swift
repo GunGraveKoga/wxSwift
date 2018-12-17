@@ -136,7 +136,7 @@ open class wxBitmap: wxGDIObject {
         }
     }
     
-    open func isStatic() -> Bool {
+    public func isStatic() -> Bool {
         return _wxc_wxBitmap_IsStatic(rawValue)
     }
     
