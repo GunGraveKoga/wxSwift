@@ -77,9 +77,9 @@ EWXWEXPORT(bool,wxStreamBase_IsOk)(wxStreamBase* self)
 	return self->IsOk();
 }
 	
-EWXWEXPORT(int,wxStreamBase_GetSize)(wxStreamBase* self)
+EWXWEXPORT(size_t,wxStreamBase_GetSize)(wxStreamBase* self)
 {
-	return (int)self->GetSize();
+	return self->GetSize();
 }
 	
 
@@ -93,24 +93,24 @@ EWXWEXPORT(void,wxOutputStream_PutC)(wxOutputStream* self,char c)
 	self->PutC(c);
 }
 	
-EWXWEXPORT(void,wxOutputStream_Write)(wxOutputStream* self,void* buffer,int size)
+EWXWEXPORT(void,wxOutputStream_Write)(wxOutputStream* self,void* buffer,size_t size)
 {
-	self->Write((const void*)buffer, (size_t)size);
+	self->Write((const void*)buffer, size);
 }
 	
-EWXWEXPORT(int,wxOutputStream_Seek)(wxOutputStream* self,int pos,int mode)
+EWXWEXPORT(off_t,wxOutputStream_Seek)(wxOutputStream* self,off_t pos,int mode)
 {
-	return (int)self->SeekO((off_t)pos, (wxSeekMode)mode);
+	return self->SeekO(pos, (wxSeekMode)mode);
 }
 	
-EWXWEXPORT(int,wxOutputStream_Tell)(wxOutputStream* self)
+EWXWEXPORT(off_t,wxOutputStream_Tell)(wxOutputStream* self)
 {
-	return (int)self->TellO();
+	return self->TellO();
 }
 	
-EWXWEXPORT(int,wxOutputStream_LastWrite)(wxOutputStream* self)
+EWXWEXPORT(size_t,wxOutputStream_LastWrite)(wxOutputStream* self)
 {
-	return (int)self->LastWrite();
+	return self->LastWrite();
 }
 	
 EWXWEXPORT(void,wxOutputStream_Sync)(void* self)

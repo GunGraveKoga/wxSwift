@@ -3419,6 +3419,7 @@ TClass(wxImage) wxImage_CreateFromData( TSize(width,height), void* data );
 TClass(wxImage) wxImage_CreateFromFile( TClass(wxString) name );
 TClass(wxImage) wxImage_CreateSized( TSize(width,height) );
 void       wxImage_Destroy( TSelf(wxImage) _obj );
+TChar      wxImage_GetAlpha( TSelf(wxImage) _obj);
 TChar      wxImage_GetBlue( TSelf(wxImage) _obj, TPoint(x,y) );
 void*      wxImage_GetData( TSelf(wxImage) _obj );
 TChar      wxImage_GetGreen( TSelf(wxImage) _obj, TPoint(x,y) );

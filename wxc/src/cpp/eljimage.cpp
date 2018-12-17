@@ -161,6 +161,11 @@ EWXWEXPORT(wxUint8,wxImage_GetBlue)(wxImage* self,int x,int y)
 {
 	return self->GetBlue(x, y);
 }
+    
+EWXWEXPORT(wxUint8, wxImage_GetAlpha)(wxImage* self,int x, int y)
+{
+    return self->GetAlpha(x, y);
+}
 	
 EWXWEXPORT(bool,wxImage_CanRead)(wxString* name)
 {
@@ -249,7 +254,7 @@ EWXWEXPORT(bool,wxImage_HasMask)(wxImage* self)
 	
 EWXWEXPORT(int,wxImage_CountColours)(wxImage* self,int stopafter)
 {
-	return self->CountColours((long)stopafter);
+	return (int)self->CountColours((long)stopafter);
 }
 
 EWXWEXPORT (wxString*,wxImage_GetOption)(wxImage* self,wxString* key)
