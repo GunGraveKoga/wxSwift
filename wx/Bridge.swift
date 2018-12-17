@@ -2310,3 +2310,29 @@ fileprivate func Cursor_CreateLoad(_ name: CVoidPtr, _ type: CInt, _ w: CInt, _ 
 internal func _wxc_Cursor_CreateLoad(_ name: CVoidPtr, _ type: CInt, _ w: CInt, _ h: CInt) -> CVoidPtr {
     return Cursor_CreateLoad(name, type, w, h)
 }
+
+// wxStreamBase
+
+@_silgen_name("wxStreamBase_GetLastError")
+fileprivate func wxStreamBase_GetLastError(_ ptr: CVoidPtr) -> CInt
+internal func _wxc_wxStreamBase_GetLastError(_ ptr: CVoidPtr) -> CInt {
+    return wxStreamBase_GetLastError(ptr)
+}
+
+@_silgen_name("wxStreamBase_GetSize")
+fileprivate func wxStreamBase_GetSize(_ ptr: CVoidPtr) -> CInt
+internal func _wxc_wxStreamBase_GetSize(_ ptr: CVoidPtr) -> CInt {
+    return wxStreamBase_GetSize(ptr)
+}
+
+@_silgen_name("wxStreamBase_IsOk")
+fileprivate func wxStreamBase_IsOk(_ ptr: CVoidPtr) -> CBool
+internal func _wxc_wxStreamBase_IsOk(_ ptr: CVoidPtr) -> CBool {
+    return wxStreamBase_IsOk(ptr)
+}
+
+@_silgen_name("wxStreamBase_Delete")
+fileprivate func wxStreamBase_Delete(_ ptr: CVoidPtr) -> Void
+internal func _wxc_wxStreamBase_Delete(_ ptr: CVoidPtr) -> Void {
+    wxStreamBase_Delete(ptr)
+}
