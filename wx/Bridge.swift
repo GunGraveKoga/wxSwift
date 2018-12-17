@@ -2266,3 +2266,47 @@ fileprivate func wxIcon_SetWidth(_ ptr: CVoidPtr, _ width: CInt) -> Void
 internal func _wxc_wxIcon_SetWidth(_ ptr: CVoidPtr, _ width: CInt) -> Void {
     wxIcon_SetWidth(ptr, width)
 }
+
+// wxCursor
+
+@_silgen_name("Null_Cursor")
+fileprivate func Null_Cursor() -> CVoidPtr
+internal func _wxc_Null_Cursor() -> CVoidPtr {
+    return Null_Cursor()
+}
+
+@_silgen_name("wxCursor_SafeDelete")
+fileprivate func wxCursor_SafeDelete(_ ptr: CVoidPtr) -> Void
+internal func _wxc_wxCursor_SafeDelete(_ ptr: CVoidPtr) -> Void {
+    wxCursor_SafeDelete(ptr)
+}
+
+@_silgen_name("wxCursor_IsStatic")
+fileprivate func wxCursor_IsStatic(_ ptr: CVoidPtr) -> CBool
+internal func _wxc_wxCursor_IsStatic(_ ptr: CVoidPtr) -> CBool {
+    return wxCursor_IsStatic(ptr)
+}
+
+@_silgen_name("wxCursor_Delete")
+fileprivate func wxCursor_Delete(_ ptr: CVoidPtr) -> Void
+internal func _wxc_wxCursor_Delete(_ ptr: CVoidPtr) -> Void {
+    wxCursor_Delete(ptr)
+}
+
+@_silgen_name("Cursor_CreateFromStock")
+fileprivate func Cursor_CreateFromStock(_ stockId: CInt) -> CVoidPtr
+internal func _wxc_Cursor_CreateFromStock(_ stockId: CInt) -> CVoidPtr {
+    return Cursor_CreateFromStock(stockId)
+}
+
+@_silgen_name("Cursor_CreateFromImage")
+fileprivate func Cursor_CreateFromImage(_ image: CVoidPtr) -> CVoidPtr
+internal func _wxc_Cursor_CreateFromImage(_ image: CVoidPtr) -> CVoidPtr {
+    return Cursor_CreateFromImage(image)
+}
+
+@_silgen_name("Cursor_CreateLoad")
+fileprivate func Cursor_CreateLoad(_ name: CVoidPtr, _ type: CInt, _ w: CInt, _ h: CInt) -> CVoidPtr
+internal func _wxc_Cursor_CreateLoad(_ name: CVoidPtr, _ type: CInt, _ w: CInt, _ h: CInt) -> CVoidPtr {
+    return Cursor_CreateLoad(name, type, w, h)
+}

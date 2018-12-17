@@ -6,36 +6,6 @@
 //  Copyright © 2018 Yury Vovk. All rights reserved.
 //
 
-@_silgen_name("Null_Cursor")
-fileprivate func Null_Cursor() -> CVoidPtr
-internal func _wxc_Null_Cursor() -> CVoidPtr {
-    return Null_Cursor()
-}
-
-@_silgen_name("wxCursor_SafeDelete")
-fileprivate func wxCursor_SafeDelete(_ ptr: CVoidPtr) -> Void
-internal func _wxc_wxCursor_SafeDelete(_ ptr: CVoidPtr) -> Void {
-    wxCursor_SafeDelete(ptr)
-}
-
-@_silgen_name("wxCursor_IsStatic")
-fileprivate func wxCursor_IsStatic(_ ptr: CVoidPtr) -> CBool
-internal func _wxc_wxCursor_IsStatic(_ ptr: CVoidPtr) -> CBool {
-    return wxCursor_IsStatic(ptr)
-}
-
-@_silgen_name("wxCursor_Delete")
-fileprivate func wxCursor_Delete(_ ptr: CVoidPtr) -> Void
-internal func _wxc_wxCursor_Delete(_ ptr: CVoidPtr) -> Void {
-    wxCursor_Delete(ptr)
-}
-
-@_silgen_name("Cursor_CreateFromStock")
-fileprivate func Cursor_CreateFromStock(_ stockId: CInt) -> CVoidPtr
-internal func _wxc_Cursor_CreateFromStock(_ stockId: CInt) -> CVoidPtr {
-    return Cursor_CreateFromStock(stockId)
-}
-
 public enum wxStockCursor: CInt {
     case wxCURSOR_NONE = 0,
     wxCURSOR_ARROW,
@@ -94,6 +64,20 @@ public class wxCursor: wxGDIObject {
     
     public init(fromStock cursorId: wxStockCursor) {
         super.init(rawValue: _wxc_Cursor_CreateFromStock(cursorId.rawValue))!
+    }
+    
+    public init(fromImage image: wxImage) {
+        super.init(rawValue: _wxc_Cursor_CreateFromImage(image.rawValue))!
+    }
+    
+    public init(fromFile fileName: String, type: wxBitmapType, size: Size = wxDefaultSize) {
+        let _fileName = _wxc_wxString_CreateUTF8(fileName)
+        
+        defer {
+            _wxc_wxString_Delete(_fileName)
+        }
+        
+        super.init(rawValue: _wxc_Cursor_CreateLoad(_fileName, type.rawValue, size.width, size.height))!
     }
     
     override public func delete() {
