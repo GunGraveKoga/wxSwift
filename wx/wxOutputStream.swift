@@ -24,12 +24,12 @@ public protocol wxOutputStream: wxStreamBase {
     
     func sync() -> Void
     
-    func tell() -> Int
+    func tellO() -> Int
     
     func write(buffer: UnsafeRawPointer!, length: UInt) -> Void
 }
 
-public extension wxOutputStream where Self.RawValue == CVoidPtr {
+public extension wxOutputStream {
     
     public func delete() {
         guard self.rawValue != nil else {
@@ -55,7 +55,7 @@ public extension wxOutputStream where Self.RawValue == CVoidPtr {
         _wxc_wxOutputStream_Sync(self.rawValue)
     }
     
-    public func tell() -> Int {
+    public func tellO() -> Int {
         return _wxc_wxOutputStream_Tell(self.rawValue)
     }
     

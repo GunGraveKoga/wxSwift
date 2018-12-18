@@ -24,4 +24,12 @@ TClass(wxFileOutputStream) wxFileOutputStream_Create(TClass(wxString) ofileName)
 void wxFileOutputStream_Delete( TSelf(wxFileOutputStream) self );
 TBool wxFileOutputStream_IsOk( TSelf(wxFileOutputStream) self);
 
+/*-----------------------------------------------------------------------------
+ File I/O stream
+ -----------------------------------------------------------------------------*/
+
+TClass(wxFileStream) wxFileStream_Create(TClass(wxString) ioFileName);
+void wxFileStream_Delete( TSelf(wxFileStream) self);
+TBool wxFileStream_IsOK( TSelf(wxFileStream) self);
+
 #endif /* FILESTEAM_H */

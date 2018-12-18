@@ -13,8 +13,11 @@ public enum wxStreamError: CInt {
     wxSTREAM_READ_ERROR
 }
 
-public protocol wxStreamBase: class, RawRepresentable {
+public protocol wxStreamBase: Hashable, RawRepresentable {
     
+    var rawValue: CVoidPtr { get }
+    
+    init?(rawValue: CVoidPtr)
     
     func getLastError() -> wxStreamError!
     
@@ -22,10 +25,14 @@ public protocol wxStreamBase: class, RawRepresentable {
     
     func isOK() -> Bool
     
-    func delete() -> Void
+    mutating func delete() -> Void
 }
 
-public extension wxStreamBase where Self.RawValue == CVoidPtr {
+public extension wxStreamBase {
+    
+    public static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.rawValue == rhs.rawValue
+    }
     
     public func getLastError() -> wxStreamError! {
         return wxStreamError(rawValue: _wxc_wxStreamBase_GetLastError(self.rawValue))
@@ -45,5 +52,9 @@ public extension wxStreamBase where Self.RawValue == CVoidPtr {
         }
         
         _wxc_wxStreamBase_Delete(self.rawValue)
+    }
+    
+    public var hashValue: Int {
+        return self.rawValue!.hashValue
     }
 }

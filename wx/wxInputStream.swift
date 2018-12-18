@@ -22,7 +22,7 @@ public protocol wxInputStream: wxStreamBase {
     
     func seekI(offset: wxFileOffset, mode: wxSeekMode) -> Int
     
-    func tell() -> Int
+    func tellI() -> Int
     
     func unget(buffer: UnsafeRawPointer!, length: UInt) -> UInt
     
@@ -31,7 +31,7 @@ public protocol wxInputStream: wxStreamBase {
     func canRead() -> Bool
 }
 
-public extension wxInputStream where Self.RawValue == CVoidPtr {
+public extension wxInputStream {
     
     public func delete() {
         guard self.rawValue != nil else {
@@ -71,7 +71,7 @@ public extension wxInputStream where Self.RawValue == CVoidPtr {
         return _wxc_wxInputStream_SeekI(self.rawValue, offset, mode.rawValue)
     }
     
-    public func tell() -> Int {
+    public func tellI() -> Int {
         return _wxc_wxInputStream_Tell(self.rawValue)
     }
     

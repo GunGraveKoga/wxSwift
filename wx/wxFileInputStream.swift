@@ -11,7 +11,7 @@ public protocol wxFileInputStream: wxInputStream {
     init(atPath path: String)
 }
 
-public extension wxFileInputStream where Self.RawValue == CVoidPtr {
+public extension wxFileInputStream {
     
     public init(atPath path: String) {
         let _path = _wxc_wxString_CreateUTF8(path)

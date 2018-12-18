@@ -164,7 +164,7 @@
 		149B9FAC21938D0F00A15A31 /* libwx_baseu_net-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9B21938D0F00A15A31 /* libwx_baseu_net-3.0.0.4.0.dylib */; };
 		149B9FAD21938D0F00A15A31 /* libwx_osx_cocoau_richtext-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9C21938D0F00A15A31 /* libwx_osx_cocoau_richtext-3.0.0.4.0.dylib */; };
 		149B9FAE21938D0F00A15A31 /* libwx_osx_cocoau_webview-3.0.0.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9D21938D0F00A15A31 /* libwx_osx_cocoau_webview-3.0.0.4.0.dylib */; };
-		149B9FAF21938D0F00A15A31 /* libjpeg.8.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9E21938D0F00A15A31 /* libjpeg.8.dylib */; };
+		149B9FAF21938D0F00A15A31 /* libjpeg.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9F9E21938D0F00A15A31 /* libjpeg.9.dylib */; };
 		149B9FB121938F4800A15A31 /* libpng16.16.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9FB021938F4800A15A31 /* libpng16.16.dylib */; };
 		149B9FB32193901400A15A31 /* libtiff.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 149B9FB22193901400A15A31 /* libtiff.5.dylib */; };
 		149B9FB62193919900A15A31 /* wxObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149B9FB52193919900A15A31 /* wxObject.swift */; };
@@ -225,6 +225,7 @@
 		EDFCE02E21C903AD0064FD60 /* wxInputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE02D21C903AD0064FD60 /* wxInputStream.swift */; };
 		EDFCE03021C90FB60064FD60 /* wxFileInputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE02F21C90FB60064FD60 /* wxFileInputStream.swift */; };
 		EDFCE03221C913160064FD60 /* wxFileOutputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE03121C913160064FD60 /* wxFileOutputStream.swift */; };
+		EDFCE03421C91C470064FD60 /* wxFileStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE03321C91C470064FD60 /* wxFileStream.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -400,7 +401,7 @@
 		149B9F9B21938D0F00A15A31 /* libwx_baseu_net-3.0.0.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libwx_baseu_net-3.0.0.4.0.dylib"; path = "../../../../usr/local/Cellar/wxmac/3.0.4_1/lib/libwx_baseu_net-3.0.0.4.0.dylib"; sourceTree = "<group>"; };
 		149B9F9C21938D0F00A15A31 /* libwx_osx_cocoau_richtext-3.0.0.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libwx_osx_cocoau_richtext-3.0.0.4.0.dylib"; path = "../../../../usr/local/Cellar/wxmac/3.0.4_1/lib/libwx_osx_cocoau_richtext-3.0.0.4.0.dylib"; sourceTree = "<group>"; };
 		149B9F9D21938D0F00A15A31 /* libwx_osx_cocoau_webview-3.0.0.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libwx_osx_cocoau_webview-3.0.0.4.0.dylib"; path = "../../../../usr/local/Cellar/wxmac/3.0.4_1/lib/libwx_osx_cocoau_webview-3.0.0.4.0.dylib"; sourceTree = "<group>"; };
-		149B9F9E21938D0F00A15A31 /* libjpeg.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjpeg.8.dylib; path = ../../../../usr/local/Cellar/jpeg/8d/lib/libjpeg.8.dylib; sourceTree = "<group>"; };
+		149B9F9E21938D0F00A15A31 /* libjpeg.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjpeg.9.dylib; path = ../../../usr/local/Cellar/jpeg/9c/lib/libjpeg.9.dylib; sourceTree = "<group>"; };
 		149B9FB021938F4800A15A31 /* libpng16.16.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng16.16.dylib; path = ../../../../usr/local/Cellar/libpng/1.6.35/lib/libpng16.16.dylib; sourceTree = "<group>"; };
 		149B9FB22193901400A15A31 /* libtiff.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libtiff.5.dylib; path = ../../../../usr/local/Cellar/libtiff/4.0.9_4/lib/libtiff.5.dylib; sourceTree = "<group>"; };
 		149B9FB52193919900A15A31 /* wxObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxObject.swift; sourceTree = "<group>"; };
@@ -462,6 +463,7 @@
 		EDFCE02D21C903AD0064FD60 /* wxInputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxInputStream.swift; sourceTree = "<group>"; };
 		EDFCE02F21C90FB60064FD60 /* wxFileInputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxFileInputStream.swift; sourceTree = "<group>"; };
 		EDFCE03121C913160064FD60 /* wxFileOutputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxFileOutputStream.swift; sourceTree = "<group>"; };
+		EDFCE03321C91C470064FD60 /* wxFileStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxFileStream.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -474,7 +476,7 @@
 				149B9FAC21938D0F00A15A31 /* libwx_baseu_net-3.0.0.4.0.dylib in Frameworks */,
 				149B9FA321938D0F00A15A31 /* libwx_baseu_xml-3.0.0.4.0.dylib in Frameworks */,
 				149B9F8D21938C3E00A15A31 /* libexpat.tbd in Frameworks */,
-				149B9FAF21938D0F00A15A31 /* libjpeg.8.dylib in Frameworks */,
+				149B9FAF21938D0F00A15A31 /* libjpeg.9.dylib in Frameworks */,
 				149B9F9F21938D0F00A15A31 /* libwx_osx_cocoau_adv-3.0.0.4.0.dylib in Frameworks */,
 				149B9FAB21938D0F00A15A31 /* libwx_osx_cocoau_aui-3.0.0.4.0.dylib in Frameworks */,
 				149B9FA921938D0F00A15A31 /* libwx_osx_cocoau_core-3.0.0.4.0.dylib in Frameworks */,
@@ -725,7 +727,7 @@
 				14EFAE2C2193BB6500105BAB /* IOKit.framework */,
 				149B9FB22193901400A15A31 /* libtiff.5.dylib */,
 				149B9FB021938F4800A15A31 /* libpng16.16.dylib */,
-				149B9F9E21938D0F00A15A31 /* libjpeg.8.dylib */,
+				149B9F9E21938D0F00A15A31 /* libjpeg.9.dylib */,
 				149B9F9B21938D0F00A15A31 /* libwx_baseu_net-3.0.0.4.0.dylib */,
 				149B9F9221938D0F00A15A31 /* libwx_baseu_xml-3.0.0.4.0.dylib */,
 				149B9F9121938D0F00A15A31 /* libwx_baseu-3.0.0.4.0.dylib */,
@@ -758,6 +760,7 @@
 				EDFCE03121C913160064FD60 /* wxFileOutputStream.swift */,
 				EDFCE02D21C903AD0064FD60 /* wxInputStream.swift */,
 				EDFCE02F21C90FB60064FD60 /* wxFileInputStream.swift */,
+				EDFCE03321C91C470064FD60 /* wxFileStream.swift */,
 				149B9FB52193919900A15A31 /* wxObject.swift */,
 				14FB877F21C501F8006D42BF /* wxMask.swift */,
 				14FB877D21C4FC5B006D42BF /* wxBitmapHandler.swift */,
@@ -977,6 +980,7 @@
 				14EFAE5D2194662900105BAB /* wxEvent.swift in Sources */,
 				14B672992198F59800C6328B /* wxCursor.swift in Sources */,
 				EDFCE02221C2DB0D0064FD60 /* wxButton.swift in Sources */,
+				EDFCE03421C91C470064FD60 /* wxFileStream.swift in Sources */,
 				EDFCE02C21C8191A0064FD60 /* wxOutputStream.swift in Sources */,
 				14D53BC521B40F2A00E86AE6 /* wxRegion.swift in Sources */,
 				14B672932198F3A300C6328B /* wxWindowList.swift in Sources */,
@@ -1179,7 +1183,7 @@
 					"/usr/local/include/wx-3.0",
 				);
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1242,7 +1246,7 @@
 					"/usr/local/include/wx-3.0",
 				);
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -1278,9 +1282,10 @@
 					/usr/local/Cellar/jpeg/8d/lib,
 					/usr/local/Cellar/libpng/1.6.35/lib,
 					/usr/local/Cellar/libtiff/4.0.9_4/lib,
+					/usr/local/Cellar/jpeg/9c/lib,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.gungravekoga.wxSwift;
-				PRODUCT_MODULE_NAME = wx;
+				PRODUCT_MODULE_NAME = wxSwift;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1313,9 +1318,10 @@
 					/usr/local/Cellar/jpeg/8d/lib,
 					/usr/local/Cellar/libpng/1.6.35/lib,
 					/usr/local/Cellar/libtiff/4.0.9_4/lib,
+					/usr/local/Cellar/jpeg/9c/lib,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.gungravekoga.wxSwift;
-				PRODUCT_MODULE_NAME = wx;
+				PRODUCT_MODULE_NAME = wxSwift;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;

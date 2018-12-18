@@ -6,7 +6,12 @@
 //  Copyright © 2018 Yury Vovk. All rights reserved.
 //
 
-public extension wxFileOutputStream where Self.RawValue == CVoidPtr {
+public protocol wxFileOutputStream: wxOutputStream {
+    
+    init(atPath path: String)
+}
+
+public extension wxFileOutputStream {
     
     public init(atPath path: String) {
         let _path = _wxc_wxString_CreateUTF8(path)

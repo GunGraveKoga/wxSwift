@@ -55,5 +55,24 @@ EWXWEXPORT( bool, wxFileOutputStream_IsOk)(wxFileOutputStream* self)
 {
   return self->IsOk();
 }
+    
+/*-----------------------------------------------------------------------------
+File Output stream
+-----------------------------------------------------------------------------*/
+
+EWXWEXPORT(wxFileStream*, wxFileStream_Create)(wxString *ioFileName)
+{
+    return new wxFileStream(*ioFileName);
+}
+    
+EWXWEXPORT(void, wxFileStream_Delete)(wxFileStream* self)
+{
+    if (self) delete self;
+}
+    
+EWXWEXPORT(bool, wxFileStream_IsOK)(wxFileStream* self)
+{
+    return self->IsOk();
+}
 
 }

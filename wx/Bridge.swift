@@ -938,7 +938,7 @@ internal func _wxc_ELJApp_GetUserName() -> CVoidPtr {
     return ELJApp_GetUserName()
 }
 
-@_silgen_name("LJApp_GetUserHome")
+@_silgen_name("ELJApp_GetUserHome")
 fileprivate func ELJApp_GetUserHome(_ user: CVoidPtr) -> CVoidPtr
 internal func _wxc_ELJApp_GetUserHome(_ user: CVoidPtr) -> CVoidPtr {
     return ELJApp_GetUserHome(user)
@@ -1120,10 +1120,10 @@ internal func _wxc_wxWindow_GetCharWidth(_ ptr: CVoidPtr) -> CInt {
     return wxWindow_GetCharWidth(ptr)
 }
 
-@_silgen_name("wxWindow_GetChildre")
-fileprivate func wxWindow_GetChildre(_ ptr: CVoidPtr, _ res: UnsafeMutablePointer<CVoidPtr>?, _ cnt: CInt) -> CInt
-internal func _wxc_wxWindow_GetChildre(_ ptr: CVoidPtr, _ res: UnsafeMutablePointer<CVoidPtr>?, _ cnt: CInt) -> CInt {
-    return wxWindow_GetChildre(ptr, res, cnt)
+@_silgen_name("wxWindow_GetChildren")
+fileprivate func wxWindow_GetChildren(_ ptr: CVoidPtr, _ res: UnsafeMutablePointer<CVoidPtr>?, _ cnt: CInt) -> CInt
+internal func _wxc_wxWindow_GetChildren(_ ptr: CVoidPtr, _ res: UnsafeMutablePointer<CVoidPtr>?, _ cnt: CInt) -> CInt {
+    return wxWindow_GetChildren(ptr, res, cnt)
 }
 
 @_silgen_name("wxWindow_GetClientData")
@@ -1881,7 +1881,7 @@ internal func _wxc_wxFrame_Restore(_ ptr: CVoidPtr) -> Void {
     wxFrame_Restore(ptr)
 }
 
-@_silgen_name("vwxFrame_SetMenuBar")
+@_silgen_name("wxFrame_SetMenuBar")
 fileprivate func wxFrame_SetMenuBar(_ ptr: CVoidPtr, _ manuBar: CVoidPtr) -> Void
 internal func _wxc_wxFrame_SetMenuBar(_ ptr: CVoidPtr, _ menuBar: CVoidPtr) -> Void {
     wxFrame_SetMenuBar(ptr, menuBar)
@@ -1975,7 +1975,7 @@ internal func _wxc_wxBitmap_Create(_ bits: UnsafeRawPointer, _ w: CInt, _ h: CIn
     return wxBitmap_Create(bits, w, h, depth)
 }
 
-@_silgen_name("wxBitmap_Create")
+@_silgen_name("wxBitmap_CreateDefault")
 fileprivate func wxBitmap_CreateDefault() -> CVoidPtr
 internal func _wxc_wxBitmap_CreateDefault() -> CVoidPtr {
     return wxBitmap_CreateDefault()
@@ -2489,9 +2489,4 @@ internal func _wxc_wxFileOutputStream_Delete(_ ptr: CVoidPtr) -> Void {
 fileprivate func wxFileOutputStream_IsOk(_ ptr: CVoidPtr) -> CBool
 internal func _wxc_wxFileOutputStream_IsOk(_ ptr: CVoidPtr) -> CBool {
     return wxFileOutputStream_IsOk(ptr)
-}
-
-public protocol wxFileOutputStream: wxOutputStream {
-    
-    init(atPath path: String)
 }
