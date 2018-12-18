@@ -6,7 +6,7 @@
 //  Copyright © 2018 Yury Vovk. All rights reserved.
 //
 
-open class wxObject : Equatable {
+open class wxObject : Equatable, Hashable {
     
     public internal(set) var rawValue: CVoidPtr
     
@@ -29,6 +29,10 @@ open class wxObject : Equatable {
         
         _wxc_wxObject_Delete(rawValue)
         rawValue = nil
+    }
+    
+    open var hashValue: Int {
+        return rawValue!.hashValue
     }
 }
 
