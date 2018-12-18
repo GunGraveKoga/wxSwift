@@ -204,3 +204,5 @@ public struct wxBorder: OptionSet {
 }
 
 public let wxDEFAULT_CONTROL_BORDER: wxBorder = .wxBORDER_SUNKEN
+
+public typealias wxCoord = CInt

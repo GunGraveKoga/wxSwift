@@ -26,8 +26,6 @@ internal func _wxc_ELJDropTarget_SetOnData(_ ptr: CVoidPtr, _ func: CVoidPtr) ->
 
 internal typealias DragThreeFunc = @convention(c) (_ obj: UnsafeMutableRawPointer, _ x: CInt, _ y: CInt, _ def: CInt) -> CInt
 
-public typealias wxCoord = CInt
-
 public enum wxDragResult: CInt {
     case wxDragError = 0
     case wxDragNone
