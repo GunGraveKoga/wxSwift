@@ -2798,3 +2798,53 @@ fileprivate func wxImage_SetAlpha(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt, _ a: UI
 internal func _wxc_wxImage_SetAlpha(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt, _ a: UInt8) -> Void {
     wxImage_SetAlpha(ptr, x, y, a)
 }
+
+// wxIconBundle
+
+@_silgen_name("wxIconBundle_CreateDefault")
+fileprivate func wxIconBundle_CreateDefault() -> CVoidPtr
+internal func _wxc_wxIconBundle_CreateDefault() -> CVoidPtr {
+    return wxIconBundle_CreateDefault()
+}
+
+@_silgen_name("wxIconBundle_CreateFromFile")
+fileprivate func wxIconBundle_CreateFromFile(_ file: CVoidPtr, _ type: CInt) -> CVoidPtr
+internal func _wxc_wxIconBundle_CreateFromFile(_ file: CVoidPtr, _ type: CInt) -> CVoidPtr {
+    return wxIconBundle_CreateFromFile(file, type)
+}
+
+@_silgen_name("wxIconBundle_CreateFromIcon")
+fileprivate func wxIconBundle_CreateFromIcon(_ icon: CVoidPtr) -> CVoidPtr
+internal func _wxc_wxIconBundle_CreateFromIcon(_ icon: CVoidPtr) -> CVoidPtr {
+    return wxIconBundle_CreateFromIcon(icon)
+}
+
+@_silgen_name("wxIconBundle_AddIcon")
+fileprivate func wxIconBundle_AddIcon(_ ptr: CVoidPtr, _ icon: CVoidPtr) -> Void
+internal func _wxc_wxIconBundle_AddIcon(_ ptr: CVoidPtr, _ icon: CVoidPtr) -> Void {
+    wxIconBundle_AddIcon(ptr, icon)
+}
+
+@_silgen_name("wxIconBundle_AddIconFromFile")
+fileprivate func wxIconBundle_AddIconFromFile(_ ptr: CVoidPtr, _ file: CVoidPtr, _ type: CInt) -> Void
+internal func _wxc_wxIconBundle_AddIconFromFile(_ ptr: CVoidPtr, _ file: CVoidPtr, _ type: CInt) -> Void {
+    wxIconBundle_AddIconFromFile(ptr, file, type)
+}
+
+@_silgen_name("wxIconBundle_Delete")
+fileprivate func wxIconBundle_Delete(_ ptr: CVoidPtr) -> Void
+internal func _wxc_wxIconBundle_Delete(_ ptr: CVoidPtr) -> Void {
+    wxIconBundle_Delete(ptr)
+}
+
+@_silgen_name("wxIconBundle_GetIcon")
+fileprivate func wxIconBundle_GetIcon(_ ptr: CVoidPtr, _ w: CInt, _ h: CInt, _ icon: CVoidPtr) -> Void
+internal func _wxc_wxIconBundle_GetIcon(_ ptr: CVoidPtr, _ w: CInt, _ h: CInt, _ icon: CVoidPtr) -> Void {
+    wxIconBundle_GetIcon(ptr, w, h, icon)
+}
+
+@_silgen_name("wxIconBundle_Assign")
+fileprivate func wxIconBundle_Assign(_ ptr: CVoidPtr, _ other: CVoidPtr) -> Void
+internal func _wxc_wxIconBundle_Assign(_ ptr: CVoidPtr, _ other: CVoidPtr) -> Void {
+    wxIconBundle_Assign(ptr, other)
+}
