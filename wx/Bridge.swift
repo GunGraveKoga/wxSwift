@@ -2381,3 +2381,72 @@ fileprivate func wxOutputStream_Write(_ ptr: CVoidPtr, _ buffer: UnsafeRawPointe
 internal func _wxc_wxOutputStream_Write(_ ptr: CVoidPtr, _ buffer: UnsafeRawPointer!, _ length: UInt) -> Void {
     return wxOutputStream_Write(ptr, buffer, length)
 }
+
+// wxInputStream
+
+
+@_silgen_name("wxInputStream_Delete")
+fileprivate func wxInputStream_Delete(_ ptr: CVoidPtr) -> Void
+internal func _wxc_wxInputStream_Delete(_ ptr: CVoidPtr) -> Void {
+    wxInputStream_Delete(ptr)
+}
+
+@_silgen_name("wxInputStream_Eof")
+fileprivate func wxInputStream_Eof(_ ptr: CVoidPtr) -> CBool
+internal func _wxc_wxInputStream_Eof(_ ptr: CVoidPtr) -> CBool {
+    return wxInputStream_Eof(ptr)
+}
+
+@_silgen_name("wxInputStream_GetC")
+fileprivate func wxInputStream_GetC(_ ptr: CVoidPtr) -> CInt
+internal func _wxc_wxInputStream_GetC(_ ptr: CVoidPtr) -> CInt {
+    return wxInputStream_GetC(ptr)
+}
+
+@_silgen_name("wxInputStream_LastRead")
+fileprivate func wxInputStream_LastRead(_ ptr: CVoidPtr) -> UInt
+internal func _wxc_wxInputStream_LastRead(_ ptr: CVoidPtr) -> UInt {
+    return wxInputStream_LastRead(ptr)
+}
+
+@_silgen_name("wxInputStream_Peek")
+fileprivate func wxInputStream_Peek(_ ptr: CVoidPtr) -> CChar
+internal func _wxc_wxInputStream_Peek(_ ptr: CVoidPtr) -> CChar {
+    return wxInputStream_Peek(ptr)
+}
+
+@_silgen_name("wxInputStream_Read")
+fileprivate func wxInputStream_Read(_ ptr: CVoidPtr, _ buffer: UnsafeMutableRawPointer!, _ size: UInt) -> Void
+internal func _wxc_wxInputStream_Read(_ ptr: CVoidPtr, _ buffer: UnsafeMutableRawPointer!, _ size: UInt) -> Void {
+    wxInputStream_Read(ptr, buffer, size)
+}
+
+@_silgen_name("wxInputStream_SeekI")
+fileprivate func wxInputStream_SeekI(_ ptr: CVoidPtr, _ pos: Int, _ mode: CInt) -> Int
+internal func _wxc_wxInputStream_SeekI(_ ptr: CVoidPtr, _ pos: Int, _ mode: CInt) -> Int {
+    return wxInputStream_SeekI(ptr, pos, mode)
+}
+
+@_silgen_name("wxInputStream_Tell")
+fileprivate func wxInputStream_Tell(_ ptr: CVoidPtr) -> Int
+internal func _wxc_wxInputStream_Tell(_ ptr: CVoidPtr) -> Int {
+    return wxInputStream_Tell(ptr)
+}
+
+@_silgen_name("wxInputStream_UngetBuffer")
+fileprivate func wxInputStream_UngetBuffer(_ ptr: CVoidPtr, _ buffer: UnsafeRawPointer!, _ size: UInt) -> UInt
+internal func _wxc_wxInputStream_UngetBuffer(_ ptr: CVoidPtr, _ buffer: UnsafeRawPointer!, _ size: UInt) -> UInt {
+    return wxInputStream_UngetBuffer(ptr, buffer, size)
+}
+
+@_silgen_name("wxInputStream_Ungetch")
+fileprivate func wxInputStream_Ungetch(_ ptr: CVoidPtr, _ char: CChar) -> CBool
+internal func _wxc_wxInputStream_Ungetch(_ ptr: CVoidPtr, _ char: CChar) -> CBool {
+    return wxInputStream_Ungetch(ptr, char)
+}
+
+@_silgen_name("wxInputStream_CanRead")
+fileprivate func wxInputStream_CanRead(_ ptr: CVoidPtr) -> CBool
+internal func _wxc_wxInputStream_CanRead(_ ptr: CVoidPtr) -> CBool {
+    return wxInputStream_CanRead(ptr)
+}
