@@ -3438,7 +3438,7 @@ TBool      wxImage_GetOptionInt( TSelf(wxImage) _obj, TClass(wxString) name );
 TBool      wxImage_HasOption( TSelf(wxImage) _obj, TClass(wxString) name );
 void       wxImage_Initialize( TSelf(wxImage) _obj, TSize(width,height) );
 void       wxImage_InitializeFromData( TSelf(wxImage) _obj, TSize(width,height), void* data );
-TBool      wxImage_LoadFile( TSelf(wxImage) _obj, TClass(wxString) name, int type );
+TBool      wxImage_LoadFile( TSelf(wxImage) _obj, TClass(wxString) name, int type, int index );
 TBool      wxImage_LoadStream( TSelf(wxImage) _obj, TClass(wxInputStream) name, int type, int index );
 void       wxImage_Mirror( TSelf(wxImage) _obj, TBoolInt horizontally, TClassRef(wxImage) image );
 TBool      wxImage_IsOk( TSelf(wxImage) _obj );
@@ -3453,12 +3453,13 @@ TBool      wxImage_SaveStream( TSelf(wxImage) _obj, TClass(wxOutputStream) strea
 void       wxImage_ScaleEx( TSelf(wxImage) _obj, TSize(width,height),int quality, TClassRef(wxImage) image );
 void       wxImage_Scale( TSelf(wxImage) _obj, TSize(width,height), TClassRef(wxImage) image );
 void       wxImage_SetData( TSelf(wxImage) _obj, void* data );
-void       wxImage_SetDataAndSize( TSelf(wxImage) _obj, void* data, TSize(new_width,new_height) );
+void       wxImage_SetDataAndSize( TSelf(wxImage) _obj, void* data, TSize(new_width,new_height), TBool static_data );
 void       wxImage_SetMask( TSelf(wxImage) _obj, int mask );
 void       wxImage_SetMaskColour( TSelf(wxImage) _obj, TColorRGB(r,g,b) );
 void       wxImage_SetOption( TSelf(wxImage) _obj, TClass(wxString) name, TClass(wxString) value );
 void       wxImage_SetOptionInt( TSelf(wxImage) _obj, TClass(wxString) name, int value );
 void       wxImage_SetRGB( TSelf(wxImage) _obj, TPoint(x,y), TColorRGB(r,g,b) );
+void       wxImage_SetAlpha( TSelf(wxImage) _obj, TPoint(x,y), TChar value);
 
 /* wxImageHandler */
 TClassDefExtend(wxImageHandler,wxObject)

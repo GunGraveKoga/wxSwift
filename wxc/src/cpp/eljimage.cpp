@@ -146,6 +146,11 @@ EWXWEXPORT(void,wxImage_SetRGB)(wxImage* self,int x,int y,wxUint8 r,wxUint8 g,wx
 {
 	self->SetRGB(x, y, r, g, b);
 }
+    
+EWXWEXPORT(void, wxImage_SetAlpha)(wxImage* self,int x,int y,wxUint8 alpha)
+{
+    self->SetAlpha(x, y, alpha);
+}
 	
 EWXWEXPORT(wxUint8,wxImage_GetRed)(wxImage* self,int x,int y)
 {
@@ -172,9 +177,9 @@ EWXWEXPORT(bool,wxImage_CanRead)(wxString* name)
 	return wxImage::CanRead(*name);
 }
 	
-EWXWEXPORT(bool, wxImage_LoadFile)(wxImage *self, wxString *name, wxBitmapType type)
+EWXWEXPORT(bool, wxImage_LoadFile)(wxImage *self, wxString *name, wxBitmapType type, int index)
 {
-	return self->LoadFile(*name, type);
+	return self->LoadFile(*name, type, index);
 }
 
 EWXWEXPORT(bool, wxImage_LoadStream)(wxImage *self, wxInputStream *stream, wxBitmapType type, int index)
@@ -217,9 +222,9 @@ EWXWEXPORT(void,wxImage_SetData)(wxImage* self,void* data)
 	self->SetData((unsigned char*)data);
 }
 	
-EWXWEXPORT(void,wxImage_SetDataAndSize)(wxImage* self,char* data,int new_width,int new_height)
+EWXWEXPORT(void,wxImage_SetDataAndSize)(wxImage* self,char* data,int new_width,int new_height, bool static_data)
 {
-	self->SetData((unsigned char*)data, new_width, new_height);
+	self->SetData((unsigned char*)data, new_width, new_height, static_data);
 }
 	
 EWXWEXPORT(void,wxImage_SetMaskColour)(wxImage* self,wxUint8 r,wxUint8 g,wxUint8 b)

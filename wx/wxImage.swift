@@ -6,192 +6,6 @@
 //  Copyright © 2018 Yury Vovk. All rights reserved.
 //
 
-@_silgen_name("wxImage_CreateFromDataEx")
-fileprivate func wxImage_CreateFromDataEx(_ w: CInt, _ h: CInt, _ data: UnsafePointer<UInt8>!, _ isStatic: CBool) -> CVoidPtr
-internal func _wxc_wxImage_CreateFromDataEx(_ w: CInt, _ h: CInt, _ data: UnsafePointer<UInt8>!, _ isStatic: CBool) -> CVoidPtr {
-    return wxImage_CreateFromDataEx(w, h, data, isStatic)
-}
-
-@_silgen_name("wxImage_Delete")
-fileprivate func wxImage_Delete(_ ptr: CVoidPtr) -> Void
-internal func _wxc_wxImage_Delete(_ ptr: CVoidPtr) -> Void {
-    wxImage_Delete(ptr)
-}
-
-@_silgen_name("wxImage_CanRead")
-fileprivate func wxImage_CanRead(_ fileName: CVoidPtr) -> CBool
-internal func _wxc_wxImage_CanRead(_ fileName: CVoidPtr) -> CBool {
-    return wxImage_CanRead(fileName)
-}
-
-@_silgen_name("wxImage_ConvertToBitmap")
-fileprivate func wxImage_ConvertToBitmap(_ ptr: CVoidPtr, _ bitmap: CVoidPtr) -> Void
-internal func _wxc_wxImage_ConvertToBitmap(_ ptr: CVoidPtr, _ bitmap: CVoidPtr) -> Void {
-    wxImage_ConvertToBitmap(ptr, bitmap)
-}
-
-@_silgen_name("wxImage_ConvertToByteString")
-fileprivate func wxImage_ConvertToByteString(_ ptr: CVoidPtr, _ type: CInt, _ data: UnsafeMutablePointer<UInt8>!) -> Int
-internal func _wxc_wxImage_ConvertToByteString(_ ptr: CVoidPtr, _ type: CInt, _ data: UnsafeMutablePointer<UInt8>!) -> Int {
-    return wxImage_ConvertToByteString(ptr, type, data)
-}
-
-@_silgen_name("wxImage_CountColours")
-fileprivate func wxImage_CountColours(_ ptr: CVoidPtr, _ stopafter: CInt) -> CInt
-internal func _wxc_wxImage_CountColours(_ ptr: CVoidPtr, _ stopafter: CInt) -> CInt {
-    return wxImage_CountColours(ptr, stopafter)
-}
-
-@_silgen_name("wxImage_Copy")
-fileprivate func wxImage_Copy(_ ptr: CVoidPtr, _ copy: CVoidPtr) -> Void
-internal func _wxc_wxImage_Copy(_ ptr: CVoidPtr, _ copy: CVoidPtr) -> Void {
-    wxImage_Copy(ptr, copy)
-}
-
-@_silgen_name("wxImage_CreateDefault")
-fileprivate func wxImage_CreateDefault() -> CVoidPtr
-internal func _wxc_wxImage_CreateDefault() -> CVoidPtr {
-    return wxImage_CreateDefault()
-}
-
-@_silgen_name("wxImage_CreateFromBitmap")
-fileprivate func wxImage_CreateFromBitmap(_ bitmap: CVoidPtr) -> CVoidPtr
-internal func _wxc_wxImage_CreateFromBitmap(_ bitmap: CVoidPtr) -> CVoidPtr {
-    return wxImage_CreateFromBitmap(bitmap)
-}
-
-@_silgen_name("wxImage_CreateFromFile")
-fileprivate func wxImage_CreateFromFile(_ name: CVoidPtr) -> CVoidPtr
-internal func _wxc_wxImage_CreateFromFile(_ name: CVoidPtr) -> CVoidPtr {
-    return wxImage_CreateFromFile(name)
-}
-
-@_silgen_name("wxImage_CreateSized")
-fileprivate func wxImage_CreateSized(_ w: CInt, _ h: CInt) -> CVoidPtr
-internal func _wxc_wxImage_CreateSized(_ w: CInt, _ h: CInt) -> CVoidPtr {
-    return wxImage_CreateSized(w, h)
-}
-
-@_silgen_name("wxImage_Destroy")
-fileprivate func wxImage_Destroy(_ ptr: CVoidPtr) -> Void
-internal func _wxc_wxImage_Destroy(_ ptr: CVoidPtr) -> Void {
-    wxImage_Destroy(ptr)
-}
-
-@_silgen_name("wxImage_GetBlue")
-fileprivate func wxImage_GetBlue(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt) -> UInt8
-internal func _wxc_wxImage_GetBlue(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt) -> UInt8 {
-    return wxImage_GetBlue(ptr, x, y)
-}
-
-@_silgen_name("wxImage_GetData")
-fileprivate func wxImage_GetData(_ ptr: CVoidPtr) -> UnsafeMutablePointer<UInt8>!
-internal func _wxc_wxImage_GetData(_ ptr: CVoidPtr) -> UnsafeMutablePointer<UInt8>! {
-    return wxImage_GetData(ptr)
-}
-
-@_silgen_name("wxImage_GetGreen")
-fileprivate func wxImage_GetGreen(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt) -> UInt8
-internal func _wxc_wxImage_GetGreen(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt) -> UInt8 {
-    return wxImage_GetGreen(ptr, x, y)
-}
-
-@_silgen_name("wxImage_GetRed")
-fileprivate func wxImage_GetRed(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt) -> UInt8
-internal func _wxc_wxImage_GetRed(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt) -> UInt8 {
-    return wxImage_GetRed(ptr, x, y)
-}
-
-@_silgen_name("wxImage_GetAlpha")
-fileprivate func wxImage_GetAlpha(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt) -> UInt8
-internal func _wxc_wxImage_GetAlpha(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt) -> UInt8 {
-    return wxImage_GetAlpha(ptr, x, y)
-}
-
-@_silgen_name("wxImage_GetHeight")
-fileprivate func wxImage_GetHeight(_ ptr: CVoidPtr) -> CInt
-internal func _wxc_wxImage_GetHeight(_ ptr: CVoidPtr) -> CInt {
-    return wxImage_GetHeight(ptr)
-}
-
-@_silgen_name("wxImage_GetMaskBlue")
-fileprivate func wxImage_GetMaskBlue(_ ptr: CVoidPtr) -> UInt8
-internal func _wxc_wxImage_GetMaskBlue(_ ptr: CVoidPtr) -> UInt8 {
-    return wxImage_GetMaskBlue(ptr)
-}
-
-@_silgen_name("wxImage_GetMaskGreen")
-fileprivate func wxImage_GetMaskGreen(_ ptr: CVoidPtr) -> UInt8
-internal func _wxc_wxImage_GetMaskGreen(_ ptr: CVoidPtr) -> UInt8 {
-    return wxImage_GetMaskGreen(ptr)
-}
-
-@_silgen_name("wxImage_GetMaskRed")
-fileprivate func wxImage_GetMaskRed(_ ptr: CVoidPtr) -> UInt8
-internal func _wxc_wxImage_GetMaskRed(_ ptr: CVoidPtr) -> UInt8 {
-    return wxImage_GetMaskRed(ptr)
-}
-
-@_silgen_name("wxImage_GetSubImage")
-fileprivate func wxImage_GetSubImage(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt, _ w: CInt, _ h: CInt, _ image: CVoidPtr) -> Void
-internal func _wxc_wxImage_GetSubImage(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt, _ w: CInt, _ h: CInt, _ image: CVoidPtr) -> Void {
-    wxImage_GetSubImage(ptr, x, y, w, h, image)
-}
-
-@_silgen_name("wxImage_GetType")
-fileprivate func wxImage_GetType(_ ptr: CVoidPtr) -> CInt
-internal func _wxc_wxImage_GetType(_ ptr: CVoidPtr) -> CInt {
-    return wxImage_GetType(ptr)
-}
-
-@_silgen_name("wxImage_SetType")
-fileprivate func wxImage_SetType(_ ptr: CVoidPtr, _ type: CInt) -> Void
-internal func _wxc_wxImage_SetType(_ ptr: CVoidPtr, _ type: CInt) -> Void {
-    wxImage_SetType(ptr, type)
-}
-
-@_silgen_name("wxImage_GetWidth")
-fileprivate func wxImage_GetWidth(_ ptr: CVoidPtr) -> CInt
-internal func _wxc_wxImage_GetWidth(_ ptr: CVoidPtr) -> CInt {
-    return wxImage_GetWidth(ptr)
-}
-
-@_silgen_name("wxImage_HasMask")
-fileprivate func wxImage_HasMask(_ ptr: CVoidPtr) -> CBool
-internal func _wxc_wxImage_HasMask(_ ptr: CVoidPtr) -> CBool {
-    return wxImage_HasMask(ptr)
-}
-
-@_silgen_name("wxImage_GetOption")
-fileprivate func wxImage_GetOption(_ ptr: CVoidPtr, _ option: CVoidPtr) -> CVoidPtr
-internal func _wxc_wxImage_GetOption(_ ptr: CVoidPtr, _ option: CVoidPtr) -> CVoidPtr {
-    return wxImage_GetOption(ptr, option)
-}
-
-@_silgen_name("wxImage_GetOptionInt")
-fileprivate func wxImage_GetOptionInt(_ ptr: CVoidPtr, _ option: CVoidPtr) -> CInt
-internal func _wxc_wxImage_GetOptionInt(_ ptr: CVoidPtr, _ option: CVoidPtr) -> CInt {
-    return wxImage_GetOptionInt(ptr, option)
-}
-
-@_silgen_name("wxImage_HasOption")
-fileprivate func wxImage_HasOption(_ ptr: CVoidPtr, _ option: CVoidPtr) -> CBool
-internal func _wxc_wxImage_HasOption(_ ptr: CVoidPtr, _ option: CVoidPtr) -> CBool {
-    return wxImage_HasOption(ptr, option)
-}
-
-@_silgen_name("wxImage_Initialize")
-fileprivate func wxImage_Initialize(_ ptr: CVoidPtr, _ w: CInt, _ h: CInt) -> Void
-internal func _wxc_wxImage_Initialize(_ ptr: CVoidPtr, _ w: CInt, _ h: CInt) -> Void {
-    wxImage_Initialize(ptr, w, h)
-}
-
-@_silgen_name("wxImage_InitializeFromData")
-fileprivate func wxImage_InitializeFromData(_ ptr: CVoidPtr, _ w: CInt, _ h: CInt, _ data: UnsafePointer<UInt8>!) -> Void
-internal func _wxc_wxImage_InitializeFromData(_ ptr: CVoidPtr, _ w: CInt, _ h: CInt, _ data: UnsafePointer<UInt8>!) -> Void {
-    wxImage_InitializeFromData(ptr, w, h, data)
-}
-
 public let wxIMAGE_OPTION_QUALITY = "quality"
 public let wxIMAGE_OPTION_FILENAME = "FileName"
 public let wxIMAGE_OPTION_RESOLUTION = "Resolution"
@@ -221,6 +35,16 @@ public let wxIMAGE_OPTION_TIFF_SAMPLESPERPIXEL = "SamplesPerPixel"
 public let wxIMAGE_OPTION_TIFF_COMPRESSION = "Compression"
 public let wxIMAGE_OPTION_TIFF_PHOTOMETRIC = "Photometric"
 public let wxIMAGE_OPTION_TIFF_IMAGEDESCRIPTOR = "ImageDescriptor"
+
+public enum wxImageResizeQuality: CInt {
+    public static let wxIMAGE_QUALITY_NORMAL: wxImageResizeQuality = .wxIMAGE_QUALITY_NEAREST
+    
+    case wxIMAGE_QUALITY_NEAREST = 0
+    case wxIMAGE_QUALITY_BILINEAR = 1
+    case wxIMAGE_QUALITY_BICUBIC = 2
+    case wxIMAGE_QUALITY_BOX_AVERAGE = 3
+    case wxIMAGE_QUALITY_HIGH = 4
+}
 
 open class wxImage: wxObject, wxCopying {
     
@@ -319,6 +143,10 @@ open class wxImage: wxObject, wxCopying {
         get {
             return _wxc_wxImage_GetData(rawValue)
         }
+        
+        set {
+            _wxc_wxImage_SetData(rawValue, newValue)
+        }
     }
     
     open func getBlue(at point: Point) -> UInt8 {
@@ -383,8 +211,14 @@ open class wxImage: wxObject, wxCopying {
         }
     }
     
-    open func hasMask() -> Bool {
-        return _wxc_wxImage_HasMask(rawValue)
+    open var hasMask: Bool {
+        get {
+            return _wxc_wxImage_HasMask(rawValue)
+        }
+        
+        set {
+            _wxc_wxImage_SetMask(rawValue, newValue)
+        }
     }
     
     open func getOption(_ option: String) -> String {
@@ -411,5 +245,122 @@ open class wxImage: wxObject, wxCopying {
     
     open func initialize(with data: UnsafePointer<UInt8>!, size: Size) {
         _wxc_wxImage_InitializeFromData(rawValue, size.width, size.height, data)
+    }
+    
+    @discardableResult
+    open func load(from file: String, type: wxBitmapType = .wxBITMAP_TYPE_ANY, index: CInt = -1) -> Bool {
+        return file.withWxString {
+            return _wxc_wxImage_LoadFile(rawValue, $0, type.rawValue, index)
+        }
+    }
+    
+    @discardableResult
+    open func load<T: wxInputStream>(from stream: T, type: wxBitmapType = .wxBITMAP_TYPE_ANY, index: CInt = -1) -> Bool {
+        return _wxc_wxImage_LoadStream(rawValue, stream.rawValue, type.rawValue, index)
+    }
+    
+    open func mirrored(horizontally: Bool = true) -> Self {
+        let _mirrored = type(of: self).init()
+        
+        _wxc_wxImage_Mirror(rawValue, horizontally, _mirrored.rawValue)
+        
+        return _mirrored
+    }
+    
+    open func isOK() -> Bool {
+        return _wxc_wxImage_IsOk(rawValue)
+    }
+    
+    open func paste(_ image: wxImage, at point: Point) {
+        _wxc_wxImage_Paste(rawValue, image.rawValue, point.x, point.y)
+    }
+    
+    open func replace(_ rgb: (red: UInt8, green: UInt8, blue: UInt8), with other: (red: UInt8, green: UInt8, blue: UInt8)) {
+        _wxc_wxImage_Replace(rawValue, rgb.red, rgb.green, rgb.blue, other.red, other.green, other.blue)
+    }
+    
+    open func rescale(to size: Size, quality: wxImageResizeQuality = .wxIMAGE_QUALITY_NORMAL) {
+        _wxc_wxImage_RescaleEx(rawValue, size.width, size.height, quality.rawValue)
+    }
+    
+    open func rotated(by angle: CDouble, about rotationCentre: Point, interpolating: Bool = true, offsetAfterRotation: Point? = nil) -> Self {
+        let _rotated = type(of: self).init()
+        
+        var _offsetAfterRotation: CVoidPtr = nil
+        
+        if let offsetAfterRotation = offsetAfterRotation {
+            _offsetAfterRotation = _wxc_wxPoint_Create(offsetAfterRotation.x, offsetAfterRotation.y)
+            
+            defer {
+                _wxc_wxPoint_Delete(_offsetAfterRotation)
+            }
+        }
+        
+        _wxc_wxImage_Rotate(rawValue, angle, rotationCentre.x, rotationCentre.y, interpolating, _offsetAfterRotation, _rotated.rawValue)
+        
+        return _rotated
+    }
+    
+    open func rotatedBy90(clockwise: Bool = true) -> Self {
+        let _rotated = type(of: self).init()
+        
+        _wxc_wxImage_Rotate90(rawValue, clockwise, _rotated.rawValue)
+        
+        return _rotated
+    }
+    
+    @discardableResult
+    open func save(to file: String, type: wxBitmapType) -> Bool {
+        return file.withWxString {
+            return _wxc_wxImage_SaveFile(rawValue, $0, type.rawValue)
+        }
+    }
+    
+    @discardableResult
+    open func save<T: wxOutputStream>(to stream: T, type: wxBitmapType) -> Bool {
+        return _wxc_wxImage_SaveStream(rawValue, stream.rawValue, type.rawValue)
+    }
+    
+    open func scaled(to size: Size, quality: wxImageResizeQuality = .wxIMAGE_QUALITY_NORMAL) -> Self {
+        let _scaled = type(of: self).init()
+        
+        _wxc_wxImage_ScaleEx(rawValue, size.width, size.height, quality.rawValue, _scaled.rawValue)
+        
+        return _scaled
+    }
+    
+    open func setData(_ data: UnsafePointer<UInt8>!, size: Size, isStatic: Bool = true) {
+        _wxc_wxImage_SetDataAndSize(rawValue, data, size.width, size.height, isStatic)
+    }
+    
+    open func setMaskColour(_ value: (red: UInt8, green: UInt8, blue: UInt8)) {
+        _wxc_wxImage_SetMaskColour(rawValue, value.red, value.green, value.blue)
+    }
+    
+    open func setOption(_ option: String, value: String) {
+        option.withWxString {_option in
+            value.withWxString {_value in
+                _wxc_wxImage_SetOption(rawValue, _option, _value)
+            }
+        }
+    }
+    
+    open func setOptionInt(_ option: String, value: CInt) {
+        option.withWxString {
+            _wxc_wxImage_SetOptionInt(rawValue, $0, value)
+        }
+    }
+    
+    open func setRGB(_ value: (red: UInt8, green: UInt8, blue: UInt8), at point: Point) {
+        _wxc_wxImage_SetRGB(rawValue, point.x, point.y, value.red, value.green, value.blue)
+    }
+    
+    open func setAlpha(_ value: UInt8, at point: Point) {
+        _wxc_wxImage_SetAlpha(rawValue, point.x, point.y, value)
+    }
+    
+    open func setColour(_ value: wxColour, at point: Point) {
+        _wxc_wxImage_SetRGB(rawValue, point.x, point.y, value.red, value.green, value.blue)
+        _wxc_wxImage_SetAlpha(rawValue, point.x, point.y, value.alpha)
     }
 }

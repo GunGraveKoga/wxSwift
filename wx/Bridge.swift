@@ -2490,3 +2490,311 @@ fileprivate func wxFileOutputStream_IsOk(_ ptr: CVoidPtr) -> CBool
 internal func _wxc_wxFileOutputStream_IsOk(_ ptr: CVoidPtr) -> CBool {
     return wxFileOutputStream_IsOk(ptr)
 }
+
+// wxImage
+
+@_silgen_name("wxImage_CreateFromDataEx")
+fileprivate func wxImage_CreateFromDataEx(_ w: CInt, _ h: CInt, _ data: UnsafePointer<UInt8>!, _ isStatic: CBool) -> CVoidPtr
+internal func _wxc_wxImage_CreateFromDataEx(_ w: CInt, _ h: CInt, _ data: UnsafePointer<UInt8>!, _ isStatic: CBool) -> CVoidPtr {
+    return wxImage_CreateFromDataEx(w, h, data, isStatic)
+}
+
+@_silgen_name("wxImage_Delete")
+fileprivate func wxImage_Delete(_ ptr: CVoidPtr) -> Void
+internal func _wxc_wxImage_Delete(_ ptr: CVoidPtr) -> Void {
+    wxImage_Delete(ptr)
+}
+
+@_silgen_name("wxImage_CanRead")
+fileprivate func wxImage_CanRead(_ fileName: CVoidPtr) -> CBool
+internal func _wxc_wxImage_CanRead(_ fileName: CVoidPtr) -> CBool {
+    return wxImage_CanRead(fileName)
+}
+
+@_silgen_name("wxImage_ConvertToBitmap")
+fileprivate func wxImage_ConvertToBitmap(_ ptr: CVoidPtr, _ bitmap: CVoidPtr) -> Void
+internal func _wxc_wxImage_ConvertToBitmap(_ ptr: CVoidPtr, _ bitmap: CVoidPtr) -> Void {
+    wxImage_ConvertToBitmap(ptr, bitmap)
+}
+
+@_silgen_name("wxImage_ConvertToByteString")
+fileprivate func wxImage_ConvertToByteString(_ ptr: CVoidPtr, _ type: CInt, _ data: UnsafeMutablePointer<UInt8>!) -> Int
+internal func _wxc_wxImage_ConvertToByteString(_ ptr: CVoidPtr, _ type: CInt, _ data: UnsafeMutablePointer<UInt8>!) -> Int {
+    return wxImage_ConvertToByteString(ptr, type, data)
+}
+
+@_silgen_name("wxImage_CountColours")
+fileprivate func wxImage_CountColours(_ ptr: CVoidPtr, _ stopafter: CInt) -> CInt
+internal func _wxc_wxImage_CountColours(_ ptr: CVoidPtr, _ stopafter: CInt) -> CInt {
+    return wxImage_CountColours(ptr, stopafter)
+}
+
+@_silgen_name("wxImage_Copy")
+fileprivate func wxImage_Copy(_ ptr: CVoidPtr, _ copy: CVoidPtr) -> Void
+internal func _wxc_wxImage_Copy(_ ptr: CVoidPtr, _ copy: CVoidPtr) -> Void {
+    wxImage_Copy(ptr, copy)
+}
+
+@_silgen_name("wxImage_CreateDefault")
+fileprivate func wxImage_CreateDefault() -> CVoidPtr
+internal func _wxc_wxImage_CreateDefault() -> CVoidPtr {
+    return wxImage_CreateDefault()
+}
+
+@_silgen_name("wxImage_CreateFromBitmap")
+fileprivate func wxImage_CreateFromBitmap(_ bitmap: CVoidPtr) -> CVoidPtr
+internal func _wxc_wxImage_CreateFromBitmap(_ bitmap: CVoidPtr) -> CVoidPtr {
+    return wxImage_CreateFromBitmap(bitmap)
+}
+
+@_silgen_name("wxImage_CreateFromFile")
+fileprivate func wxImage_CreateFromFile(_ name: CVoidPtr) -> CVoidPtr
+internal func _wxc_wxImage_CreateFromFile(_ name: CVoidPtr) -> CVoidPtr {
+    return wxImage_CreateFromFile(name)
+}
+
+@_silgen_name("wxImage_CreateSized")
+fileprivate func wxImage_CreateSized(_ w: CInt, _ h: CInt) -> CVoidPtr
+internal func _wxc_wxImage_CreateSized(_ w: CInt, _ h: CInt) -> CVoidPtr {
+    return wxImage_CreateSized(w, h)
+}
+
+@_silgen_name("wxImage_Destroy")
+fileprivate func wxImage_Destroy(_ ptr: CVoidPtr) -> Void
+internal func _wxc_wxImage_Destroy(_ ptr: CVoidPtr) -> Void {
+    wxImage_Destroy(ptr)
+}
+
+@_silgen_name("wxImage_GetBlue")
+fileprivate func wxImage_GetBlue(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt) -> UInt8
+internal func _wxc_wxImage_GetBlue(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt) -> UInt8 {
+    return wxImage_GetBlue(ptr, x, y)
+}
+
+@_silgen_name("wxImage_GetData")
+fileprivate func wxImage_GetData(_ ptr: CVoidPtr) -> UnsafeMutablePointer<UInt8>!
+internal func _wxc_wxImage_GetData(_ ptr: CVoidPtr) -> UnsafeMutablePointer<UInt8>! {
+    return wxImage_GetData(ptr)
+}
+
+@_silgen_name("wxImage_GetGreen")
+fileprivate func wxImage_GetGreen(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt) -> UInt8
+internal func _wxc_wxImage_GetGreen(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt) -> UInt8 {
+    return wxImage_GetGreen(ptr, x, y)
+}
+
+@_silgen_name("wxImage_GetRed")
+fileprivate func wxImage_GetRed(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt) -> UInt8
+internal func _wxc_wxImage_GetRed(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt) -> UInt8 {
+    return wxImage_GetRed(ptr, x, y)
+}
+
+@_silgen_name("wxImage_GetAlpha")
+fileprivate func wxImage_GetAlpha(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt) -> UInt8
+internal func _wxc_wxImage_GetAlpha(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt) -> UInt8 {
+    return wxImage_GetAlpha(ptr, x, y)
+}
+
+@_silgen_name("wxImage_GetHeight")
+fileprivate func wxImage_GetHeight(_ ptr: CVoidPtr) -> CInt
+internal func _wxc_wxImage_GetHeight(_ ptr: CVoidPtr) -> CInt {
+    return wxImage_GetHeight(ptr)
+}
+
+@_silgen_name("wxImage_GetMaskBlue")
+fileprivate func wxImage_GetMaskBlue(_ ptr: CVoidPtr) -> UInt8
+internal func _wxc_wxImage_GetMaskBlue(_ ptr: CVoidPtr) -> UInt8 {
+    return wxImage_GetMaskBlue(ptr)
+}
+
+@_silgen_name("wxImage_GetMaskGreen")
+fileprivate func wxImage_GetMaskGreen(_ ptr: CVoidPtr) -> UInt8
+internal func _wxc_wxImage_GetMaskGreen(_ ptr: CVoidPtr) -> UInt8 {
+    return wxImage_GetMaskGreen(ptr)
+}
+
+@_silgen_name("wxImage_GetMaskRed")
+fileprivate func wxImage_GetMaskRed(_ ptr: CVoidPtr) -> UInt8
+internal func _wxc_wxImage_GetMaskRed(_ ptr: CVoidPtr) -> UInt8 {
+    return wxImage_GetMaskRed(ptr)
+}
+
+@_silgen_name("wxImage_GetSubImage")
+fileprivate func wxImage_GetSubImage(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt, _ w: CInt, _ h: CInt, _ image: CVoidPtr) -> Void
+internal func _wxc_wxImage_GetSubImage(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt, _ w: CInt, _ h: CInt, _ image: CVoidPtr) -> Void {
+    wxImage_GetSubImage(ptr, x, y, w, h, image)
+}
+
+@_silgen_name("wxImage_GetType")
+fileprivate func wxImage_GetType(_ ptr: CVoidPtr) -> CInt
+internal func _wxc_wxImage_GetType(_ ptr: CVoidPtr) -> CInt {
+    return wxImage_GetType(ptr)
+}
+
+@_silgen_name("wxImage_SetType")
+fileprivate func wxImage_SetType(_ ptr: CVoidPtr, _ type: CInt) -> Void
+internal func _wxc_wxImage_SetType(_ ptr: CVoidPtr, _ type: CInt) -> Void {
+    wxImage_SetType(ptr, type)
+}
+
+@_silgen_name("wxImage_GetWidth")
+fileprivate func wxImage_GetWidth(_ ptr: CVoidPtr) -> CInt
+internal func _wxc_wxImage_GetWidth(_ ptr: CVoidPtr) -> CInt {
+    return wxImage_GetWidth(ptr)
+}
+
+@_silgen_name("wxImage_HasMask")
+fileprivate func wxImage_HasMask(_ ptr: CVoidPtr) -> CBool
+internal func _wxc_wxImage_HasMask(_ ptr: CVoidPtr) -> CBool {
+    return wxImage_HasMask(ptr)
+}
+
+@_silgen_name("wxImage_GetOption")
+fileprivate func wxImage_GetOption(_ ptr: CVoidPtr, _ option: CVoidPtr) -> CVoidPtr
+internal func _wxc_wxImage_GetOption(_ ptr: CVoidPtr, _ option: CVoidPtr) -> CVoidPtr {
+    return wxImage_GetOption(ptr, option)
+}
+
+@_silgen_name("wxImage_GetOptionInt")
+fileprivate func wxImage_GetOptionInt(_ ptr: CVoidPtr, _ option: CVoidPtr) -> CInt
+internal func _wxc_wxImage_GetOptionInt(_ ptr: CVoidPtr, _ option: CVoidPtr) -> CInt {
+    return wxImage_GetOptionInt(ptr, option)
+}
+
+@_silgen_name("wxImage_HasOption")
+fileprivate func wxImage_HasOption(_ ptr: CVoidPtr, _ option: CVoidPtr) -> CBool
+internal func _wxc_wxImage_HasOption(_ ptr: CVoidPtr, _ option: CVoidPtr) -> CBool {
+    return wxImage_HasOption(ptr, option)
+}
+
+@_silgen_name("wxImage_Initialize")
+fileprivate func wxImage_Initialize(_ ptr: CVoidPtr, _ w: CInt, _ h: CInt) -> Void
+internal func _wxc_wxImage_Initialize(_ ptr: CVoidPtr, _ w: CInt, _ h: CInt) -> Void {
+    wxImage_Initialize(ptr, w, h)
+}
+
+@_silgen_name("wxImage_InitializeFromData")
+fileprivate func wxImage_InitializeFromData(_ ptr: CVoidPtr, _ w: CInt, _ h: CInt, _ data: UnsafePointer<UInt8>!) -> Void
+internal func _wxc_wxImage_InitializeFromData(_ ptr: CVoidPtr, _ w: CInt, _ h: CInt, _ data: UnsafePointer<UInt8>!) -> Void {
+    wxImage_InitializeFromData(ptr, w, h, data)
+}
+
+@_silgen_name("wxImage_LoadFile")
+fileprivate func wxImage_LoadFile(_ ptr: CVoidPtr, _ name: CVoidPtr, _ type: CInt, _ index: CInt) -> CBool
+internal func _wxc_wxImage_LoadFile(_ ptr: CVoidPtr, _ name: CVoidPtr, _ type: CInt, _ index: CInt) -> CBool {
+    return wxImage_LoadFile(ptr, name, type, index)
+}
+
+@_silgen_name("wxImage_LoadStream")
+fileprivate func wxImage_LoadStream(_ ptr: CVoidPtr, _ stream: CVoidPtr, _ type: CInt, _ index: CInt) -> CBool
+internal func _wxc_wxImage_LoadStream(_ ptr: CVoidPtr, _ stream: CVoidPtr, _ type: CInt, _ index: CInt) -> CBool {
+    return wxImage_LoadStream(ptr, stream, type, index)
+}
+
+@_silgen_name("wxImage_Mirror")
+fileprivate func wxImage_Mirror(_ ptr: CVoidPtr, _ horizontally: CBool, _ image: CVoidPtr) -> Void
+internal func _wxc_wxImage_Mirror(_ ptr: CVoidPtr, _ horizontally: CBool, _ image: CVoidPtr) -> Void {
+    wxImage_Mirror(ptr, horizontally, image)
+}
+
+@_silgen_name("wxImage_IsOk")
+fileprivate func wxImage_IsOk(_ ptr: CVoidPtr) -> CBool
+internal func _wxc_wxImage_IsOk(_ ptr: CVoidPtr) -> CBool {
+    return wxImage_IsOk(ptr)
+}
+
+@_silgen_name("wxImage_Paste")
+fileprivate func wxImage_Paste(_ ptr: CVoidPtr, _ image: CVoidPtr, _ x: CInt, _ y: CInt) -> Void
+internal func _wxc_wxImage_Paste(_ ptr: CVoidPtr, _ image: CVoidPtr, _ x: CInt, _ y: CInt) -> Void {
+    wxImage_Paste(ptr, image, x, y)
+}
+
+@_silgen_name("wxImage_Replace")
+fileprivate func wxImage_Replace(_ ptr: CVoidPtr, _ r1: UInt8, _ g1: UInt8, _ b1: UInt8, _ r2: UInt8, _ g2: UInt8, _ b2: UInt8) -> Void
+internal func _wxc_wxImage_Replace(_ ptr: CVoidPtr, _ r1: UInt8, _ g1: UInt8, _ b1: UInt8, _ r2: UInt8, _ g2: UInt8, _ b2: UInt8) -> Void {
+    wxImage_Replace(ptr, r1, g1, b1, r2, g2, b2)
+}
+
+@_silgen_name("wxImage_RescaleEx")
+fileprivate func wxImage_RescaleEx(_ ptr: CVoidPtr, _ w: CInt, _ h: CInt, _ quality: CInt) -> Void
+internal func _wxc_wxImage_RescaleEx(_ ptr: CVoidPtr, _ w: CInt, _ h: CInt, _ quality: CInt) -> Void {
+    wxImage_RescaleEx(ptr, w, h, quality)
+}
+
+@_silgen_name("wxImage_Rotate")
+fileprivate func wxImage_Rotate(_ ptr: CVoidPtr, _ angle: CDouble, _ x: CInt, _ y: CInt, _ interpolating: CBool, _ offset: CVoidPtr, _ image: CVoidPtr) -> Void
+internal func _wxc_wxImage_Rotate(_ ptr: CVoidPtr, _ angle: CDouble, _ x: CInt, _ y: CInt, _ interpolating: CBool, _ offset: CVoidPtr, _ image: CVoidPtr) -> Void {
+    wxImage_Rotate(ptr, angle, x, y, interpolating, offset, image)
+}
+
+@_silgen_name("wxImage_Rotate90")
+fileprivate func wxImage_Rotate90(_ ptr: CVoidPtr, _ clockwise: CBool, _ image: CVoidPtr) -> Void
+internal func _wxc_wxImage_Rotate90(_ ptr: CVoidPtr, _ clockwise: CBool, _ image: CVoidPtr) -> Void {
+    wxImage_Rotate90(ptr, clockwise, image)
+}
+
+@_silgen_name("wxImage_SaveFile")
+fileprivate func wxImage_SaveFile(_ ptr: CVoidPtr, _ name: CVoidPtr, _ type: CInt) -> CBool
+internal func _wxc_wxImage_SaveFile(_ ptr: CVoidPtr, _ name: CVoidPtr, _ type: CInt) -> CBool {
+    return wxImage_SaveFile(ptr, name, type)
+}
+
+@_silgen_name("wxImage_SaveStream")
+fileprivate func wxImage_SaveStream(_ ptr: CVoidPtr, _ stream: CVoidPtr, _ type: CInt) -> CBool
+internal func _wxc_wxImage_SaveStream(_ ptr: CVoidPtr, _ stream: CVoidPtr, _ type: CInt) -> CBool {
+    return wxImage_SaveStream(ptr, stream, type)
+}
+
+@_silgen_name("wxImage_ScaleEx")
+fileprivate func wxImage_ScaleEx(_ ptr: CVoidPtr, _ w: CInt, _ h: CInt, _ quality: CInt, _ image: CVoidPtr) -> Void
+internal func _wxc_wxImage_ScaleEx(_ ptr: CVoidPtr, _ w: CInt, _ h: CInt, _ quality: CInt, _ image: CVoidPtr) -> Void {
+    wxImage_ScaleEx(ptr, w, h, quality, image)
+}
+
+@_silgen_name("wxImage_SetData")
+fileprivate func wxImage_SetData(_ ptr: CVoidPtr, _ data: UnsafeRawPointer!) -> Void
+internal func _wxc_wxImage_SetData(_ ptr: CVoidPtr, _ data: UnsafeRawPointer!) -> Void {
+    wxImage_SetData(ptr, data)
+}
+
+@_silgen_name("wxImage_SetDataAndSize")
+fileprivate func wxImage_SetDataAndSize(_ ptr: CVoidPtr, _ data: UnsafeRawPointer!, _ w: CInt, _ h: CInt, _ isStatic: CBool) -> Void
+internal func _wxc_wxImage_SetDataAndSize(_ ptr: CVoidPtr, _ data: UnsafeRawPointer!, _ w: CInt, _ h: CInt, _ isStaic: CBool) -> Void {
+    wxImage_SetDataAndSize(ptr, data, w, h, isStaic)
+}
+
+@_silgen_name("wxImage_SetMask")
+fileprivate func wxImage_SetMask(_ ptr: CVoidPtr, _ value: CBool) -> Void
+internal func _wxc_wxImage_SetMask(_ ptr: CVoidPtr, _ value: CBool) -> Void {
+    wxImage_SetMask(ptr, value)
+}
+
+@_silgen_name("wxImage_SetMaskColour")
+fileprivate func wxImage_SetMaskColour(_ ptr: CVoidPtr, _ r: UInt8, _ g: UInt8, _ b: UInt8) -> Void
+internal func _wxc_wxImage_SetMaskColour(_ ptr: CVoidPtr, _ r: UInt8, _ g: UInt8, _ b: UInt8) -> Void {
+    wxImage_SetMaskColour(ptr, r, g, b)
+}
+
+@_silgen_name("wxImage_SetOption")
+fileprivate func wxImage_SetOption(_ ptr: CVoidPtr, _ name: CVoidPtr, _ value: CVoidPtr) -> Void
+internal func _wxc_wxImage_SetOption(_ ptr: CVoidPtr, _ name: CVoidPtr, _ value: CVoidPtr) -> Void {
+    wxImage_SetOption(ptr,name, value)
+}
+
+@_silgen_name("wxImage_SetOptionInt")
+fileprivate func wxImage_SetOptionInt(_ ptr: CVoidPtr, _ name: CVoidPtr, _ value: CInt) -> Void
+internal func _wxc_wxImage_SetOptionInt(_ ptr: CVoidPtr, _ name: CVoidPtr, _ value: CInt) -> Void {
+    wxImage_SetOptionInt(ptr, name, value)
+}
+
+@_silgen_name("wxImage_SetRGB")
+fileprivate func wxImage_SetRGB(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt, _ r: UInt8, _ g: UInt8, _ b: UInt8) -> Void
+internal func _wxc_wxImage_SetRGB(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt, _ r: UInt8, _ g: UInt8, _ b: UInt8) -> Void {
+    wxImage_SetRGB(ptr, x, y, r, g, b)
+}
+
+@_silgen_name("wxImage_SetAlpha")
+fileprivate func wxImage_SetAlpha(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt, _ a: UInt8) -> Void
+internal func _wxc_wxImage_SetAlpha(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt, _ a: UInt8) -> Void {
+    wxImage_SetAlpha(ptr, x, y, a)
+}
