@@ -20,7 +20,7 @@ public protocol wxOutputStream: wxStreamBase {
     
     func putChar(_ char: CChar) -> Void
     
-    func seek(offset: wxFileOffset, mode: wxSeekMode) -> wxFileOffset
+    func seekO(offset: wxFileOffset, mode: wxSeekMode) -> wxFileOffset
     
     func sync() -> Void
     
@@ -47,7 +47,7 @@ public extension wxOutputStream where Self.RawValue == CVoidPtr {
         _wxc_wxOutputStream_PutC(self.rawValue, char)
     }
     
-    public func seek(offset: wxFileOffset, mode: wxSeekMode) -> wxFileOffset {
+    public func seekO(offset: wxFileOffset, mode: wxSeekMode) -> wxFileOffset {
         return _wxc_wxOutputStream_Seek(rawValue, offset, mode.rawValue)
     }
     

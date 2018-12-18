@@ -134,39 +134,39 @@ EWXWEXPORT(char,wxInputStream_Peek)(wxInputStream* self)
 	return self->Peek();
 }
 	
-EWXWEXPORT(char,wxInputStream_GetC)(wxInputStream* self)
+EWXWEXPORT(int,wxInputStream_GetC)(wxInputStream* self)
 {
 	return self->GetC();
 }
 	
-EWXWEXPORT(void,wxInputStream_Read)(wxInputStream* self,void* buffer,int size)
+EWXWEXPORT(void,wxInputStream_Read)(wxInputStream* self,void* buffer,size_t size)
 {
-	self->Read(buffer, (size_t)size);
+	self->Read(buffer, size);
 }
 	
-EWXWEXPORT(int,wxInputStream_SeekI)(wxInputStream* self,int pos,int mode)
+EWXWEXPORT(off_t,wxInputStream_SeekI)(wxInputStream* self,off_t pos,int mode)
 {
-	return (int)self->SeekI((off_t)pos, (wxSeekMode)mode);
+	return self->SeekI(pos, (wxSeekMode)mode);
 }
 	
-EWXWEXPORT(int,wxInputStream_Tell)(wxInputStream* self)
+EWXWEXPORT(off_t,wxInputStream_Tell)(wxInputStream* self)
 {
-	return (int)self->TellI();
+	return self->TellI();
 }
 	
-EWXWEXPORT(int,wxInputStream_LastRead)(wxInputStream* self)
+EWXWEXPORT(size_t,wxInputStream_LastRead)(wxInputStream* self)
 {
-	return (int)self->LastRead();
+	return self->LastRead();
 }	
 
-EWXWEXPORT(int,wxInputStream_UngetBuffer)(wxInputStream* self,void* buffer,int size)
+EWXWEXPORT(size_t,wxInputStream_UngetBuffer)(wxInputStream* self,void* buffer,size_t size)
 {
-	return (int)self->Ungetch((const void*)buffer, (size_t)size);
+	return self->Ungetch((const void*)buffer, size);
 }
 	
-EWXWEXPORT(int,wxInputStream_Ungetch)(wxInputStream* self,char c)
+EWXWEXPORT(bool,wxInputStream_Ungetch)(wxInputStream* self,char c)
 {
-	return (int)self->Ungetch(c);
+	return self->Ungetch(c);
 }
 	
 }

@@ -2450,3 +2450,48 @@ fileprivate func wxInputStream_CanRead(_ ptr: CVoidPtr) -> CBool
 internal func _wxc_wxInputStream_CanRead(_ ptr: CVoidPtr) -> CBool {
     return wxInputStream_CanRead(ptr)
 }
+
+// wxFileInputStream
+
+@_silgen_name("wxFileInputStream_Create")
+fileprivate func wxFileInputStream_Create(_ fileName: CVoidPtr) -> CVoidPtr
+internal func _wxc_wxFileInputStream_Create(_ fileName: CVoidPtr) -> CVoidPtr {
+    return wxFileInputStream_Create(fileName)
+}
+
+@_silgen_name("wxFileInputStream_Delete")
+fileprivate func wxFileInputStream_Delete(_ ptr: CVoidPtr) -> Void
+internal func _wxc_wxFileInputStream_Delete(_ ptr: CVoidPtr) -> Void {
+    wxFileInputStream_Delete(ptr)
+}
+
+@_silgen_name("wxFileInputStream_IsOk")
+fileprivate func wxFileInputStream_IsOk(_ ptr: CVoidPtr) -> CBool
+internal func _wxc_wxFileInputStream_IsOk(_ ptr: CVoidPtr) -> CBool {
+    return wxFileInputStream_IsOk(ptr)
+}
+
+// wxFileoutputStream
+
+@_silgen_name("wxFileOutputStream_Create")
+fileprivate func wxFileOutputStream_Create(_ name: CVoidPtr) -> CVoidPtr
+internal func _wxc_wxFileOutputStream_Create(_ name: CVoidPtr) -> CVoidPtr {
+    return wxFileOutputStream_Create(name)
+}
+
+@_silgen_name("wxFileOutputStream_Delete")
+fileprivate func wxFileOutputStream_Delete(_ ptr: CVoidPtr) -> Void
+internal func _wxc_wxFileOutputStream_Delete(_ ptr: CVoidPtr) -> Void {
+    wxFileOutputStream_Delete(ptr)
+}
+
+@_silgen_name("wxFileOutputStream_IsOk")
+fileprivate func wxFileOutputStream_IsOk(_ ptr: CVoidPtr) -> CBool
+internal func _wxc_wxFileOutputStream_IsOk(_ ptr: CVoidPtr) -> CBool {
+    return wxFileOutputStream_IsOk(ptr)
+}
+
+public protocol wxFileOutputStream: wxOutputStream {
+    
+    init(atPath path: String)
+}

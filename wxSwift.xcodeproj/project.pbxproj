@@ -222,6 +222,9 @@
 		EDFCE02821C3E3D80064FD60 /* wxDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE02721C3E3D80064FD60 /* wxDialog.swift */; };
 		EDFCE02A21C810200064FD60 /* wxStreamBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE02921C8101F0064FD60 /* wxStreamBase.swift */; };
 		EDFCE02C21C8191A0064FD60 /* wxOutputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE02B21C8191A0064FD60 /* wxOutputStream.swift */; };
+		EDFCE02E21C903AD0064FD60 /* wxInputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE02D21C903AD0064FD60 /* wxInputStream.swift */; };
+		EDFCE03021C90FB60064FD60 /* wxFileInputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE02F21C90FB60064FD60 /* wxFileInputStream.swift */; };
+		EDFCE03221C913160064FD60 /* wxFileOutputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFCE03121C913160064FD60 /* wxFileOutputStream.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -456,6 +459,9 @@
 		EDFCE02721C3E3D80064FD60 /* wxDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxDialog.swift; sourceTree = "<group>"; };
 		EDFCE02921C8101F0064FD60 /* wxStreamBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxStreamBase.swift; sourceTree = "<group>"; };
 		EDFCE02B21C8191A0064FD60 /* wxOutputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxOutputStream.swift; sourceTree = "<group>"; };
+		EDFCE02D21C903AD0064FD60 /* wxInputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxInputStream.swift; sourceTree = "<group>"; };
+		EDFCE02F21C90FB60064FD60 /* wxFileInputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxFileInputStream.swift; sourceTree = "<group>"; };
+		EDFCE03121C913160064FD60 /* wxFileOutputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wxFileOutputStream.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -749,6 +755,9 @@
 				EDFCE01D21C2D08C0064FD60 /* Bridge.swift */,
 				EDFCE02921C8101F0064FD60 /* wxStreamBase.swift */,
 				EDFCE02B21C8191A0064FD60 /* wxOutputStream.swift */,
+				EDFCE03121C913160064FD60 /* wxFileOutputStream.swift */,
+				EDFCE02D21C903AD0064FD60 /* wxInputStream.swift */,
+				EDFCE02F21C90FB60064FD60 /* wxFileInputStream.swift */,
 				149B9FB52193919900A15A31 /* wxObject.swift */,
 				14FB877F21C501F8006D42BF /* wxMask.swift */,
 				14FB877D21C4FC5B006D42BF /* wxBitmapHandler.swift */,
@@ -933,6 +942,7 @@
 				14B6729F21A2C6C200C6328B /* wxStockGDI.swift in Sources */,
 				14EFAE6B2194F7E700105BAB /* wxPoint.swift in Sources */,
 				14A5475521C1CABF00C4AD26 /* wxClientData.swift in Sources */,
+				EDFCE03221C913160064FD60 /* wxFileOutputStream.swift in Sources */,
 				14B672912198E66700C6328B /* wxIndividualLayoutConstraint.swift in Sources */,
 				14FB878021C501F8006D42BF /* wxMask.swift in Sources */,
 				14FB877E21C4FC5B006D42BF /* wxBitmapHandler.swift in Sources */,
@@ -949,11 +959,13 @@
 				14FB877621C31BFD006D42BF /* wxStatusBar.swift in Sources */,
 				14B6729B219A3A0000C6328B /* wxDropTarget.swift in Sources */,
 				149B9FBA21939A0300A15A31 /* wxString.swift in Sources */,
+				EDFCE02E21C903AD0064FD60 /* wxInputStream.swift in Sources */,
 				EDFCE02A21C810200064FD60 /* wxStreamBase.swift in Sources */,
 				14B6728D2198D89200C6328B /* wxCaret.swift in Sources */,
 				14A5475321C1C40E00C4AD26 /* wxAcceleratorTable.swift in Sources */,
 				14EFAE652194F2A900105BAB /* wxWindow.swift in Sources */,
 				14B6728F2198E5E900C6328B /* wxLayoutConstraints.swift in Sources */,
+				EDFCE03021C90FB60064FD60 /* wxFileInputStream.swift in Sources */,
 				14FB878221C50909006D42BF /* wxPalette.swift in Sources */,
 				14B6728B2198C57500C6328B /* wxColour.swift in Sources */,
 				14EFAE6D2194FB9F00105BAB /* wxRect.swift in Sources */,

@@ -3514,8 +3514,8 @@ TClassDefExtend(wxInitDialogEvent,wxEvent)
 TClassDefExtend(wxInputStream,wxStreamBase)
 void       wxInputStream_Delete( TSelf(wxInputStream) _obj );
 TBool      wxInputStream_Eof( TSelf(wxInputStream) _obj );
-TChar      wxInputStream_GetC( TSelf(wxInputStream) _obj );
-int        wxInputStream_LastRead( TSelf(wxInputStream) _obj );
+int        wxInputStream_GetC( TSelf(wxInputStream) _obj );
+size_t     wxInputStream_LastRead( TSelf(wxInputStream) _obj );
 TChar      wxInputStream_Peek( TSelf(wxInputStream) _obj );
 void       wxInputStream_Read( TSelf(wxInputStream) _obj, void* buffer, int size );
 int        wxInputStream_SeekI( TSelf(wxInputStream) _obj, int pos, int mode );
