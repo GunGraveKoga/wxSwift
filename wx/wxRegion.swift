@@ -99,6 +99,24 @@ open class wxRegion: wxGDIObject {
         return _wxc_wxRegion_SubtractRegion(rawValue, region.rawValue)
     }
     
+    open func subtracting(_ rect: Rect) -> Self {
+        let _subtracting = type(of: self).init()
+        
+        _subtracting.assign(self)
+        _subtracting.subtract(rect)
+        
+        return _subtracting
+    }
+    
+    open func subtracting(_ region: wxRegion) -> Self {
+        let _subtracting = type(of: self).init()
+        
+        _subtracting.assign(self)
+        _subtracting.subtract(region)
+        
+        return _subtracting
+    }
+    
     @discardableResult
     open func formUnion(_ rect: Rect) -> Bool {
         return _wxc_wxRegion_UnionRect(rawValue, rect.x, rect.y, rect.width, rect.height)
