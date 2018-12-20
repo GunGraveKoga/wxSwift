@@ -2848,3 +2848,108 @@ fileprivate func wxIconBundle_Assign(_ ptr: CVoidPtr, _ other: CVoidPtr) -> Void
 internal func _wxc_wxIconBundle_Assign(_ ptr: CVoidPtr, _ other: CVoidPtr) -> Void {
     wxIconBundle_Assign(ptr, other)
 }
+
+// wxRegion
+
+@_silgen_name("wxRegion_CreateDefault")
+fileprivate func wxRegion_CreateDefault() -> CVoidPtr
+internal func _wxc_wxRegion_CreateDefault() -> CVoidPtr {
+    return wxRegion_CreateDefault()
+}
+
+@_silgen_name("wxRegion_CreateFromRect")
+fileprivate func wxRegion_CreateFromRect(_ x: CInt, _ y: CInt, _ w: CInt, _ h: CInt) -> CVoidPtr
+internal func _wxc_wxRegion_CreateFromRect(_ x: CInt, _ y: CInt, _ w: CInt, _ h: CInt) -> CVoidPtr {
+    return wxRegion_CreateFromRect(x, y, w, h)
+}
+
+@_silgen_name("wxRegion_Assign")
+fileprivate func wxRegion_Assign(_ ptr: CVoidPtr, _ other: CVoidPtr) -> Void
+internal func _wxc_wxRegion_Assign(_ ptr: CVoidPtr, _ other: CVoidPtr) -> Void {
+    wxRegion_Assign(ptr, other)
+}
+
+@_silgen_name("wxRegion_ContainsPoint")
+fileprivate func wxRegion_ContainsPoint(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt) -> CBool
+internal func _wxc_wxRegion_ContainsPoint(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt) -> CBool {
+    return wxRegion_ContainsPoint(ptr, x, y)
+}
+
+@_silgen_name("wxRegion_ContainsRect")
+fileprivate func wxRegion_ContainsRect(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt, _ w: CInt, _ h: CInt) -> CBool
+internal func _wxc_wxRegion_ContainsRect(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt, _ w: CInt, _ h: CInt) -> CBool {
+    return wxRegion_ContainsRect(ptr, x, y, w, h)
+}
+
+@_silgen_name("wxRegion_Clear")
+fileprivate func wxRegion_Clear(_ ptr: CVoidPtr) -> Void
+internal func _wxc_wxRegion_Clear(_ ptr: CVoidPtr) -> Void {
+    wxRegion_Clear(ptr)
+}
+
+@_silgen_name("wxRegion_Delete")
+fileprivate func wxRegion_Delete(_ ptr: CVoidPtr) -> Void
+internal func _wxc_wxRegion_Delete(_ ptr: CVoidPtr) -> Void {
+    wxRegion_Delete(ptr)
+}
+
+@_silgen_name("wxRegion_IsEmpty")
+fileprivate func wxRegion_IsEmpty(_ ptr: CVoidPtr) -> CBool
+internal func _wxc_wxRegion_IsEmpty(_ ptr: CVoidPtr) -> CBool {
+    return wxRegion_IsEmpty(ptr)
+}
+
+@_silgen_name("wxRegion_GetBox")
+fileprivate func wxRegion_GetBox(_ ptr: CVoidPtr, _ x: UnsafeMutableRawPointer, _ y: UnsafeMutableRawPointer, _ w: UnsafeMutableRawPointer, _ h: UnsafeMutableRawPointer) -> Void
+internal func _wxc_wxRegion_GetBox(_ ptr: CVoidPtr, _ x: UnsafeMutablePointer<CInt>, _ y: UnsafeMutablePointer<CInt>, _ w: UnsafeMutablePointer<CInt>, _ h: UnsafeMutablePointer<CInt>) -> Void {
+    wxRegion_GetBox(ptr, x, y, w, h)
+}
+
+@_silgen_name("wxRegion_IntersectRect")
+fileprivate func wxRegion_IntersectRect(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt, _ w: CInt, _ h: CInt) -> CBool
+internal func _wxc_wxRegion_IntersectRect(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt, _ w: CInt, _ h: CInt) -> CBool {
+    return wxRegion_IntersectRect(ptr, x ,y, w, h)
+}
+
+@_silgen_name("wxRegion_IntersectRegion")
+fileprivate func wxRegion_IntersectRegion(_ ptr: CVoidPtr, _ other: CVoidPtr) -> CBool
+internal func _wxc_wxRegion_IntersectRegion(_ ptr: CVoidPtr, _ other: CVoidPtr) -> CBool {
+    return wxRegion_IntersectRegion(ptr, other)
+}
+
+@_silgen_name("wxRegion_SubtractRect")
+fileprivate func wxRegion_SubtractRect(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt, _ w: CInt, _ h: CInt) -> CBool
+internal func _wxc_wxRegion_SubtractRect(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt, _ w: CInt, _ h: CInt) -> CBool {
+    return wxRegion_SubtractRect(ptr, x, y, w ,h)
+}
+
+@_silgen_name("wxRegion_SubtractRegion")
+fileprivate func wxRegion_SubtractRegion(_ ptr: CVoidPtr, _ other: CVoidPtr) -> CBool
+internal func _wxc_wxRegion_SubtractRegion(_ ptr: CVoidPtr, _ other: CVoidPtr) -> CBool {
+    return wxRegion_SubtractRegion(ptr, other)
+}
+
+@_silgen_name("wxRegion_UnionRect")
+fileprivate func wxRegion_UnionRect(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt, _ w: CInt, _ h: CInt) -> CBool
+internal func _wxc_wxRegion_UnionRect(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt, _ w: CInt, _ h: CInt) -> CBool {
+    return wxRegion_UnionRect(ptr, x, y, w, h)
+}
+
+@_silgen_name("wxRegion_UnionRegion")
+fileprivate func wxRegion_UnionRegion(_ ptr: CVoidPtr, _ other: CVoidPtr) -> CBool
+internal func _wxc_wxRegion_UnionRegion(_ ptr: CVoidPtr, _ other: CVoidPtr) -> CBool {
+    return wxRegion_UnionRegion(ptr, other)
+}
+
+@_silgen_name("wxRegion_XorRect")
+fileprivate func wxRegion_XorRect(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt, _ w: CInt, _ h: CInt) -> CBool
+internal func _wxc_wxRegion_XorRect(_ ptr: CVoidPtr, _ x: CInt, _ y: CInt, _ w: CInt, _ h: CInt) -> CBool {
+    return wxRegion_XorRect(ptr, x, y, w, h)
+}
+
+@_silgen_name("wxRegion_XorRegion")
+fileprivate func wxRegion_XorRegion(_ ptr: CVoidPtr, _ othe: CVoidPtr) -> CBool
+internal func _wxc_wxRegion_XorRegion(_ ptr: CVoidPtr, _ other: CVoidPtr) -> CBool {
+    return wxRegion_XorRegion(ptr, other)
+}
+
